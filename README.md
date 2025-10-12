@@ -12,8 +12,8 @@ Just copy/paste [pictolang.md](pictolang.md) specs into an AI chatbot and ask it
 
 - currently works best with ChatGPT5
 
-- _Warning_: ⁋ictolang is a very experimental and wacky thing: currently it can give some satisfaction / entertainment value, but do not expect it to be formally sound.
+**Warning**: ⁋ictolang is a very experimental and wacky thing: currently it can give some satisfaction / entertainment value, but do not expect it to be formally sound.
  
 **Credits**: David Leoni (info@davidleoni.it)
 
-**License:**: MIT
+**License**: MIT

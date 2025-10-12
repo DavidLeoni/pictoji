@@ -194,15 +194,15 @@ No unregistered or invisible joiners, variation selectors, or combining marks ma
 
 Symbol definitions are in the format
 
-SYMBOLS = MEANING1 / MEANING2 / ...    RATIONALE? [OVERRIDE]? [DEFAULT]?
+SYMBOLS = MEANING1 / MEANING2 / ...    RATIONALE? [OVERRIDE]? [DEFAULT]? SPACERET
 
 where:
 
-SYMBOLS: Sequence of Unicode symbols 
-MEANINGn: English word OR a pictolang unicode symbols sequence
-RATIONALE?: optional description
-[DEFAULT]?: optional flag to indicate preference when there are multiple symbols mapped to the same word 
-[OVERRIDE]?: optional flag which asserts that the mapping is semantically final and intentional. Override Enforcement:
+- SYMBOLS: Sequence of Unicode symbols 
+- MEANINGn: English word OR a pictolang unicode symbols sequence
+- RATIONALE?: optional description
+- [DEFAULT]?: optional flag to indicate preference when there are multiple symbols mapped to the same word 
+- [OVERRIDE]?: optional flag which asserts that the mapping is semantically final and intentional. Override Enforcement:
 
     - Any line or definition marked [OVERRIDE] is semantically final.
     - Automated or manual reviews MUST ignore meaning, symbol choice, or mapping debates for those entries.
@@ -210,6 +210,8 @@ RATIONALE?: optional description
         * Structural integrity: token spacing, normalization, Unicode validity.
         * File consistency: duplicates, formatting, or syntax errors.
     - Review tools and validators MUST detect [OVERRIDE] tags and suppress all semantic warnings for those lines.
+- SPACERET: two spaces so markdown renders properly the newline (we use this solution here only to minimize visual clutter, in general avoid phantom spaces)
+
 
 
 ### Assertions
@@ -397,6 +399,7 @@ Symbol, Word, Seq, Set, Map, Bool, Nat.
 
 ### Copula and auxiliary
 
+
 ⟡ = be / am / is / are / was / were / been / being
 ⟡⟡ = plural be
 ↶⟡ = was
@@ -408,15 +411,16 @@ Symbol, Word, Seq, Set, Map, Bool, Nat.
 〽 = already 
 🔁 = again
 
+
 ### Determiners
 
 ⚲ = a / an
 ◙ = the
-⛶ = any  
+⛶ = any
 ⊡ = each
-⍜ = only
+⍜ = only 
 ⛉ = just
-⛊ = such
+⛊ = such  
 
 ## Adverbs
 
