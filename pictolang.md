@@ -390,37 +390,37 @@ emoji_sequence_source = emoji-zwj-sequences.txt (Unicode)
 
 ### System terms
 
-⁋ = Pictolang
-㉣ = specs
+⁋ = Pictolang  
+㉣ = specs  
 
 Symbol, Word, Seq, Set, Map, Bool, Nat.
 
 ### Copula and auxiliary
 
-⟡ = be / am / is / are / was / were / been / being
-⟡⟡ = plural be
-↶⟡ = was
-↶⟡⟡ = were
-↻⟡ = being
-◐ = do / does
-◇ = maybe 
-🧘= still
-〽 = already 
-🔁 = again
+⟡ = be / am / is / are / was / were / been / being  
+⟡⟡ = plural be  
+↶⟡ = was  
+↶⟡⟡ = were  
+↻⟡ = being  
+◐ = do / does  
+◇ = maybe   
+🧘= still  
+〽 = already   
+🔁 = again  
 
 ### Determiners
 
-⚲ = a / an
-◙ = the
+⚲ = a / an  
+◙ = the  
 ⛶ = any  
-⊡ = each
-⍜ = only
-⛉ = just
-⛊ = such
+⊡ = each  
+⍜ = only  
+⛉ = just  
+⛊ = such  
 
 ## Adverbs
 
-۞ = well
+۞ = well  
 
 
 ### Negation / Validation
@@ -428,216 +428,216 @@ Symbol, Word, Seq, Set, Map, Bool, Nat.
 ¬ attaches to auxiliary or modal
 Example: ◐¬ = don't, ↶◐¬ = didn't
 
-◐¬ = don't
-🚫 = no        determiner / clausal negation clash with no, none [OVERRIDE]
-👌 = ok/yes
-✅ = good
-❌ = bad
-🙂 = happy
-🙁 = sad 
+◐¬ = don't  
+🚫 = no        determiner / clausal negation clash with no, none [OVERRIDE]  
+👌 = ok/yes  
+✅ = good  
+❌ = bad  
+🙂 = happy  
+🙁 = sad   
 
 
 ### Tense and aspect
 
 ↶ attaches to verbs for past
-⊸ = have
-⊸ ↶⟡ = have been
-⊸ ↶⟡ ↻VERB = have been doing
+⊸ = have  
+⊸ ↶⟡ = have been  
+⊸ ↶⟡ ↻VERB = have been doing  
 
 ### Modals
 
-◐ = do 
-◐¬ = don't 
-↶◐ = did 
-↶◐¬ = didn't
+◐ = do   
+◐¬ = don't   
+↶◐ = did   
+↶◐¬ = didn't  
 
-🞋 = can 
-🞋¬ =  cannot 
+🞋 = can   
+🞋¬ =  cannot   
 ↶🞋 = could  
-↶🞋¬ = couldn't
+↶🞋¬ = couldn't  
 
-⇗ = will
-⇗¬ = won't
-↶⇗ = would
-↶⇗¬ = wouldn't
+⇗ = will  
+⇗¬ = won't  
+↶⇗ = would  
+↶⇗¬ = wouldn't  
 
-⭧ = shall
-⭧¬ = shan't 
-↶⭧ = should
-↶⭧¬ = shouldn't
+⭧ = shall  
+⭧¬ = shan't   
+↶⭧ = should  
+↶⭧¬ = shouldn't  
 
-◆ = may 
-◆¬ = may not
-↶◆ = might
-↶◆¬ = might not
+◆ = may   
+◆¬ = may not  
+↶◆ = might  
+↶◆¬ = might not  
 
-⤊ = must
-⤊¬ = must not
-↶⤊ = must (past)
+⤊ = must  
+⤊¬ = must not  
+↶⤊ = must (past)  
 
-↶⭧ ⊸ ↶⟡ ↻VERB = should have been doing
-⇗ ⊸ ↶⟡ ↻VERB = will have been doing
-↶⇗ ⊸ ↶⟡ ↻VERB = would have been doing
+↶⭧ ⊸ ↶⟡ ↻VERB = should have been doing  
+⇗ ⊸ ↶⟡ ↻VERB = will have been doing  
+↶⇗ ⊸ ↶⟡ ↻VERB = would have been doing  
 
 ## Formal concepts
 
 ### Logic
 
-🝆 = set
-🜛 = group
-🜶 = category
-¬ = not      determiner / clausal negation clash with no, none [OVERRIDE]
+🝆 = set  
+🜛 = group  
+🜶 = category  
+¬ = not      determiner / clausal negation clash with no, none [OVERRIDE]  
 ~ = approximated complement    property: ~~x ¬= x  
-⊤ = true
-⊥ = false
-= = equal, same 
-≠ = different
-◈ = constant
+⊤ = true  
+⊥ = false  
+= = equal, same   
+≠ = different  
+◈ = constant  
 
 ⇒ = implies   
 
-⍰ = if
-⇨ = then
-⤳ = so / therefore
+⍰ = if  
+⇨ = then  
+⤳ = so / therefore  
 
 
 ### Quantifiers
 
-∃ = exists / there exists      formal only; tenseless; negation and time apply outside/adjacent to the existential (¬ (∃ X), ∃ X ⮊ T). Interpret existential / spatial as needed [setting=formal][OVERRIDE]
+∃ = exists / there exists      formal only; tenseless; negation and time apply outside/adjacent to the existential (¬ (∃ X), ∃ X ⮊ T). Interpret existential / spatial as needed [setting=formal][OVERRIDE]  
 
-☞ ⟡ = there is / there's / there are       natural_language existential; carries tense/aspect/negation on ⟡; ☞ alone remains deictic "there". Interpret existential / spatial as needed [setting=natural][OVERRIDE] 
+☞ ⟡ = there is / there's / there are       natural_language existential; carries tense/aspect/negation on ⟡; ☞ alone remains deictic "there". Interpret existential / spatial as needed [setting=natural][OVERRIDE]   
 
 
-∀ = all / every
-∅ = none     determiner / clausal negation clash with no, none [OVERRIDE]
-◔ = some
-◳ = part
-◕ = most
-◫ = few
-▥ = many / several 
-▩ = much
-░ = empty
-█ = full
-ꙮ = very
-⊜ = enough 
-⚯ = too
-⏙ = also
-🔹🔹 =  pair 
-⍠ = both
+∀ = all / every  
+∅ = none     determiner / clausal negation clash with no, none [OVERRIDE]  
+◔ = some  
+◳ = part  
+◕ = most  
+◫ = few  
+▥ = many / several   
+▩ = much  
+░ = empty  
+█ = full  
+ꙮ = very  
+⊜ = enough   
+⚯ = too  
+⏙ = also  
+🔹🔹 =  pair   
+⍠ = both  
 
-⛞ = length
+⛞ = length  
 
 ### Numbers
 
-0 = zero
-1 = one
-2 = two
-3 = three
-4 = four
-5 = five
-6 = six
-7 = seven
-8 = eight
-9 = nine
-° = ordinal marker 
+0 = zero  
+1 = one  
+2 = two  
+3 = three  
+4 = four  
+5 = five  
+6 = six  
+7 = seven  
+8 = eight  
+9 = nine  
+° = ordinal marker   
 
 
 ### Relations
 
-∈ = in / belongs
-⁐ = out
-⊣ = because
-◒ = over
-◓ = under
-⍟ = around
-🟗 = on
-🟘 = off
-🞬 = by
-⚮ = between
+∈ = in / belongs  
+⁐ = out  
+⊣ = because  
+◒ = over  
+◓ = under  
+⍟ = around  
+🟗 = on  
+🟘 = off  
+🞬 = by  
+⚮ = between  
 
 
 
 ### Conjunctions
 
-∧ = and
-∨ = or
-⚞ = since  both temporal preposition and causal conjunction [OVERRIDE]
-🌓 = but 
-⌇= though / although
+∧ = and  
+∨ = or  
+⚞ = since  both temporal preposition and causal conjunction [OVERRIDE]  
+🌓 = but   
+⌇= though / although  
 
 ### Comparison
 
-▲ADJ = more ADJ/ADV
-▼ADJ = less ADJ/ADV
-⊳ = than
-▲▲ = most
-▼▼ = least
+▲ADJ = more ADJ/ADV  
+▼ADJ = less ADJ/ADV  
+⊳ = than  
+▲▲ = most  
+▼▼ = least  
 
 
 ## Prepositions
 
-⎋ = from
-⌘ = away
-↦ = to / toward / as infinitive 
-⊶ = of 
-⚭ = with 
-㊅ = as      use it also in as ADJ as   [OVERRIDE]
-⮊ = at
-∻ = through 
-⟴ = across 
-🆚 = against
+⎋ = from  
+⌘ = away  
+↦ = to / toward / as infinitive   
+⊶ = of   
+⚭ = with   
+㊅ = as      use it also in as ADJ as   [OVERRIDE]  
+⮊ = at  
+∻ = through   
+⟴ = across   
+🆚 = against  
 
 
 
 ### Adjectives
 
-⊛ = own
-⬣ = big
-◘ = little / small
-⌔ =  near
-▽ = far
-🮁 = long
-▃ = short
-🆕 = new
-⌛ = old
-⋏ = high 
-⋎ = low 
-🐣= young 
-✪ = important 
-⧊ = difficult 
-⬭ = easy
+⊛ = own  
+⬣ = big  
+◘ = little / small  
+⌔ =  near  
+▽ = far  
+🮁 = long  
+▃ = short  
+🆕 = new  
+⌛ = old  
+⋏ = high   
+⋎ = low   
+🐣= young   
+✪ = important   
+⧊ = difficult   
+⬭ = easy  
 
 
 ### Interrogatives
 
 ? at the end
 
-□ = what
-☻ = who
-📍 = where
-⏰ = when
-∵ = why
-⚙ = how
-❖ = which
+□ = what  
+☻ = who  
+📍 = where  
+⏰ = when  
+∵ = why  
+⚙ = how  
+❖ = which  
 
 #### Interrogative Clitics
 
 Form: SYMBOL ⟡/⊸ = INTERROGATIVE's 
 
-□ ⟡ = what's
-□ ⊸ = what's
-☻ ⟡ = who's
-☻ ⊸ = who's
-📍 ⟡ = where's
-📍 ⊸ = where's
-⏰ ⟡ = when's
-⏰ ⊸ = when's
-∵ ⟡ = why's
-∵ ⊸ = why's
-⚙ ⟡ = how's
-⚙ ⊸ = how's
-❖ ⟡ = which's     rare, awkward
-❖ ⊸ = which's     rare, awkward
+□ ⟡ = what's  
+□ ⊸ = what's  
+☻ ⟡ = who's  
+☻ ⊸ = who's  
+📍 ⟡ = where's  
+📍 ⊸ = where's  
+⏰ ⟡ = when's  
+⏰ ⊸ = when's  
+∵ ⟡ = why's  
+∵ ⊸ = why's  
+⚙ ⟡ = how's  
+⚙ ⊸ = how's  
+❖ ⟡ = which's     rare, awkward  
+❖ ⊸ = which's     rare, awkward  
 
 
 ### Compound forms
@@ -645,144 +645,144 @@ Form: SYMBOL ⟡/⊸ = INTERROGATIVE's
 - Compund forms are created by joining the symbols they use, without spaces.
 - We place them here for completeness but they should all be derivable just from the rule. 
 
-◔1 = someone 
-⛶1 = anyone
-🚫🧍 = nobody
-∀🧍 = everybody
-∀📍 = everywhere
+◔1 = someone   
+⛶1 = anyone  
+🚫🧍 = nobody  
+∀🧍 = everybody  
+∀📍 = everywhere  
 
 
-◔☉ = something
-⛶☉ = anything
-🚫☉ = nothing
-∀☉ = everything
+◔☉ = something  
+⛶☉ = anything  
+🚫☉ = nothing  
+∀☉ = everything  
 
-🜁⇄ = another
-▲◒ = moreover
+🜁⇄ = another  
+▲◒ = moreover  
 
-∈↦ = into
-🟗↦ = onto
+∈↦ = into  
+🟗↦ = onto  
 
-⚭∈ = within
-⚭⁐ = without
+⚭∈ = within  
+⚭⁐ = without  
 
 
 ### Directionals and links
 
-≃ = about   isomorphic to / homotopy equivalent / similar. Common in algebra, topology, category theory
-↑ ↓ ← → = up, down, left, right
-⇢ = after
-⇠ = before
-➡ = way
-⇄ = other
-‖ = even
+≃ = about   isomorphic to / homotopy equivalent / similar. Common in algebra, topology, category theory  
+↑ ↓ ← → = up, down, left, right  
+⇢ = after  
+⇠ = before  
+➡ = way  
+⇄ = other  
+‖ = even  
 
 ## Time
 
-⏳ = time
-⏱ = now
-🕒 = hour
-📅 = day
-▓ = week
-🗓= year
-🌃 = night
-🌅 = morning / morrow
+⏳ = time  
+⏱ = now  
+🕒 = hour  
+📅 = day  
+▓ = week  
+🗓= year  
+🌃 = night  
+🌅 = morning / morrow  
 
 ### Frequency 
 
-✴⁰ = never 
-✴¹ = ✴ = once
-✴² = seldom / rarely 
-✴³ = sometimes 
-✴⁴ = often 
+✴⁰ = never   
+✴¹ = ✴ = once  
+✴² = seldom / rarely   
+✴³ = sometimes   
+✴⁴ = often   
 ✴⁵ = always  
 
-✴✴ = twice / two times 
-✴✴✴ = thrice / three times
+✴✴ = twice / two times   
+✴✴✴ = thrice / three times  
 
 ### Ordering
 
-⏩ = forward
-⏪ = backward
-⏭ = next
-⏮ = previous / back
+⏩ = forward  
+⏪ = backward  
+⏭ = next  
+⏮ = previous / back  
 
 When uncertain about how to express a word which has natural "successor of / predecessor of SOMETHING" meaning, prefix SOMETHING with ⏮️ / ⏭️ without spaces.
 
 Example:
 
-⏭📅 = tomorrow
-⏮📅 = yesterday
+⏭📅 = tomorrow  
+⏮📅 = yesterday  
 
-⏮⏳ = past
-⏭⏳ = future 
+⏮⏳ = past  
+⏭⏳ = future   
 
 If in doubt, try compound forms, example:
 
-↦📅 = today   DO NOT bother about it being a hack [OVERRIDE]
-↦🌃 = tonight DO NOT bother about it being a hack [OVERRIDE]
+↦📅 = today   DO NOT bother about it being a hack [OVERRIDE]  
+↦🌃 = tonight DO NOT bother about it being a hack [OVERRIDE]  
 
 When there is a clear progression about some MEASURE, use  ⏪/⏩MEASURE  without spaces
 
 Example:
 
-⏪⏳ = soon
-⏩⏳ = late
-▲⏪⏳ = sooner
-▲⏩⏳ = later
+⏪⏳ = soon  
+⏩⏳ = late  
+▲⏪⏳ = sooner  
+▲⏩⏳ = later  
 
 
 ### Mutation
 
-⏺ = record
-⯮ = become
+⏺ = record  
+⯮ = become  
 
 ### Loops
 
-🌀 = cycle 
-∽ = while 
+🌀 = cycle   
+∽ = while   
 ㊐ = for       use same word for benefactive/purpose/duration [OVERRIDE]    
-⌢ = during
-⧘ = until
+⌢ = during  
+⧘ = until  
 
-▶ = play
-🏃 = go
-▲🏃 = run 
-⏹ = stop
-⏸ = pause
+▶ = play  
+🏃 = go  
+▲🏃 = run   
+⏹ = stop  
+⏸ = pause  
 
 ## Humans
 
-웃 = person
+웃 = person  
 
-웃¹ = person 
-웃² = people / crowd 
-웃³ = society 
+웃¹ = person   
+웃² = people / crowd   
+웃³ = society   
 
-웃웃 = persons
-2웃 = a couple (of persons)
+웃웃 = persons  
+2웃 = a couple (of persons)  
 
-🧒 = child
-🧑 = adult
-🤝 = friend
-👥 = partner
+🧒 = child  
+🧑 = adult  
+🤝 = friend  
+👥 = partner  
 
-♂ = male
-♀ = female
-👨‍👦 = son
-👩‍👧 = daughter
+♂ = male  
+♀ = female  
+👨‍👦 = son  
+👩‍👧 = daughter  
 father
 mother
 
 ### Settlements hierarchy 
 
-🏠 = house 
-🏠¹ = house 
-🏠² = village
-🏠³ = city 
-🏠⁴ = metropolis 
-🏠⁵ = state/province 
-🏠⁶ = country / nation (I picked Kiribati as most people won't even know it exists) [OVERRIDE]
+🏠 = house   
+🏠¹ = house   
+🏠² = village  
+🏠³ = city   
+🏠⁴ = metropolis   
+🏠⁵ = state/province   
+🏠⁶ = country / nation (I picked Kiribati as most people won't even know it exists) [OVERRIDE]  
 
 🏘 = 🏠²    
 🏙 = 🏠³    
@@ -790,14 +790,14 @@ mother
 🗺 = 🏠⁵    
 ⚐ = 🏠⁶    
 
-🌐 = world
+🌐 = world  
 
-🏠🏠 = houses 
+🏠🏠 = houses   
 
 #### Specific groups
 
-🏢 = company (dedicated Unicode: "office building") 
-🏛 = institution (Unicode: "classical building")
+🏢 = company (dedicated Unicode: "office building")   
+🏛 = institution (Unicode: "classical building")  
 
 ## Pronouns and Deictics
 
@@ -807,57 +807,57 @@ English has some inherent ambiguities,  either for historical reasons ("it" is b
 - If no context is available, use symbols marked as [DEFAULT].
 
 
-🧿 = self
-🧿🧿 = selves
+🧿 = self  
+🧿🧿 = selves  
 
-👤 = I 
-🫵 = you
-👨 = he 
-👩 = she
-Ə = they     singular, gender-neutral
-🔹 = it      [DEFAULT]
-👤👤 = we 
-ƏƏ = they    plural [DEFAULT]
+👤 = I   
+🫵 = you  
+👨 = he   
+👩 = she  
+Ə = they     singular, gender-neutral  
+🔹 = it      [DEFAULT]  
+👤👤 = we   
+ƏƏ = they    plural [DEFAULT]  
 
 ### Verb Clitics
 
 Form: PRONOUN_SYMBOL VERB_SYMBOL = PRONOUN'CONTRACTED_VERB
 
-👤 ⟡ = I'm
-🫵 ⟡ = you're
-👨 ⟡ = he's
-👩 ⟡ = she's
-Ə ⟡ = they're    singular, gender-neutral
-🔹 ⟡ = it's
-👤👤 ⟡ = we're
-ƏƏ ⟡ = they're    plural [DEFAULT]
+👤 ⟡ = I'm  
+🫵 ⟡ = you're  
+👨 ⟡ = he's  
+👩 ⟡ = she's  
+Ə ⟡ = they're    singular, gender-neutral  
+🔹 ⟡ = it's  
+👤👤 ⟡ = we're  
+ƏƏ ⟡ = they're    plural [DEFAULT]  
 
-👤 ⊸ = I've
-🫵 ⊸ = you've
-👨 ⊸ = he's
-👩 ⊸ = she's
-Ə ⊸ = they've    singular, gender-neutral
-🔹 ⊸ = it's
-👤👤 ⊸ = we've
-ƏƏ ⊸ = they've    plural [DEFAULT]
+👤 ⊸ = I've  
+🫵 ⊸ = you've  
+👨 ⊸ = he's  
+👩 ⊸ = she's  
+Ə ⊸ = they've    singular, gender-neutral  
+🔹 ⊸ = it's  
+👤👤 ⊸ = we've  
+ƏƏ ⊸ = they've    plural [DEFAULT]  
 
-👤 ⇗ = I'll
-🫵 ⇗ = you'll
-👨 ⇗ = he'll
-👩 ⇗ = she'll
-Ə ⇗ = they'll    singular, gender-neutral
-🔹 ⇗ = it'll
-👤👤 ⇗ = we'll
-ƏƏ ⇗ = they'll    plural [DEFAULT]
+👤 ⇗ = I'll  
+🫵 ⇗ = you'll  
+👨 ⇗ = he'll  
+👩 ⇗ = she'll  
+Ə ⇗ = they'll    singular, gender-neutral  
+🔹 ⇗ = it'll  
+👤👤 ⇗ = we'll  
+ƏƏ ⇗ = they'll    plural [DEFAULT]  
 
-👤 ↶⇗ = I'd
-🫵 ↶⇗ = you'd
-👨 ↶⇗ = he'd
-👩 ↶⇗ = she'd
-Ə ↶⇗ = they'd    singular, gender-neutral
-🔹 ↶⇗ = it'd
-👤👤 ↶⇗ = we'd
-ƏƏ ↶⇗ = they'd    plural [DEFAULT]
+👤 ↶⇗ = I'd  
+🫵 ↶⇗ = you'd  
+👨 ↶⇗ = he'd  
+👩 ↶⇗ = she'd  
+Ə ↶⇗ = they'd    singular, gender-neutral  
+🔹 ↶⇗ = it'd  
+👤👤 ↶⇗ = we'd  
+ƏƏ ↶⇗ = they'd    plural [DEFAULT]  
 
 
 ### Object pronouns 
@@ -865,26 +865,26 @@ Form: PRONOUN_SYMBOL VERB_SYMBOL = PRONOUN'CONTRACTED_VERB
 Form: PRONOUN⁀
 
 👤⁀ = me  
-🫵⁀ = you 
-👨⁀ = him 
-👩⁀ = her 
-Ə⁀ = them   singular, gender-neutral, see default
-🔹⁀ = it 
-👤👤⁀ = us 
-ƏƏ⁀ = them   plural [DEFAULT]
+🫵⁀ = you   
+👨⁀ = him   
+👩⁀ = her   
+Ə⁀ = them   singular, gender-neutral, see default  
+🔹⁀ = it   
+👤👤⁀ = us   
+ƏƏ⁀ = them   plural [DEFAULT]  
 
 ### Possessive adjectives 
 
 From: PRONOUN⎴
 
-👤⎴ = my 
-🫵⎴ = your 
-👨⎴ = his     [DEFAULT]
-👩⎴ = her
-Ə⎴ = their    singular, gender-neutral
-🔹⎴ = its     [DEFAULT]
-👤👤⎴ = our 
-ƏƏ⎴ = their    plural [DEFAULT]
+👤⎴ = my   
+🫵⎴ = your   
+👨⎴ = his     [DEFAULT]  
+👩⎴ = her  
+Ə⎴ = their    singular, gender-neutral  
+🔹⎴ = its     [DEFAULT]  
+👤👤⎴ = our   
+ƏƏ⎴ = their    plural [DEFAULT]  
 
 ### Possessive clitics
 
@@ -894,14 +894,14 @@ Possessive clitic A's B becomes A⌎ B, Example John's dog -> John⌎ 🐶
 
 Form: PRONOUN⌎ 
 
-👤⌎ = mine 
-🫵⌎ = yours 
-👨⌎ = his     see default form 👨⎴ 
-👩⌎ = hers
-Ə⌎ = theirs   singular, gender-neutral
-🔹⌎ = its     see default form 🔹⎴ 
-👤👤⌎ = ours 
-ƏƏ⌎ = theirs  plural
+👤⌎ = mine   
+🫵⌎ = yours   
+👨⌎ = his     see default form 👨⎴   
+👩⌎ = hers  
+Ə⌎ = theirs   singular, gender-neutral  
+🔹⌎ = its     see default form 🔹⎴   
+👤👤⌎ = ours   
+ƏƏ⌎ = theirs  plural  
 
 ### Reflexives 
 
@@ -909,33 +909,33 @@ Form: PRONOUN🧿
 
 These are special irregular 'compounds' to keep things simple .
 
-👤🧿 = myself 
-🫵🧿 = yourself 
-👨🧿 = himself 
-👩🧿 = herself
-Ə🧿 = themself    singular, one person with unspecified or nonbinary gender
-🔹🧿 = itself 
-👤👤🧿 = ourselves 
+👤🧿 = myself   
+🫵🧿 = yourself   
+👨🧿 = himself   
+👩🧿 = herself  
+Ə🧿 = themself    singular, one person with unspecified or nonbinary gender  
+🔹🧿 = itself   
+👤👤🧿 = ourselves   
 ƏƏ🧿 = themselves   plural  
 
 
 ### Demonstrative deictics
 
-▣ = this
+▣ = this  
 👉 = that   use same word for complementizer vs demonstrative [OVERRIDE]  
-▣▣ = these
-👉👉 = those
+▣▣ = these  
+👉👉 = those  
 
-👉 ⟡ = that's       99% of cases
-👉 ↶⟡ = that was   not grammatical, still everywhere in colloquial English — That's him! (≈ "That was the person I meant.")
-👉 ⊸ = that has    rare, mostly before been
+👉 ⟡ = that's       99% of cases  
+👉 ↶⟡ = that was   not grammatical, still everywhere in colloquial English — That's him! (≈ "That was the person I meant.")  
+👉 ⊸ = that has    rare, mostly before been  
 
 
 ### Spatial deictics
 
-☟ = here
-☞ = there
-☉ = thing
+☟ = here  
+☞ = there  
+☉ = thing  
 
 
 ## Morphological derivations
@@ -947,8 +947,8 @@ We also add examples in Latin since its forms are much more regular and still so
 * `encode` function SHOULD attempt a translation to the most precise proper morphological category.
 * `decode` function SHOULD select the form depending on context:
 
-  * `setting=natural`: closest to what an everyday English speaker would read best.
-  * `setting=formal`:  closest to what an English academic would want.
+  * `setting=natural`: closest to what an everyday English speaker would read best.  
+  * `setting=formal`:  closest to what an English academic would want.  
 
 ---
 
@@ -1006,9 +1006,9 @@ Form: SYMBOL^0
   Latin: _beatitudo_ (blessedness, happiness), _claritas_ (brightness), _calor_ (warmth)
 
 - **Condition / status**: 
-    - deadness, tiredness, 🙁^0 = sadness,
-    ⭐^0 = stardom (The status of a performer or entertainer acknowledged as a star.) 
-    ⚐^0 = nationhood (status / condition of nation)
+    - deadness, tiredness, 🙁^0 = sadness,  
+    ⭐^0 = stardom (The status of a performer or entertainer acknowledged as a star.)   
+    ⚐^0 = nationhood (status / condition of nation)  
   Latin: _mors_ (death), _lassitudo_ (weariness), _tristitia_ (sadness)
 
 
@@ -1043,7 +1043,7 @@ Form: SYMBOL📍
 **Recurrence / cycle**: 
 
 - Form (generic): 🔁SYMBOL
-- English Examples 🔁◐ = redo, 🔁▶ = replay, rewrite
+- English Examples 🔁◐ = redo, 🔁▶ = replay, rewrite  
 repetition, schedule, renewal
 - Latin: *repetitio* (repetition), *series* (sequence), *renovatio* (renewal)
 
@@ -1198,131 +1198,131 @@ Latin: *male formatus* (ill-formed), *malus consilium* (bad advice), *deformis* 
 
 ## Body
 
-🧍 = body
-✋ = hand
-😶 = head
-♥ = heart (≠ ❤ love)
-👄 = mouth
-🦶 = foot
+🧍 = body  
+✋ = hand  
+😶 = head  
+♥ = heart (≠ ❤ love)  
+👄 = mouth  
+🦶 = foot  
 
 
  
 
 ## Nature
 
-🥣 = food
+🥣 = food  
 
-⛰ = earth / ground
-💧 = water
-🔥 = fire
+⛰ = earth / ground  
+💧 = water  
+🔥 = fire  
 
-☁ = sky
-☀ = sun
-🌙 = moon
-⭐ = star 
+☁ = sky  
+☀ = sun  
+🌙 = moon  
+⭐ = star   
 
-☥ = life
+☥ = life  
 
-🌱 = sprout
-🌱¹ = sprout
-🌱² = grass
-🌱🌱 = sprouts
+🌱 = sprout  
+🌱¹ = sprout  
+🌱² = grass  
+🌱🌱 = sprouts  
 
-🌿 = natural plant
-🌿¹ = natural plant
-🌿² = vegetation 
-🌿³ = field 
+🌿 = natural plant  
+🌿¹ = natural plant  
+🌿² = vegetation   
+🌿³ = field   
 
-🌾 = cultivated plant (of a crop)
-🌾¹ = cultivated plant (of a crop) 
-🌾² = crop 
-🌾🌾 = cultivated plants (of a crop) 
+🌾 = cultivated plant (of a crop)  
+🌾¹ = cultivated plant (of a crop)   
+🌾² = crop   
+🌾🌾 = cultivated plants (of a crop)   
 
-🪴 = domestic plant
-🪴¹ = domestic plant
-🪴² = garden 
-🪴🪴 = domestic plants 
+🪴 = domestic plant  
+🪴¹ = domestic plant  
+🪴² = garden   
+🪴🪴 = domestic plants   
 
-🌳 = tree 
-🌳¹ = tree
-🌳² = forest 
-🌳🌳 = trees 
+🌳 = tree   
+🌳¹ = tree  
+🌳² = forest   
+🌳🌳 = trees   
 
-🌴 = palm
-🌴¹ = palm
-🌴² = jungle (don't care if it a proper jungle is made by several types of trees)
-🌴🌴 = palm trees 
+🌴 = palm  
+🌴¹ = palm  
+🌴² = jungle (don't care if it a proper jungle is made by several types of trees)  
+🌴🌴 = palm trees   
 
 
 ## Things
 
 
-⌖ = place
-📖 = book
-📄 = paper
-📱 = phone
-🧩 = problem
+⌖ = place  
+📖 = book  
+📄 = paper  
+📱 = phone  
+🧩 = problem  
 
 
 ## Verbs
 
-✇ = use
-⩕ = mean
-🫳 = put / set / place
-🫱 = let / allow
-🫱 👤👤⁀ = let's     (let us)
-🏳 = begin / start
-🏁 = end / finish
-ⓞ = keep / stay
-🤜 = move / push
-⚒ = work
-🛠 = make
+✇ = use  
+⩕ = mean  
+🫳 = put / set / place  
+🫱 = let / allow  
+🫱 👤👤⁀ = let's     (let us)  
+🏳 = begin / start  
+🏁 = end / finish  
+ⓞ = keep / stay  
+🤜 = move / push  
+⚒ = work  
+🛠 = make  
 👀 = see     
-👀 ↦ = look at
-📚 = know
-💭 = think
+👀 ↦ = look at  
+📚 = know  
+💭 = think  
 
 💬 = say / tell (content)                
 🗣 = speak / tell (to someone) / talk    
 📢 = call / shout / announce              
 🏷 = name / label                        
 
-☺ = like
-❤ = love
+☺ = like  
+❤ = love  
 
-✦ = want
-⊞ = need
+✦ = want  
+⊞ = need  
 
-△ = try
-🔎 = find
+△ = try  
+🔎 = find  
 
-🤏 = get
-✊ = take
-👐 = give
-🏃 = go
-👈 = come
-↘ = leave
-⏢ = help
-🍴 = eat
-🍷 = drink
-✺ = show 
-⤞ = bring 
-📨 = send 
-⊍ = open 
-🜳 = close 
-⚡= happen
-💓 = feel
-⸮ = ask
+🤏 = get  
+✊ = take  
+👐 = give  
+🏃 = go  
+👈 = come  
+↘ = leave  
+⏢ = help  
+🍴 = eat  
+🍷 = drink  
+✺ = show   
+⤞ = bring   
+📨 = send   
+⊍ = open   
+🜳 = close   
+⚡= happen  
+💓 = feel  
+⸮ = ask  
 
 ## Testing vocabulary
 
-𑁍 = sentient
-🧪 = test
-📡 = contact
-⚛ = atom
-👨‍💻☯ = CoderDojo
+𑁍 = sentient  
+🧪 = test  
+📡 = contact  
+⚛ = atom  
+👨‍💻☯ = CoderDojo  
 
-㊷ = the Answer to the Ultimate Question of Life, the Universe, and Everything
+㊷ = the Answer to the Ultimate Question of Life, the Universe, and Everything  
 
 ## Examples
 
