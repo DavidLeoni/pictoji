@@ -1,4 +1,4 @@
-# Pictolang Tests (v2.11)
+# Pictoji Tests (v0.2.11)
 
 ## Smoke tests — literal decoding
 

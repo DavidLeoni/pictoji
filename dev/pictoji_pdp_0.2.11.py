@@ -1,10 +1,10 @@
 """
-Pictolang PDP (Pictolang Decoding Prompt) — v2.11
+Pictoji PDP (Pictoji Decoding Prompt) — v0.2.11
 =================================================
 
 Goal
 ----
-Enable an AI to **decode** Pictolang strings (emoji- and symbol-based) into literal English
+Enable an AI to **decode** Pictoji strings (emoji- and symbol-based) into literal English
 glosses, using a small set of deterministic rules. Clarity beats compression.
 Never substitute synonyms; always translate literally (📡 = "contact" not "connect").
 Word order follows English. Question order remains English and ends with "?".

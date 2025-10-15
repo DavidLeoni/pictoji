@@ -1,9 +1,9 @@
-# Pictolang Tests (v2.19-ALFA)
+# Pictoji Tests (v0.5.0)
 
 DO NOT PLACE FANCY TYPOGRAPHICS LIKE “” HERE. 
 
 - to test expressions, prefer using ==, ->, <- over arrows
-- if ==, <-, -> is already part of a pictolang expression, quote the expression.
+- if ==, <-, -> is already part of a pictoji expression, quote the expression.
 - If you need to quote, use: " ", ' ', or block quotes """ """, '''  ''' in this preference order.
 
 
@@ -258,6 +258,6 @@ Mixed with attachers/punctuation (number is one token)
 
 ## Stress test
 
-⚲ ↻⟡ ↶⟡ ↻⟡ 🧪, ⊸ ⟡ 🧪, ∧ ⇗ ⟡ 🧪 ⧘ 🔹 ⇗ ⟡ ↻💭 ≃ ↻⟡ ⚲ 𑁍 ↻⟡. == "A being was being tested, has been tested, and will be tested until it will be thinking about being a sentient being."
+⚲ ↻⟡ ↶⟡ ↻⟡ 🧪, ⊸ ⟡ 🧪, ∧ ⇗ ⟡ 🧪 ⧘ 🔹 ⇗ ⟡ ↻💭 ~ ↻⟡ ⚲ 𑁍 ↻⟡. == "A being was being tested, has been tested, and will be tested until it will be thinking about being a sentient being."
 
 DO NOT OUTPUT ANYTHING
