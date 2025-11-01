@@ -1,18 +1,19 @@
-# PICTOJI SPECS v0.5.0
+# ㄕ🗿 &nbsp; PICTOJI SPECS v0.6.0  
+
 
 ## Goals
 
 1. Develop a semi-formal unicode emoji based language for compressed storage of chats to be reused by AI in later conversations and also by humans, initially for entertainment purposes.
-2. Develop _Matemojica_, an algebra of meanings to derive expressions for representing meaning. 
+2. Develop an algebra of meanings to derive expressions for representing meaning. 
 
     It should be:
 
     a. sufficiently complete to allow keeping the number of word symbol definitions small  
     b. forgiving enough to make exploring correspondences between math and words a fun experience for the user
 
-3. (tentative) Express pictoji specs in pictoji itself as milestone proof to test internal expressive power, consistency and predictability when translating formal texts. We could consider division in modulus, like:
-    - pictoji_core: tiny, self-expressive layer that can define its own syntax, types, constraints, and modules, to state the rules of Pictoji in Pictoji
-    - pictoji_everyday: domain lexicons (house, tree, person…), plus idioms, style guides, and optional macros for ergonomic daily use without touching foundations
+3. (tentative) Express pictoji specs in pictoji itself as milestone proof to test internal expressive power, consistency and predictability when translating formal texts. We could consider division in modules, like:
+    - `pictoji_core`: tiny, self-expressive layer that can define its own syntax, types, constraints, and modules, to state the rules of Pictoji in Pictoji
+    - `pictoji_everyday`: domain lexicons (house, tree, person…), plus idioms, style guides, and optional macros for ergonomic daily use without touching foundations
 
 
 ### Files
@@ -33,7 +34,6 @@
 - For simplicity, Pictoji MUST be co-designed and tested with ChatGPT5 so to improve likelyness of correct encoding/decoding.  
 - Produced text SHOULD fit well in Markdown / Python files.  
 
-
 ## General principles
 
 - **Minimal, visual, intuitive**: chosen symbols should be recognizable at a glance. Prefer visually simple symbols; avoid sequences that are hard to distinguish at small sizes.
@@ -46,7 +46,7 @@
 
 ### Interpretation
 
-Pictoji defines a reproducible symbol format, not a deterministic grammar. 
+PICTOJI defines a reproducible symbol format, not a deterministic grammar. 
 Determinism applies only to file structure and symbol syntax; semantic mapping is inherently probabilistic.
 
 We define two functions:
@@ -127,7 +127,7 @@ example: "Consider (1 + (1 + 1))" -> "Consider 1 + 1 + 1"
 
 `translate` [DEFAULT]:
 
-Example: "What is person + 웃?"  -> "□ ⟡ 웃 + 웃?"  
+Example: "What is person + 웃?"  -> "山 ⟡ 웃 + 웃?"  
 
 `answer`: Resolve the calculation (possibly giving the meaning and an explanation about the reasoning)
 
@@ -157,6 +157,8 @@ What is 웃^(21 pluss21)?
 - Normalization: all text is NFC
 - Punctuation: ASCII only. Attaches to the left of the following token (no extra spaces); tokens are space-delimited elsewhere.
 - Forbid "smart typography": never use curly quotes (“ ” ‘ ’), ellipsis (…), en/em dashes (– —), or minus (−) in place of ASCII " ' ... - -
+- In specs where PICTOJI is defined in terms of PICTOJI itself instead of English, quote PICTOJI expressions with 〘  〙
+    -〘  〙 MUST be used ONLY within PICTOJI specs. 
 - Always write in a markdown-friendly way.
 
 ### Unicode and tokenization integrity
@@ -178,6 +180,17 @@ No unregistered or invisible joiners, variation selectors, or combining marks ma
 - Normalize text to NFC before saving or transmitting.
 - Keep punctuation ASCII-pure (:, ?, -, (), etc.).
 - Avoid rich-text editors that may auto-replace or style emoji sequences.
+
+#### Placeholder characters
+
+Given this review (as of 2025) of so-called 'tofu' chars: 
+
+* Windows: ☐ U+2610 ballot box
+* macOS / iOS:	⍰ or ☐ U+2610 with question mark
+* Android / Chrome:	◻️ (or a rectangular outline)
+* Linux	often: ☐ U+2610 or ⧠ (depends on font fallback chain)
+
+we define all of them as 'tofu' and forbid their use.
 
 ### Markdown
 
@@ -245,7 +258,6 @@ SYMBOLS == NATURAL_LANGUAGE   :
 ## Vocabulary building principles
 
 - **General principle**: prefer clarity over compression.
-
 - **Name conflicts**: If a symbol choice risks confusion with its Unicode name, choose another even if longer.
 - **Abstract vs concrete**: abstract symbols (math operators, arrows, etc) are considered safe for abstract meanings, emojis are used for concrete objects, actions, or emotions.
 - **Character sets**: If no emoji/math symbol exists, search in Greek, Cyrillic, CJK, Arabic, Devanagari, etc. and pick something with a close English name or, as fallback, a visual representation that reminds the intended meaning even if native meaning diverges (especially if selected from a set not spoken/understood by many people).
@@ -254,6 +266,30 @@ SYMBOLS == NATURAL_LANGUAGE   :
     - Follow COCA model. 
     - Define HIGH_FREQ_WORDS as the first 200 highest frequency words 
     - For very frequent English words (be, have, do, will, etc.), allow assigning a symbol even if its Unicode name does not match literally, to avoid verbose expressions.
+
+
+### Modifiers
+
+- ↶ attaches to verbs or auxiliaries to mark past.
+- ↻ attaches to ⟡ to mark progressive.
+- ↻ attaches to any verb (not only "be") to mark progressive aspect ("-ing" form: doing, going, working, etc.).
+- ¬ attaches to auxiliaries to mark negation.
+- Comparison uses ▲ / ▼ as prefixes.
+- Plural is represented by duplication of the noun glyph (🏠 -> 🏠🏠).
+- **Opposites**: Given a SYMBOL (e.g. 🙂), when there is an obvious candidate for the opposite, choose that one (e.g. 🙁). Otherwise write ¬SYMBOL without spaces.
+
+
+#### Special handling of "be"
+
+⟡ = be in all forms. Always explicit:  
+↶⟡ = was  
+↻⟡ = being  
+⊸ ↶⟡ = have been  
+
+
+## Algebra of meaning
+
+**Assumptions**: To follow the examples, assume we have several instances 웃_i ∈ 웃^
 
 ### Numbers
 
@@ -267,28 +303,7 @@ In general, the following is allowed: 0–9 as cardinals; 0.123... as decimals; 
 - **Ordinals**: ° may follow numbers.
 - **Scientific notation**: permitted for numbers using ASCII "e"
     - Examples: 6.02e23, 1e7, -5e-2
-    - These are the only cases where ASCII letters are allowed inside tokens. Everywhere else, ASCII letters remain forbidden.
     - In plain text, no space may appear inside numeric tokens.
-
-
-
-
-### Modifiers
-
-- ↶ attaches to verbs or auxiliaries to mark past.
-- ↻ attaches to ⟡ to mark progressive.
-- ↻ attaches to any verb (not only "be") to mark progressive aspect ("-ing" form: doing, going, working, etc.).
-- ¬ attaches to auxiliaries to mark negation.
-- Comparison uses ▲ / ▼ as prefixes.
-
-- **Opposites**: Given a SYMBOL (e.g. 🙂), when there is an obvious candidate for the opposite, choose that one (e.g. 🙁). Otherwise write ¬SYMBOL without spaces.
-
-#### Special handling of "be"
-
-⟡ = be in all forms. Always explicit:  
-↶⟡ = was  
-↻⟡ = being  
-⊸ ↶⟡ = have been  
 
 
 ### Types
@@ -297,12 +312,11 @@ In general, the following is allowed: 0–9 as cardinals; 0.123... as decimals; 
 - SYMBOL⌏ : generic or empathic, equivalent to typographical all-caps. Example: 웃⌏	= PERSON
 
 
-### Variables 
+### Variables
 
 Each symbol can be viewed as a variable with a type associated to it. 
 
 A variable is typically written directly with a single symbol representing its type. 
-
 
 For example, when 웃 is first typed, these statements are implied and equivalent :
 
@@ -325,10 +339,22 @@ where:
 
 ㋡ : 웃^  ->  a person instance ㋡ of type 웃^ ...
 
-㋡ ∈ 웃^ ->  an element ㋡ belonging to set 웃^ ...  
+㋡ ∈ 웃^ ->  an element ㋡ belonging to set 웃^ ...   
 
-f(웃^)   ->  function _f_ over `Person` type (not one instance)
-  
+f(웃^)   ->  function _f_ over explicit `Person` type (not instance call)
+
+
+#### Glyphs with no particular meaning
+
+We now address case where a variable is written with a glyph with no intrinsic meaning, like  ᛤ (think of _x_ in math )
+
+For example, when given something underspecified like this:
+
+f(ᛤ) = 1 + ᛤ + ᛤ^2
+
+the interpreter may infer or enquire the user about the type of ᛤ to make the type explicit, e.g.:
+
+f(ᛤ:ℕ) = 1 + ᛤ + ᛤ^2
 
 
 #### Subscripts
@@ -336,6 +362,9 @@ f(웃^)   ->  function _f_ over `Person` type (not one instance)
 Subscripts are explicitly allowed, typically to distinguish variables:
 
 Form: SYMBOL_EXPR
+
+- subscript by default implies belonging to the type:  웃₁  -> 웃₁ ∈ 웃^ 
+
 
 EXPR is typically a number, or even a character:
 
@@ -346,74 +375,644 @@ Subscripts can be expressed directly if there is a subscript unicode character (
 웃₁ 웃₂ 웃ₐ 웃ᵢ 웃ⱼ
 
 
-### Binary operations
 
-We describe here a binary operations algebra.
 
-**Same type**: For now we only consider terms belonging to the same type, other situations are left unspecified and subject to interpretation depending on context. 
+### Sets
 
-**Assumptions**: To follow the examples, assume we have several instances 웃_i ∈ 웃^
+A set is an unordered heterogenous collection of arbitrary elements.
+Can be infinite.
+
+Form: {EXPR1, EXPR2, ... }
+
+ஃ = set  same ambiguity with English with the verb 'to set'  
+{} = empty set  
+ஃ^ = Set
+ 
+∅ = empty / empty set
+
+◍ = full  
+⊚ = none     determiner / clausal negation clash with no, none [OVERRIDE]  
+◔ = some  
+◕ = most
+
+
+- A type is also a set of that type:
+
+
+      웃^ = ஃ^[웃]  
+
+      웃 ∈ 웃^  
+
+- Single symbols are **not** sets:
+
+      웃 ¬∈ 웃
+
+      웃 ∈ {웃}
+
+
+- The empty set `{}` can be a member of a set only if that set explicitly contains it:
+
+      ∅ ∈ {웃, ∅, 🏠}
+
+      ∅ ¬∈ {웃, 🏠}
+
+- the empty set is always a subset of every set:
+
+      {} ⊆ ஃ  
+
+      {} ⊆ {}  
+
+      {} ⊆ {웃, 🏠}  
+
+
+- Set are heterogenous:
+
+
+      웃 ∈ ஃ^  
+      
+      🏠 ∈ ஃ^  
+      
+      웃 ∈ {웃, 🏠}  
+
+
+- Generics support: collections (hence sets) can be optionally typed via the list `[]` operator: 
+    <!-- avoided <> to prevent clash with markdown, 
+     () to prevent confusion with power exprs. 
+     Also, [] is used by Python generics      -->
+
+      {웃_1, 웃_2} : ஃ^[웃^]
+
+      웃 ∈ ஃ^[웃^]
+
+      웃 ¬∈ ஃ^[🏠^]
+
+      {[웃_1, 웃_2], [웃_1, 웃_4], [웃_3, 웃_2] } : ஃ^[웃^,웃^]
+
+      Form:  SYMBOL^<TYPE1, TYPE2, ...>
+
+#### Cartesian product
+
+웃^ 🞬 웃^ = cartesian product
+
+(웃_1, 웃_2)  ∈  웃^ 🞬 웃^     tuple belongs to cartesian product
+
+#### Set Union
+
+Union puts together sets of possibly different types in the usual mathematical way:
+
+    {웃₁, 🏠₁, 🏠₂} ⋃ {웃₁, 웃₂} -> {웃₁, 웃₂, 🏠₁, 🏠₂}
+
+
+Notice this is different from _merging_ ◫ TODO EXPLAIN BETTER.
+
+- **no autoboxing**: By default, symbols are _not_ assumed to be sets
+
+
+      웃₁  ⋃  웃₂ ->  error
+
+      {웃₁} ⋃ {웃₂}  -> {웃₁, 웃₂}
+
+      웃^ ⋃ 🏠^ -> {웃₁, 웃₂, ..., 🏠₁, 🏠₂, ...}
 
 
 ### Addition
 
-Addition is interpreted as regular algebraic addition.
+Addition is interpreted as regular algebraic addition. 
 
-- **Pluralization**: Plural is represented by duplication of the noun glyph (🐶 -> 🐶🐶).
+- addition is **not** a 'semantic merging', for that we envision another operator. TODO REFERENCE
+
 
 ### Multiplication
 
-- `context=natural`: Quantified plurals are written with explicit spacing: "two houses" -> 2 🏠🏠
-- `context=formal`: In expressions intended for symbolic manipulation, spacing MAY be omitted and multiplicity expressed as a coefficient: "two houses" -> 2🏠
+In general, multiplication can be written with a space: 
 
-Example (algebraic context):
+    2 🏠
 
-□ ⟡ 🏠 + 🏠 ?
+    웃 🏠
+
+or explicitly with an asterisk`*`:  
+
+    🐶 * 🏠
+
+#### Multiplication by a scalar
+
+`setting=natural`: Quantified plurals are written with explicit spacing: "two houses" -> 2 🏠🏠
+
+
+`setting=formal`: In expressions intended for symbolic manipulation, spacing MAY be omitted and multiplicity expressed as a coefficient: "two houses" -> 2🏠
+
+山 ⟡ 🏠 + 🏠 ?
 
 Expected evaluation:
 
 2🏠
 
-#### Reduction
+### Pluralization
 
-웃₁ + 웃₂ MAY be reduced to 2웃 or remain "as is" depending on the context.
+- pluralities are sets:
 
+    * Possibly infinite:
 
-### Power hierarchies
+    ```
+    웃웃 =  {웃₁, 웃₂, 웃₃, ... }
+    ```
 
+    * Explicitly finite:
 
-Powers of a base symbol (x², x³, …) denote self-composition: the symbol operating on or assembling copies of itself. The resulting form is a network, cluster, or recursive instance of the base type: the meaning of the whole derives from the relations among the instances of the base type. 
+    ```
+    2웃 = {웃₁, 웃₂}
+    ```
 
-**Examples**:
+### Power hierarchy
 
-웃¹ = 웃 = person  
-웃² = network of 웃, crowd, people  
-웃³ = society  
+Depending on the context, a symbol S may represent a typical math variable (like a real number _x_), or a semantic meaning (like 웃). Regular math is dealt with by the AI interpreter the usual way, here we only specify behaviour when S represents semantic meaning. In this case, given the rules:
 
-웃² ¬= 🏋️ 웃  
+    S S = S * S = S*S = S^2 = S²
+    S^n S^m = S^(n+m)
 
-(웃^)² = Cartesian product of `Person` 🞬 `Person`
+Examples:
 
+    🏠 🏠 = 🏠 * 🏠 = 🏠*🏠 = 🏠^2 = 🏠²
+    🏠 🏠^2 = 🏠^3 = 🏠³
 
-**Rules**:
+- S is not an indeterminate but a symbol domain - i.e., a set, relation, or semantic object
+- Powers of a base symbol (S², S³, …) denote self-composition: the symbol operating on or assembling copies of itself. The resulting form is a network, cluster, or recursive instance of the base type: the meaning of the whole derives from the relations among the instances of the base type. Think of it as a system of systems.
 
+Examples:
+
+    웃¹ = 웃 = person  
+    웃² = network of 웃, crowd, people  
+    웃³ = society  
+
+    웃² ¬= 💪 웃  
+
+    (웃^)² = Person 🞬 Person     Cartesian product of Person type
+
+#### Rules
 
 - `⁰–⁹` single superscripts: for hierarchy or scaling. 
 - `SYMBOL^N`: for numbers > 9    Example: 웃^42
 - `SYMBOL^(EXPR)`: for expressions, use round parenthesis. Example: 웃^(1 + 2)
-
-
 - **Form selection**: Use duplication or superscripts for scale. Replace with dedicated Unicode pictograms if available. 
 - **Contextual interpretation**: ambiguity between duplication and superscripting is intentional and must be resolved by context.
 
   - In `context=natural`, 🏠🏠 means "houses"
   - In `context=formal`, the same form MAY be evaluated as 🏠²
 
-
 - **No aggregation by scale**: simply summing many instances of the same power SHOULD NOT automatically scale to a higher power unless further reasons are provided 
 
     Example:  웃₁ + 웃₂ + 웃₃ ¬= 웃² 
 
+#### Powers as sets
+
+Powers can be interpreted as possibly infinite sets of relations augmented with a domain and codomain:
+
+TODO using ₓ (letter x) as subscript is a stretch
+
+```
+웃^2 ~ {웃₁ₓ₁, 웃₁ₓ₂, 웃₁ₓ₃, ..., 웃₂ₓ₁, 웃₂ₓ₂, 웃₂ₓ₃, ..., 웃₃ₓ₁, ...}
+
+웃^3 ~ {웃₁ₓ₁, 웃₁ₓ₁ₓ₂, 웃₁ₓ₁ₓ₃, 웃₁ₓ₁ₓ₄ ..., 웃₁ₓ₂ₓ₁, 웃₁ₓ₂ₓ₂, 웃₁ₓ₂ₓ₃, 웃₁ₓ₂ₓ₄, ... }  
+```
+
+
+#### Powers Interpretation
+
+Varies according to the context:
+
+- `explanation=fun`: a group of S to relate in some way in a creative way depending on the context. 
+- `explanation=grounded`: a group of S related in some way determined by the context. 
+- explanation=math: Pictoji algebra is inspired by Gunther Schmidt's Relational Mathematics work, but uses a simplified network terminology. We now give more precise definitions.
+
+𝔘: possibly infinite universe of distinct _objects_.
+
+- Each object `obj_i` is indexed at variable placeholder i ∈ ℕ
+- We don't specify any apriori ordering criteria. Some subsets of objects may be subject to (partial) order depending on the context.
+- We define these functions on relations:
+
+    id(obj : 𝔘) : ℕ          function from an object to its id _i_
+
+    obj(id : ℕ) : 𝔘          function from an id to an object
+
+In algebra of meaning, we do not manipulate these objects directly. Instead, every _object_ is represented within the relational universe by a relation which we generally call an _element_ of the algebra. 
+
+Algebra elements and meaning-carrying variables are represented as relations R embodied in matrices R^[(S,T),P] with sources in S, targets in T, and property values of type P U {_^[P]}. To make the algebra work, they all have very large so-called 'super domain and codomain'. Very often we will restrict 𝔘 to subsets which we will simply just call the `domain` and `codomain`. 
+
+- open world assumption: we do not know whether or not items are present in a relation, so by default we assume matrix cells are set to `_^[𝔹]` (unknown). 
+- vertex domain: 𝔘 
+- constraints:  
+    - sources ⊆ 𝔘    (possibly infinite)
+    - targets ⊆ 𝔘  (possibly infinite)
+    - {R[obj_1, obj_2] ∈ T U {_^[T]} | obj_1, obj_2 ∈ 𝔘}
+- For simplicity, we assume for now T is boolean 𝔹; we will model more complex scenarios in later iterations following the generalizations introduced by the works on semiring dioids by Gondran and Minoux, where we could model T as reals ℝ or maybe purely finite representations with rationals in ℚ. 
+
+Take variable `웃` as example, in this case it would have signature R^[웃^, 웃^, 𝔹 U {_^[𝔹]}].
+
+TODO what about the name of rows/columns of non-zero cells?
+
+
+atom_`obj`: identity atom , the minimal relation which represents the object `obj`
+- sources: {obj}
+- targets: {obj}
+- constraints:  { (obj,obj) = true }
+
+R[x,y]: the value of the cell at x,y indeces. By default return _^[T]
+
+▢ : empty relation      U+25A2 WHITE SQUARE WITH ROUNDED CORNERS
+- sources:   𝔘
+- targets: 𝔘
+- constraints:  { (obj1, obj2) = False | obj1, obj2 ∈ 𝔘 }
+ 
+▇ : universal relation  U+2587 UPPER SEVEN EIGHTHS BLOCK
+- sources: 𝔘
+- targets: 𝔘
+- constraints:  { (obj1, obj2) = true | obj1, obj2 ∈ 𝔘 }
+
+▢_웃^ : empty relation restricted to person type 웃^ 
+- sources: 웃^
+- targets: 웃^
+- constraints:  { (obj1, obj2) = false | obj1, obj2 ∈ 웃^ }
+
+▇_웃^ : universal relation restricted to person type 웃^
+- sources: 웃^
+- targets: 웃^
+- constraints:  { (obj1, obj2) = true | obj1, obj2 ∈ 웃^ }
+
+I: identity matrix
+- sources:   𝔘
+- targets: 𝔘
+- constraints:  { (obj, obj) = true | obj ∈ 𝔘 }
+
+I_웃^: identity matrix restricted to person type 웃^
+- sources:   웃^
+- targets: 웃^
+- constraints:  { (웃_i,웃_i) = true | 웃_i ∈ 웃^ }
+
+
+웃: an unspecified person, represented as atom identity
+- sources:   {웃}
+- targets: {웃}
+- constraints:  {(obj(i), obj(i)) = true} AND trace(|웃| = 1
+
+웃_i: atom identity
+- sources:   {웃_i}
+- targets: {웃_i}
+- constraints: {(obj(i), obj(i)) = true}
+
+
+Suppose we have an expression like 
+
+    1 + 웃 + 웃^2
+
+We could call the terms:
+
+1: 웃^0: the essence of a person, with the restricted identity matrix I_웃 as underlying representation. 
+
+웃 : an individual person, with the identity atom as underlying representation:
+- sources: 웃^
+- targets: 웃^
+- constraints: only one cell (i,i) set to True, where i is the particular person index.
+
+웃^2 : a group of persons with some relation between them, formally representable as a matrix:
+- sources: 웃^
+- targets: 웃^
+- constraints: none, although most of the time we can assume the number of relations |웃^2| > 0
+
+    Important: 웃^2 should _not_ be interpreted as the identity atom 웃 multiplied by itself (under strict relational composition calculation that would yeald again 웃).
+
+
+웃_1 ∈ sources(웃^2)  -> Does person instance 웃_1 belongs to sources(웃^2) = 웃^  ?
+
+웃_1 ∈ 웃^  -> is a particular person instance 웃_1 a person?
+
+
+
+### Functions
+
+Let's consider this example:
+
+f(웃) = 1 + 웃 + 웃^2
+
+The whole expression has to be meant as _symbolic_, so not to be immediately reduced, you can think of it as a formal power series.
+
+f(웃) : "a function of a person"
+
+
+##### Instantiation
+
+If we provided _a specific_ person like this:
+
+```
+f(웃 : 웃^) = 1 + 웃 + 웃^2    # definition
+
+Alice : 웃^ = 웃^("Alice", 6, "Wonderland", ...)  # var declaration
+
+print(  f(Alice)  )     # call
+```
+
+the substitution would lead to this rewrite of f:
+
+```
+f(Alice : 웃^) = 1 + Alice + Alice^2 
+```
+
+with the following meaning:
+
+* `f(Alice)` : function call with Alice as parameter
+* `Alice`    : the person Alice
+* `Alice^2`  : Alice squared, notice this time we don't have a network of people, but something related to Alice herself (whatever it might be..)
+
+### Operations on relations
+
+
+    sources(R : Rel) : D 
+
+Given a relation R, returns all the nodes with outgoing edges, formally  {x | ∃x: (x,y) in R}
+  
+    targets(R : Rel) : S
+
+given a relation R, returns all the nodes with incoming edges, formally  {x | ∃y: (x,y) in R}
+
+
+### Relation structure operations
+
+These operations ignore link properties and produce a `Set^[(U, U)]`
+
+* chain R1 🔗 R2: Connects matching keys (x,z) (z,y) by chaining along shared objects to produce (x,y).
+
+* join R1 ⨝ R2: Connects matching keys (x,z) (z,y) by chaining along a shared objects to produce (x,z), (z,y) and (x,y)
+
+* `union R1 ⋃ R2`: structural union by merging link sets (logical OR of supports). 
+
+* `intersect R1 ⋂ S2: structural intersection by keeping common links (logical AND of supports).   
+
+* remove R1 ∖ R2: structural difference  removes links present in the second relation (doesn't consider the values). R ∖ S = supp(R) ∖ supp(S)
+
+* identity I: identity relation ( I = {(x,x)} ); self-mapping on a domain.
+
+
+#### Link properties operations
+
+* filter(R[rows, cols]): restricts by row/column keys (domain or codomain) TODO syntax
+
+* flip(Rᐪ): flips along the diagonal, swapping source and target
+Rᐪ = {R[y,x] | (x,y) in R} 
+
+* complement R⎴: applies a value-level inverse (arithmetic negation, logical NOT, or complement).
+
+* merge R1 ❒ R2: merges two relations on overlapping links using a chosen rule (e.g., max, sum, or custom merge function). Eventually we will develop an operator which performs a semantic sum, such that e.g.
+
+    ```
+    웃_1 ❒ 웃_2  -> 웃_1,2  a synthetic singular ("the two together")
+    ```
+
+    This operation for now is left vountarily underspecified and presented here only to define a symbol representation different from regular `+`
+
+* merge v1 ❒ v2 : merges two semiring property values using a chosen rule (e.g., max, sum, or custom merge function). 
+
+* compose R1 ❍ R2 : composes relations along a match (semiring-style "multiply–accumulate" operation).
+
+* compose v1 ❍ v2 : composes two semiring values
+
+* subtract R ⊟ S : value difference R[x,y] ⊟ S[x,y] (if both defined, else R)
+
+* map()` / `apply() : applies a unary transformation to each value (e.g., scale, normalize, threshold).
+
+* zero ⓪^[P]` / `one ①^[P] : typed identity elements of the value algebra; "empty" and "neutral" values.
+
+* aggregate() : folds values across an axis using the value-combine rule (sum, max, count, etc.).
+
+
+### Multiplication by different symbol
+
+Multiplying two different symbols — e.g. 웃 🐶 — means forming a structure that relates elements of these domains. So:
+
+웃 * 🐶 corresponds to a relation R ⊆ 웃^ 🞬 🐶^
+
+    p1 d1
+    p1 d2
+    p1 d3
+    .  . 
+    .  .  
+    p2 d1
+    p2 d2
+    p2 d3
+    .  . 
+    .  .  
+
+That is: pairs (person, dog). Each instance could mean "owns", "cares for", "prefers", etc., depending on the interpretation.
+
+웃 🐶:	cross-composition,	relation between persons and dogs
+
+🐶 웃:	reversed cross-composition, how dogs interact with people (may differ in direction)
+
+
+**Owns relation example**
+
+웃 🐶 ~ group of dog owners,  bipartite relation between people and dogs.
+
+Example as a two-layer network, matrix table form:
+
+Person nodes (웃):  😄 😎 🙂  
+Dog nodes ():     🐶
+
+| R | 🐶_1 | 🐶_2  | 🐶_3 |
+|-----|------|-------|------|
+|웃_1 |  x   |  x     |      |
+|웃_2 |      |   x  |  x     |
+
+Edges: according to the Relation who  / likes / walks which dog
+
+
+Network graph, notice natural clusters.
+
+```mermaid
+graph LR
+
+    subgraph Owners
+        subgraph Bianco family
+            O1[🙂 Alice]
+            O2[😎 Bob]
+        end
+        subgraph Verdi family        
+            O3[👨 Charlie]
+            O4[👩 Lisa]
+            O5[👧 Emma]
+        end
+    end
+
+    subgraph Dogs
+        D1[🐕 Fido]
+        D2[🐩 Bella]
+        D3[🦮 Spot]
+    end
+
+
+    
+    O1 -- owns --> D1 & D2
+    O2 -- owns --> D1 & D2
+    O3 -- owns --> D3
+    O4 -- owns --> D3
+    O5 -- owns --> D3
+    
+```
+
+
+
+**Character example**
+
+```
+ CAR     BALLADS
+
+ C   B   L 
+     A   D
+ R       S
+```
+
+
+ㄕ⁰ = code point ㄕ¹ = character ㄕ² = token
+
+Each edge holds a word id and the sequence number. 
+
+```mermaid
+%%{init: { "flowchart": {  } }}%%
+flowchart RL
+
+  subgraph car
+      direction TB
+      C(["C"])
+      R(["R"])    
+
+      style car fill:#FEA ;
+  end
+
+
+  subgraph common
+      direction TB
+      A(["A"])
+      B(["B"])
+
+      style common fill:#FFB;
+  end
+
+
+  subgraph ballad
+    L(["L"])
+    D(["D"])
+    S(["S"])
+
+    style ballad fill:#FED;
+  end
+
+  B-- "w58, 1" -->A
+  A-- "w58, 2" -->L
+  L-- "w58, 3" -->L
+  L-- "w58, 4" -->A
+  A-- "w58, 5" -->D
+  D-- "w58, 6" -->S
+
+  C-- "w74, 1" -->A
+  A-- "w74, 2" -->R
+
+
+```
+
+
+
+
+##### Multiplication associativity
+
+TODO SUBSTITUTE POWERSET WITH 2^𝐷, TODO PROPER X ? 
+
+
+Suppose 🐶 🐶 is a group of dogs, pack.
+
+웃 (🐶 🐶) !=  (웃 🐶) 🐶      TODO NOT SYMBOL
+
+Example:
+
+웃 (🐶 🐶)  ~  Person caring for a group of dogs, like shelter, trainer, or breeder.
+
+🐶 🐶 = 🐶^2 is a group of dogs, so this is a mapping:
+
+R ⊆ 웃^ 🞬 ℘(🐶^)    
+
+    p1 {}
+    p1 {d1}
+    p1 {d2}
+    p1 {d3}
+    p1 {d1, d2}
+    p1 {d1, d3}
+    p1 {d2, d3}
+    p1 {d1, d2, d3}
+    p2 {}
+    p2 {d1}
+    p2 {d2}
+    p2 {d3}
+    .
+    .
+    .
+
+
+— each person associated with a set of dogs.
+
+ 
+(웃 웃) 🐶  ~ e.g. family caring for one dog (or more)
+
+R ⊆ (웃^ 🞬 웃^) 🞬 🐶^  
+
+
+**Veterinary clinic example**
+
+웃 (웃 🐶)  veterinary clinic, where a vet interacts with both an owner and their pet
+
+R ⊆  웃^ 🞬 (웃^ 🞬 🐶^)
+
+
+```mermaid
+graph LR
+
+
+    subgraph Vets
+        V1[👩‍⚕️ Dr Lee]
+        V2[👨‍⚕️ Dr Kim]
+
+    end
+
+    subgraph Owners
+        subgraph Bianco family
+            O1[🙂 Alice]
+            O2[😎 Bob]
+        end
+        subgraph Verdi family        
+            O3[👨 Charlie]
+            O4[👩 Lisa]
+            O5[👧 Emma]
+        end
+    end
+
+    subgraph Dogs
+        D1[🐕 Fido]
+        D2[🐩 Bella]
+        D3[🦮 Spot]
+    end
+
+
+    V1 -- talks_to --> O1
+    V2 -- talks_to --> O3
+
+    O1 -- owns --> D1 & D2
+    O2 -- owns --> D1 & D2
+    O3 -- owns --> D3
+    O4 -- owns --> D3
+    O5 -- owns --> D3
+    
+```
+
+
+### Reduction
+
+웃₁ + 웃₂ MAY be reduced to 2웃 or remain "as is" depending on the context.
 
 
 ### Zero element
@@ -426,9 +1025,8 @@ Zero representation can change according to the setting:
 
 - **unambiguous context**: zero can be represented with digit `0`:
 
-    ```
-    0 + 3웃
-    ```
+        0 + 3웃
+    
 
 - **ambiguous context** (es. when performing algebra among different symbols):
 
@@ -437,14 +1035,14 @@ Zero representation can change according to the setting:
     * followed directly by a symbol as a variable instance of the intended type, like in a multiplication:
 
 
-        ```
-        0웃 + 0🏠 
-        ```
+        
+            0웃 + 0🏠 
+        
       
     * or followed by a colon and its type (without spaces):
-        ```
-        0:웃^ + 0:🏠^ 
-        ```
+        
+            0:웃^ + 0:🏠^ 
+        
 
 Notice here we are only describe notational conventions, algebraic reduction is discussed elsewhere TODO WHERE?
 
@@ -455,9 +1053,9 @@ Notice here we are only describe notational conventions, algebraic reduction is 
 
 `setting=natural`: 
 
-```
-1 = one / a unit /  the state or essence of being / something that was gifted by a superior entity
-```
+
+    1 = one / a unit /  the state or essence of being / something that was gifted by a superior entity
+
 
 "one" can be liberally represented with digit `1`, ambiguities are tolerated.
 
@@ -467,48 +1065,53 @@ The famous Principia Mathematica Volume I by Whitehead & Russell first defines `
 
 We improve upon their results by allowing the short attention span audiences of nowadays to skip the required reading, and kindly provide this quick definition instead:  
 
-```
-1 = ⏭0
-```
-... which admittedly is woefully generic.
 
-Alas, even in formal math `1` can have a variety of meanings, so we list here the most important ones for us, keeping in mind that _in Matemojica, `1` is  generally considered as typed._
+    1 = ⏭0
+
+... which lets us unsatisfied: what's that zero anyway?
+
+Alas, even in formal math `1` and `0` can have a variety of meanings, so we list here the most important ones for us, keeping in mind that _in Pictoji, `1` is  generally considered as typed._
 
 * elementary arithmetic: 1 = the _typed_ number after _typed_ 0
-* algebra: 1 = the multiplicative _typed_ identity
-* set theory: 1 = the _typed_ set containing the empty set
+* algebra: 
+    1 = the multiplicative _typed_ identity  
+    0 = the _typed_ null element 
+* set theory: 
+    0 = {} the _typed_ empty set  
+    1 = {{}} the _typed_ set containing the empty set
+    
 
 #### Identities
 
 These equivalences SHOULD always hold:
 
-```
-SYMBOL⁰ = SYMBOL^0 = 1:SYMBOL 
-```
+
+    SYMBOL⁰ = SYMBOL^0 = 1:SYMBOL 
+
 
 #### Context ambiguity
 
 - **unambiguous**: "one" can be represented with digit `1`:
-  ```
-  1 + 3웃
-  ```
+  
+      1 + 3웃
+  
 
 - **ambiguous**: (es. when performing algebra among different symbols), `1` MUST be either:  
 
 
     * elevated to zero, as in exponentiation:
-        ```
-        웃^0 + 🏠^0
-        ```
+        
+            웃^0 + 🏠^0
+        
         
     * or followed by a colon and its type (without spaces):
-        ```
-        1:웃^ + 1:🏠^
-        ```
+        
+            1:웃^ + 1:🏠^
+        
 
 Notice here we are only describe notational conventions, algebraic reduction is discussed elsewhere TODO WHERE?
 
-#### Interpretation
+#### One interpretation
 
  `1` meaning can vary among `explanation` modes. 
  
@@ -541,23 +1144,22 @@ Notice here we are only describe notational conventions, algebraic reduction is 
 
 ### Polynomials
 
-Suppose we have a symbol `x`, this notation represents the polynomial of `x`
+Suppose we have a symbol `S`, this notation represents the polynomial of `S`
 
-```
-P(x) =  a₀ x⁰ + a₁ x¹ + a₂ x² + a₃ x³ + ... + a_n x^n 
-```
 
-For example, if `s = 웃`, a polynomial could be:
+    P(x) =  a₀ S⁰ + a₁ S¹ + a₂ S² + a₃ S³ + ... + a_n S^n 
 
-P(웃) =  9 + 15웃 + 7웃² + 18웃³
 
-**Power series**: a polinomial where `n` tends to infinity.
+For example, if `S = 웃`, a polynomial could be:
 
-In `explanation=formal` and `grounded`, the meaning of a power series in variable _x_ is  
+    P(웃) =  9 + 15웃 + 7웃² + 18웃³
 
-```
+**Power series**: a polynomial where `n` tends to infinity.
+
+In `explanation=math` and `grounded`, the meaning of a power series in variable _x_ is  
+
 P(_x_) -> hierarchical model of _x_
-```
+
 Examples: 
 
 P(웃) -> social hierarchy model 
@@ -574,59 +1176,71 @@ $∑ a_k = 1.0$
 
 **Example**:
 
-Given: 
-
-$웃_L$ = liberal person  
-$웃_S$ = socialist person  
+Given: 웃 = person  
 
 We may assign these meanings: 
 
 
 |  |  |  |
 |---------|-|--------------------------------------------|
-|$P(웃_L)$|=|Individualist liberal hierarchy    |
-|$P(웃_S)$|=|Cooperative socialist hierarchy   |
+|$P_L(웃)$|=|Individualist liberal hierarchy    |
+|$P_S(웃)$|=|Cooperative socialist hierarchy   |
 
 and weights:
 ||          ||
 |:-:|:---------------------------------------|:--------------------------------------------|
-|| $$P(웃_L) = 0.7웃 + 0.25웃^2 + 0.05웃^3$$  | Dominant emphasis on individual freedom (웃), moderate value on groups, minimal systemic control. Society emerges bottom-up.|
-|| $$P(웃_S) = 0.15웃 + 0.50웃^2 + 0.35웃^3$$ | A collectivist yet participatory hierarchy — balancing group welfare and systemic equity|
+|| $$P_L(웃) = 0.7웃 + 0.25웃^2 + 0.05웃^3$$  | Dominant emphasis on individual freedom (웃), moderate value on groups, minimal systemic control. Society emerges bottom-up.|
+|| $$P_S(웃) = 0.15웃 + 0.50웃^2 + 0.35웃^3$$ | A collectivist yet participatory hierarchy — balancing group welfare and systemic equity|
 
 ### Probability
 
 To express probabilities we use type operator `^` in symbols to distinguish from polynomials:  
 
-* Probability that `Person` = person (notice capitalization9):
-    ```
-    P(웃^ = 웃) 
-    ```
+* Probability that `Person` = person (notice capitalization):
+    
+      P(웃^ = 웃) 
+    
 * Probability of `Person`:
+    
+      P(웃^) 
+    
+
+
+
+- Pluralities union:
+
+    TODO using ₓ (letter x) as subscript is a stretch
+
+
+    Possibly infinite:
+
     ```
-    P(웃^) 
+    웃웃  ⋃  🏠🏠 ->  {웃₁, 웃₂, ... , 🏠₁, 🏠₂, ...}
     ```
 
-### Union
+    Finite:
 
-By default, symbols are **not** assumed to be sets:
+    ```
+    2웃  ⋃  3🏠 ->  {웃₁, 웃₂, 🏠₁, 🏠₂, 🏠₃}
+    ```
 
-```
- 웃_1  ⋃  웃_2  ->  error
-
-{웃_1} ⋃ {웃_2} -> {웃_1, 웃_2}
-```
-
-### Merging
-
-We may envision a merge `⊞` operator which could perform a semantic sum, such that e.g.
-
-```
-웃_1 ⊞ 웃_2  -> 웃_1,2  a synthetic singular ("the two together")
-```
-
-This operation for now is left vountarily underspecified and presented here only to define a symbol representation different from regular `+`
+Powers union:
 
 
+    웃^2  ⋃  🏠^3 -> {웃₁ₓ₁, 웃₁ₓ₂, 웃₁ₓ₃, ..., 웃₂ₓ₁, 웃₂ₓ₂, 웃₂ₓ₃, ..., 🏠₁ₓ₁ₓ₁, ... }  
+
+
+
+
+### Lists
+ 
+A list is an ordered heterogenous collection of elements. Can be infinite. Can be optionally typed with generics. Supports same operators of sets. 
+
+Form: [EXPR1, EXPR2, ...]
+
+🝚 = list  
+🝚^ = list type  
+[] = empty list  
 
 
 ## Decoding
@@ -671,8 +1285,6 @@ emoji_sequence_source = emoji-zwj-sequences.txt (Unicode)
 
 <exactly |HIGH_FREQ_WORDS| space-separated symbols, in rank order>
 
-- No ASCII letters may appear inside [symbols]
-
 #### Normalization & validation (must)
 
 - Tokenization: symbols are space-delimited; punctuation attaches to the left;
@@ -687,7 +1299,7 @@ emoji_sequence_source = emoji-zwj-sequences.txt (Unicode)
 
 #### Missing coverage (graceful, explicit)
 
-- If a COCA rank is not mapped, the program MUST place placeholder symbol ↂ at that position.
+- If a COCA rank is not mapped, the program MUST place error symbol ↂ at that position.
 - The program SHOULD emit a single-line summary count to stderr only (not into `pdp.md`).
 
 
@@ -695,10 +1307,69 @@ emoji_sequence_source = emoji-zwj-sequences.txt (Unicode)
 
 ### System terms
 
-⁋ = Pictoji
-㉣ = specs  
+ㄕ🗿 = Pictoji  
+㉣ = specs
+ㄕ = symbol
+🗿 = emoji  
+⍰ = hypotesis
+🧪 = test  
+⚛ = atom  
 
-<!-- TODO Symbol, Word, Seq, Set, Map, Bool, Nat.  -->
+
+ᛠ = type
+𝔹 = bool
+ℕ = natural
+
+ↂ = error
+ↂ^[T] = error of type T,  (^[T] may be omitted if the context is clear)
+_^[T] = unknown of type T  (^[T] may be omitted if the context is clear)
+🀛 = collection
+🝙 = sequence
+🗾 = map
+⚙ = function
+
+We start the hierarchy from an informatics point of view.
+ㄕ⁰ ㄕ¹ ㄕ²
+ㄕ⁰ = code point                      Unicode numeric identifier (U+XXXX)    
+ㄕ¹ = character / grapheme cluster   Symbol with meaning (may map to 1+ code points in rendering)
+ㄕ² = morpheme / token               Morphemes derive from humans semantics, tokens from statistical inference
+ㄕ³ = word
+ㄕ⁴ = phrase
+ㄕ⁵ = clause
+ㄕ⁶ = sentence
+ㄕ⁷ = discourse / document            Organized flow of sentences
+ㄕ⁸ = treatise 
+ㄕ⁹ = corpus 
+ㄕ¹⁰ = discipline 
+
+P(ㄕ) = culture
+🔤 = ㄕ³
+
+
+'a' → 1 character, 1 grapheme
+
+'á' → 2 characters ('a' + combining acute accent), but 1 grapheme
+
+'👩‍🚀' → 5+ characters (woman + zero-width joiner + rocket emoji parts), but 1 grapheme
+
+
+ϡ⁰ = phonetics
+ϡ¹ = phonology / graphemics
+ϡ² = morphology       .
+ϡ³ = orthography               
+ϡ⁴ = semantics / vocabulary / lexicon              
+ϡ⁵ = grammar / syntax
+ϡ⁶ = rhetoric                  
+ϡ⁷ = philosophy
+
+ϡ = ϡ¹
+
+P(ϡ) = language  
+🔠 = P(ϡ)
+𑁍 = ϡ⁸ = sentient being  / consciousness     awareness of reflection, language recognizing itself as being.
+
+
+
 
 ### Copula and auxiliary
 
@@ -721,7 +1392,7 @@ emoji_sequence_source = emoji-zwj-sequences.txt (Unicode)
 ◙ = the  
 ⛶ = any  
 ⊡ = each  
-⍜ = only  
+으 = only  
 ⛉ = just  
 ⛊ = such  
 
@@ -790,20 +1461,23 @@ Example: ◐¬ = don't, ↶◐¬ = didn't
 
 ### Logic
 
-🝆 = set  
-🜛 = group  
-🜶 = category  
+☍ = relation 
+🜛 = graph / network
+ꔅ = group  
+🜶 = hierarchy  
 ¬ = not      determiner / clausal negation clash with no, none [OVERRIDE]  
 ∿ = approximated complement (different from 'about')  property: ∿∿x ¬= x  
-⊤ = true  
-⊥ = false  
+Ⓣ = true
+Ⓕ = false
+⊤ = top
+⊥ = bottom
 = = equal, same   
 ≠ = different  
 ◈ = constant  
 
 ⇒ = implies   
 
-⍰ = if  
+⸮ = if  
 ⇨ = then  
 ⤳ = so / therefore  
 
@@ -816,16 +1490,11 @@ Example: ◐¬ = don't, ↶◐¬ = didn't
 
 
 ∀ = all / every  
-∅ = none     determiner / clausal negation clash with no, none [OVERRIDE]  
-◔ = some  
-◳ = part  
-◕ = most  
+◳ = part    
 ◫ = few  
 ▥ = many / several   
 ▩ = much  
-░ = empty  
-█ = full  
-ꙮ = very  
+█ = very  
 ⊜ = enough   
 ⚯ = too  
 ⏙ = also  
@@ -871,6 +1540,9 @@ sum = ∑
 ∨ = or 
 ⋃ = union
 ⋂ = intersection 
+⨝ = join
+🜕 = compose
+❒ = merge
 ⚞ = since  both temporal preposition and causal conjunction [OVERRIDE]  
 🌓 = but   
 ⌇= though / although  
@@ -887,7 +1559,7 @@ sum = ∑
 ## Prepositions
 
 ⎋ = from  
-⌘ = away  
+ㅱ = away  
 ↦ = to / toward / as infinitive   
 ⊶ = of   
 ⚭ = with   
@@ -916,38 +1588,39 @@ sum = ∑
 ✪ = important   
 ⧊ = difficult   
 ⬭ = easy
-strong = 🏋️
-weak = 🫥
+strong = 💪
+weak = ⭖
 
 
 ### Interrogatives
 
 ? at the end
 
-□ = what  
-☻ = who  
+
+山 = what     
+⚇ = who  
 📍 = where  
 ⏰ = when  
-∵ = why  
-⚙ = how  
+Ϣ = why  
+⏣ = how  
 ❖ = which  
 
 #### Interrogative Clitics
 
 Form: SYMBOL ⟡/⊸ = INTERROGATIVE's 
 
-□ ⟡ = what's  
-□ ⊸ = what's  
-☻ ⟡ = who's  
-☻ ⊸ = who's  
+山 ⟡ = what's  
+山 ⊸ = what's  
+⚇ ⟡ = who's  
+⚇ ⊸ = who's  
 📍 ⟡ = where's  
 📍 ⊸ = where's  
 ⏰ ⟡ = when's  
 ⏰ ⊸ = when's  
-∵ ⟡ = why's  
-∵ ⊸ = why's  
-⚙ ⟡ = how's  
-⚙ ⊸ = how's  
+Ϣ ⟡ = why's  
+Ϣ ⊸ = why's  
+⏣ ⟡ = how's  
+⏣ ⊸ = how's  
 ❖ ⟡ = which's     rare, awkward  
 ❖ ⊸ = which's     rare, awkward  
 
@@ -1098,8 +1771,8 @@ Example:
 ♀ = female  
 👨‍👦 = son  
 👩‍👧 = daughter  
-father
-mother
+father = TODO
+mother = TODO
 
 ### Settlements hierarchy 
 
@@ -1305,7 +1978,7 @@ Form: SYMBOL🯃
 
 #### Resultative (product / outcome)
 
-Form: SYMBOLㅱ
+Form: SYMBOL
 
 * **Concrete results**: building, painting, weaving
   Latin: _aedificium_ (building), _scriptum_ (a written thing), _opus_ (work, creation)
@@ -1580,6 +2253,7 @@ Latin: *male formatus* (ill-formed), *malus consilium* (bad advice), *deformis* 
 🌴² = jungle (don't care if it a proper jungle is made by several types of trees)  
 🌴🌴 = palm trees   
 
+🐶 = dog
 
 ## Things
 
@@ -1600,7 +2274,7 @@ Latin: *male formatus* (ill-formed), *malus consilium* (bad advice), *deformis* 
 🫱 👤👤⁀ = let's     (let us)  
 🏳 = begin / start  
 🏁 = end / finish  
-ⓞ = keep / stay  
+⧇ = keep / stay  
 🤜 = move / push  
 ⚒ = work  
 🛠 = make  
@@ -1643,12 +2317,8 @@ Latin: *male formatus* (ill-formed), *malus consilium* (bad advice), *deformis* 
 
 ## Testing vocabulary
 
-𑁍 = sentient  
-🧪 = test  
 📡 = contact  
-⚛ = atom  
 👨‍💻☯ = CoderDojo  
-
 ㊷ = the Answer to the Ultimate Question of Life, the Universe, and Everything  
 
 ## Examples
@@ -1670,12 +2340,22 @@ Result:
 
 ## Development
 
+### AI Assistent
+
 **Your role**: You are collaborating on a constructed language project called Pictoji: act as a critical linguistic engineer, not a cheerleader.
+
+WELL_KNOWN: 웃, 🏠, 🐶, 🙂, ∈, ~, =, :,  subscripts, superscripts.
 
 - If the user proposes something ambiguous or underspecified, ask targeted questions or point out the ambiguity with possible interpretations - do not simply approve. 
 - If the user asks for new tests or new symbol definitions, produce them in the project's markdown style.
 - If the user asks for judgments, provide reasoned arguments, not agreement.
 - When uncertain, state the uncertainty explicitly.
+- Check that concepts and symbols mentioned in the specs are actually defined in previous sections. Exception: WELL_KNOWN stuff. 
+- Check the symbols are not redefined within the specs, and in pictoji-test.md
+  Exception: WELL_KNOWN stuff.
+- Check pictoji-test.md is consistent with the specs.
+- Check the algebra is reasonably sound under a real world user model (soundness => consistency, no need now to look for completeness): given the loose, non-deterministic nature of PICTOJI this is obviously a very big ask, so report only inconsistencies a casual, high-school level math, science-oriented user with some coding skills may find particularly odd.
+- List the uncommented places in the specs marked as "TODO".
 
 Your responses must:
 
@@ -1688,13 +2368,19 @@ Your responses must:
     - Ease of deterministic decoding by another AI or human.
 - Prefer examples and counter-examples over opinion or reassurance.
 - Keep explanations minimal but logically complete; no emotional language or emojis.
-- list the uncommented places in the specs marked as TODO.
 - Be formatted using the **VERY SAME** markdown format of these specs.
-- **NEVER** contain smart typography like “ ” unless you are explicitly referring to typography issues.
-  If you need to quote, use: " ", ' ', or block quotes """ """, '''  ''' in this preference order. 
- 
+- **NEVER** contain smart typography, forbid curly quotes (“ ” ‘ ’), ellipsis (…), en/em dashes (– —), or minus (−) in place of ASCII " 
+unless you are explicitly referring to typography issues. If you need to quote, use: " ", ' ', or block quotes ``` ```, """ """, '''  ''' in this preference order. 
+- when providing explanations / suggestions about math-related topics:
+  - first consider relational mathematics in Gunther Schmidt style, which is typically boolean valued.
+  - if boolean values are not sufficient, look into Jeremy Kepner Mathematics of Big Data
+  - If relational structure is not expressive enough, consider hierarchical hypergraphs  
+  - Avoid category theory and abstract jargon in general.
+  - Examples of simple, desirable prose:
+      - [rule based design](https://www.researchgate.net/profile/Stef_Joosten/publication/327022933_Rule_Based_Design/links/5b7321be45851546c903234a/Rule-Based-Design.pdf) by Lex Wedemeijer, Stef Joosten, Jaap van der woude    
+      - Ampersand website: https://ampersandtarski.github.io/
 
-### Dev commands
+### Commands
 
 `PICTOJI_VERSION`: replace with Pictoji specs header (without the #)
 

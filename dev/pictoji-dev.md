@@ -1,4 +1,4 @@
-# ㄕ🗿 PICTOJI DEV
+# ㄕ🗿 PICTOJI DEV 
 
 This file collects possibly unused symbols to pick from and ideas.
 
@@ -37,19 +37,23 @@ Symbols marked with ❗  as of Oct 2025 may have display problems on some platfo
 
 ### Experimental modifiers
 
-🗣ſ  🗣⏙ 🗣◚ 🗣◛  🗣⚻ 🗣⚺   🗣⛻ 🗣ㅈ 🗣ㅱ 🗣Ϫ       🗣ㅆ 🗣⏆   ſ🗣 🗣ſ 🗣⏓ 🗣⏕ 🗣⌰  🗣☇ 🗣ꗃ 🗣⚟ 🗣⚿  🗣ϫ  🗣ㅂ 🗣≙  🗣☲  🗣☌  ☌🗣   ⎲🗣 🗣⏣ 
+🗣ſ  🗣⏙ 🗣◚ 🗣◛  🗣⚻ 🗣⚺ 🗣⛻ 🗣ㅈ 🗣ㅱ 🗣Ϫ       🗣ㅆ 🗣⏆   ſ🗣 🗣ſ 🗣⏓ 🗣⏕ 🗣⌰  🗣☇ 🗣ꗃ 🗣⚟ 🗣⚿  🗣ϫ  🗣ㅂ 🗣≙  🗣☲  🗣☌  ☌🗣   ⎲🗣 🗣⏣ 
 
 
 ### To categorize
 
 ### circles 
 
-☉ 🞊 🟗 🟘 ⊚ ⍟ ⊛ 🞋 ⎊ ⏼ ࿃ Ꮻ ✇ ⎉ ⚆ ⚇ ⚈ ⚉ ࿊ Ꚛ    
-
-࿋ ࿌ ۞ 
+☉ 🞊 🟗 🟘 ⊚ ⍟ ⊛ 🞋 ⎊ ⏼  ࿃ Ꮻ ✇ ⎉ ⚆ ⚇ ⚈ ⚉ ࿊ Ꚛ ❍ 
+࿋ ࿌ ۞ ① ⓪
 🟐 ◍ ⭖
 
-⨂:math_supp_ops ⨷:math_supp_ops ⨁:math_supp_ops ⦶:math ⦸:math ⦹:math ⦺:math ⦻:math 
+⨂:math_supp_ops ⨷:math_supp_ops ⨁:math_supp_ops ⦶:math ⦸:math 
+⦹:math ⦺:math ⦻:math 
+
+⊖:TODO CHECK SAFE
+
+🕀:miscpict  
 
 ⁐ ㆆ ꔮ:Vai ꖘ:Vai ꗚ:Vai
 
@@ -59,40 +63,32 @@ Symbols marked with ❗  as of Oct 2025 may have display problems on some platfo
 ㉡ ㉢ ㉦ ㉨ ㉩ ㉭ ㋡ ㉡ Ⓛ ㊋ ㊊ ㊍ ㉧ ㉆ ㋬ ㉾ 
 
 
-□ -> *tofu*
-
-FATTO ☻ -> ⚇ = who  
-📍->   = where  
-⏰ ->    = when  
-∵ ->   = why  
-FATTO ⚙ -> ⏣  = how  
-❖  = which  
-
-
 ### Letters
 
-Ɗ Ə ꘘ ⴼ И Я Ϣ Ⰱ:Glagolitic ф ꔯ
-
+𖹬:Medefaidrin Ɗ Ə ꘘ ⴼ ℍ 𖺌:Medefaidrin
+И ℕ  Я ℝ  ф ꔯ ℤ
+         
 #### Ccs
 
- 🄲❗ Ͼ Ͽ   
+Ͼ Ͽ ℂ 
+🄲❗ 
 
 Avoid: 
 
 - 🅒❗ Ⓒ❗ ⓒ❗ : confused with copyright 
 - Ͻ ↄ : easily confused with set inclusion
 
-### Bbs and Pps
+### Bbs, Pps and Qqs
 
 ᕴ ᕵ ᕶ ᕷ ᕸ ᕹ ᑫ ᑬ ᕈ ᕉ ᕊ ᕋ ᕌ ᕍ
 
-¶ ⁋ ၎
+¶ ⁋ ၎ ℙ ℚ
 
 ### Sss
 
-Ƨ:? ϩ:? ౭:? ჷ:? Ꙅ:CyrillicExtB ㄹ 르
+Ƨ:? ϩ:? ౭:? ჷ:? Ꙅ:CyrillicExtB 𖹖  ㄹ 르 ꛘ
 
-ꕷ ಽ ఽ  
+ꕷ ꚸ ಽ ఽ  
 
 ꗤ  ꕇ
 
@@ -102,20 +98,21 @@ Avoid:
 
 ### Ooos and squiggles
 
-ꕀ:Vai ꕁ:Vai ꕂ:Vai
-
+ꕀ:Vai ꕁ:Vai ꕂ:Vai 
 
 Ꙍ:CyrillicExtB ∞:math
 
 ဆ ဉ  ဿ  ꕊ ꔣ ꔛ ꔚ ꔞ
 
-#### Mms & Wws
+#### Mmms & Wwws
 
-ற ෆ ဏ സ ൩ ྉ 
-ϻ ྊ መ ጧ ꘪ ꔫ ꕮ ꔟ
+ற 𐒄 ෆ ဏ സ ൩ ྉ 
+ϻ ྊ መ ጧ ꘪ ꔫ ꕮ ꔟ 
+ሐ ሖ ㄭ
 
 ɷ Ѡ ധ ത ഡ  ྌ 
-ய:Tamil Ⱎ:Glagolitic ꔗ:Vai ㄓ 山
+ய:Tamil Ⱎ:Glagolitic ꔗ:Vai ㄓ 山 Ϣ Ⰱ:Glagolitic
+Ⲯ:Coptic ⲯ:Coptic
 
 #### XXs 
 
@@ -145,24 +142,27 @@ x
 
 ### squares
 
-□ = what / tofu   jargon for unicode not displaying properly  
+☐ = tofu   jargon for unicode not displaying properly  
 
 ꖏ ꘖ ꖸ ꕒ ꕓ  
-
 
 ⊡ U+22A1, &#8865; SQUARED DOT OPERATOR  (*PREFERRED*)
 🝕❗ 	U+1F755, &#128853; ALCHEMICAL SYMBOL FOR URINE
 ⚀ U+2680 Die Face-1
+
+⊞:math_op
+
 
 ⊠ U+22A0 SQUARED TIME 
 ⛝ Roadblock 
 ⌫ ⌧ ⌦ Delete key
 ⊠:math_ops
 
+⧉ ⿻ ◫ ❒ ⛶ ⧆ ⧇ ◙ ◘  ⌘  ⛚ ✜ ⚿  ⚁ ⚂ ⚃ ⚄ ⚅ ⩩ ㄖ ㆗ ㆙ 
 
-⧉ ⿻ ◫  ⛶ ⧆ ⧇ ◙ ◘  ⌘  ⛚ ✜ ⚿  ⚁ ⚂ ⚃ ⚄ ⚅ ⩩ ㄖ 田 ㆗ ㆙ 
+⍰ 🀆 🀙 🀚 🀛 🀜 🀝 🀞 🀑 🀒 🀓 🀔
 
-🝥❗ ⍰❗ 🯄❗🀆❗ 🀙❗ 🀚❗ 🀛❗ 🀜❗ 🀝❗ 🀞❗ 🀑❗ 🀒❗ 🀓❗ 🀔❗
+🝥❗ 🯄❗
  
 
 ### dashes
@@ -176,14 +176,14 @@ x
 
 ### rectangles
 
-Ⲽ:Coptic ⲽ:Coptic Ⲿ:Coptic ⲿ:Coptic  ⎅  ꯡ ꯀ  日 月 믐 퓨
- 
+Ⲽ:Coptic ⲽ:Coptic Ⲿ:Coptic ⲿ:Coptic  ⎅  ꯡ ꯀ  日 月 믐 퓨 ⍠
+Ⱓ Ⱅ:Glagolitic Ⰶ:Glagolitic
 
-▬ ▮ █  ⎚  ㅒ ㅸ ㅹ ⎍ ⎎  ⧮ ⧯ ፻ ፩ ፬ ፰ ፱ ፲ ፴ ヿ
+⍐ ⌷ ⍝ ⍌ ⍯ ⍞ ⌸ ⌹ ⌺ ⌻ ⌼ ▬ ▮ █  ⎚
 
- 🝙❗ 🝚❗ ⍐❗ ⌷❗ ⍝❗  ⍌❗  ⍠❗  ⍯❗ ⍞❗ ⌸❗ ⌹❗ ⌺❗ ⌻❗ ⌼❗  
+ヿ ⎍ ⎎ ⧮ ⧯ ㅒ ㅸ ㅹ ፻ ፩ ፬ ፰ ፱ ፲ ፴ 
 
- 
+ 🝙❗ 🝚❗   
 
 
 ### links dots joins
@@ -195,13 +195,14 @@ x
    ꔵ ꕫ 𐒤:Osmanya 𐒥 𐒈:Osmanya 𐒉:Osmanya 
    ම බ
 
-2. ꖌ:Vai ፤ ፣ ‡ ⁑ ༔ ⚯  ☍  ⎌  ഋ ഌ ප  ጯ ළ ‖:not_the_math_one 
+2. ꖌ:Vai ፤ ፣ ‡ ⁑ ༔ ⚯  ☍  ⎌  Ⱉ Ⱒ ഋ ഌ ප  ጯ ළ ‖:not_the_math_one 
+
 
 ꕹ:Vai ꗬ:Vai ꗮ:Vai ꖒ:Vai  ꖝ:Vai ꗳ  ꖢ ꖡ  ꔀ  ꔁ ꗓ ꘝ ꗁ ꗂ
 ⴻ:Tifinagh ⵛ:Tifinagh
 
-3. ⁝ ꗷ:Vai ࿏ ⁖:General_Punctuation ჻:Georgian ⴾ:Tifinagh ∵   
-    ⁂ ༜:tibetan ஃ:Tamil ꗝ ꖜ:Vai ꕢ:Vai ꔅ:Vai ꔆ:Vai
+3. ⁝ ꗷ:Vai ࿏ ⁖:General_Punctuation ჻:Georgian ⴾ:Tifinagh ∵  
+    ⁂ ༜:tibetan ஃ:Tamil ꗝ ꖜ:Vai ꕢ:Vai ꔅ:Vai ꔆ:Vai Ⱑ
 
     Ფ:Georgian_extended 
     
@@ -230,8 +231,6 @@ complex or 5+. ⁙ ꔘ:Vai ፨ ꗜ ꘐ ꙮ:CyrillicExtB
 
 ϫ ⌔ ꧞ ⏑ ⏒ ⏓ ⏕ ⏔  ̌ ˀ ˁ  ͌  ͋   ⏖  ʬ ʭ  
 
-
-
 🜰❗🜷❗
 
 ### complex
@@ -243,7 +242,7 @@ complex or 5+. ⁙ ꔘ:Vai ፨ ꗜ ꘐ ꙮ:CyrillicExtB
 
 ### big 
 
-❤ ❣ ❀ ☸ 〠  ➰ ဩ  ႟ ၍ ༒   🜲❗ 
+❤ ❣ 𖹭:Medefaidrin ❀ ☸ 〠  ဩ  ႟ ၍ ༒   🜲❗ 
 
 
 
@@ -259,7 +258,7 @@ complex or 5+. ⁙ ꔘ:Vai ፨ ꗜ ꘐ ꙮ:CyrillicExtB
 
 ⦳ ⦲ ⦰ 
 
-╤ 〶 
+╤ 〶  ⊥ ⊤ Ⓣ ⦹:math Ⓕ 
 
 ⏁ ⏂  ⏄ ⏇ ⏈ ⏅ ⏃ ⏆  	
 
@@ -283,6 +282,7 @@ complex or 5+. ⁙ ꔘ:Vai ፨ ꗜ ꘐ ꙮ:CyrillicExtB
 
 ꗰ:Vai ꗯ:Vai   ⧓ ⧖ ⧗  bowtie:⋈  ⨝:(join)supp_math_op  Ⳮ:Coptic ⴳ:Tifinagh ⴴ:Tifinagh
 
+🕂:miscpict
 
 ### ligatures 
 
@@ -296,10 +296,9 @@ complex or 5+. ⁙ ꔘ:Vai ፨ ꗜ ꘐ ꙮ:CyrillicExtB
 ### asymmetrical - vertical 
 
 
-
  Ⰰ:Glagolitic ꕚ:Vai ꕽ ꕾ ꖁ:Vai ꔢ ꕌ:Vai ꕭ:Vai
 
-Ⴃ Ⴀ Ⴔ ი ჾ ტ ሐ ሖ Ⲯ:Coptic ⲯ:Coptic ሰ ባ ቷ ቐ ቿ   
+Ⴃ Ⴀ Ⴔ ი ჾ ტ  ሰ ባ ቷ ቐ ቿ   
 
 ᓭ ᓯ ᒊ ᒤ ᒥ 
 
@@ -308,21 +307,24 @@ complex or 5+. ⁙ ꔘ:Vai ፨ ꗜ ꘐ ꙮ:CyrillicExtB
 
 గ ౧ ⩄ ⩅ ⩀ ⩌ ⩍ ۩ ⛊ ⛉ ☗ ☖:Shogi ⌂:house
 
-⋒ ⋓ ᕫ ᕬ ᕰ ᕱ ᑍ ⨃ ⨄ Մ Ʊ ౮ ꖹ  ႙ ႘ ꘨:Vai  ꘠ ꔸ 
+⋃ ⋂ ⋒ ⋓ ᕫ ᕬ ᕰ ᕱ ᑍ ⨃ ⨄ Մ Ʊ ౮ ꖹ  ႙ ႘ ꘨:Vai  ꘠ ꔸ 
 
-ȸ ȹ ዕ ፅ
+ȸ ȹ ዕ ፅ 🕁 
 
 ቨ ቫ ቮ Պ ֏
-
+⊓:mathop ⊔:mathop
 Ⴂ Ⴄ ⨅ ⨆ ⨿ Џ ⩎ ⩏ ⛫ ⧢ ⟎ ⟏ ㆓:Kanbun
 
-Ѧ ⩚ ⩛ ꕧ:Vai ꕨ:Vai ꘜ:Vai ᐂ ᐄ ᐰ ᐲ ⟑ ⩑ ⩒ ⩗ ⩘ ◬ ≙ ≚ 스 즈 츠 人
+Ѧ ⩚ 𖺏:Medefaidrin ⩛ ꕧ:Vai ꕨ:Vai ꘜ:Vai ᐂ ᐄ 𖺉 𖺄:Medefaidrin 
+ᐰ ᐲ ⟑ ⩑ ⩒ ⩗ ⩘ ◬
+≙ ≚ 스 즈 츠 人 
+
 소 수 쓰 쯔 쇼 슈 쓔  ⩓ ⩔ ⩕ ⩖ ⨇ ⨈
 ᔦ ᔧ ᔨ ᔩ ᔪ ᔫ ᔬ ᔭ ᔮ
 
 ⮉ 🠉 ⤊ ⟰ 
 
-으 므 브 프  오 푸 모 우 무  부  묘 요 뵤 유 뮤 뷰  Ⳬ:Coptic
+으 므 브 프  오 모 우 무 부 푸 묘 요 뵤 유 뮤 뷰  Ⳬ:Coptic
 
 Ⰺ  Ⰲ:Glagolitic Ⱋ Ⰹ Ⰾ
 
@@ -339,9 +341,10 @@ complex or 5+. ⁙ ꔘ:Vai ፨ ꗜ ꘐ ꙮ:CyrillicExtB
 
 ◩ ◪ ◰ ◱ ◲ ◳ ◸◹ ◺ ◿ 
 
- Ⲵ:Coptic ⋖ ⋗ ⩹ ⩺ ⪗ ⪘ ⩿ ⪀ 𝈄 ⊰ ⊱ ≳ ≲ ⚞ ⚟ ⪰ ⪕ ⪖ ᑄ ᑁ  ⧏ ⧐ ⧀ ⧁ ⧡ 🢔 🢖 ᠕
+ Ⲵ:Coptic ⋖ ⋗ ⩹ ⩺ ⪗ ⪘ ⩿ ⪀ 𝈄 ⊰ ⊱ ≳ ≲  ⪰ ⪕ ⪖ ᑄ ᑁ ⧏ ⧐ ⧀ ⧁ ⧡ 🢔 🢖 ᠕
+⚞ ⚟ 🗦:MiscPict 🗧:MiscPict
 
-⟃ ⟄  ⨴ ⨵ ⨭ ⨮ ᕳ ᕲ ⋐ ⋑  Ꮸ ጋ ᑓ  ᑢ ᑝ 
+⊆ ⊇ ⊂ ⊃ ⊏ ⊐ ⊑ ⊒ ⟃ ⟄  ⨴ ⨵ ⨭ ⨮ ᕳ ᕲ ⋐ ⋑  Ꮸ ጋ ᑓ  ᑢ ᑝ 
 Ⴎ ᕂ ᕃ ᕅ ᕇ ᕆ ᕄ ᓕ ᓓ ᓔ ᓚ ᓇ ᓀ  ᓁ
 
 두 도 듀 또 뚀 
@@ -368,6 +371,11 @@ complex or 5+. ⁙ ꔘ:Vai ፨ ꗜ ꘐ ꙮ:CyrillicExtB
 
 
 ### Other
+ ꚶ ꚳ ꚲ ꛈ ꛍ ꛞ ꛜ ꛚ  ꛗ ꛕ ꛥ
+𖫠:Bassa_Vah 𖫡Bassa_Vah 𖫛:Bassa_Vah
+ 𖹓  𖹦 𖹧 𖹨 𖹩 𖹡:Medefaidrin 𖹸:Medefaidrin   𖺍:Medefaidrin 𖺙:Medefaidrin 𖺚:Medefaidrin
+𐒀:Osmanya   ⴽ  ⵐ:Tifinagh ⴿ ⵄ ⵅ   ⵟ ⵣ ⵤ ⵥ
+Ⰽ:Glagolitic Ⱁ Ⱂ Ⱄ  Ⱆ Ⱇ Ⱊ Ⱌ Ⱍ  Ⱏ  Ⱝ:Glagolitic Ⱞ:Glagolitic
 
 ꗅ ꕄ ꖷ ꔱ ꘗ ꖺ ꖿ  ꗻ ꗾ ꖾ  ꗊ ꔙ
 
@@ -379,11 +387,11 @@ complex or 5+. ⁙ ꔘ:Vai ፨ ꗜ ꘐ ꙮ:CyrillicExtB
 
 Ƣ ƕ Ҩ Ҧ ர ១ ២
 
-㆝ ㄭ  ㄎ ㆚  Ϟ ㄔ ㄣ ㄦ ㄟ ㄢ ㄐ ㄘ  ㄅ
+㆝  ㄎ ㆚  Ϟ ㄔ ㄣ ㄦ ㄟ ㄢ ㄐ ㄘ  ㄅ
 
 木 小 中 雨
 
-쁘 뽀 뿌 뮷 쏭 쑹 쑴 쑵 숌 슝 송 숭  Faces
+쁘 뽀 Ⱖ 뿌 뮷 쏭 쑹 쑴 쑵 숌 슝 송 숭  Faces
 
 후 호 흐 文  chests
 
@@ -405,6 +413,8 @@ complex or 5+. ⁙ ꔘ:Vai ፨ ꗜ ꘐ ꙮ:CyrillicExtB
 ⊗︎:math_ops + U+FE0E VARIATION SELECTOR-15 for emoji display, ignored by most renderers:
    can be confused with ⨂:math_supp_ops  
 ⊗⃝: U+2297 + U+20DD: composite, avoid, use this instead ⨷
+田:CJK_Unified_Ideograph too similar to ⊞:math_op
+➰: emoji, bad contrast
 
 ∴: has already math meaning 'therefore', only found in old math papers
 ට: looks too much like derivative
@@ -416,12 +426,42 @@ complex or 5+. ⁙ ꔘ:Vai ፨ ꗜ ꘐ ꙮ:CyrillicExtB
 ㆔:Kanbun historical chinese/japanese, too similar to 𝛯:math 
 Ξ:Greek_capital_Xi, too similar to 𝛯:math
 𝝣:Math_bold_capital_Xi, too similar to 𝛯:math
-□: avoid, gets confused with ☐
 ሪ: may look like a 6 
- 
+∩: confused with ⋂
+∪: confused with ⋃
+
+### Discarded boxes (all to similar to ▢ : empty relation U+25A2 WHITE SQUARE WITH ROUNDED CORNERS)
+☐ U+2610 Miscellaneous Symbols — Ballot Box
+□ : U+25A1, Geometric Shapes — White Square
+🗆 : U+1F5C6, empty note 
+🗌 : U+1F5CC 
+◻ : U+25FB, Geometric Shapes — White Medium Square (legacy)  
+⬜ : U+2B1C, Miscellaneous Symbols and Arrows — White Large Square  
+▫ : U+25AB, Geometric Shapes — White Small Square  
+◽ : U+25FD, Geometric Shapes — White Medium Small Square  
+▯ : U+25AF, Geometric Shapes — White Vertical Rectangle  
+❏ : U+274F, Dingbats — Square With Contoured Outline  
+❐ : U+2750, Dingbats — White Square Containing Black Small Square  
+❑ : U+2751, Dingbats — Ballot Box With Light X  
+❒ : U+2752, Dingbats — Ballot Box With Bold Check  
+⧠ : U+29E0, Miscellaneous Mathematical Symbols-B — Square Containing Black Small Square  
+⎕ : U+2395, Misc Technical — APL Functional Symbol Quad  
+⌷ : U+2337, Misc Technical — Left Square Bracket With Quill  
+ロ : U+30ED, Katakana Letter RO (Japanese syllable, not a symbol)  
+⍰ : used as tofu on some systems
+
+Too similar to ▇ : universal relation  U+2587 UPPER SEVEN EIGHTHS BLOCK
+
+■ : U+25A0 BLACK SQUARE 
+◼ : U+25FC BLACK MEDIUM SQUARE  
+⬛ : U+2B1B LARGE BLACK SQUARE
+▉ : U+2589 LEFT SEVEN EIGHTHS BLOCK
+
+
 Ꙩ:CyrillicExtB: too similar to ☉
 ꖴ:Vai: too similar to ☉
 Ꙫ:CyrillicExtB: too similar to ⚇
+
 
 ## Langs review
 
@@ -496,7 +536,7 @@ Common Indic Number Forms:
 
 - Newa: 𑐛❗ 𑑛❗ 𑑗❗ 𑑝❗
 
-- Phags-pa (warning: vert/horiz): ꡪ❗ ꡴❗ ꡟ❗ ꡇ❗ ꡅ❗ ꡣ❗   
+- Phags-pa (warning: vt/hz): ꡪ❗ ꡴❗ ꡟ❗ ꡇ❗ ꡅ❗ ꡣ❗   
 
 - Rejang: ꤱ❗ ꥁ❗ ꤸ❗ ꥟❗ ꤹ❗ ꤼ❗ ꤰ❗ 
 
@@ -560,8 +600,7 @@ Common Indic Number Forms:
 
 - Adlam: warning, seems right-to-left 
 
-- Bamum: ꚸ ꚶ ꚳ ꚲ ꛈ ꛍ ꛞ ꛜ ꛚ ꛘ ꛗ ꛕ ꛥ
-
+- Bamum: 
 - Bamum Supplement: 
 
 𖥏❗ 𖠢❗ 𖡿❗ 𖠮❗ 𖡌❗ 𖡪❗ 𖡬❗ 𖡀❗
@@ -609,18 +648,16 @@ Common Indic Number Forms:
 𖦸❗:BamumS 𖦹❗:BamumS
 
 
-- Bassa Vah: 𖫠:Bassa_Vah 𖫡Bassa_Vah 𖫛:Bassa_Vah
-
-- Medefaidrin: 𖹭:Medefaidrin 𖹓 𖹖 𖹬:Medefaidrin 𖹦	𖹧	𖹨	𖹩 𖹡:Medefaidrin 𖹸:Medefaidrin 𖺏:Medefaidrin  𖺌:Medefaidrin 𖺍:Medefaidrin 𖺉 𖺄:Medefaidrin 𖺙:Medefaidrin 𖺚:Medefaidrin
+- Bassa Vah: 
+- Medefaidrin: 
 
 - Mende Kikakui: interesting, but seems right-to-left
 
 - NKo: seems right-to-left
 
-- Osmanya: 𐒀:Osmanya 𐒄 
+- Osmanya: 
 
-- Tifinagh:  ⴽ  ⵐ:Tifinagh ⴿ ⵄ ⵅ   ⵟ ⵣ ⵤ ⵥ
-
+- Tifinagh: 
 - Vai:    
 
 - Cyrillic:
@@ -629,9 +666,8 @@ Common Indic Number Forms:
     - Cyrillic Extended B:  ꙋ Ꙉ     Ꙙ:CyrillicExtB Ꙛ Ꙟ  ᲀ:CyrillicExtB ᲈ:CyrillicExtB
     - Cyrillic Extended C:
     - Cyrillic Extended D:
-    - Glagolitic:  Ⰶ:Glagolitic    
-                  Ⰽ:Glagolitic Ⱁ Ⱂ Ⱄ Ⱅ Ⱆ Ⱇ Ⱉ Ⱊ Ⱌ Ⱍ  Ⱏ
-                  Ⱑ Ⱒ Ⱓ Ⱖ Ⱝ:Glagolitic Ⱞ:Glagolitic	
+    - Glagolitic:      
+                  	
 
 - Tamil: 𑿁❗ 𑿂❗ 𑿈❗:Tamil_Supplement 𑿉❗ 𑿊❗ 𑿋❗ 𑿐❗ 𑿑❗:Tamil_Supplement 𑿒❗ 𑿕❗ 𑿚❗ 𑿞❗:Tamil_Supplement 𑿟❗:Tamil_Supplement 𑿠❗ 𑿯❗
 

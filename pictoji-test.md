@@ -1,4 +1,4 @@
-# Pictoji Tests (v0.5.0)
+# Pictoji Tests (v0.6.0)
 
 DO NOT PLACE FANCY TYPOGRAPHICS LIKE “” HERE. 
 
@@ -13,10 +13,13 @@ NOTE: these tests have awkward English _on purpose_ to show literal decoding is 
 
 ```
 👤 ⊸ ↶⟡ ↻⚒ == I have been working
-🫵 🞋 ◐¬ ⸮ ☻ ? == you can do not ask who ?  *(odd but literal; tests negation attach to aux)*
 ◙ ⌖ ∈ ▣ ☟ == the place in this here
+
 👤 ⇗ ⚭ 👤👤 ↦ ⌖ == I will with we to place
-☻ ⟹ ◐ ⸮ □ ? == who if…then do ask what ?
+
+TODO THESE TWO WERE MESSED UP BY FIND/REPLACE
+🫵 🞋 ◐¬ ⸮ ⸮ ? == you can do not ask who ?  *(odd but literal; tests negation attach to aux)*
+⸮ ⟹ ◐ ⸮ 山 ? == who if…then do ask what ?
 ```
 
 ### Noun pluralization
@@ -46,7 +49,7 @@ NOTE: these tests have awkward English _on purpose_ to show literal decoding is 
 👤 ↶🞋 ⏢ == I could help
 👤 ↶🞋¬ ⏢ == I couldn't help
 👤 ⇗¬ 🏃 == I will not go
-👤 ↶◐¬ ⸮ □ ? == I did not ask what ?
+👤 ↶◐¬ ⸮ 山 ? == I did not ask what ?
 
 ### Prepositions & compounds
 
@@ -59,7 +62,7 @@ NOTE: these tests have awkward English _on purpose_ to show literal decoding is 
 
 📍 ◙ ⌖ ? == where the place ?
 ❖ ☉ ◕ ⊳ ◔ ? == which thing most than some ? *(form test)*
-∵ 👤 ◐ ⸮ 🗣 ? == why I do ask speak ? *(order test)*
+Ϣ 👤 ◐ ⸮ 🗣 ? == why I do ask speak ? *(order test)*
 
 ## Time
 
@@ -141,8 +144,8 @@ NOTE: these tests have awkward English _on purpose_ to show literal decoding is 
 
 ### Since (temporal vs causal) with your chosen split⟡
 
-- Temporal: ⟡ 👤 ⓞ ∺ ⏮️📅.
-- Causal  : ⟡ 👤 ⓞ ⊣ ⚡.
+- Temporal: ⟡ 👤 ⧇ ∺ ⏮️📅.
+- Causal  : ⟡ 👤 ⧇ ⊣ ⚡.
 
 ### Possessive vs object
 

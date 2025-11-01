@@ -1,7 +1,6 @@
 
 # ㄕ🗿  &emsp;  PICTOJI
 
-
 An emoji-based language to explore what an AI-assisted algebra of meaning could possibly be.
 
 Features:
