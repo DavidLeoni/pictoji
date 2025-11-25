@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mxfile host="app.diagrams.net" modified="2025-10-19T12:16:00Z" agent="ChatGPT" version="24.7.7">
+  <diagram id="clouds-diagram" name="Page-1">
+    <mxGraphModel dx="1280" dy="720" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1920" pageHeight="1200" math="0" shadow="0">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+        
+        <!-- Top-level container: clouds -->
+        <mxCell id="clouds" value="clouds" style="swimlane;rounded=1;html=1;startSize=28;" vertex="1" parent="1">
+          <mxGeometry x="40" y="40" width="900" height="420" as="geometry"/>
+        </mxCell>
+
+        <!-- Child containers inside clouds: aws and gcloud -->
+        <mxCell id="aws" value="aws" style="swimlane;rounded=1;html=1;startSize=28;" vertex="1" parent="clouds">
+          <mxGeometry x="24" y="60" width="380" height="300" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="gcloud" value="gcloud" style="swimlane;rounded=1;html=1;startSize=28;" vertex="1" parent="clouds">
+          <mxGeometry x="436" y="60" width="380" height="300" as="geometry"/>
+        </mxCell>
+
+        <!-- AWS children -->
+        <mxCell id="load_balancer" value="load_balancer" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="aws">
+          <mxGeometry x="24" y="60" width="140" height="60" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="api" value="api" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="aws">
+          <mxGeometry x="24" y="160" width="140" height="60" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="db_aws" value="db" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="aws">
+          <mxGeometry x="200" y="160" width="140" height="60" as="geometry"/>
+        </mxCell>
+
+        <!-- GCLOUD children -->
+        <mxCell id="auth" value="auth" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="gcloud">
+          <mxGeometry x="24" y="120" width="140" height="60" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="db_gcloud" value="db" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="gcloud">
+          <mxGeometry x="216" y="160" width="140" height="60" as="geometry"/>
+        </mxCell>
+
+        <!-- Edges on top layer (parent=1) -->
+        <!-- load_balancer -> api -->
+        <mxCell id="e_lb_api" edge="1" parent="1" source="load_balancer" target="api" style="endArrow=block;html=1;curved=1;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="150" y="260"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+
+        <!-- api -> db (within aws) -->
+        <mxCell id="e_api_db_aws" edge="1" parent="1" source="api" target="db_aws" style="endArrow=block;html=1;curved=1;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="190" y="300"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+
+        <!-- auth -> db (within gcloud) -->
+        <mxCell id="e_auth_db_gcloud" edge="1" parent="1" source="auth" target="db_gcloud" style="endArrow=block;html=1;curved=1;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="616" y="280"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+
+        <!-- gcloud -> aws (container-to-container) HIGH-BOWED above headers -->
+        <mxCell id="e_gcloud_aws" edge="1" parent="1" source="gcloud" target="aws" style="endArrow=block;html=1;curved=1;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <!-- Route between clouds header (~y=68) and child headers (~y=100) -->
+              <mxPoint x="816" y="88"/>
+              <mxPoint x="436" y="88"/>
+              <mxPoint x="214" y="88"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

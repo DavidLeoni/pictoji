@@ -1,0 +1,42 @@
+<mxfile host="app.diagrams.net" modified="2025-10-19T00:00:00Z" agent="D2→draw.io converter" version="24.7.10">
+  <diagram id="D2Containment" name="Page-1">
+    <mxGraphModel>
+      <root>
+        <!-- Required roots -->
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+
+        <!-- Container: christmas -->
+        <mxCell id="container_christmas" value="christmas" style="swimlane;rounded=1;html=1;startSize=28;fillColor=#ACE1AF;" vertex="1" parent="1">
+          <mxGeometry x="40" y="40" width="260" height="180" as="geometry"/>
+        </mxCell>
+
+        <!-- Child: christmas.presents -->
+        <mxCell id="node_christmas.presents" value="presents" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="container_christmas">
+          <mxGeometry x="24" y="60" width="120" height="50" as="geometry"/>
+        </mxCell>
+
+        <!-- Container: birthdays -->
+        <mxCell id="container_birthdays" value="birthdays" style="swimlane;rounded=1;html=1;startSize=28;" vertex="1" parent="1">
+          <mxGeometry x="340" y="40" width="260" height="180" as="geometry"/>
+        </mxCell>
+
+        <!-- Child: birthdays.presents -->
+        <mxCell id="node_birthdays.presents" value="presents" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="container_birthdays">
+          <mxGeometry x="24" y="60" width="120" height="50" as="geometry"/>
+        </mxCell>
+
+        <!-- Edge: _.christmas.presents -> birthdays.presents (label: regift) -->
+        <mxCell id="edge_regift_1" value="regift" style="endArrow=block;html=1;curved=1;" edge="1" parent="1" source="node_christmas.presents" target="node_birthdays.presents">
+          <!-- One waypoint to route below headers and minimize crossings -->
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="270" y="230"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

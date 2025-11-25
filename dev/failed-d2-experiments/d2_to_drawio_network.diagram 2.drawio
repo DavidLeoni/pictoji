@@ -1,0 +1,91 @@
+<mxfile host="65bd71144e">
+    <diagram name="Page-1" id="0">
+        <mxGraphModel dx="687" dy="639" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="2200" pageHeight="1700" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="network" value="network" style="swimlane;rounded=1;html=1;startSize=28;" parent="1" vertex="1">
+                    <mxGeometry x="40" y="40" width="900" height="420" as="geometry"/>
+                </mxCell>
+                <mxCell id="network.cell_tower" value="cell tower" style="swimlane;rounded=1;html=1;startSize=28;" parent="network" vertex="1">
+                    <mxGeometry x="24" y="60" width="260" height="320" as="geometry"/>
+                </mxCell>
+                <mxCell id="network.cell_tower.satellites" value="satellites" style="shape=mxgraph.flowchart.storedData;multiple=1;html=1;" parent="network.cell_tower" vertex="1">
+                    <mxGeometry x="24" y="60" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="network.cell_tower.transmitter" value="transmitter" style="rounded=1;html=1;" parent="network.cell_tower" vertex="1">
+                    <mxGeometry x="24" y="140" width="120" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="network.online_portal" value="online portal" style="swimlane;rounded=1;html=1;startSize=28;" parent="network" vertex="1">
+                    <mxGeometry x="324" y="60" width="260" height="320" as="geometry"/>
+                </mxCell>
+                <mxCell id="network.online_portal.ui" value="ui" style="shape=hexagon;perimeter=hexagonPerimeter2;html=1;" parent="network.online_portal" vertex="1">
+                    <mxGeometry x="24" y="60" width="140" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="network.data_processor" value="data processor" style="swimlane;rounded=1;html=1;startSize=28;" parent="network" vertex="1">
+                    <mxGeometry x="624" y="60" width="260" height="320" as="geometry"/>
+                </mxCell>
+                <mxCell id="network.data_processor.storage" value="storage" style="shape=cylinder;multiple=1;html=1;" parent="network.data_processor" vertex="1">
+                    <mxGeometry x="24" y="60" width="160" height="70" as="geometry"/>
+                </mxCell>
+                <mxCell id="user" value="user" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="40" y="500" width="50" height="100" as="geometry"/>
+                </mxCell>
+                <mxCell id="api_server" value="api server" style="rounded=1;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="500" y="520" width="140" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="logs" value="logs" style="shape=document;multiple=1;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="780" y="520" width="140" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="e_sat_tx_1" value="send" style="endArrow=block;html=1;noEdgeStyle=1;curved=1;" parent="1" source="network.cell_tower.satellites" target="network.cell_tower.transmitter" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="128" y="230"/>
+                        </Array>
+                        <mxPoint x="-14" y="-16" as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="e_sat_tx_2" value="send" style="endArrow=block;html=1;noEdgeStyle=1;curved=1;" parent="1" source="network.cell_tower.satellites" target="network.cell_tower.transmitter" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="148" y="230"/>
+                        </Array>
+                        <mxPoint as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="e_sat_tx_3" value="send" style="endArrow=block;html=1;noEdgeStyle=1;curved=1;" parent="1" source="network.cell_tower.satellites" target="network.cell_tower.transmitter" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="168" y="230"/>
+                        </Array>
+                        <mxPoint x="14" y="16" as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="e_tx_storage" value="phone logs" style="endArrow=block;html=1;edgeStyle=orthogonalEdgeStyle;orthogonalLoop=1;" parent="1" source="network.cell_tower.transmitter" target="network.data_processor.storage" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="208" y="430"/>
+                            <mxPoint x="654" y="430"/>
+                            <mxPoint x="654" y="195"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="e_user_celltower" value="make call" style="endArrow=block;html=1;" parent="1" source="user" target="network.cell_tower" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e_user_ui" value="access" style="endArrow=block;html=1;dashed=1;dashPattern=3 3;" parent="1" source="user" target="network.online_portal.ui" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e_api_ui" value="display" style="endArrow=block;html=1;" parent="1" source="api_server" target="network.online_portal.ui" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e_api_logs" value="persist" style="endArrow=block;html=1;" parent="1" source="api_server" target="logs" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e_dataproc_api" value="" style="endArrow=block;html=1;" parent="1" source="network.data_processor" target="api_server" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>

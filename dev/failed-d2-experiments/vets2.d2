@@ -1,0 +1,47 @@
+direction: right
+
+V: Vets {
+  1: 👩‍⚕️ Dr Lee
+  2: 👨‍⚕️ Dr Kim
+  3: Dr Z
+}
+
+O: Owners {
+  B: Bianco family {
+    direction: down
+
+    1: 🙂 Alice
+    2: 😎 Bob
+  }
+  V: Verdi family: {
+    direction: down
+    1: 👨 Charlie
+    2: 👩 Lisa
+    3: 👧 Emma
+  }
+}
+
+D: Dogs {
+  direction: down
+  1: 🐕 Fido
+  2: 🐩 Bella
+  3: 🦮 Spot
+}
+
+V.1 -> O.B.1: talks_to
+V.2 -> O.V.3: talks_to
+
+V.1 -> V.2: collaborates with
+V.1 -> V.1: collaborates with
+V.1 -> V.3: collaborates with
+V.3 -> V.2: collaborates with
+
+O.B.1 -> D.1: owns
+O.B.1 -> D.2: owns
+
+O.B.2 -> D.1: owns
+O.B.2 -> D.2: owns
+
+O.V.1 -> D.D3: owns
+O.V.2 -> D.D3: owns
+O.V.3 -> D.D3: owns

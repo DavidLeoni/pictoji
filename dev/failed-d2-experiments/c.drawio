@@ -1,0 +1,130 @@
+<mxfile host="app.diagrams.net" modified="2025-10-19T11:36:33.055553Z" agent="D2-to-drawio" version="22.0.8">
+  <diagram id="d2" name="Page-1">
+    <mxGraphModel dx="1280" dy="720" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1920" pageHeight="1080" math="0" shadow="0">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+        
+        <!-- Top-level external node: users -->
+        <mxCell id="n_users" value="users" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="40" y="220" width="120" height="50" as="geometry"/>
+        </mxCell>
+
+        <!-- Top-level container: clouds -->
+        <mxCell id="c_clouds" value="clouds" style="swimlane;rounded=1;html=1;startSize=28;" vertex="1" parent="1">
+          <mxGeometry x="200" y="80" width="800" height="420" as="geometry"/>
+        </mxCell>
+
+        <!-- Child container of clouds: aws -->
+        <mxCell id="c_clouds.aws" value="AWS" style="swimlane;rounded=1;html=1;startSize=28;" vertex="1" parent="c_clouds">
+          <mxGeometry x="24" y="60" width="360" height="320" as="geometry"/>
+        </mxCell>
+
+        <!-- Nodes inside aws -->
+        <mxCell id="n_clouds.aws.load_balancer" value="load_balancer" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="c_clouds.aws">
+          <mxGeometry x="24" y="60" width="140" height="60" as="geometry"/>
+        </mxCell>
+        <mxCell id="n_clouds.aws.api" value="api" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="c_clouds.aws">
+          <mxGeometry x="200" y="60" width="120" height="60" as="geometry"/>
+        </mxCell>
+        <mxCell id="n_clouds.aws.db" value="db" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="c_clouds.aws">
+          <mxGeometry x="200" y="160" width="120" height="60" as="geometry"/>
+        </mxCell>
+
+        <!-- Child container of clouds: gcloud -->
+        <mxCell id="c_clouds.gcloud" value="Google Cloud" style="swimlane;rounded=1;html=1;startSize=28;" vertex="1" parent="c_clouds">
+          <mxGeometry x="416" y="60" width="360" height="320" as="geometry"/>
+        </mxCell>
+
+        <!-- Nodes inside gcloud -->
+        <mxCell id="n_clouds.gcloud.auth" value="auth" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="c_clouds.gcloud">
+          <mxGeometry x="24" y="60" width="120" height="60" as="geometry"/>
+        </mxCell>
+        <mxCell id="n_clouds.gcloud.db" value="db" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="c_clouds.gcloud">
+          <mxGeometry x="200" y="60" width="120" height="60" as="geometry"/>
+        </mxCell>
+
+        <!-- Top-level container: ci (implied by ci.deploys) -->
+        <mxCell id="c_ci" value="ci" style="swimlane;rounded=1;html=1;startSize=28;" vertex="1" parent="1">
+          <mxGeometry x="40" y="420" width="140" height="180" as="geometry"/>
+        </mxCell>
+        <mxCell id="n_ci.deploys" value="deploys" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="c_ci">
+          <mxGeometry x="24" y="60" width="92" height="48" as="geometry"/>
+        </mxCell>
+
+        <!-- EDGES: all on top layer parent=1 -->
+        <!-- aws: load_balancer -> api -->
+        <mxCell id="e_aws_lb_api" style="edgeStyle=orthogonalEdgeStyle;rounded=1;jettySize=auto;html=1;endArrow=block;endFill=1;" edge="1" parent="1" source="n_clouds.aws.load_balancer" target="n_clouds.aws.api">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <!-- Route within content area, below header -->
+              <mxPoint x="380" y="240"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+
+        <!-- aws: api -> db -->
+        <mxCell id="e_aws_api_db" style="edgeStyle=orthogonalEdgeStyle;rounded=1;jettySize=auto;html=1;endArrow=block;endFill=1;" edge="1" parent="1" source="n_clouds.aws.api" target="n_clouds.aws.db">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="460" y="320"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+
+        <!-- gcloud: auth -> db -->
+        <mxCell id="e_gcloud_auth_db" style="edgeStyle=orthogonalEdgeStyle;rounded=1;jettySize=auto;html=1;endArrow=block;endFill=1;" edge="1" parent="1" source="n_clouds.gcloud.auth" target="n_clouds.gcloud.db">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="760" y="240"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+
+        <!-- container-to-container: gcloud -> aws -->
+        <mxCell id="e_gcloud_to_aws" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;jettySize=auto;html=1;endArrow=block;endFill=1;" edge="1" parent="1" source="c_clouds.gcloud" target="c_clouds.aws">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <!-- Route above to avoid headers -->
+              <mxPoint x="580" y="120"/>
+              <mxPoint x="420" y="120"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+
+        <!-- users -> clouds.aws.load_balancer -->
+        <mxCell id="e_users_to_lb" style="edgeStyle=orthogonalEdgeStyle;rounded=1;jettySize=auto;html=1;endArrow=block;endFill=1;" edge="1" parent="1" source="n_users" target="n_clouds.aws.load_balancer">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <!-- Enter aws container content area without crossing header -->
+              <mxPoint x="200" y="250"/>
+              <mxPoint x="260" y="250"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+
+        <!-- users -> clouds.gcloud.auth -->
+        <mxCell id="e_users_to_auth" style="edgeStyle=orthogonalEdgeStyle;rounded=1;jettySize=auto;html=1;endArrow=block;endFill=1;" edge="1" parent="1" source="n_users" target="n_clouds.gcloud.auth">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="200" y="260"/>
+              <mxPoint x="760" y="260"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+
+        <!-- ci.deploys -> clouds (to the container) -->
+        <mxCell id="e_deploys_to_clouds" style="edgeStyle=orthogonalEdgeStyle;rounded=1;jettySize=auto;html=1;endArrow=block;endFill=1;" edge="1" parent="1" source="n_ci.deploys" target="c_clouds">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <!-- Route upward then right, avoiding labels -->
+              <mxPoint x="140" y="520"/>
+              <mxPoint x="220" y="520"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

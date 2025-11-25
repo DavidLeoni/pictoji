@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mxfile host="app.diagrams.net" modified="2025-10-19T00:00:00.000Z" agent="D2-to-drawio-generator" version="24.7.10" editor="www.diagrams.net">
+  <diagram name="D2 Containment">
+    <mxGraphModel dx="1200" dy="800" grid="1" gridSize="10" page="1" pageScale="1" pageWidth="1920" pageHeight="1080" background="#ffffff">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+        <mxCell id="server" value="server" style="swimlane;rounded=1;html=1;startSize=28;collapsible=0;container=1;recursiveResize=0;" vertex="1" parent="1">
+          <mxGeometry x="40" y="40" width="300" height="200" as="geometry"/>
+        </mxCell>
+        <mxCell id="im_a_parent" value="im a parent" style="swimlane;rounded=1;html=1;startSize=28;collapsible=0;container=1;recursiveResize=0;" vertex="1" parent="1">
+          <mxGeometry x="400" y="40" width="300" height="200" as="geometry"/>
+        </mxCell>
+        <mxCell id="apartment" value="apartment" style="swimlane;rounded=1;html=1;startSize=28;collapsible=0;container=1;recursiveResize=0;" vertex="1" parent="1">
+          <mxGeometry x="760" y="40" width="340" height="260" as="geometry"/>
+        </mxCell>
+        <mxCell id="office" value="office" style="swimlane;rounded=1;html=1;startSize=28;collapsible=0;container=1;recursiveResize=0;" vertex="1" parent="1">
+          <mxGeometry x="1140" y="40" width="360" height="260" as="geometry"/>
+        </mxCell>
+        <mxCell id="server.process" value="process" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="server">
+          <mxGeometry x="24" y="60" width="140" height="60" as="geometry"/>
+        </mxCell>
+        <mxCell id="im_a_parent.im_a_child" value="im a child" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="im_a_parent">
+          <mxGeometry x="24" y="60" width="160" height="60" as="geometry"/>
+        </mxCell>
+        <mxCell id="apartment.Bedroom" value="Bedroom" style="swimlane;rounded=1;html=1;startSize=28;collapsible=0;container=1;recursiveResize=0;" vertex="1" parent="apartment">
+          <mxGeometry x="24" y="60" width="280" height="160" as="geometry"/>
+        </mxCell>
+        <mxCell id="apartment.Bedroom.Bathroom" value="Bathroom" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="apartment.Bedroom">
+          <mxGeometry x="24" y="60" width="180" height="60" as="geometry"/>
+        </mxCell>
+        <mxCell id="office.Spare_Room" value="Spare Room" style="swimlane;rounded=1;html=1;startSize=28;collapsible=0;container=1;recursiveResize=0;" vertex="1" parent="office">
+          <mxGeometry x="24" y="60" width="300" height="160" as="geometry"/>
+        </mxCell>
+        <mxCell id="office.Spare_Room.Bathroom" value="Bathroom" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="office.Spare_Room">
+          <mxGeometry x="24" y="60" width="180" height="60" as="geometry"/>
+        </mxCell>
+        <mxCell id="e1" value="Portal" style="edgeStyle=orthogonalEdgeStyle;rounded=1;curved=1;html=1;" edge="1" parent="1" source="apartment.Bedroom.Bathroom" target="office.Spare_Room.Bathroom">
+          <mxGeometry as="geometry">
+            <Array as="points">
+              <mxPoint x="898.0" y="20"/>
+              <mxPoint x="1278.0" y="20"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

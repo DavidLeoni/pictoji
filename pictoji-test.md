@@ -1,4 +1,4 @@
-# Pictoji Tests (v0.6.0)
+# PICTOJI Tests (v0.6.1)
 
 DO NOT PLACE FANCY TYPOGRAPHICS LIKE “” HERE. 
 
@@ -261,6 +261,6 @@ Mixed with attachers/punctuation (number is one token)
 
 ## Stress test
 
-⚲ ↻⟡ ↶⟡ ↻⟡ 🧪, ⊸ ⟡ 🧪, ∧ ⇗ ⟡ 🧪 ⧘ 🔹 ⇗ ⟡ ↻💭 ~ ↻⟡ ⚲ 𑁍 ↻⟡. == "A being was being tested, has been tested, and will be tested until it will be thinking about being a sentient being."
+⚲ ↻⟡ ↶⟡ ↻⟡ ↶🧪, ⊸ ↶⟡ ↶🧪, ∧ ⇗ ⟡ ↶🧪 ⧘ 🔹 ⇗ ⟡ ↻💭 ~ ↻⟡ ⚲ 𑁍 ↻⟡. == "A being was being tested, has been tested, and will be tested until it will be thinking about being a sentient being."
 
 DO NOT OUTPUT ANYTHING

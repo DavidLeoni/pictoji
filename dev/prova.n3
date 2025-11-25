@@ -1,0 +1,63 @@
+PREFIX  :  <s:>
+
+:verdiFamily a :group  .
+:verdiFamily :contains :bob ;
+:verdiFamily :contains :alissa .
+
+{
+:O1 :owner  :O2 .
+:O2 :owner  :O2 .
+}
+
+:alissa :job "engineer" . 
+
+:alice
+    :surname "Verdi" ;
+    :job "Designer" {| :accordingTo :bob |};
+     :prova [
+         :unz  "pippero";
+         :bab  "chill";
+     ] .
+
+
+graph TD
+
+    subgraph Vets
+        C
+        R
+    end
+
+    subgraph Owners
+        subgraph Bianco family
+            O1[🙂 Alice]
+            O2[😎 Bob]
+        end
+        subgraph Verdi family        
+            O3[👨 Charlie]
+            O4[👩 Lisa]
+            O5[👧 Emma]
+        end
+    end
+
+    subgraph Dogs
+        D1[🐕 Fido]
+        D2[🐩 Bella]
+        D3[🦮 Spot]
+    end
+
+    subgraph Peppo
+      D1
+      O1
+    end
+
+
+    C -- talks_to --> O1
+    C -- sffd     --> C
+    R -- talks_to --> O3
+
+    O1 -- owns --> D1 & D2
+    O2 -- owns --> D1 & D2
+    O3 -- owns --> D3
+    O4 -- owns --> D3
+    O5 -- owns --> D3
+    

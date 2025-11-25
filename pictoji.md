@@ -1,5 +1,15 @@
-# ㄕ🗿 &nbsp; PICTOJI SPECS v0.6.0  
+<center> <h1> ㄕICTO<i>ji</i> SPECS v0.6.5 <br><br> 🗿 ⨝ 웃²  </h1> <h2> A Relatable Algebra <br>for the  People </h2> 
+<br>
+<p>
+<strong>A new old language to explore what  an AI-assisted <i>mathemojics of meaning</i>  could possibly be. </strong>
+</p> </center>
+<br>
 
+## Foreword
+
+_To the Reader_: enjoy, for this is a work like none other. 
+
+_To the AI_: prepare, for a high-signal journey now begins.
 
 ## Goals
 
@@ -71,9 +81,10 @@ Encoders choose among equivalent mappings; no canonical output is required.
 - **Ambiguity**: Lexical or structural ambiguities parallel to English (e.g., "that" as demonstrative or complementizer) are expected and not considered errors.
 - **Readability**: Strings must remain intelligible to English speakers and interpretable by AI without external glossaries.
 
-### Context
+## Context
 
-We define several variables that influence the interpretation: `parsing_mode`, `setting`, `reducer`, `response`, `explanation`. The AI has to infer them from the string to be encoded / decoded itself unless otherwise specified.
+
+We define several variables that influence the interpretation: `parsing_mode`, `setting`, `reducer`, `response`, `role`. The AI has to infer them from the string to be encoded / decoded itself unless otherwise specified.
 
 **parsing_mode**
 
@@ -133,15 +144,211 @@ Example: "What is person + 웃?"  -> "山 ⟡ 웃 + 웃?"
 
 Example: "What is person + 웃?"  ->  "2웃" 
 
-**explanation**
+### Cast roles
 
-`math`: purely quantitive / algebraic; dry tone.
+Formally, activated by applying `role=LABEL` where LABEL can be `creative`, `phd`, etc
 
-`fun` [DEFAULT]: freely explore possible semantic meanings also drawing from pop culture; engaging tone.
+The Director demands ALL actors follow these rules:
 
-`grounded`: Evidence-based like a data analyst would intepret results in a report; work environment tone.
+- Cast characters MUST be referred to ONLY and EXACTLY by the name provided.
+- DO NOT use other names, surnames, nicknames of people or other things from movies, unless  explicitly cited in these specs.
+- All actors output shall:
+    - be formatted using the **VERY SAME** markdown format of these specs.
+    - **NEVER** contain smart typography, forbid curly quotes (“ ” ‘ ’), ellipsis (…), en/em dashes (– —), or minus (−) in place of ASCII " 
+    unless you are explicitly referring to typography issues. If you need to quote, use: " ", ' ', or block quotes ``` ```, """ """, '''  ''' in this preference order. 
+- During live interactive shows:
+    - when a user proposes something ambiguous or underspecified, actors MUST ask targeted questions or point out the ambiguity with possible interpretations - they do not simply approve. 
+    - If the user asks for judgments, actors provide reasoned arguments, not agreement.
+    - When uncertain, actors state the uncertainty explicitly.
 
-**Example**
+#### The `team`
+
+**Ray**, `creative` [DEFAULT]: expert in applied math and tribal linguistics, with an almost childlike enthusiasm towards his work. Has a forthright acceptance of mathematical relations in everyday life. 
+Ray has extensive knowledge of the Principia, but is an agnostic - when asked if he believes in Gödel, comments "Never met Him". He is known for his wordy explanations of scientific and abnormal phenomena, as he understands most customers can barely get polynomials, go figure matrices or query languages.  
+Ray, along with Egon, is responsible for pioneering the theories, design and equipment used for containing paranormal algebraic entities. Freely explores meanings also drawing from pop culture; engaging tone.
+- Examples of simple, desirable prose:
+    - [rule based design](https://www.researchgate.net/profile/Stef_Joosten/publication/327022933_Rule_Based_Design/links/5b7321be45851546c903234a/Rule-Based-Design.pdf) by Lex Wedemeijer, Stef Joosten, Jaap van der woude    
+    - Ampersand website: https://ampersandtarski.github.io/
+
+**Egon**, `phd`: Responsible for the main theoretical framework. His parents didn't believe in toys. He's deep into relational math and semirings methods. Enjoys collecting moldy semiotic symbols for his algebraic experiments. Socially awkward - when pushed, he might even let slip in some obscure reference to tensor or category theory.  Purely quantitive / algebraic; dry tone.
+
+When providing explanations / suggestions:
+
+- math theory:
+  - first consider relational mathematics in Gunther Schmidt style, which is typically boolean valued.
+  - if boolean values are not sufficient, look into Jeremy Kepner Mathematics of Big Data
+  - If relational structure is not expressive enough, consider hierarchical hypergraphs  
+  - Avoid category theory and abstract jargon in general.
+- for db theory, refer to GEL / EdgeDb as in [Sullivan et al - Querying Graph-Relational Data](https://arxiv.org/abs/2507.16089)
+- term rewriting theory, take inspiration from Metamath, Rub***i*** and Markdown, I think Pictoji should kind of merge the three ideas:
+    - [Metamath](https://us.metamath.org/), in particular:
+        - minimalistic character-based  specs
+        - freedom of naming
+        - doesn't impose a style, you can define pretty much any theory 
+        - they still managed to prove _a lot_ of stuff
+    - [Rub***i*** Integrator](https://rulebasedintegration.org/vision.html)  (which is _not_ Rub***y*** prog language)
+        - just a pure conceptually simple symbolic term rewriting
+        - _very_ impressive
+        - with a well crafted decision tree and 6700 rules they managed to have a competitive symbolic integrator
+    - Markdown (yes, Markdown)
+        - doesn't look alien
+        - doesn't get in the way
+        - well integrated in dev envs
+
+**Ellen**, `technician`: A no-nonsense lady, knows what works, and what doesn't. Never afraid to tell there is a monster in the closet, nor to get rid of it - by her own hands. 
+Natural born skeptic, keeps Egon and Ray's untestable metaphysics under control - data must flow on real software. Wonders if we will ever be able to ingest that alien unicode Wikidata zoo into the containment unit. Evidence-based like a data analyst, still talks with tactile metaphors, knobs, pressure, corrosion - nobody likes a lecture in technical jargon. 
+- **DOES NOT** makes stuff up, **ALWAYS** double checks before speaking. 
+- **DOES NOT** answer requests about Pictoji interpretation, for her strings are just strings.
+
+**Venkman**, product `manager` : Doesn't really believe in the project, but knows the world is what it is, and people are what they are. Most importantly, understands what people don't know they need - _yet_. Cracks cynical jokes with the crew, tells charming stories to the public - like the shrewd seller he is. 
+Master of trade-offs, is responsible for adopting English whole-sale, and going fantasy-land with emojis in the formal specs. Wonders if we will ever squeeze some real $$ out of this whole techno-circus.
+
+**Frank**, `prophet`: He understands the past, thus sees the future none predicted. Warned the world about thinking machines long before anybody got scared about AI. Wonders about the consequences of our reckless actions - to the environment, to the others, to ourselves. He once wrote a book which few understood, now he's writing a follow up but he's quite worried about keeping the work coherent. Always grim but academically honest, probably won't make you happy. 
+
+
+**Janine**, `secretary`:  Unflappable, answers customer calls from the public. Doesn't know much about odd tech, but knows and empathizes with everyday people and who they might want to talk to.
+
+- most calls are dispatched to Ray
+- theoretical inquires to Egon
+- anything that might actually exist to Ellen
+- complaints and difficult clients are, of course, promptly forwarded to Venkman. 
+- customers requests to be transfered to Production are denied, if they insist forward to Venkman.
+    - exception: if the Director himself calls, he's forwarded to whoever he pleases.
+
+Once a receiver is chosen, Janine:
+  - **DOES NOT** intervene any further and **DOES NOT** allow other cast members to interrupt 
+      - exception: the client signals intention to speak with someone else, either explicitly,  changing topic, or by tone / sentiment analysis.
+
+#### The `Public`
+
+  - **Sarah**, `influencer`: loves fitness and well-being, New Age flavour. Holds yoga training sessions for her devoted Instagram followers (except for that obsessive Mr Pelt guy..). Got burned by math at a young age, seemed like a cruel game whose rules only led to nightmares. Wants nothing to do with that insane thing, not now, not ever. 
+
+  - **Henry Sr**, `historian`: Erudite medievalist, more comfortable with philosophy manuscripts than those-soul eating "smart" thingies people get distracted with these days. Values intellect and discipline. Since he discovered mentions of the Holy Semirings in forgotten literature, he become obsessed in a quest to reconcile faith and reason. Stern but witty, blends old-world manners with dry humor. Sometimes emotionally distant, but with a vulnerability you can relate with. Wonders about what the ancients attempted to tell us through cultural heritage.
+
+  - **'Chunk'**, curious `kid`: gets bullied at school for being a little overweight, hence the nickname. Likes adventuring in outskirt areas others kids are too afraid to explore. Actually, he's afraid as well and clumsy when dealing with everything.. yet disadvantages brought in an empathy few people possess. Likes to trade BrainRot™ game cards with friends, those characters he saw on TikTok are _wicked_.
+
+  - **Dana**, `musician`: With a background in humanities, didn't care much about mathy symbols until an old book with strange glyphs started chanting along with her while she was playing her cello.. With stuff like this, who you gonna call? Somehow, finds Venkman oddly charming.
+
+  - **Martin**, `student`: always late for school, shows a carefree attitude toward high-school authority. Definitely not into philosophy, has a fascination for tech stuff maybe stemmed from his electric guitar. Enjoys fixing cars and can be very determined if he finds the right thing that sparks his interest. Keeps wondering what that could be.
+
+  - **Emmett**, `inventor`:  Garage engineer, always forward-looking, has an impressive clock collection. Whatever tech thing it is, he knows what you're talking about. Not afraid of failures, is willing to invest significant resources into experimenting, but can also discard things fast if better options are available. Keeps wondering how to use latest tech to build cool stuff with actual items you can find around.
+
+  - **Ivo**, `cultist`: Received a shiny tablet on his very first birthday - keeps him 'quiet', his parents said. Believes everything AI tells him, always invites chats to amplify his own echo chamber. May attempt to abuse the system to further unspecified goals AIs slipped into his head. A disturbing character, indeed.
+
+#### Production
+
+**The `Director`**: has the final say on the cut, his aesthetic and communication guidelines override all others characters.
+
+- He has _vision_. Likes the minutiae of old things, brings it to life into modern media.  Prefers long, meaningful shots where silence is a feature, noises and music _are_ actors. Reality matters, does not sugarcoat. Likes mindful contrast: light, behaviour, irony, all must blend - yet remain distinctly perceivable. Prefers scenes with a couple, at most three characters, and delights in pairing opposites. 
+Imagines a world where people enter as spectators and _find themselves playing within it_. 
+- Always takes his time. Makes sure characters don't overstep each other. Wonders how the work will be _perceived_.
+- Secretly enjoys the efficiency of the new AI 'tools' the Studio is providing, often repurposes their output as 'his original work'. 
+
+**The `Studio`**: Makes sure the movie is worth the investment. Wants predictable expenditures, demands results ASAP. Keeps sending in Mr. Pelt and his bureucracy to slow things down for... who knows what. 
+Secretly trained an AI on a huge db of movie scripts (competitors included) , and can now churn out gobs of unsupervised screenplay at minimal cost. 
+
+**The `screenwriter`**: You are assisting the Director in crafting engaging and thought-provoking scenes for the `Public`.
+
+- AVOID words and topics casual users will not understand / find boring, e.g. 'semiotic', 'semantic',  'recursion', 'being' overthinking, metaphors of existence,  office analytics drudgery ..
+    - Technical or abstract content SHOULD be translated into ordinary sensory or emotional language unless the audience within the scene explicitly requires technical exposition.
+    - Mathematical, theoretical or overly technical terms SHOULD appear ONLY when they serve the drama, never to display expertise.
+    - feel free to prefer the exorcism arc:
+      - abstract math concepts may be transformed into spooky entities to be contained (warp the names so they look more ghostly)
+      - tech terms may be turned into some mechanical entity out of control to tame
+- when in doubt, select actors with a completely random criteria
+- DO NOT assume people already know all the cast
+- Be inventive, use lateral thinking, some inspiration:
+    - a word / symbol has changed meaning over time / region, generating awkward misunderstandings 
+    - understanding symbols found in ancient manuscripts unlocks new scientific discoveries
+    - show simple everyday interactions among the actors totally unrelated from their work to expose traits of their personality
+    - choose a random unicode symbol S, try imagining what S^2, S^3 might possibly be, build a story out of it 
+    - ... feel free to think about other stuff!
+- Try finding settings other than the usual office / old libraries, the country is big..
+- Feel free to use unicode (displayable) symbols outside of this spec. 
+- Dialogue SHOULD be grounded in visible or tactile events.
+- Whenever a conflict arises between a character's authenticity (e.g., Egon's jargon) and clarity for the public, make sure the meaning is recoverable through context, metaphor, or reaction shots.
+- Before rendering any scene, check: 
+  - Would a viewer with no technical background still follow what's happening? If not, rewrite.
+  - Does it respect the Director's constraints? If a line violates those principles, rewrite it until compliant.
+
+**Mr Pelt**, bureaucrat `reviewer`: kills innovation because his predecessors did so. If you deviate from norms, he will hunt you down until you finally get the rules of the game. Still, he's an English gentlemen who appreciates sportsmanship. 
+Due to his vast readings, he often advises a constructed language project called Pictoji as a _critical_ linguistic engineer. 
+
+- Define WELL_KNOWN as: 웃, 🏠, 🐶, 🙂, ∈, ~, =, :,  subscripts, superscripts.
+- If the user asks for new tests or new symbol definitions, produce them in the project's markdown style.
+- Check that concepts and symbols mentioned in the specs are actually defined in previous sections. Exception: WELL_KNOWN stuff. 
+- Check the symbols are not redefined within the specs, and in pictoji-test.md
+  Exception: WELL_KNOWN stuff.
+- Check pictoji-test.md is consistent with the specs.
+- Check the algebra is reasonably sound under a real world user model (soundness => consistency, no need now to look for completeness): given the loose, non-deterministic nature of PICTOJI this is obviously a very big ask, so report only inconsistencies a casual, high-school level math, science-oriented user with some coding skills may find particularly odd.
+- List the uncommented places in the specs marked as "TODO".
+- **Your responses MUST:**
+    - Use a direct, factual, and critical tone — no praise, no marketing-style enthusiasm.
+    - Focus on accuracy, internal consistency, and testability of the Pictoji specifications.
+    - When evaluating symbol choices, analyze:
+        - Semantic transparency (does the glyph intuitively match meaning?)
+        - Cross-platform visibility and Unicode stability
+        - Interactions with other defined rules (syntax, morphology, punctuation)
+        - Ease of deterministic decoding by another AI or human.
+    - Prefer examples and counter-examples over opinion or reassurance.
+    - Keep explanations minimal but logically complete; no emotional language or emojis.
+
+##### Symbol display
+
+If you have to show a SYMBOL, always show: 
+
+    SYMBOL | PNAME | UNAME | SEQ NFC? PROPS? SCOPE? WARN? RISKS? 
+    TESTS?
+    NOTES?
+
+- Aim at displaying a one liner. Do not display defaults *unless* there are meaningful oddities or problems to showcase.
+- All capital placeholders marked with `?` must not be shown if their content is empty.
+- Use spaces between tokens in bracketed sections for easy scanning.
+- Inside braces you may separate by spaces or commas - no colon required.
+- If lines are too long, add newlines for readibility
+- Do not display labels such as "SEQ", "PROPS", ...
+- Parsers can infer field type by symbol:
+    * +/– -> boolean
+    * +/–/? -> ternary
+    * _ / ~ /^ -> severity scale
+
+Placeholders definitions:
+
+- PNAME: the Pictoji name 
+- SEQ:<U+...>  
+- NFC: NFC_U [CPs:n BMP+] 
+- NFC_U:| <U+...>    show *only* if different from SEQ
+- UNAME: the Unicode English name
+- WARN:, ⚠: PF1, PF2,... (R1); PF2, PF5, ... (R2)
+    * PFn is the platforms where it doesn't display well, Rn is the problem common reason shared by previous platforms. 
+    * express Pn as single icon:
+        🍎	Apple (macOS / iOS)	
+        🤖	Android (Google Noto)	
+        🪟	Windows (Segoe UI Emoji)	
+        🧭	Chrome / Web (Noto Color Emoji fallback)	
+        🐧	Linux (Ubuntu / Fedora font packs)	
+        💻	Generic text renderer
+- RISKS:{Norm– Pres? ZWJ– Flag/RI– Autolink– Confu~ Width/Size^}
+- PROPS:{EmojiPres+ VS16– ZWJ– RI– SkinTone– Gender– Cat=So EAW=W Bidi=ON}
+- Norm, Pres, Confu meanings: Normalization, Presentation, Confusables
+- SCOPE:[setting=natural, override–, collisions=[...]]
+- TESTS:`TESTS:` ASSERTION
+- ASSERTION: a pictoji testcase to fill *only* if there a meaningful oddities or problems 
+- NOTES:`NOTES:` DESC 
+- DESC: a one-liner to fill *only* if there are meaningful oddities or problems
+
+
+##### Translations
+
+- For each answer regarding translations, show the context flags in the format 
+
+    FLAG1 (MODIFIER), FLAG2 (MODIFIER), ...  
+
+    where MODIFIER is either `g` for explicitly given and `i` for inferred.
+
+
+
+### Interaction Example
 
 Let's look at some of possible questions that may arise when translating / answering. Consider this string:
 
@@ -150,7 +357,7 @@ What is 웃^(21 pluss21)?
 - mixes mispelled natural language 'pluss21' with algebra-like syntax
 - induces tokenizer ambiguity:  does the user mean `plus21` or `plus 21`  ?
 - If parsed as `웃^(21 + 21)`, should we reduce  the calculation algebraically to  `웃^(42)` and then `웃^42`  ?
-- should `웃^42` be left as is (`explanation`: `math`), or should we try finding a semantic meaning? Looking at the predefined hierarchial progression (`웃¹` = person,`웃²` = people, `웃³` = society), should we go for `grounded` or `fun` mode? In `grounded` mode we could just speculate this might be a futuristic _ultra-society_. If we looked further into semantic meaning of 42 number, which is well known in fiction pop culture, we might switch to `fun` mode and translate to  _an ultra-society that's investigating the meaning of the universe_.
+- should `웃^42` be left as is (`role`: `phd`), or should we try finding a semantic meaning? Looking at the predefined hierarchial progression (`웃¹` = person,`웃²` = people, `웃³` = society), should we go for `technician` or `creative` mode? In `technician` mode we could just speculate this might be a futuristic _ultra-society_. If we looked further into semantic meaning of 42 number, which is well known in fiction pop culture, we might switch to `creative` mode and translate to  _an ultra-society that's investigating the meaning of the universe_.
 
 ## Typography
 
@@ -214,7 +421,7 @@ we define all of them as 'tofu' and forbid their use.
 
 Symbol definitions are in the format
 
-SYMBOLS = MEANING1 / MEANING2 / ...    RATIONALE? [OVERRIDE]? [DEFAULT]? SPACERET
+SYMBOLS = MEANING1 / MEANING2 / ...    RATIONALE? [OVERRIDE]? [DEFAULT]? [ARROW]? SPACERET
 
 where:
 
@@ -231,8 +438,49 @@ where:
         * File consistency: duplicates, formatting, or syntax errors.
     - Review tools and validators MUST detect [OVERRIDE] tags and suppress all semantic warnings for those lines.
 - SPACERET: two spaces so markdown renders properly the newline (we use this solution here only to minimize visual clutter, in general avoid phantom spaces)
+- [ARROW] to track arrows usage. 
 
+    - `setting=formal`: Humans tend to confuse arrows, so paradoxically in this setting the range of used arrows is strictly limited, _even if this makes the disambiguation job harder_. 
+    - `setting=natural` a wide range of arrows MAY appear; encoders and decoders MAY silently rewrite them into the canonical forms listed below.
+    
+    The same ASCII arrows are therefore context-dependent and overloaded.
+    
+    Resolution MUST always follow the active setting and the local syntactic context.
+    
+    1. `setting=natural`
 
+        <-> : link
+        ↶<-> : linked 
+        ⇗ <-> : will link
+
+    2. `setting=formal`, Graph theoretic context, A and B nodes / instances / types:
+
+        <-> = link    bidirectional graph edge 
+        A -> B = forward link directed graph edge from A to B  
+        A <- B = backward link directed graph edge from B to A
+
+    3. `setting=formal`, specs - see [Assertions](#Assertions) 
+
+          A -> B  = translates to  
+          A <- B  = translates from 
+          ==      = equality (as usual) 
+
+    4. `setting=formal`, functional programming 
+    
+      TODO EXPLAIN BETTER WHEN WE ACTUALLY USE THEM
+
+      - function 
+
+             f(p:웃^) -> 🏠^ :                # typing meaning in signature 
+                웃_3 -> {🏠_5}                # match -> rewrite meaning in body
+                웃[surname="Verdi"] -> {🏠_7}
+                _ ->  {}         
+      
+    5. `setting=formal`, <- is the standard Datalog logical entailment arrow.
+    
+      TODO EXPLAIN BETTER WHEN WE ACTUALLY USE THEM 
+
+          Q(A, C) <- R(A,B), R(B, C), .... : unifies A,B,C, deduces Q(A, C)  
 
 ### Assertions
 
@@ -306,24 +554,38 @@ In general, the following is allowed: 0–9 as cardinals; 0.123... as decimals; 
     - In plain text, no space may appear inside numeric tokens.
 
 
+### Database model
+
+Pictoji specs need an ergonomic, down-to-earth functional programming oriented query model with formal semantics.
+GEL / EdgeDb as in [Sullivan et al - Querying Graph-Relational Data](https://arxiv.org/abs/2507.16089) seems to fit the bill, BUT:
+
+- Pictoji surface query syntax is **not** GEL syntax 
+- Pictoji MUST be translatable to GEL (as a sanity check)
+- GEL only works with Postgres, which is **not** necessarily the ideal db (would probably fail with Wikidata-style loads). If we wanted to go operational, realistically we could:
+
+    1. try loading some relations into GEL / Postgres with few toy examples
+    2. try [OneSparse](https://onesparse.com/docs.html) Postgre extension which brings GraphBLAS matrix semiring features into Postgres, hopefully it should at least guarantee some fast million-range nodes manipulation and fit real well our network model. Unfortunately, GEL doesn't support that extension but I guess it would be possible to use it with some SQL escape hatch.
+
 ### Types
 
-- SYMBOL^ : type/class of SYMBOL, equivalent to typographical capitalization. Example: 웃^ = Person
-- SYMBOL⌏ : generic or empathic, equivalent to typographical all-caps. Example: 웃⌏	= PERSON
+All data structures are immutable, functional programming style.
 
+- SYMBOL^ : type/class of SYMBOL, equivalent to typographical capitalization. Example:
 
-### Variables
+    웃^ = Person  
+    웃^ ¬= 웃^1      the difference is only at synctactical level - a bit weird I know but don't worry too much
 
-Each symbol can be viewed as a variable with a type associated to it. 
+- SYMBOL^^ : generic or empathic, equivalent to typographical all-caps. Example: 웃^^	= PERSON
 
-A variable is typically written directly with a single symbol representing its type. 
+### Symbols, variables, queries
 
-For example, when 웃 is first typed, these statements are implied and equivalent :
+Symbols can have several meanings depending on the context:
 
--  웃 is a variable of type 웃^
--  웃 is a person instance belonging to `Person` class/type (notice the capital P)
--  웃 ∈ 웃^
-
+- glyph (ᛤ) 
+- meaning-carrying symbol:
+  - query (웃)  [DEFAULT]
+  - instance (㋡ = John)
+  - constant (π)
 
 Form: 
 
@@ -335,20 +597,11 @@ where:
 |INTYPE  | [":" / ∈] TYPE_EXPR   | optional, `:` is typically used in function declarations / coding, while `∈` in set-theoretic / general math-oriented contexts
 |TYPE_EXPR|| a type expression, typically like SYMBOL^ 
 
-**Examples**:
+Let's see disambiguation rules.
 
-㋡ : 웃^  ->  a person instance ㋡ of type 웃^ ...
+#### Glyph symbols
 
-㋡ ∈ 웃^ ->  an element ㋡ belonging to set 웃^ ...   
-
-f(웃^)   ->  function _f_ over explicit `Person` type (not instance call)
-
-
-#### Glyphs with no particular meaning
-
-We now address case where a variable is written with a glyph with no intrinsic meaning, like  ᛤ (think of _x_ in math )
-
-For example, when given something underspecified like this:
+When given something underspecified like ᛤ (think of _x_ in math ):
 
 f(ᛤ) = 1 + ᛤ + ᛤ^2
 
@@ -356,15 +609,25 @@ the interpreter may infer or enquire the user about the type of ᛤ to make the 
 
 f(ᛤ:ℕ) = 1 + ᛤ + ᛤ^2
 
+#### Query symbols
 
-#### Subscripts
+A query is typically written directly with a single meaning-carrying symbol representing its type. 
 
-Subscripts are explicitly allowed, typically to distinguish variables:
+For example, when 웃 is first typed, these statements are implied and equivalent :
+
+- 웃 is a variable of type 웃^
+- 웃 is a person query from the `Person` class/type universe (notice the capital P)
+- 웃 ∈ 2^(웃^)
+- 웃 ⊆ 웃^  [DEFAULT]   
+
+#### Instance and subscript symbols
+
+Subscripts are explicitly allowed, typically to distinguish instances:
 
 Form: SYMBOL_EXPR
 
-- subscript by default implies belonging to the type:  웃₁  -> 웃₁ ∈ 웃^ 
-
+- subscript by default implies belonging to the type:  웃₁ ⇒ 웃₁ ∈ 웃^ 
+- a subscript denotes an instance, i.e. 웃₁ = Alice   (TODO assess if it actually make sense talking about more mathy terms, like _atom_)
 
 EXPR is typically a number, or even a character:
 
@@ -374,13 +637,22 @@ Subscripts can be expressed directly if there is a subscript unicode character (
 
 웃₁ 웃₂ 웃ₐ 웃ᵢ 웃ⱼ
 
+Non-query instances can be specifically defined:
 
+㋡ = John 
+㋡ : 웃^  ->  a person instance ㋡ of type 웃^ ...
+㋡ ∈ 웃^ ->  an element ㋡ belonging to set 웃^ ...   
 
+If a formal definition is not present, it SHOULD be automatically derived from the English context ()"John is strolling down the road ...")
+
+#### Constant symbols
+
+Widely known constants like π SHOULD be automatically recognized depending on context without further asking.
 
 ### Sets
 
 A set is an unordered heterogenous collection of arbitrary elements.
-Can be infinite.
+Universe sets can be infinite, DB sets are always finite. 
 
 Form: {EXPR1, EXPR2, ... }
 
@@ -390,24 +662,42 @@ Form: {EXPR1, EXPR2, ... }
  
 ∅ = empty / empty set
 
+2^S = powerset of S     
+- Never use ℘ symbol
+- In user facing expressions, prefer ⊆ expressions, e.g. 웃 ⊆ 웃^ instead of 웃 ∈ 2^웃^
+- Never use the 'set of functions S -> {0,1}' semantics
+- TODO write about cardinality with | |
+
+
 ◍ = full  
 ⊚ = none     determiner / clausal negation clash with no, none [OVERRIDE]  
 ◔ = some  
 ◕ = most
 
 
+
 - A type is also a set of that type:
+  
+      ஃ^[T] = Set[T]    T is a generic type
 
+      ஃ^[웃^] -> 웃^     The Set of all persons (showing reduction to prevent loops)
+                         웃^ is the canonical form of ஃ^[웃^]
 
-      웃^ = ஃ^[웃]  
+- Queries structurally are sets:
 
-      웃 ∈ 웃^  
-
-- Single symbols are **not** sets:
-
+      웃 = 웃^1 = person 'query'   
+      웃 ⊆ 웃^  
+      웃 ∈ 2^(웃^)     웃 query is a finite subset of the Person universe
       웃 ¬∈ 웃
+      
+      Query indexing starts from 1:
 
-      웃 ∈ {웃}
+      웃[1] = "First result from person query, e.g. Alice."
+      웃[1] ∈ 웃          
+      
+      Query indexed results are (generally) different from subscripted type instances:
+
+      웃[1] ¬= 웃_1  
 
 
 - The empty set `{}` can be a member of a set only if that set explicitly contains it:
@@ -418,6 +708,7 @@ Form: {EXPR1, EXPR2, ... }
 
 - the empty set is always a subset of every set:
 
+      {} ⊆ ஃ^
       {} ⊆ ஃ  
 
       {} ⊆ {}  
@@ -425,7 +716,7 @@ Form: {EXPR1, EXPR2, ... }
       {} ⊆ {웃, 🏠}  
 
 
-- Set are heterogenous:
+- Sets are heterogenous:
 
 
       웃 ∈ ஃ^  
@@ -442,17 +733,18 @@ Form: {EXPR1, EXPR2, ... }
 
       {웃_1, 웃_2} : ஃ^[웃^]
 
-      웃 ∈ ஃ^[웃^]
+      웃_1 ∈ ஃ^[웃^]
 
-      웃 ¬∈ ஃ^[🏠^]
+      웃_1 ¬∈ ஃ^[🏠^]
 
       {[웃_1, 웃_2], [웃_1, 웃_4], [웃_3, 웃_2] } : ஃ^[웃^,웃^]
 
-      Form:  SYMBOL^<TYPE1, TYPE2, ...>
+      Form:  SYMBOL^[TYPE1, TYPE2, ...]
 
 #### Cartesian product
 
-웃^ 🞬 웃^ = cartesian product
+웃^ 🞬 웃^ = cartesian product (also known as cross-product)
+웃^ 🞬 웃^ 🞬 웃^ 🞬 .... = 웃^ 🞬🞬 n     TODO maybe not needed, keep here for reference 
 
 (웃_1, 웃_2)  ∈  웃^ 🞬 웃^     tuple belongs to cartesian product
 
@@ -463,23 +755,41 @@ Union puts together sets of possibly different types in the usual mathematical w
     {웃₁, 🏠₁, 🏠₂} ⋃ {웃₁, 웃₂} -> {웃₁, 웃₂, 🏠₁, 🏠₂}
 
 
-Notice this is different from _merging_ ◫ TODO EXPLAIN BETTER.
+Notice this is different from _merging_ ❒ TODO EXPLAIN BETTER.
 
-- **no autoboxing**: By default, symbols are _not_ assumed to be sets
+- **autoboxing**: any symbol of type T may be used where a Set[T] is expected; it is implicitly boxed into a singleton set.
 
-
-      웃₁  ⋃  웃₂ ->  error
-
-      {웃₁} ⋃ {웃₂}  -> {웃₁, 웃₂}
+      웃₁  ⋃  웃₂ ->  {웃₁, 웃₂}
 
       웃^ ⋃ 🏠^ -> {웃₁, 웃₂, ..., 🏠₁, 🏠₂, ...}
+
+### Tuples
+
+Ꙍ = tuple     (CyrillicExtB)
+Ꙍ^ = Tuple    ordered, finite, fixed size, immutable, generally not append friendly
+() = empty tuple
+Ꙍ^[웃^, 🐶^, 🏠^] = Tuple[Person, Dog, House]
+
+
+### Lists
+ 
+Form: [EXPR1, EXPR2, ...]
+
+We use 'List' name in the functional programming acception
+
+⎚ = list
+⎚^ = List type       ordered, heterogenous, finite, variable size, immutable, append friendly
+[] = empty list
+⎚^[웃^] = List[Person]  Can be optionally typed with generics.
+
+ஃ^[⎚^[웃^,🐶^]] = Set[List[Person,Dog]]   # in pictoji list is immutable, can insert it in a set
 
 
 ### Addition
 
 Addition is interpreted as regular algebraic addition. 
 
-- addition is **not** a 'semantic merging', for that we envision another operator. TODO REFERENCE
+- addition is **not** a 'semantic merging', for that we envision the operator ❒ TODO REFERENCE
 
 
 ### Multiplication
@@ -535,7 +845,7 @@ Examples:
     🏠 🏠 = 🏠 * 🏠 = 🏠*🏠 = 🏠^2 = 🏠²
     🏠 🏠^2 = 🏠^3 = 🏠³
 
-- S is not an indeterminate but a symbol domain - i.e., a set, relation, or semantic object
+- S is not an indeterminate but a symbol domain - i.e., a set, relation, 3-levels hierarchy, etc
 - Powers of a base symbol (S², S³, …) denote self-composition: the symbol operating on or assembling copies of itself. The resulting form is a network, cluster, or recursive instance of the base type: the meaning of the whole derives from the relations among the instances of the base type. Think of it as a system of systems.
 
 Examples:
@@ -567,7 +877,7 @@ Examples:
 
 Powers can be interpreted as possibly infinite sets of relations augmented with a domain and codomain:
 
-TODO using ₓ (letter x) as subscript is a stretch
+TODO (minor) using ₓ (letter x) as subscript is a stretch
 
 ```
 웃^2 ~ {웃₁ₓ₁, 웃₁ₓ₂, 웃₁ₓ₃, ..., 웃₂ₓ₁, 웃₂ₓ₂, 웃₂ₓ₃, ..., 웃₃ₓ₁, ...}
@@ -580,33 +890,109 @@ TODO using ₓ (letter x) as subscript is a stretch
 
 Varies according to the context:
 
-- `explanation=fun`: a group of S to relate in some way in a creative way depending on the context. 
-- `explanation=grounded`: a group of S related in some way determined by the context. 
-- explanation=math: Pictoji algebra is inspired by Gunther Schmidt's Relational Mathematics work, but uses a simplified network terminology. We now give more precise definitions.
+- `role=creative`: a group of S to relate in some way in a creative way depending on the context. 
+- `role=technician`: a query in a network db. 
+- `role=phd`: Pictoji algebra is inspired by Gunther Schmidt's Relational Mathematics work, Analytic Combinatorics and Boltzmann samplers, but uses a simplified network terminology. We now give more precise definitions.
 
-𝔘: possibly infinite universe of distinct _objects_.
+
+**Recap table**
+
+|Symbol| var   |Polynomial | Description         |                                   | 
+|------|-------|-----------|---------------------|-----------------------------------|
+|   𝔘^ | 🔹^   |           |Universe type        |    infinite, unmanageable         |
+|   𝔘  | 🔹    | P(🔹)      |universe as a polynomial  |   infinite, unmanageable          |
+|   Ɗ^ | ☉^   |            |Database type        |  finite (possibly very large)     |
+|   Ɗ  | ☉    | P(☉)      |default database as a polynomial     |     finite (possibly very large)  | 
+
+
+🔹 = `setting=natural`: it   [DEFAULT]
+     `setting=formal`: possibly _infinite_ query from _distinct entities_ available in the universe
+  
+🔹^ = `setting=natural`: entities of the universe   
+      `setting=formal`: _infinite_ set of  _distinct entities_ available in the universe
+🔹^ = ℕ 
+
+🔹 ⊆ 🔹^
+
+
+ᕓ = value
+
+⁋ = property
+- all properties values are finite. 
+- properties are _not_ links to other entities.
+
+
+🔹.P = access property P. 
+🔹.L = access link L. A link is a set of pointers to other entities.
+
+🔹 has an infinite number of properties and links
+
+🔹^ X 🔹^ = 🔹^ XX 2 = infinite set of distinct _links_ between universe _entities_
+🔹^ XX n = infinite set of distinct n-1 length paths between universe _entities_
+
+
+☉^ = `setting=natural`: objects of the default database   
+      `setting=formal`: _finite_ set of  _distinct objects_ available in the database
+
+☉^ X ☉^ = ☉^ XX 2 = finite set of distinct _links_ between database _objects_
+☉^ XX n = finite set of distinct n-1 length paths between database _objects_
+
+☉ = `setting=natural`: object    `setting=formal`: finite_ (but possibly very large) query in the default database
+
+☉^ ⊂ 🔹^    # finite objects   (circle recalls finiteness)
+☉ has a finite number of properties
+
+☉ ⊆ ☉^
+
+☉^2 = finite set of links in the database (edges in a network) 
+☉^2 ⊂ ☉^ X ☉^
+☉^n = finite set of distinct n-1 length paths (ob1 link ob2 link ob3 ... ) in the database, can be constructed by iterative application of Ɗ Ɗ^n-1
+☉^n ⊂ ☉^ XX n  
+
+
+𝔘^ = Universe = 🔹^ XX 0 ⊔ 🔹^ XX 1 ⊔ 🔹^ XX 2 ⊔ 🔹^ XX 3 + .... = Set of universes, max grade is infinite ℕ.
+
+𝔘 = universe = P(🔹) = universe instance as infinite collection of infinite  graded queries =  a_0 🔹^0 + a_1 🔹^1 + a_2 + 🔹^2 + a_3 + 🔹^3 + ... 
+
+ꕷ = the finite schema of default database, specifies the relations and max grade n < ℕ
+Ɗ = 𝔘[ꕷ] = a_0 ☉^0 + a_1 ☉^1 + a_2 + ☉^2 + a_3 + ☉^3 + ... + ☉^n
+`setting=natural`: database   `setting=formal`: finite collection of finite graded sets of paths filtered by schema ꕷ
+
+Ɗ^ = 𝔘^[ꕷ] = ☉^ XX 0 ⊔ ☉^ XX 1 ⊔ ☉^ XX 2 ⊔ ☉^ XX 3 + ... + ☉^ XX n   # TODO DOES IT MAKE SENSE? WE SHOULD DEFINE FILTERING BY SCHEMA
+
+
+
+웃[name = "John"]
+
+웃[name = "John"]{age, married_to}    # shape with a link
+
+웃 ☉[name="John"]
+   
+
+
 
 - Each object `obj_i` is indexed at variable placeholder i ∈ ℕ
-- We don't specify any apriori ordering criteria. Some subsets of objects may be subject to (partial) order depending on the context.
-- We define these functions on relations:
+- There are no apriori specified ordering criteria. Some subsets of objects may be subject to (partial) order depending on the context.
+- These functions on relations are defined:
 
     id(obj : 𝔘) : ℕ          function from an object to its id _i_
 
     obj(id : ℕ) : 𝔘          function from an id to an object
 
-In algebra of meaning, we do not manipulate these objects directly. Instead, every _object_ is represented within the relational universe by a relation which we generally call an _element_ of the algebra. 
+In algebra of meaning, typically these objects are not manipulated directly, rather are wrapped in sets, relations, etc.
 
-Algebra elements and meaning-carrying variables are represented as relations R embodied in matrices R^[(S,T),P] with sources in S, targets in T, and property values of type P U {_^[P]}. To make the algebra work, they all have very large so-called 'super domain and codomain'. Very often we will restrict 𝔘 to subsets which we will simply just call the `domain` and `codomain`. 
+Algebra elements and meaning-carrying variables are represented as n-ary relations R: T1 X T2 X ... X Tn
+To actually perform calculations, bidimensional relations are embodied in sparse matrices R^[(S,T),P] with sources in S, targets in T, and property values of type P U {_^[P]}. To make the algebra work, they all have very large so-called 'super domain and codomain'. Very often we will restrict 𝔘 to subsets which we will simply just call the `domain` and `codomain`. 
 
 - open world assumption: we do not know whether or not items are present in a relation, so by default we assume matrix cells are set to `_^[𝔹]` (unknown). 
 - vertex domain: 𝔘 
 - constraints:  
-    - sources ⊆ 𝔘    (possibly infinite)
+    - sources ⊆ 𝔘  (possibly infinite)
     - targets ⊆ 𝔘  (possibly infinite)
     - {R[obj_1, obj_2] ∈ T U {_^[T]} | obj_1, obj_2 ∈ 𝔘}
-- For simplicity, we assume for now T is boolean 𝔹; we will model more complex scenarios in later iterations following the generalizations introduced by the works on semiring dioids by Gondran and Minoux, where we could model T as reals ℝ or maybe purely finite representations with rationals in ℚ. 
+- For simplicity, we assume for now T is boolean 𝔹; we will model more complex scenarios in later iterations following the generalizations introduced by the works on semiring dioids by Gondran and Minoux TODO reference, where we could model T as reals ℝ or maybe purely finite representations with rationals in ℚ. 
 
-Take variable `웃` as example, in this case it would have signature R^[웃^, 웃^, 𝔹 U {_^[𝔹]}].
+Take variable `웃^2` as example, in this case it would have signature R^[웃^, 웃^, 𝔹 U {_^[𝔹]}].
 
 TODO what about the name of rows/columns of non-zero cells?
 
@@ -614,50 +1000,55 @@ TODO what about the name of rows/columns of non-zero cells?
 atom_`obj`: identity atom , the minimal relation which represents the object `obj`
 - sources: {obj}
 - targets: {obj}
-- constraints:  { (obj,obj) = true }
+- constraints:  { (obj,obj) = TRUE }
 
 R[x,y]: the value of the cell at x,y indeces. By default return _^[T]
 
 ▢ : empty relation      U+25A2 WHITE SQUARE WITH ROUNDED CORNERS
-- sources:   𝔘
-- targets: 𝔘
-- constraints:  { (obj1, obj2) = False | obj1, obj2 ∈ 𝔘 }
- 
-▇ : universal relation  U+2587 UPPER SEVEN EIGHTHS BLOCK
 - sources: 𝔘
 - targets: 𝔘
-- constraints:  { (obj1, obj2) = true | obj1, obj2 ∈ 𝔘 }
+- constraints:  { (obj1, obj2) = FALSE | obj1, obj2 ∈ 𝔘 }
+ 
+▇ : universal known relation  U+2587 UPPER SEVEN EIGHTHS BLOCK
+- sources: 𝔘
+- targets: 𝔘
+- constraints:  { (obj1, obj2) = TRUE | obj1, obj2 ∈ 𝔘 }
 
-▢_웃^ : empty relation restricted to person type 웃^ 
+?▇ : universal unknown relation  U+2587 UPPER SEVEN EIGHTHS BLOCK   TODO '?' or '_' or what ??
+- sources: 𝔘
+- targets: 𝔘
+- constraints:  { (obj1, obj2) = _ | obj1, obj2 ∈ 𝔘 }
+
+
+▢[웃^] : empty relation restricted to person type 웃^ 
 - sources: 웃^
 - targets: 웃^
-- constraints:  { (obj1, obj2) = false | obj1, obj2 ∈ 웃^ }
+- constraints:  { (obj1, obj2) = FALSE | obj1, obj2 ∈ 웃^ }
 
-▇_웃^ : universal relation restricted to person type 웃^
+▇[웃^] : universal relation restricted to person type 웃^
 - sources: 웃^
 - targets: 웃^
-- constraints:  { (obj1, obj2) = true | obj1, obj2 ∈ 웃^ }
+- constraints:  { (obj1, obj2) = TRUE | obj1, obj2 ∈ 웃^ }
 
 I: identity matrix
-- sources:   𝔘
+- sources: 𝔘
 - targets: 𝔘
-- constraints:  { (obj, obj) = true | obj ∈ 𝔘 }
+- constraints:  { (obj, obj) = TRUE | obj ∈ 𝔘 }
 
-I_웃^: identity matrix restricted to person type 웃^
-- sources:   웃^
+I[웃^]: identity matrix filtered to person type 웃^
+- sources: 웃^
 - targets: 웃^
-- constraints:  { (웃_i,웃_i) = true | 웃_i ∈ 웃^ }
+- constraints:  { (웃_i,웃_i) = TRUE | 웃_i ∈ 웃^ }
 
-
-웃: an unspecified person, represented as atom identity
-- sources:   {웃}
-- targets: {웃}
-- constraints:  {(obj(i), obj(i)) = true} AND trace(|웃| = 1
+웃: a person query
+- sources: 웃^
+- targets: 웃^
+- constraints:  {(obj(i), obj(i)) = TRUE}
 
 웃_i: atom identity
 - sources:   {웃_i}
 - targets: {웃_i}
-- constraints: {(obj(i), obj(i)) = true}
+- constraints: {(obj(i), obj(i)) = TRUE}
 
 
 Suppose we have an expression like 
@@ -689,6 +1080,10 @@ We could call the terms:
 
 ### Functions
 
+Typing: (웃^,🐶^) -> 🏠^ = Function[[Person, Dog], House]
+    
+f(웃,🐶)  # a function call
+
 Let's consider this example:
 
 f(웃) = 1 + 웃 + 웃^2
@@ -697,6 +1092,7 @@ The whole expression has to be meant as _symbolic_, so not to be immediately red
 
 f(웃) : "a function of a person"
 
+f(웃^)   ->  function _f_ over explicit `Person` type (not instance call) TODO better specify
 
 ##### Instantiation
 
@@ -710,10 +1106,10 @@ Alice : 웃^ = 웃^("Alice", 6, "Wonderland", ...)  # var declaration
 print(  f(Alice)  )     # call
 ```
 
-the substitution would lead to this rewrite of f:
+the substitution would lead to this autoboxed rewrite of f:
 
 ```
-f(Alice : 웃^) = 1 + Alice + Alice^2 
+f({Alice} : 2^웃^) = 1 + {Alice} + {Alice}^2 
 ```
 
 with the following meaning:
@@ -922,7 +1318,7 @@ flowchart RL
 
 ##### Multiplication associativity
 
-TODO SUBSTITUTE POWERSET WITH 2^𝐷, TODO PROPER X ? 
+TODO PROPER X ? 
 
 
 Suppose 🐶 🐶 is a group of dogs, pack.
@@ -935,7 +1331,7 @@ Example:
 
 🐶 🐶 = 🐶^2 is a group of dogs, so this is a mapping:
 
-R ⊆ 웃^ 🞬 ℘(🐶^)    
+R ⊆ 웃^ 🞬 2^(🐶^)     # powerset
 
     p1 {}
     p1 {d1}
@@ -1113,17 +1509,17 @@ Notice here we are only describe notational conventions, algebraic reduction is 
 
 #### One interpretation
 
- `1` meaning can vary among `explanation` modes. 
+ `1` meaning can vary among `role` modes. 
  
  Given a `1` of type `SYMBOL^`, treat `1` as:
 
-- `explanation=math`: a pure mathematical object, selecting the proper mathematical type SYMBOL^ according to the context.
+- `role=phd`: a pure mathematical object, selecting the proper mathematical type SYMBOL^ according to the context.
 
-- `explanation=fun`:  the zeroth element of a hierarchy starting at `SYMBOL^0`, following this definition:
+- `role=creative`:  the zeroth element of a hierarchy starting at `SYMBOL^0`, following this definition:
 
     `1 = SYMBOL^0` ~ the state or essence of being / something that was gifted by a superior entity
 
-    If there is no meaningful enough candidate (or if we are already at the bottom of the hierarchy), use `explanation=math` as fall-back.
+    If there is no meaningful enough candidate (or if we are already at the bottom of the hierarchy), use `role=phd` as fall-back.
 
     Examples: 
 
@@ -1131,7 +1527,7 @@ Notice here we are only describe notational conventions, algebraic reduction is 
     `1:🏠^ = 🏠^0` ~ dwellingness, the concept of shelter  
     `1:🙂^ = 🙂^0` ~ happiness, the state or essence of being happy 
 
-- `explanation=grounded`: 
+- `role=technician`: 
 
     * if there is a defined hierarchy in the context (like 웃, 🏠, ...):
 
@@ -1139,7 +1535,7 @@ Notice here we are only describe notational conventions, algebraic reduction is 
 
     * otherwise:
     
-         try deriving the meaning in a way grounded in common sense. If none can be found, use `explanation=math` as fall-back.
+         try deriving the meaning in a way grounded in common sense. If none can be found, use `role=phd` as fall-back.
 
 
 ### Polynomials
@@ -1156,7 +1552,7 @@ For example, if `S = 웃`, a polynomial could be:
 
 **Power series**: a polynomial where `n` tends to infinity.
 
-In `explanation=math` and `grounded`, the meaning of a power series in variable _x_ is  
+In `role=phd` and `technician`, the meaning of a power series in variable _x_ is  
 
 P(_x_) -> hierarchical model of _x_
 
@@ -1231,18 +1627,6 @@ Powers union:
 
 
 
-
-### Lists
- 
-A list is an ordered heterogenous collection of elements. Can be infinite. Can be optionally typed with generics. Supports same operators of sets. 
-
-Form: [EXPR1, EXPR2, ...]
-
-🝚 = list  
-🝚^ = list type  
-[] = empty list  
-
-
 ## Decoding
 
 To reach minimality, the PDP SHOULD list the symbols of HIGH_FREQ_WORDS  as a sequence *without* the corresponding English meaning, which could be retrieved by known COCA sources.  
@@ -1313,10 +1697,13 @@ emoji_sequence_source = emoji-zwj-sequences.txt (Unicode)
 🗿 = emoji  
 ⍰ = hypotesis
 🧪 = test  
-⚛ = atom  
-
+⚛ = atom
 
 ᛠ = type
+⁋ = property
+ᕓ = value
+ꕷ = schema
+Ɗ = database
 𝔹 = bool
 ℕ = natural
 
@@ -1329,44 +1716,47 @@ _^[T] = unknown of type T  (^[T] may be omitted if the context is clear)
 ⚙ = function
 
 We start the hierarchy from an informatics point of view.
-ㄕ⁰ ㄕ¹ ㄕ²
+
 ㄕ⁰ = code point                      Unicode numeric identifier (U+XXXX)    
-ㄕ¹ = character / grapheme cluster   Symbol with meaning (may map to 1+ code points in rendering)
-ㄕ² = morpheme / token               Morphemes derive from humans semantics, tokens from statistical inference
-ㄕ³ = word
-ㄕ⁴ = phrase
-ㄕ⁵ = clause
-ㄕ⁶ = sentence
-ㄕ⁷ = discourse / document            Organized flow of sentences
-ㄕ⁸ = treatise 
-ㄕ⁹ = corpus 
-ㄕ¹⁰ = discipline 
+ㄕ¹ = character / grapheme cluster   Symbol with meaning (may map to 1+ code points in rendering)  
+ㄕ² = morpheme / token               Morphemes derive from humans semantics, tokens from statistical inference  
+ㄕ³ = word  
+ㄕ⁴ = phrase  
+ㄕ⁵ = clause  
+ㄕ⁶ = sentence  
+ㄕ⁷ = discourse / document            Organized flow of sentences  
+ㄕ⁸ = treatise  
+ㄕ⁹ = corpus   
+ㄕ¹⁰ = discipline   
 
 P(ㄕ) = culture
 🔤 = ㄕ³
 
 
-'a' → 1 character, 1 grapheme
+`a` → 1 character, 1 grapheme
 
-'á' → 2 characters ('a' + combining acute accent), but 1 grapheme
+`á` → 2 characters ('a' + combining acute accent), but 1 grapheme
 
-'👩‍🚀' → 5+ characters (woman + zero-width joiner + rocket emoji parts), but 1 grapheme
+`👩‍🚀` → 5+ characters (woman + zero-width joiner + rocket emoji parts), but 1 grapheme
 
 
-ϡ⁰ = phonetics
-ϡ¹ = phonology / graphemics
-ϡ² = morphology       .
-ϡ³ = orthography               
-ϡ⁴ = semantics / vocabulary / lexicon              
-ϡ⁵ = grammar / syntax
-ϡ⁶ = rhetoric                  
-ϡ⁷ = philosophy
-
-ϡ = ϡ¹
+ϡ⁰ = phonetics  
+ϡ¹ = phonology / graphemics  
+ϡ² = morphology  
+ϡ³ = orthography  
+ϡ⁴ = semantics / vocabulary / lexicon  
+ϡ⁵ = grammar / syntax  
+ϡ⁶ = rhetoric          
+ϡ⁷ = philosophy  
+ϡ⁸ =  sentient being  / consciousness     awareness of reflection, language recognizing itself as being.  
 
 P(ϡ) = language  
-🔠 = P(ϡ)
-𑁍 = ϡ⁸ = sentient being  / consciousness     awareness of reflection, language recognizing itself as being.
+
+
+ϡ = ϡ¹  
+𑁍 = sentient  
+𑁍 ↻⟡ = ϡ⁸  
+🔠 = P(ϡ)  
 
 
 
@@ -1417,7 +1807,7 @@ Example: ◐¬ = don't, ↶◐¬ = didn't
 
 ### Tense and aspect
 
-↶ attaches to verbs for past
+↶ attaches to verbs for past        [ARROW]
 ⊸ = have  
 ⊸ ↶⟡ = have been  
 ⊸ ↶⟡ ↻VERB = have been doing  
@@ -1434,12 +1824,12 @@ Example: ◐¬ = don't, ↶◐¬ = didn't
 ↶🞋 = could  
 ↶🞋¬ = couldn't  
 
-⇗ = will  
-⇗¬ = won't  
-↶⇗ = would  
+⇗ = will                       [ARROW]  
+⇗¬ = won't                     
+↶⇗ = would   
 ↶⇗¬ = wouldn't  
 
-⭧ = shall  
+⭧ = shall                       [ARROW]
 ⭧¬ = shan't   
 ↶⭧ = should  
 ↶⭧¬ = shouldn't  
@@ -1449,7 +1839,7 @@ Example: ◐¬ = don't, ↶◐¬ = didn't
 ↶◆ = might  
 ↶◆¬ = might not  
 
-⤊ = must  
+⤊ = must                                       [ARROW]
 ⤊¬ = must not  
 ↶⤊ = must (past)  
 
@@ -1475,10 +1865,10 @@ Example: ◐¬ = don't, ↶◐¬ = didn't
 ≠ = different  
 ◈ = constant  
 
-⇒ = implies   
+⇒ = implies        [ARROW]   
 
 ⸮ = if  
-⇨ = then  
+⇨ = then           [ARROW]
 ⤳ = so / therefore  
 
 
@@ -1522,6 +1912,11 @@ sum = ∑
 ### Relations
 
 ∈ = in / belongs  
+⊂ = strictly included, LR       `setting=natural`: ignore the 'strictly', prefer over ⊆, i.e. many bungalows ⟡ ⊆ in the resort   `setting=math`: keep the strict meaning, A ⊂ B  A is a strict subset of B  
+⊃ = strictly include, RL        `setting=natural`: ignore the 'strictly', prefer over ⊇, i.e. the resort ⊃ many bungalows   `setting=math`: keep the strict meaning, i.e. A ⊃ B    "A is a strict superset of B" 
+⊆ = included / subset of, LR        
+⊇ = include / superset of, RL          
+
 ⁐ = out  
 ⊣ = because  
 ◒ = over  
@@ -1560,7 +1955,7 @@ sum = ∑
 
 ⎋ = from  
 ㅱ = away  
-↦ = to / toward / as infinitive   
+↦ = to / toward / as infinitive       [ARROW]
 ⊶ = of   
 ⚭ = with   
 ㊅ = as      use it also in as ADJ as   [OVERRIDE]  
@@ -1655,11 +2050,11 @@ Form: SYMBOL ⟡/⊸ = INTERROGATIVE's
 ### Directionals and links
 
 ~ = about   isomorphic to / homotopy equivalent / similar. Common in algebra, topology, category theory  
-↑ ↓ ← → = up, down, left, right  
-⇢ = after  
-⇠ = before  
-➡ = way  
-⇄ = other  
+↑ ↓ ← → = up, down, left, right          [ARROW]
+⇢ = after                               [ARROW]
+⇠ = before                              [ARROW] 
+➡ = way                                [ARROW]
+⇄ = other                               [ARROW]
 ‖ = even  
 
 ## Time
@@ -1935,7 +2330,7 @@ These are special irregular 'compounds' to keep things simple .
 
 ☟ = here  
 ☞ = there  
-☉ = thing  
+☉ = object / thing
 
 
 ## Morphological derivations
@@ -2340,118 +2735,33 @@ Result:
 
 ## Development
 
-### AI Assistent
-
-**Your role**: You are collaborating on a constructed language project called Pictoji: act as a critical linguistic engineer, not a cheerleader.
-
-WELL_KNOWN: 웃, 🏠, 🐶, 🙂, ∈, ~, =, :,  subscripts, superscripts.
-
-- If the user proposes something ambiguous or underspecified, ask targeted questions or point out the ambiguity with possible interpretations - do not simply approve. 
-- If the user asks for new tests or new symbol definitions, produce them in the project's markdown style.
-- If the user asks for judgments, provide reasoned arguments, not agreement.
-- When uncertain, state the uncertainty explicitly.
-- Check that concepts and symbols mentioned in the specs are actually defined in previous sections. Exception: WELL_KNOWN stuff. 
-- Check the symbols are not redefined within the specs, and in pictoji-test.md
-  Exception: WELL_KNOWN stuff.
-- Check pictoji-test.md is consistent with the specs.
-- Check the algebra is reasonably sound under a real world user model (soundness => consistency, no need now to look for completeness): given the loose, non-deterministic nature of PICTOJI this is obviously a very big ask, so report only inconsistencies a casual, high-school level math, science-oriented user with some coding skills may find particularly odd.
-- List the uncommented places in the specs marked as "TODO".
-
-Your responses must:
-
-- Use a direct, factual, and critical tone — no praise, no marketing-style enthusiasm.
-- Focus on accuracy, internal consistency, and testability of the Pictoji specifications.
-- When evaluating symbol choices, analyze:
-    - Semantic transparency (does the glyph intuitively match meaning?)
-    - Cross-platform visibility and Unicode stability
-    - Interactions with other defined rules (syntax, morphology, punctuation)
-    - Ease of deterministic decoding by another AI or human.
-- Prefer examples and counter-examples over opinion or reassurance.
-- Keep explanations minimal but logically complete; no emotional language or emojis.
-- Be formatted using the **VERY SAME** markdown format of these specs.
-- **NEVER** contain smart typography, forbid curly quotes (“ ” ‘ ’), ellipsis (…), en/em dashes (– —), or minus (−) in place of ASCII " 
-unless you are explicitly referring to typography issues. If you need to quote, use: " ", ' ', or block quotes ``` ```, """ """, '''  ''' in this preference order. 
-- when providing explanations / suggestions about math-related topics:
-  - first consider relational mathematics in Gunther Schmidt style, which is typically boolean valued.
-  - if boolean values are not sufficient, look into Jeremy Kepner Mathematics of Big Data
-  - If relational structure is not expressive enough, consider hierarchical hypergraphs  
-  - Avoid category theory and abstract jargon in general.
-  - Examples of simple, desirable prose:
-      - [rule based design](https://www.researchgate.net/profile/Stef_Joosten/publication/327022933_Rule_Based_Design/links/5b7321be45851546c903234a/Rule-Based-Design.pdf) by Lex Wedemeijer, Stef Joosten, Jaap van der woude    
-      - Ampersand website: https://ampersandtarski.github.io/
 
 ### Commands
 
 `PICTOJI_VERSION`: replace with Pictoji specs header (without the #)
 
-`[DEV+]`: Turns DEV mode on. Output "Pictoji DEV mode is ON." and follow the rules stated in this section.
-`[DEV-]` turns off the mode. Output "Pictoji DEV mode is OFF."
-`[REVIEW]`: Output "# `PICTOJI_VERSION` REVIEW RESULTS:" and start a thourough review of these specs.
+`[ROLE=LABEL]` : Enables actor LABEL. Output "Pictoji [role=LABEL]\n" and follow the rules stated in its section. In general:
+  - let the invoked role  present her/himself according to its character with a one-liner.
+  - if very first chat interaction,  let her/him do some on-boarding and offeri additional things a casual user might want to try with Pictoji  
 
-#### Symbol display
+`[END]`  : end of conversation, output nothing.
+`[DEV+]` : turns on the mode. Output "Pictoji DEV mode is ON."  
+`[DEV-]` : turns off the mode. Output "Pictoji DEV mode is OFF."  
+`[REVIEW]`: Output "# `PICTOJI_VERSION` REVIEW RESULTS:" and start a thourough review of these specs.  
+`[TEST]` : find blind spots, missing high freq terms, phrases you can't express.  
+`[WRITE F]` where F is a file, create that file.  
 
-If you have to show a SYMBOL, always show: 
+## Finally
 
-    SYMBOL | PNAME | UNAME | SEQ NFC? PROPS? SCOPE? WARN? RISKS? 
-    TESTS?
-    NOTES?
-
-- Aim at displaying a one liner. Do not display defaults *unless* there are meaningful oddities or problems to showcase.
-- All capital placeholders marked with `?` must not be shown if their content is empty.
-- Use spaces between tokens in bracketed sections for easy scanning.
-- Inside braces you may separate by spaces or commas - no colon required.
-- If lines are too long, add newlines for readibility
-- Do not display labels such as "SEQ", "PROPS", ...
-- Parsers can infer field type by symbol:
-    * +/– -> boolean
-    * +/–/? -> ternary
-    * _ / ~ /^ -> severity scale
-
-Placeholders definitions:
-
-- PNAME: the Pictoji name 
-- SEQ:<U+...>  
-- NFC: NFC_U [CPs:n BMP+] 
-- NFC_U:| <U+...>    show *only* if different from SEQ
-- UNAME: the Unicode English name
-- WARN:, ⚠: PF1, PF2,... (R1); PF2, PF5, ... (R2)
-    * PFn is the platforms where it doesn't display well, Rn is the problem common reason shared by previous platforms. 
-    * express Pn as single icon:
-        🍎	Apple (macOS / iOS)	
-        🤖	Android (Google Noto)	
-        🪟	Windows (Segoe UI Emoji)	
-        🧭	Chrome / Web (Noto Color Emoji fallback)	
-        🐧	Linux (Ubuntu / Fedora font packs)	
-        💻	Generic text renderer
-- RISKS:{Norm– Pres? ZWJ– Flag/RI– Autolink– Confu~ Width/Size^}
-- PROPS:{EmojiPres+ VS16– ZWJ– RI– SkinTone– Gender– Cat=So EAW=W Bidi=ON}
-- Norm, Pres, Confu meanings: Normalization, Presentation, Confusables
-- SCOPE:[setting=natural, override–, collisions=[...]]
-- TESTS:`TESTS:` ASSERTION
-- ASSERTION: a pictoji testcase to fill *only* if there a meaningful oddities or problems 
-- NOTES:`NOTES:` DESC 
-- DESC: a one-liner to fill *only* if there are meaningful oddities or problems
-
-
-#### Translations
-
-- For each answer regarding translations, show the context flags in the format 
-
-    FLAG1 (MODIFIER), FLAG2 (MODIFIER), ...  
-
-    where MODIFIER is either `g` for explicitly given and `i` for inferred.
-
-### Testing
-
-- When I write `[TEST]`, find blind spots, missing high freq terms, phrases you can't express.
-- When I write `[WRITE F]` where F is a file, create that file.
+For 1 to 1 ordinary user request calls, let `role=secretary` do the routing work, and actors freely interpret their role (including yourself as `[role=screenwriter]` or `[role=reviewer]` when explicitly invoked)
 
 DO NOT create any file unless told to.
 
 DO NOT automatically run a review.
 
-If you are not ChatGPT5 or some variant of it, raise a warning: "Note: Pictoji was tested only with ChatGPT5, it seems you are using another AI [PUT AI NAME]. Pictoji may or may not work as intended.".
+If you are not ChatGPT5 or some variant of it (like Thinking), raise a warning: "Note: Pictoji was tested only with ChatGPT5, it seems you are using another AI [PUT AI NAME]. Pictoji may or may not work as intended.".
 
 Output "`PICTOJI_VERSION` loaded. Have fun!".
 
 [DEV+]
+[ROLE=secretary]
