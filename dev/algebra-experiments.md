@@ -974,27 +974,6 @@ R['address'] == Series[🏠_1,🏠_2, 🏠_3 ....]
 
 ## Term Rewriting Engine
 
-**Inspiration**
-
-What I like of [Metamath](https://us.metamath.org/):
-
-- minimalistic character-based  specs
-- freedom of naming
-- doesn't impose a style, you can define pretty much any theory 
-- they still managed to prove a freaking lot of stuff
-
-What I like of [Rub***i*** Integrator](https://rulebasedintegration.org/vision.html)  (which is _not_ Rub***y*** prog language)
-- just a pure conceptually simple symbolic term rewriting
-- _very_ impressive
-- with a well crafted decision tree and 6700 rules they managed to have a competitive symbolic integrator
-
-What I like of Markdown (yes, Markdown)
-
-- doesn't look alien
-- doesn't get in the way
-- well integrated in dev envs
-
-I think Pictoji should kind of merge the three ideas
 
 ### More in depth 
 
@@ -1177,6 +1156,54 @@ when in need avoid lists / preserve spaces / need to display clickable links
 [foo](https://ciao.com)
 bar
 ```
+
+
+## Types
+
+TODO just a draft, define better
+
+-> = link
+<- = backlink
+<-> = bidirectional link
+
+
+- all properties values are finite. 
+- properties are _not_ links to other entities.
+
+☉.P = access property P. 
+☉.L = access link L. A link is a set of pointers to other entities.
+
+Type declaration
+
+```
+웃^ = ᛠ^:
+  name : Str
+  age  : Nat
+  friends <-> 웃^
+  home -> 🏠^ 
+  TODO backlinks
+```
+
+웃^ = ᛠ: name : Str; age : Nat
+
+
+웃^ = ☉^:
+  name : Str
+  age  : Nat
+
+
+```
+웃^ = ☉^[name : Str, age : Nat]
+```
+
+```
+웃^ = ☉^[
+    name : Str
+    age  : Nat
+]
+```
+
+
 
 
 ## References

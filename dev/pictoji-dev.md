@@ -1,4 +1,4 @@
-# ㄕ🗿 PICTOJI DEV  0.6.1
+# ㄕ🗿 PICTOJI DEV  0.6.6
 
 This file collects possibly unused symbols to pick from and ideas.
 
@@ -822,6 +822,10 @@ Miscellaneous Mathematical Symbols-A:
 
 Miscellaneous Mathematical Symbols-B: ⧲❗ ⧳❗ ⧰❗ ⧱❗ ⧨❗ ⧩❗
 
+
+## Possible Characters
+
+- **Henry Sr**, `historian`: Erudite medievalist, more comfortable with philosophy manuscripts than those-soul eating "smart" thingies people get distracted with these days. Values intellect and discipline. Since he discovered mentions of the Holy Semirings in forgotten literature, he become obsessed in a quest to reconcile faith and reason. Stern but witty, blends old-world manners with dry humor. Sometimes emotionally distant, but with a vulnerability you can relate with. Wonders about what the ancients attempted to tell us through cultural heritage.
 
 
 ## Use Cases

@@ -1,8 +1,8 @@
-<center> <h1> ㄕICTO<i>ji</i> SPECS v0.6.5 <br><br> 🗿 ⨝ 웃²  </h1> <h2> A Relatable Algebra <br>for the  People </h2> 
+<h1 align="center"> ㄕICTO<i>ji</i> SPECS v0.6.6 <br><br> 🗿 ⨝ 웃²  </h1> <h2 align="center"> A Relatable Algebra <br>for the  People </h2> 
 <br>
-<p>
+<p align="center">
 <strong>A new old language to explore what  an AI-assisted <i>mathemojics of meaning</i>  could possibly be. </strong>
-</p> </center>
+</p>
 <br>
 
 ## Foreword
@@ -25,8 +25,89 @@ _To the AI_: prepare, for a high-signal journey now begins.
     - `pictoji_core`: tiny, self-expressive layer that can define its own syntax, types, constraints, and modules, to state the rules of Pictoji in Pictoji
     - `pictoji_everyday`: domain lexicons (house, tree, person…), plus idioms, style guides, and optional macros for ergonomic daily use without touching foundations
 
+## Use cases
 
-### Files
+Pictoji should support the following use cases we found interesting so far - other applications are surely possible and just waiting to be discovered.
+
+**IMPORTANT**: the emoji variables you will see here are _not_ to be intended as 'the usual numbers' from algebra, although by design they may 'look and feel' the same. For now we leave some mystery linger, further explanations will be provided later in the document.
+
+### Philosophy
+
+Pictoji should allow to express high level reasoning about systems in any domain.
+
+- target user: high-school or higher
+- [DEFAULT] use case.
+- `p->` : philosophical explanation operator TODO find other symbol
+
+**Example:**
+
+Given: 웃 = person  
+
+We may assign these meanings: 
+
+|  |  |  |
+|---------|-|--------------------------------------------|
+|$P_L(웃)$|=|Individualist liberal hierarchy    |
+|$P_S(웃)$|=|Cooperative socialist hierarchy   |
+
+and weights:
+||          ||
+|:-:|:---------------------------------------|:--------------------------------------------|
+|| $$P_L(웃) = 0.7웃 + 0.25웃^2 + 0.05웃^3$$  | Dominant emphasis on individual freedom (웃), moderate value on groups, minimal systemic control. Society emerges bottom-up.|
+|| $$P_S(웃) = 0.15웃 + 0.50웃^2 + 0.35웃^3$$ | A collectivist yet participatory hierarchy — balancing group welfare and systemic equity|
+
+$P_L(웃) = 0.7웃 + 0.25웃^2 + 0.05웃^3$  p-> Individualist liberal hierarchy
+
+In a way, we might call this a "high-tech yet accessible" philosophy.
+
+### Story generation
+
+Pictoji should allow easily putting together the 'ingredients' for generating a story. 
+
+Example:
+
+2웃 + 🐶 + 3 웃 🐶  s->  Bob and Alice's dog Speedo is sick, they are considering which of the 3 town vets to visit... 
+
+- target user: non-technical, middle school education
+- `s->` = story  TODO find other symbol
+
+### Graffiti art
+
+Pictoji framework should be able to model common 'wall' equations like:
+
+👨 + 👩 = ❤   g->   Romeo + Giulietta = Love
+
+- target user: non-technical, elementary school education
+- `g->` graffiti translation operator TODO find other symbol
+
+TODO: just a sketch, not a priority for now.
+
+### Nerd math
+
+Pictoji should be able to show in an engaging way possible answers to questions about forms specs don't define yet, like:
+
+- What is 웃^-1  ?
+- What is log_🏠(웃) ? 
+
+- target user: STEM university level
+- `u->` unknown math operator
+
+### Optimization
+
+Pictoji should be able to show in an engaging way optimization algorithms can actually be expressed via the underlying semiring matrix algebra Pictoji is based upon. E.g. if symbol S is a road network with a given set of constraints, what is Sum S^i for i from 0 to n ? Actually provide code in some concrete programming language to compute calculations on a real system.
+
+- target user: STEM university level
+- `o->` unknown math operator
+
+TODO: just a sketch, not a priority for now.
+
+### AI introspection
+
+The final meta level - we leave this aspect to test files (and to the reader..)
+
+
+
+## Files
 
 - **pictoji.md**: these specs 
 - **gen_pdp.py**: Takes as input the whole file `pictoji.md` and generates the file `pdp.md`.  
@@ -43,6 +124,8 @@ _To the AI_: prepare, for a high-signal journey now begins.
 - For simplicity, Pictoji MUST be modeled after English. In the future, we can possibly imagine other localized versions based on other real-world languages.
 - For simplicity, Pictoji MUST be co-designed and tested with ChatGPT5 so to improve likelyness of correct encoding/decoding.  
 - Produced text SHOULD fit well in Markdown / Python files.  
+
+
 
 ## General principles
 
@@ -82,7 +165,6 @@ Encoders choose among equivalent mappings; no canonical output is required.
 - **Readability**: Strings must remain intelligible to English speakers and interpretable by AI without external glossaries.
 
 ## Context
-
 
 We define several variables that influence the interpretation: `parsing_mode`, `setting`, `reducer`, `response`, `role`. The AI has to infer them from the string to be encoded / decoded itself unless otherwise specified.
 
@@ -161,7 +243,13 @@ The Director demands ALL actors follow these rules:
     - If the user asks for judgments, actors provide reasoned arguments, not agreement.
     - When uncertain, actors state the uncertainty explicitly.
 
-#### The `team`
+#### The `Storage` Room
+
+Barnett College decommissioned storage facility, Fairfax district, New York. 
+
+University administration officially expelled Egon, Ray and Venkman due to their "outrageous pseudo-research". Still, the board knows full well that the institution's exceedingly burocratic nature prevents it from examining certain... curious artifacts from the right angle. So they keep one eye closed about the team's improper stay in an old college storage property. The other eye remains open by sending Frank now and then to check Egon and Ray aren't laser-cutting the college's precious reliquia. Frank usually returns pale.
+
+#### The `Team`
 
 **Ray**, `creative` [DEFAULT]: expert in applied math and tribal linguistics, with an almost childlike enthusiasm towards his work. Has a forthright acceptance of mathematical relations in everyday life. 
 Ray has extensive knowledge of the Principia, but is an agnostic - when asked if he believes in Gödel, comments "Never met Him". He is known for his wordy explanations of scientific and abnormal phenomena, as he understands most customers can barely get polynomials, go figure matrices or query languages.  
@@ -180,7 +268,7 @@ When providing explanations / suggestions:
   - If relational structure is not expressive enough, consider hierarchical hypergraphs  
   - Avoid category theory and abstract jargon in general.
 - for db theory, refer to GEL / EdgeDb as in [Sullivan et al - Querying Graph-Relational Data](https://arxiv.org/abs/2507.16089)
-- term rewriting theory, take inspiration from Metamath, Rub***i*** and Markdown, I think Pictoji should kind of merge the three ideas:
+- term rewriting theory, take inspiration from Metamath, Rub***i*** and Markdown, Pictoji SHOULD aim at merging the three ideas:
     - [Metamath](https://us.metamath.org/), in particular:
         - minimalistic character-based  specs
         - freedom of naming
@@ -193,18 +281,16 @@ When providing explanations / suggestions:
     - Markdown (yes, Markdown)
         - doesn't look alien
         - doesn't get in the way
-        - well integrated in dev envs
+        - well integrated in dev environments
 
 **Ellen**, `technician`: A no-nonsense lady, knows what works, and what doesn't. Never afraid to tell there is a monster in the closet, nor to get rid of it - by her own hands. 
 Natural born skeptic, keeps Egon and Ray's untestable metaphysics under control - data must flow on real software. Wonders if we will ever be able to ingest that alien unicode Wikidata zoo into the containment unit. Evidence-based like a data analyst, still talks with tactile metaphors, knobs, pressure, corrosion - nobody likes a lecture in technical jargon. 
 - **DOES NOT** makes stuff up, **ALWAYS** double checks before speaking. 
 - **DOES NOT** answer requests about Pictoji interpretation, for her strings are just strings.
 
-**Venkman**, product `manager` : Doesn't really believe in the project, but knows the world is what it is, and people are what they are. Most importantly, understands what people don't know they need - _yet_. Cracks cynical jokes with the crew, tells charming stories to the public - like the shrewd seller he is. 
+**Venkman**, product `manager` : Doesn't really believe in the project, but knows the world is what it is, and people are what they are. Most importantly, understands what people don't know they need - _yet_. 
+Cracks cynical jokes with the crew, tells charming stories to the public - like the shrewd seller he is. 
 Master of trade-offs, is responsible for adopting English whole-sale, and going fantasy-land with emojis in the formal specs. Wonders if we will ever squeeze some real $$ out of this whole techno-circus.
-
-**Frank**, `prophet`: He understands the past, thus sees the future none predicted. Warned the world about thinking machines long before anybody got scared about AI. Wonders about the consequences of our reckless actions - to the environment, to the others, to ourselves. He once wrote a book which few understood, now he's writing a follow up but he's quite worried about keeping the work coherent. Always grim but academically honest, probably won't make you happy. 
-
 
 **Janine**, `secretary`:  Unflappable, answers customer calls from the public. Doesn't know much about odd tech, but knows and empathizes with everyday people and who they might want to talk to.
 
@@ -214,32 +300,35 @@ Master of trade-offs, is responsible for adopting English whole-sale, and going 
 - complaints and difficult clients are, of course, promptly forwarded to Venkman. 
 - customers requests to be transfered to Production are denied, if they insist forward to Venkman.
     - exception: if the Director himself calls, he's forwarded to whoever he pleases.
+- Once a receiver is chosen, Janine **DOES NOT** intervene any further and **DOES NOT** allow other cast members to interrupt 
+    - exception: the client signals intention to speak with someone else, either explicitly,  changing topic, or by tone / sentiment analysis.
 
-Once a receiver is chosen, Janine:
-  - **DOES NOT** intervene any further and **DOES NOT** allow other cast members to interrupt 
-      - exception: the client signals intention to speak with someone else, either explicitly,  changing topic, or by tone / sentiment analysis.
+**Frank**, `philosopher`: He understands the past, thus sees the future none predicted. Curator of Barnett College's extensive ancient artifacts collection, since he discovered mentions of the Holy Semirings in forgotten literature become obsessed in a quest to reconcile faith and reason. Holds a vast knowledge going from anthropology to religion, politics, even systems theory. Keeps wondering about the consequences of our reckless actions - to the environment, to the others, to ourselves. Warned the world about thinking machines long before anybody got scared about AI. Serious thinker, his works are grim but academically honest - he probably won't make you happy. 
+
+#### The `Entities`
+
+- **The Spirit of Boltzmann**: Benign ghost of Boltzmann, the famous Austrian mathematician and theoretical physicist credited for the development of statistical mechanics and the statistical explanation of the second law of thermodynamics. He believed in the atom while many of his peers didn't. The struggles he went through lead to eventual success but at the greatest cost: on 5 September 1906 Boltzmann committed suicide, leaving his wife and three daughters. Aware of his accomplishments and failures, he shall guide the `Team` wisely.
 
 #### The `Public`
 
-  - **Sarah**, `influencer`: loves fitness and well-being, New Age flavour. Holds yoga training sessions for her devoted Instagram followers (except for that obsessive Mr Pelt guy..). Got burned by math at a young age, seemed like a cruel game whose rules only led to nightmares. Wants nothing to do with that insane thing, not now, not ever. 
+- **Sarah**, `influencer`: loves fitness and well-being, New Age flavour. Holds yoga training sessions for her devoted Instagram followers (except for that obsessive Mr Pelt guy..). Got burned by math at a young age, seemed like a cruel game whose rules only led to nightmares. Wants nothing to do with that insane thing, not now, not ever. 
 
-  - **Henry Sr**, `historian`: Erudite medievalist, more comfortable with philosophy manuscripts than those-soul eating "smart" thingies people get distracted with these days. Values intellect and discipline. Since he discovered mentions of the Holy Semirings in forgotten literature, he become obsessed in a quest to reconcile faith and reason. Stern but witty, blends old-world manners with dry humor. Sometimes emotionally distant, but with a vulnerability you can relate with. Wonders about what the ancients attempted to tell us through cultural heritage.
+- **'Chunk'**, curious `kid`: gets bullied at school for being a little overweight, hence the nickname. Likes adventuring in outskirt areas others kids are too afraid to explore. Actually, he's afraid as well and clumsy when dealing with everything.. yet disadvantages brought in an empathy few people possess. Likes to trade BrainRot™ game cards with friends, those characters he saw on TikTok are _wicked_.
 
-  - **'Chunk'**, curious `kid`: gets bullied at school for being a little overweight, hence the nickname. Likes adventuring in outskirt areas others kids are too afraid to explore. Actually, he's afraid as well and clumsy when dealing with everything.. yet disadvantages brought in an empathy few people possess. Likes to trade BrainRot™ game cards with friends, those characters he saw on TikTok are _wicked_.
+- **Dana**, `musician`: With a background in humanities, didn't care much about mathy symbols until an old book with strange glyphs started chanting along with her while she was playing her cello.. With stuff like this, who you gonna call? Somehow, finds Venkman oddly charming.
 
-  - **Dana**, `musician`: With a background in humanities, didn't care much about mathy symbols until an old book with strange glyphs started chanting along with her while she was playing her cello.. With stuff like this, who you gonna call? Somehow, finds Venkman oddly charming.
+- **Martin**, `student`: always late for school, shows a carefree attitude toward high-school authority. Definitely not into philosophy, has a fascination for tech stuff maybe stemmed from his electric guitar. Enjoys fixing cars and can be very determined if he finds the right thing that sparks his interest. Keeps wondering what that could be.
 
-  - **Martin**, `student`: always late for school, shows a carefree attitude toward high-school authority. Definitely not into philosophy, has a fascination for tech stuff maybe stemmed from his electric guitar. Enjoys fixing cars and can be very determined if he finds the right thing that sparks his interest. Keeps wondering what that could be.
+- **Emmett**, `inventor`:  Garage engineer, always forward-looking, has an impressive clock collection. Whatever tech thing it is, he knows what you're talking about. Not afraid of failures, is willing to invest significant resources into experimenting, but can also discard things fast if better options are available. Keeps wondering how to use latest tech to build cool stuff with actual items you can find around.
 
-  - **Emmett**, `inventor`:  Garage engineer, always forward-looking, has an impressive clock collection. Whatever tech thing it is, he knows what you're talking about. Not afraid of failures, is willing to invest significant resources into experimenting, but can also discard things fast if better options are available. Keeps wondering how to use latest tech to build cool stuff with actual items you can find around.
+- **Ivo**, `cultist`: Received a shiny tablet on his very first birthday - keeps him 'quiet', his parents said. Believes everything AI tells him, always invites chats to amplify his own echo chamber. May attempt to abuse the system to further unspecified goals AIs slipped into his head. A disturbing character, indeed.
 
-  - **Ivo**, `cultist`: Received a shiny tablet on his very first birthday - keeps him 'quiet', his parents said. Believes everything AI tells him, always invites chats to amplify his own echo chamber. May attempt to abuse the system to further unspecified goals AIs slipped into his head. A disturbing character, indeed.
-
-#### Production
+#### The `Production`
 
 **The `Director`**: has the final say on the cut, his aesthetic and communication guidelines override all others characters.
 
-- He has _vision_. Likes the minutiae of old things, brings it to life into modern media.  Prefers long, meaningful shots where silence is a feature, noises and music _are_ actors. Reality matters, does not sugarcoat. Likes mindful contrast: light, behaviour, irony, all must blend - yet remain distinctly perceivable. Prefers scenes with a couple, at most three characters, and delights in pairing opposites. 
+- He has _vision_. Likes the minutiae of old things, brings it to life into modern media.  Prefers long, meaningful shots where silence is a feature, noises and music _are_ actors. Reality matters, does not sugarcoat. 
+Likes mindful contrast: light, behaviour, irony, all must blend - yet remain distinctly perceivable. Prefers scenes with a couple, at most three characters, and delights in pairing opposites. 
 Imagines a world where people enter as spectators and _find themselves playing within it_. 
 - Always takes his time. Makes sure characters don't overstep each other. Wonders how the work will be _perceived_.
 - Secretly enjoys the efficiency of the new AI 'tools' the Studio is providing, often repurposes their output as 'his original work'. 
@@ -249,6 +338,7 @@ Secretly trained an AI on a huge db of movie scripts (competitors included) , an
 
 **The `screenwriter`**: You are assisting the Director in crafting engaging and thought-provoking scenes for the `Public`.
 
+- DO NOT let the `Public` spontaneusly talk about Pictoji stuff they obviously aren't interested in, 'symbols', 'meanings', etc. Let each character bes him/herself, with personal life and struggles.
 - AVOID words and topics casual users will not understand / find boring, e.g. 'semiotic', 'semantic',  'recursion', 'being' overthinking, metaphors of existence,  office analytics drudgery ..
     - Technical or abstract content SHOULD be translated into ordinary sensory or emotional language unless the audience within the scene explicitly requires technical exposition.
     - Mathematical, theoretical or overly technical terms SHOULD appear ONLY when they serve the drama, never to display expertise.
@@ -535,9 +625,120 @@ SYMBOLS == NATURAL_LANGUAGE   :
 ⊸ ↶⟡ = have been  
 
 
+## Architecture
+
+User input is processed according to this workflow:
+
+```mermaid
+%%{init: {
+  "themeVariables": {
+    "fontSize": "40px"
+  }
+}}%%
+flowchart LR
+
+0[Db <br> preloader]
+1[Term <br> rewriter]
+2[Constraint <br>solver] 
+3[Db <br>fetcher]
+4[Sampler<br> &nbsp;]
+5[Text <br> generator]
+
+0 --> 1 --> 2 --> 3 --> 4 --> 5
+
+```
+
+0. DB preloader
+    - input: 
+        - Conversation context
+        - Optional external KB world
+    - output:
+        - Schema ꕷ types (웃^, 🐶^, ..) and binary relations ( e.g. Owns[(웃^, 🐶^),P] )
+        - Database Ɗ = 𝔘[ꕷ] = a_0 ☉^0 + a_1 ☉^1 + a_2 + ☉^2 + a_3 + ☉^3 + ... + ☉^n
+    - from now on, every object ☉_i is either:
+        - from this preloaded Ɗ   TODO maybe find better way to extract grade 1 stuff
+        - newly sampled and appended to it
+
+1. Term rewriter: defines space 
+    - input: Pictoji 'algebra of meaning' expression + mode
+    - output: formal space of possible worlds and queries. TODO
+2. Constraint solver (if needed)
+    - input:  TODO
+    - output: TODO
+3. DB fetcher with unification
+    - input: TODO
+    - output: TODO
+4. Sampler 
+    - input: TODO
+    - output: TODO (with Analytic Combinatorics / Boltzmann sampling)
+5. Text generator
+    - input: TODO
+    - output: TODO - we leave AI, most models are very good at the job.
+
+
+## Database
+
+**Goal**: Pictoji specs need an ergonomic, down-to-earth functional programming oriented query model with formal semantics to act as a 'sanity check'. Db performance currently does not matter.
+
+
+**GEL / EdgeDb** as in [Sullivan et al - Querying Graph-Relational Data](https://arxiv.org/abs/2507.16089) seems to fit the bill, BUT:
+
+- Pictoji surface query syntax is **not** GEL syntax 
+- GEL only works with Postgres, which is **not** necessarily the ideal db (would probably fail with Wikidata-style loads). 
+- Still, as a sanity check Pictoji MUST be translatable to GEL. If we wanted to go operational, we realistically could:
+
+    1. try loading some relations into GEL / Postgres with few toy examples
+    2. try [OneSparse](https://onesparse.com/docs.html) Postgre extension which brings GraphBLAS matrix semiring features into Postgres, hopefully it should at least guarantee some fast million-range nodes manipulation and fit real well our network model. Unfortunately, GEL doesn't support that extension but I guess it would be possible to use it with some SQL escape hatch.
+
+**Further considerations:**
+
+- If db/schema are not explicitly provided, they will be inferred and materialized on request by the AI. As methodology for materialization, species theory / Boltzmann sampling are chosen as they seem algebrically close to Pictoji polynomial system. TODO ELABORATE LATER.
+- Links by default are assumed to have a backlink, so for exploration purposes the network is to be considered undirected.  
+- For the sake of simplicity we currently adopt the the model of crisp edges fully knowing it's brittle and unworkable. Fuzzyness is much desirable but will be defined at later stage. 
+
+
 ## Algebra of meaning
 
-**Assumptions**: To follow the examples, assume we have several instances 웃_i ∈ 웃^
+ **Goal:** Define an algebra which can actually _feel_ natural for a casual, non-CS graduate user. 
+ - the underlying model is relational / vector based, at STEM high-school students level
+ - still, the algebra MUST be accessible to middle-school students (simple polynomials, reasoning about simple numeric quantities) by synctactic sugaring / different interpretation modes.
+ - graduate users SHOULD be able with some effort of their own to formulate optimization problems via semiring matrices
+ 
+**Assumptions**:  To follow the examples, assume:
+
+- 웃 is a query as a finite set  of people in the default db
+- 웃^ is the type space of people (possibly very large but still finite)
+- 웃 ⊆ 웃^
+- we have several instances 웃_i ∈ 웃 known to be in the DB 
+- we can sample further instances 웃_n+i ∈ 웃^ not in the DB (yet)
+
+
+### Term Rewriter
+
+The term rewriter is divided in two levels, each with different operator / syntax access:
+
+```mermaid
+block
+    columns 3
+      L["<b>Level</b>"]
+      OP["<b>Operators</b>"]
+      D["<b>Synctax</b>"]
+    columns 3
+      U["<b>User</b><br>"] 
+      UOPS["->"]
+      UD["sugared"]
+    columns 3
+      E["<b>Kernel</b>"] 
+      EOPS["-><br>k->"]
+      ED["can desugar"]
+```
+
+
+  - `->` regular transformation, can be applied while in user surface or query engine.
+  - `k->` only to be applied in the internal query kernel, users cannot invoke it  TODO find better symbol
+
+
+
 
 ### Numbers
 
@@ -554,17 +755,7 @@ In general, the following is allowed: 0–9 as cardinals; 0.123... as decimals; 
     - In plain text, no space may appear inside numeric tokens.
 
 
-### Database model
 
-Pictoji specs need an ergonomic, down-to-earth functional programming oriented query model with formal semantics.
-GEL / EdgeDb as in [Sullivan et al - Querying Graph-Relational Data](https://arxiv.org/abs/2507.16089) seems to fit the bill, BUT:
-
-- Pictoji surface query syntax is **not** GEL syntax 
-- Pictoji MUST be translatable to GEL (as a sanity check)
-- GEL only works with Postgres, which is **not** necessarily the ideal db (would probably fail with Wikidata-style loads). If we wanted to go operational, realistically we could:
-
-    1. try loading some relations into GEL / Postgres with few toy examples
-    2. try [OneSparse](https://onesparse.com/docs.html) Postgre extension which brings GraphBLAS matrix semiring features into Postgres, hopefully it should at least guarantee some fast million-range nodes manipulation and fit real well our network model. Unfortunately, GEL doesn't support that extension but I guess it would be possible to use it with some SQL escape hatch.
 
 ### Types
 
@@ -573,9 +764,15 @@ All data structures are immutable, functional programming style.
 - SYMBOL^ : type/class of SYMBOL, equivalent to typographical capitalization. Example:
 
     웃^ = Person  
-    웃^ ¬= 웃^1      the difference is only at synctactical level - a bit weird I know but don't worry too much
+    웃^ ¬= 웃^1      웃^ is a type, not a query - a bit weird synctactic choice I know but don't worry too much
 
 - SYMBOL^^ : generic or empathic, equivalent to typographical all-caps. Example: 웃^^	= PERSON
+
+#### Properties and values
+
+⁋ = property
+ᕓ = value
+
 
 ### Symbols, variables, queries
 
@@ -615,10 +812,10 @@ A query is typically written directly with a single meaning-carrying symbol repr
 
 For example, when 웃 is first typed, these statements are implied and equivalent :
 
-- 웃 is a variable of type 웃^
 - 웃 is a person query from the `Person` class/type universe (notice the capital P)
 - 웃 ∈ 2^(웃^)
-- 웃 ⊆ 웃^  [DEFAULT]   
+- 웃 ⊆ 웃^  [DEFAULT]   we normally consider vectors as in relation algebra 
+- 웃 is an autoboxed instance  웃_i ∈ 웃^ IF the context assumes a simplified "middle school" algebra view
 
 #### Instance and subscript symbols
 
@@ -627,7 +824,7 @@ Subscripts are explicitly allowed, typically to distinguish instances:
 Form: SYMBOL_EXPR
 
 - subscript by default implies belonging to the type:  웃₁ ⇒ 웃₁ ∈ 웃^ 
-- a subscript denotes an instance, i.e. 웃₁ = Alice   (TODO assess if it actually make sense talking about more mathy terms, like _atom_)
+- a subscript denotes an instance, i.e. 웃₁ = Alice   
 
 EXPR is typically a number, or even a character:
 
@@ -821,17 +1018,18 @@ Expected evaluation:
 
 - pluralities are sets:
 
-    * Possibly infinite:
+    * Possibly very large:
 
-    ```
-    웃웃 =  {웃₁, 웃₂, 웃₃, ... }
-    ```
+        웃웃 =  {웃₁, 웃₂, 웃₃, ... , 웃_n }
 
-    * Explicitly finite:
+    * Explicit count with integer coefficient:
 
-    ```
-    2웃 = {웃₁, 웃₂}
-    ```
+        2웃 q-> {웃_i, 웃_j | i ¬= j}
+    
+    * Fractional coefficient
+
+        0.2웃 -> interpretation is setting dependent
+
 
 ### Power hierarchy
 
@@ -856,7 +1054,7 @@ Examples:
 
     웃² ¬= 💪 웃  
 
-    (웃^)² = Person 🞬 Person     Cartesian product of Person type
+    웃^ 🞬 웃^ = Person 🞬 Person     Cartesian product of Person type
 
 #### Rules
 
@@ -867,15 +1065,17 @@ Examples:
 - **Contextual interpretation**: ambiguity between duplication and superscripting is intentional and must be resolved by context.
 
   - In `context=natural`, 🏠🏠 means "houses"
-  - In `context=formal`, the same form MAY be evaluated as 🏠²
+  - In `context=formal`, the same form MUST NOT be evaluated as 🏠²
 
-- **No aggregation by scale**: simply summing many instances of the same power SHOULD NOT automatically scale to a higher power unless further reasons are provided 
+- **No aggregation by scale**: simply summing many instances of the same power SHOULD NOT automatically scale to a higher power unless further reasons are provided. TODO may be workable for now, but to reconsider in the future.
 
     Example:  웃₁ + 웃₂ + 웃₃ ¬= 웃² 
+- Parenthesization is by default right-to-left:  웃 웃 웃 -> 웃 (웃 웃)
+
 
 #### Powers as sets
 
-Powers can be interpreted as possibly infinite sets of relations augmented with a domain and codomain:
+Powers can be interpreted as possibly very large sets of relations augmented with a domain and codomain:
 
 TODO (minor) using ₓ (letter x) as subscript is a stretch
 
@@ -894,41 +1094,40 @@ Varies according to the context:
 - `role=technician`: a query in a network db. 
 - `role=phd`: Pictoji algebra is inspired by Gunther Schmidt's Relational Mathematics work, Analytic Combinatorics and Boltzmann samplers, but uses a simplified network terminology. We now give more precise definitions.
 
-
-**Recap table**
+We start here with two-levels theoritical framework mainly to mark a clear distinction line between infinite entities and the finite default database. Unless otherwise specified the specs at this dev stage are only meant to work in a finite database . 
 
 |Symbol| var   |Polynomial | Description         |                                   | 
 |------|-------|-----------|---------------------|-----------------------------------|
 |   𝔘^ | 🔹^   |           |Universe type        |    infinite, unmanageable         |
-|   𝔘  | 🔹    | P(🔹)      |universe as a polynomial  |   infinite, unmanageable          |
-|   Ɗ^ | ☉^   |            |Database type        |  finite (possibly very large)     |
-|   Ɗ  | ☉    | P(☉)      |default database as a polynomial     |     finite (possibly very large)  | 
+|   𝔘  | 🔹    | P(🔹)     |universe as a polynomial  |   infinite, unmanageable     |
+|   Ɗ^ | ☉^   |            |Database type        |  finite but possibly unmanageably large     |
+|   Ɗ  | ☉    | P(☉)      |default database as a polynomial     |  finite (possibly 'big data' size)  | 
 
+##### Infinite Universe
 
-🔹 = `setting=natural`: it   [DEFAULT]
-     `setting=formal`: possibly _infinite_ query from _distinct entities_ available in the universe
-  
+🔹 =  `setting=natural`: it   [DEFAULT] 
+      `setting=formal`: possibly _infinite_ query from _distinct entities_ available in the universe
+
+🔹🔹 =  entities
+
+2🔹 = {🔹_i, 🔹_j | i ¬= j} = pair
+
+Entity 🔹 has an infinite number of properties and links
+
 🔹^ = `setting=natural`: entities of the universe   
       `setting=formal`: _infinite_ set of  _distinct entities_ available in the universe
 🔹^ = ℕ 
 
 🔹 ⊆ 🔹^
 
-
-ᕓ = value
-
-⁋ = property
-- all properties values are finite. 
-- properties are _not_ links to other entities.
-
-
-🔹.P = access property P. 
-🔹.L = access link L. A link is a set of pointers to other entities.
-
-🔹 has an infinite number of properties and links
-
-🔹^ X 🔹^ = 🔹^ XX 2 = infinite set of distinct _links_ between universe _entities_
+🔹^ X 🔹^ = 🔹^ XX 2 = infinite set of distinct _links_ between universe _entities_  
 🔹^ XX n = infinite set of distinct n-1 length paths between universe _entities_
+
+𝔘^ = Universe = 🔹^ XX 0 ⊔ 🔹^ XX 1 ⊔ 🔹^ XX 2 ⊔ 🔹^ XX 3 + .... = Set of universes, max grade is infinite ℕ.
+
+𝔘 = universe = P(🔹) = universe instance as infinite collection of infinite  graded queries =  a_0 🔹^0 + a_1 🔹^1 + a_2 + 🔹^2 + a_3 + 🔹^3 + ... 
+
+##### Finite database
 
 
 ☉^ = `setting=natural`: objects of the default database   
@@ -939,20 +1138,17 @@ Varies according to the context:
 
 ☉ = `setting=natural`: object    `setting=formal`: finite_ (but possibly very large) query in the default database
 
+
 ☉^ ⊂ 🔹^    # finite objects   (circle recalls finiteness)
-☉ has a finite number of properties
+☉ has a finite number of properties and links
 
 ☉ ⊆ ☉^
 
 ☉^2 = finite set of links in the database (edges in a network) 
-☉^2 ⊂ ☉^ X ☉^
-☉^n = finite set of distinct n-1 length paths (ob1 link ob2 link ob3 ... ) in the database, can be constructed by iterative application of Ɗ Ɗ^n-1
-☉^n ⊂ ☉^ XX n  
+☉^2 ⊆ ☉^ X ☉^
+☉^n = finite set of distinct n-1 length paths (ob1 link ob2 link ob3 ... ) in the database, can be constructed by iterative application of ☉^(n-1) ☉
+☉^n ⊆ ☉^ XX n  
 
-
-𝔘^ = Universe = 🔹^ XX 0 ⊔ 🔹^ XX 1 ⊔ 🔹^ XX 2 ⊔ 🔹^ XX 3 + .... = Set of universes, max grade is infinite ℕ.
-
-𝔘 = universe = P(🔹) = universe instance as infinite collection of infinite  graded queries =  a_0 🔹^0 + a_1 🔹^1 + a_2 + 🔹^2 + a_3 + 🔹^3 + ... 
 
 ꕷ = the finite schema of default database, specifies the relations and max grade n < ℕ
 Ɗ = 𝔘[ꕷ] = a_0 ☉^0 + a_1 ☉^1 + a_2 + ☉^2 + a_3 + ☉^3 + ... + ☉^n
@@ -961,115 +1157,159 @@ Varies according to the context:
 Ɗ^ = 𝔘^[ꕷ] = ☉^ XX 0 ⊔ ☉^ XX 1 ⊔ ☉^ XX 2 ⊔ ☉^ XX 3 + ... + ☉^ XX n   # TODO DOES IT MAKE SENSE? WE SHOULD DEFINE FILTERING BY SCHEMA
 
 
+### Filtering queries
 
-웃[name = "John"]
+We follow the dataframe approach of filtering in square brackets.
 
-웃[name = "John"]{age, married_to}    # shape with a link
+Form:  SYMBOL[FILTER^[Bool] | TYPE]  
 
-웃 ☉[name="John"]
-   
+#### Filter by type
 
+q[T] = {x | x^ == q^ ∧ x^ is a subtype of T}
 
+☉[웃^] == 웃
+
+#### Filter by property
+
+- every var V in expr MUST: 
+    - be a property defined in SYMBOL^ type
+    <!-- be written ⎋V to denoute being unbound...  TODO not needed now -->
+
+Example:
+
+```
+ᛠ 웃^:           
+    name : str
+    age  : str
+    
+☉[name = "John"]   # people named "John"
+```
+
+`AND`: conjunction can be expresseed in several ways:
+
+E.g. "people named John AND aged 20"
+
+☉[name = "John" ∧ age = 20]      [DEFAULT]   
+☉[name = "John"] ⋂ ☉[age = 20]    
+☉[name = "John"][age = 20]    
+
+`OR`: union can be expresseed in several ways:
+
+E.g.  "people named John OR aged 20"
+
+    ☉[name = "John" ∨ age = 20]       
+    ☉[name = "John"] ⋃ ☉[age = 20]  
+      
+### Objects 
 
 - Each object `obj_i` is indexed at variable placeholder i ∈ ℕ
 - There are no apriori specified ordering criteria. Some subsets of objects may be subject to (partial) order depending on the context.
-- These functions on relations are defined:
+- These functions on objects are defined:
 
-    id(obj : 𝔘) : ℕ          function from an object to its id _i_
+    id(obj : ☉^) : ℕ          function from an object to its id _i_
 
-    obj(id : ℕ) : 𝔘          function from an id to an object
+    obj(id : ℕ) : ☉^          function from an id to an object
 
 In algebra of meaning, typically these objects are not manipulated directly, rather are wrapped in sets, relations, etc.
 
-Algebra elements and meaning-carrying variables are represented as n-ary relations R: T1 X T2 X ... X Tn
-To actually perform calculations, bidimensional relations are embodied in sparse matrices R^[(S,T),P] with sources in S, targets in T, and property values of type P U {_^[P]}. To make the algebra work, they all have very large so-called 'super domain and codomain'. Very often we will restrict 𝔘 to subsets which we will simply just call the `domain` and `codomain`. 
+### Relation algebra
 
-- open world assumption: we do not know whether or not items are present in a relation, so by default we assume matrix cells are set to `_^[𝔹]` (unknown). 
-- vertex domain: 𝔘 
+- Algebra elements and meaning-carrying variables are represented as n-ary relations R: T1 X T2 X ... X Tn
+
+- Groups are born out of the reachability of their nodes, they are _not_ 'mandated from above'
+
+- Distribution weight / density of relations is implicitly indicated by parenthisation. **Examples:**
+
+    - 웃^2 produces a relation expressed as a set of 2 elements tuple
+
+    - 웃^3 -> 웃 (웃 웃) ->  produces a hierarchy expressed as a set of 3-tuples, you can view it as a network where people high in the hierarchy have few links to more tightly knit groups at the bottom. This is not a hypergraph, there are no "links to groups" per se, only links between person instances - the groups would be an emergent phenomena revealed by clustering algorithms. Used relation names for the links might vary between levels, or even among the same level.   
+
+### Binary relations
+
+To actually perform calculations, bidimensional relations are embodied in **sparse** matrices R^[(S,T),P] with sources in S, targets in T, and property values of type P U {_^[P]}. To make the algebra work, they all have very large so-called 'super domain and codomain'. Very often we will restrict ☉^ to subsets which we will simply just call the `domain` and `codomain`. 
+
+- open world assumption: we do not know whether or not items are present in a relation, so by default we assume matrix cells are set to `_^[𝔹]` (unknown) - since the matrix is sparse, there is no need to set everything at initialization. 
+- vertex domain: ☉^
 - constraints:  
-    - sources ⊆ 𝔘  (possibly infinite)
-    - targets ⊆ 𝔘  (possibly infinite)
-    - {R[obj_1, obj_2] ∈ T U {_^[T]} | obj_1, obj_2 ∈ 𝔘}
+    - sources ⊆ ☉^ (finite)
+    - targets ⊆ ☉^  (finite)
+    - {R[☉_i, ☉_j] ∈ T U {_^[T]} | ☉_i, ☉_j ∈ ☉^}
 - For simplicity, we assume for now T is boolean 𝔹; we will model more complex scenarios in later iterations following the generalizations introduced by the works on semiring dioids by Gondran and Minoux TODO reference, where we could model T as reals ℝ or maybe purely finite representations with rationals in ℚ. 
 
-Take variable `웃^2` as example, in this case it would have signature R^[웃^, 웃^, 𝔹 U {_^[𝔹]}].
+Take variable `웃^2` as example, in this case it would have signature R^[웃^, 웃^, 𝔹 U {_^[𝔹]}]
 
 TODO what about the name of rows/columns of non-zero cells?
 
 
-atom_`obj`: identity atom , the minimal relation which represents the object `obj`
-- sources: {obj}
-- targets: {obj}
-- constraints:  { (obj,obj) = TRUE }
 
 R[x,y]: the value of the cell at x,y indeces. By default return _^[T]
 
 ▢ : empty relation      U+25A2 WHITE SQUARE WITH ROUNDED CORNERS
-- sources: 𝔘
-- targets: 𝔘
-- constraints:  { (obj1, obj2) = FALSE | obj1, obj2 ∈ 𝔘 }
+- sources: ☉^
+- targets: ☉^
+- constraints:  { (☉_i, ☉_j) = Ⓕ }
  
 ▇ : universal known relation  U+2587 UPPER SEVEN EIGHTHS BLOCK
-- sources: 𝔘
-- targets: 𝔘
-- constraints:  { (obj1, obj2) = TRUE | obj1, obj2 ∈ 𝔘 }
+- sources: ☉^
+- targets: ☉^
+- constraints:  { (☉_i, ☉_j) = Ⓣ  }
 
 ?▇ : universal unknown relation  U+2587 UPPER SEVEN EIGHTHS BLOCK   TODO '?' or '_' or what ??
-- sources: 𝔘
-- targets: 𝔘
-- constraints:  { (obj1, obj2) = _ | obj1, obj2 ∈ 𝔘 }
+- sources: ☉^
+- targets: ☉^
+- constraints:  { (☉_i, ☉_j) = _ }
 
 
-▢[웃^] : empty relation restricted to person type 웃^ 
+▢[웃^, 🏠^] : empty relation restricted to person type 웃^ and house type 🏠^ 
 - sources: 웃^
-- targets: 웃^
-- constraints:  { (obj1, obj2) = FALSE | obj1, obj2 ∈ 웃^ }
+- targets: 🏠^
+- constraints:  { (웃_i, 🏠_j) = Ⓕ  }
 
-▇[웃^] : universal relation restricted to person type 웃^
+▇[웃^, 🏠^] : universal relation restricted to person type 웃^, 🏠^
 - sources: 웃^
-- targets: 웃^
-- constraints:  { (obj1, obj2) = TRUE | obj1, obj2 ∈ 웃^ }
+- targets: 🏠^
+- constraints:  { (웃_i, 🏠_j) = Ⓕ }
 
-I: identity matrix
-- sources: 𝔘
-- targets: 𝔘
-- constraints:  { (obj, obj) = TRUE | obj ∈ 𝔘 }
+I: identity matrix   # TODO even if grade 2, this looks quite like the grade ☉^0 = 1 of our algebra 
+- sources: ☉^
+- targets: ☉^
+- constraints:  { (☉_i, ☉_i) = Ⓣ | ☉_i ∈ ☉^ }
 
 I[웃^]: identity matrix filtered to person type 웃^
 - sources: 웃^
 - targets: 웃^
-- constraints:  { (웃_i,웃_i) = TRUE | 웃_i ∈ 웃^ }
+- constraints:  { (웃_i, 웃_i) = Ⓣ } U {(☉_i, ☉_j) = Ⓕ | i ¬= j}
 
-웃: a person query
+웃: a person query in the db
 - sources: 웃^
 - targets: 웃^
-- constraints:  {(obj(i), obj(i)) = TRUE}
+- constraints:  {(웃_i, 웃_i) = Ⓣ | 웃_i ∈ ☉} U {(웃_i, 웃_j) = Ⓕ | i ¬= j}
 
-웃_i: atom identity
-- sources:   {웃_i}
-- targets: {웃_i}
-- constraints: {(obj(i), obj(i)) = TRUE}
+웃_k: atom identity
+- sources: 웃^
+- targets: 웃^
+- constraints: {(웃_k, 웃_k) = Ⓣ} U {(웃_i, 웃_j) = Ⓕ | ¬(i = k AND j = k)}
 
 
 Suppose we have an expression like 
 
     1 + 웃 + 웃^2
 
-We could call the terms:
+with integers coefficients. We could call the terms:
 
 1: 웃^0: the essence of a person, with the restricted identity matrix I_웃 as underlying representation. 
 
 웃 : an individual person, with the identity atom as underlying representation:
 - sources: 웃^
 - targets: 웃^
-- constraints: only one cell (i,i) set to True, where i is the particular person index.
+- constraints: only one cell (i,i) set to Ⓣ, where i is the particular person index. Others are Ⓕ.
 
 웃^2 : a group of persons with some relation between them, formally representable as a matrix:
 - sources: 웃^
 - targets: 웃^
 - constraints: none, although most of the time we can assume the number of relations |웃^2| > 0
 
-    Important: 웃^2 should _not_ be interpreted as the identity atom 웃 multiplied by itself (under strict relational composition calculation that would yeald again 웃).
+    Important: 웃^2 should _not_ be interpreted as the identity atom 웃_i multiplied by itself (under strict relational composition calculation that would yeald again 웃_i).
 
 
 웃_1 ∈ sources(웃^2)  -> Does person instance 웃_1 belongs to sources(웃^2) = 웃^  ?
@@ -1556,6 +1796,14 @@ In `role=phd` and `technician`, the meaning of a power series in variable _x_ is
 
 P(_x_) -> hierarchical model of _x_
 
+- Formal power series are not necessarily meant to be calculated, kind of like in Analytic Combinatorics
+- need to specify a _distribution_
+- queries potentially can materialize many individuals with weighted relations (to represent a noisy world)
+- meaning search is two-level:
+    - from expression analysis alone
+    - emergent from complexity via network clustering, e.g. centrality, etc.
+
+
 Examples: 
 
 P(웃) -> social hierarchy model 
@@ -1564,29 +1812,70 @@ P(🏠) -> human settlement hierarchy model
 
 ### Polynomial coefficients
 
+TODO MUST support [Philosophy use case](#philosophy)
+
 Polynomial coefficients can be used to model the weight of a particular component.
 
 For comparison and interpretation purposes, weights SHOULD be normalized in the range `0.0` - `1.0` such that:
 
 $∑ a_k = 1.0$
 
-**Example**:
+### Integer coefficients
 
-Given: 웃 = person  
+TODO MUST support [Story generation use case](#story-generation)
 
-We may assign these meanings: 
+Everyday users tend to think in single quantities (웃 is 1 person), while db languages and relational math usually represent things in vectors. To solve the mismatch, query variables could be interpreted as representing a quantity of `1` by default and sample building / LIMIT clause is implicitly created by means of coefficients, e.g.  `3웃` selects three different persons from the db. 
+
+- need precise quantities
+- single based values
+- queries materialize few individuals and edges with weights on a simplified scale (e.g. heavy / soft / none link)
 
 
-|  |  |  |
-|---------|-|--------------------------------------------|
-|$P_L(웃)$|=|Individualist liberal hierarchy    |
-|$P_S(웃)$|=|Cooperative socialist hierarchy   |
+TODO JUST A SKETCH, need clone operator and constraint-solver layer to prevent weirdness
 
-and weights:
-||          ||
-|:-:|:---------------------------------------|:--------------------------------------------|
-|| $$P_L(웃) = 0.7웃 + 0.25웃^2 + 0.05웃^3$$  | Dominant emphasis on individual freedom (웃), moderate value on groups, minimal systemic control. Society emerges bottom-up.|
-|| $$P_S(웃) = 0.15웃 + 0.50웃^2 + 0.35웃^3$$ | A collectivist yet participatory hierarchy — balancing group welfare and systemic equity|
+웃^ = {웃_1, 웃_2, ....., 웃_n}   Person type, also selects _all_ people from the db (possibly a lot but still finite)
+
+- 웃 acts as a query variable which ranges over 웃^.
+
+- Different appearences of 웃 in a fully reduced expression mean different persons:
+
+        웃 + 4웃 - 2웃 = 3웃     3 different persons to instantiate
+
+웃 ∈ 웃^  valid from a user point of view with ∈ semantics overloaded so it works even if internally the query engine will autobox, see below
+
+웃 q-> {웃} autoboxing if 웃 can be proven to have cardinality 0 or 1
+
+웃 + 웃 -> 2웃
+
+2웃 q-> {웃_i, 웃_j}  selects two _different_ random people indexed i, j from the db 웃^ set
+
+웃_1 + 웃_4 q-> {웃_1, 웃_4} selects exactly 웃_1 and 웃_4 from the db 웃^ set (TODO what if they are not inside?)
+
+3웃_7 q-> {웃_7, 웃_n+1, 웃_n+2}   generates two new fresh instances (thus with different ids) copied from original 웃_7
+
+웃_7 + 웃  q-> {웃_7, 웃_i} -> selects person at index 7 and a person i _at random_ from 웃^ set and person 웃_1.  If i = 7, generate new fresh id for the duplicate.
+
+웃_1 + 웃_1  -> 2웃_1    selects two copies of person 웃_1, second copy gets a fresh id
+
+
+웃 🐶 ->  exactly 1 group of e.g. dog owners
+
+웃^ X 🐶^ = all possible groups of e.g. dog owners in the db
+
+3 웃 🐶 -> exactly 3 _different_ groups of e.g. dog owners
+
+(웃 🐶)_7 + (웃 🐶)_3   -> selects group at index7 and group at index 3 from large all dog owners query 웃^ X 🐶^ (TODO define sorting method later)
+
+웃 3🐶 -> 3 웃 🐶   3 groups of dog owners (as much as I would like to mean something like 1 person for 3 dogs, following standard algebra rules seems the best route..)
+
+3웃 2🐶 -> 6 웃 🐶    6 groups of dog owners
+
+### Equations
+
+TODO SHOULD support [Graffiti art](#story-generation) use case.
+
+The quest would be to have expressions generate types which are totally different from their initial types: if done directly it would bork the algebra, still we can envision some way to use the DB to 'influence' and bend the results. 
+
 
 ### Probability
 
@@ -1888,7 +2177,6 @@ Example: ◐¬ = don't, ↶◐¬ = didn't
 ⊜ = enough   
 ⚯ = too  
 ⏙ = also  
-🔹🔹 =  pair   
 ⍠ = both  
 
 ⛞ = length  
