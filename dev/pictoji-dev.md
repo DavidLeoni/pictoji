@@ -1,4 +1,4 @@
-# ㄕ🗿 PICTOJI DEV  0.6.8
+﻿# ㄕ🗿 PICTOJI DEV  0.6.9
 
 This file collects possibly unused symbols to pick from and ideas.
 
@@ -68,8 +68,6 @@ Symbols marked with ❗  as of Oct 2025 may have display problems on some platfo
 ㋵ ㋯ ㊏ ㊇ ㋥:Katakana Ideographs ㊂ ㉫ ㉣ ㉤ ㉥ ㉬ ㉠ ㋓ ㋑ ㊆
 ㉡ ㉢ ㉦ ㉨ ㉩ ㉭ ㋡ ㉡ Ⓛ ㊋ ㊊ ㊍ ㉆ ㋬ ㉾ 
 
-㋥:Katakana 
-
 
 ### Letters
 
@@ -122,7 +120,7 @@ Avoid:
 ய:Tamil Ⱎ:Glagolitic ꔗ:Vai ㄓ 山 Ϣ Ⰱ:Glagolitic
 Ⲯ:Coptic ⲯ:Coptic
 
-#### XXs 
+#### XXXs 
 
 Don't put circles and squares here.
 
@@ -881,9 +879,19 @@ d = 🐶^0 = 1:🐶^0
 - https://unifoundry.com/pikto/index.html
 - Jacques Bertin, Semiology of Graphics: Diagrams, Networks, Maps
 
-DO NOT OUTPUT ANYTHING
-
 
 
 Each interpreter level is required to operate on finite data structures. When this constraint can no longer be guaranteed under the current resource limits, the level returns ↂ instead of a partial or infinite result.
 When evaluating a function requires a DB access that would exceed configured resource bounds on Ɗ, that access yields ↂ^[T_db], and the enclosing expression reduces to ↂ according to the propagation rule.
+
+
+Kronecker product?  Strong Kleene Algebra 
+
+TODO check papers
+[Huang et al.: Datalog via Linear Algebra](https://arxiv.org/abs/1608.00139)
+[Kanerva, Smolensky, et al.: Vector Symbolic Architectures](https://arxiv.org/abs/2106.05268)
+
+
+DO NOT OUTPUT ANYTHING
+
+

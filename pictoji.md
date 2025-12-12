@@ -1,4 +1,4 @@
-<h1 align="center"> ㄕICTO<i>ji</i> SPECS v0.6.8 <br><br> 🗿 ⨝ 웃²  </h1> <h2 align="center"> A Relatable Algebra <br>for the  People </h2> 
+﻿<h1 align="center"> ㄕICTO<i>ji</i> SPECS v0.6.9 <br><br> 🗿 ⨝ 웃²  </h1> <h2 align="center"> A Relatable Algebra <br>for the  People </h2> 
 <br>
 <p align="center">
 <strong>A new old language to explore what  an AI-assisted <i>mathemojics of meaning</i>  could possibly be. </strong>
@@ -984,11 +984,6 @@ Form: {EXPR1, EXPR2, ... }
 
       Form:  SYMBOL^[TYPE1, TYPE2, ...]
 
-- Unknown placeholder: ◇^[T] represents a set with an unknown number elements of type T
-    - See [Logic chapter](#logic) about the logical implications of ◇^[Bool]
-
-    ◇^[T] ⊆ ஃ^[T]
-
 
 <details>
 <summary>CLICK HERE for CS details</summary>
@@ -1280,15 +1275,14 @@ Pictoji uses open-world logic, four-valued Boolean system:
 Bool = { T, F, ◇^[Bool], ↂ^[Bool]}
 
 - ◇^[Bool] is the unknown truth value (^[Bool] may be omitted if there is no ambiguity)
-- ↂ^[T] is a computational error for type T
-  - When evaluating ordinary expressions (non-logical operators), any occurrence of ↂ in operands strictly propagates to the result.
+- ↂ^[Bool] is a computational error
 - Logical connectives (¬, ∧, ∨) explicitly distinguish ◇ from ↂ:
   - A decisive truth value (T for ∨, F for ∧) overrides both ◇ and ↂ
   - Otherwise, errors dominate unknowns: ↂ overrides ◇
 
 <details>
 <summary>CLICK HERE for jargon details</summary>
-- Pictoji uses Kripke K3 logic on {T,F,◇}  
+- Pictoji uses strong Kleene K3 logic on {T,F,◇}  TODO check the 'strong' thing  
 - The unknown / maybe thing echoes stuff from functional programming but with different semantics.
 </details>
 
@@ -1404,10 +1398,10 @@ R[x,y]: the value of the cell at x,y indeces. By default return _^[T]
 - targets: ☉^
 - constraints:  { (☉_i, ☉_j) = Ⓣ  }
 
-?▇ : universal unknown relation  U+2587 UPPER SEVEN EIGHTHS BLOCK   TODO '?' or '_' or what ??
+◇▇ : universal unknown relation  U+2587 UPPER SEVEN EIGHTHS BLOCK   TODO '?' or '_' or what ??
 - sources: ☉^
 - targets: ☉^
-- constraints:  { (☉_i, ☉_j) = _ }
+- constraints:  { (☉_i, ☉_j) = ◇ }
 
 
 ▢[웃^, 🏠^] : empty relation restricted to person type 웃^ and house type 🏠^ 
@@ -2067,6 +2061,7 @@ Powers union:
 
 ## Computational model
 
+
 MUST support the [Computational thinking use case](#computational-thinking) 
 
 Each computer 🖥 is a Term Rewriting System (TRS) that: 
@@ -2074,6 +2069,7 @@ Each computer 🖥 is a Term Rewriting System (TRS) that:
 - decides its own rewrite strategy 
 - has typed term rewriting functions which operate at symbolic level 
 - functions are defined with signature and patterns in a 4 spaced block
+- when pattern matching is not exhaustive, the rule f(_, _, ...) -> ↂ is implicitly added
 - patterns may have guards
     - guards never rewrite the main term, they only decide if a rule may fire
     - dumb / low-level computers: 
@@ -2082,11 +2078,27 @@ Each computer 🖥 is a Term Rewriting System (TRS) that:
         - must not look at AI-style context
     - smart / high-level computers: 
         - guards may be symbolic tests delegated to other computers
-        - may return ↂ
+        - may return error ↂ
         - may look at context
         - rule applicability then depends on strategy
 
-Example (TODO, totally invented and stupid, find better one): 
+Overall:
+
+- TRSs are not optimized for performance
+- explainability and clarity are key
+- if performance / handwaving is needed, it can be modelled as functions called in other computers 
+- other computers are mostly intended as black boxes
+- caller computer may have debug / inspection power but most likely won't use it
+
+
+### Rules syntax
+
+
+TODO: provide proper grammar
+
+### Function definition example
+
+TODO: totally invented and stupid example, find better one
 
 ```
 
@@ -2097,18 +2109,11 @@ f(n:Nat, m:Int) -> Int:
     _ -> ↂ 
 
 g(n:Nat) -> List[Nat]: 
-  g(..) -> ... 
-  _ -> ↂ 
+  g(1) -> ...      
+  g(2) -> ...      
+              #  no need for a _ -> ↂ  , it's implied by the system 
 
 ```
-Overall:
-
-- TRSs are not optimized for performance
-- explainability and clarity are key
-- if performance / handwaving is needed, it can be modelled as functions called in other computers 
-- other computers are mostly intended as black boxes
-- caller computer may have debug / inspection power but most likely won't use it
-
 
 <details>
 <summary>CLICK HERE for technical raferences jargon </summary>
@@ -2116,115 +2121,23 @@ Overall:
 
 </details>
 
+### Term rewriter unification model
 
-### Errors and infinite recursion
+A pictoji rule lowers to a monotone operator over dynamic relations.
 
-- undefined / unknown values of type T are initialized as unknown ◇^[T]
+The effect of rule application on the current domain corresponds to a sparse-matrix operator, obtained by:
 
-level 1:  calculates head down until a result or eventual exhaustion when a system error 🖥ↂ is raised, which collapses all stuff calculated so far into a 🖥ↂ
+- aligning axes of predicate matrices according to variable sharing
+- joining them via matrix multiplication under the boolean (or chosen) semiring
+- masking them by equality/disequality constraints
+- projecting onto head-argument axes
+- unioning with the existing head relation
 
-level 2: can do some basic resource cost estimation, does its best to stay within limits and will properly signal a stop by returning an error with a partial result as argument filled with ↂ, like:
+**Search** = the least fixpoint of the union of all rule operators, i.e. the closure under powers of the combined adjacency operator.
 
-    ↂ( [1,4,1,4,2,1,3,ↂ] )
+**Dynamic-domain behavior** (term creation and node unification) modifies the shapes of all relations between fixpoint iterations but does not alter the matrix-power semantics of each iteration.
 
-level 3: looks at the _context_, considers if there is actual need to perform the computation, e.g.:
-
-    √2 * √2 -> 2
-
-level 4: can perform clever rearrangements to improve the performance of the calculations, and judge whether to stop at an appopriate symbolic level e.g.
-
-    2^(-x/3) * 2^(-x/6) -> 2^(-1/2)x -> (√2)^x
-
-level 5: smart - recognizes high-level problems, may just judge an appropriate refusal to proceed.
-
-    "Does the 3n+1 problem always goes to 1 for any n?"
-
-    ↂ("This is the Collatz Conjecture. Nobody knows yet (as of Dec 2025).")
-
-infinite computations
-
-- finite correct computations, the best ones
-- finite obviously wrong computations like   
-- finite non-obviously wrong computations TODO example
-
-- infinite computations,  e.g. garbled system of reductions which only when run is discovered to result in a cycle  `x y z -> x f(x, g(x)), x 3 z -> g(g(...)) if x < sqrt(z)` 
-
-- known infinite but approximable computations, e.g. 
-- known infinite computations 
-- probably (conjectured) finite computations e.g. does 3n + 1 problem reduces to 1? 
-- probably (conjectured) infinite computations e.g. x -> x(x(x)) TODO better example
-
-|Computation type  |  |  |  |  |
-|-------------|--|--|--|--|
-| error |  ↂ^    | well-known as judged by greater computer level  |  |  |  |
-| error |  ↂ^    | by quick inspection by greater computer level |  |  |
-| any |  T U ↂ^[T] U (¬⎔)^[T]  | likely (conjectured)  |  |  |  |
-| any  |  T U ↂ^[T] U (¬⎔)^[T]  | unknown  |  |  |  |
-
-
-⏸(x + y / 0)  
-
-▶( ⏸(x + y / 0) ) == x + y / 0
-
-
-Suspended execution
-
-
-A boxed value at level n can be:
-
-📦v = a value the machine can compute
-
-📦(quote e)  =  a suspended expression
-
-📦ↂ  =  a broken box (interpreter error)
-
-A normal box containing a T-value, or
-
-A broken box containing ↂ^[T].
-
-Boxing rule
-
-Every function result is put into a box:
-
-- A normal box containing a T-value, or
-
-- A broken box containing ↂ^[T].
-
-Pipeline rule
-
-If a broken box enters an operation:
-
-The operation stops,
-
-The output becomes a broken box of the appropriate type,
-
-The broken box continues down the pipeline unchanged.
-
-Unknown rule (separate)
-
-_^[T] is not a broken box.
-It is an “unknown value inside a normal box”,
-so operations still run but may produce more unknowns.
-
-This perfectly separates:
-
-interpreter problems (ↂ)
-
-database unknowns (_)
-
-normal values (T)
-
-- Errors are automatically and transparently boxed by the kernel, for any declared function type f : A1, A2, ..., An -> B (and operator OP) the kernel:
-    - treats f as totalized to:    `f : (A1 ∪ {ↂ^[A1]}), ..., (An ∪ {ↂ^[An]})  -> (B ∪ {ↂ^[B]})`
-    - If any operand is ↂ^[*], it returns ↂ^[B] and no further reduction is performed.
-
-
-- Resource exhaustion
-
-    Operations in the computer are subject to implementation-defined resource limits (time, memory, sample count, maximum path length, etc.). If evaluating a computer function of codomain T which would exceed these limits, that access yields 🖥️ↂ^[T] instead of a partial or infinite result. 
-
-    - when database resources are exhausted, computer error  🖥️ↂ  is automatically returned from every function or operator call
-        - TODO just a sketch for now, later we might distinguish between normal / panic mode 
+TODO example
 
 ### Computational tower
 
@@ -2260,19 +2173,12 @@ Examples:
 - a Python interpreter (🖥^3) cannot understand a, say, an hypothetical "semantic graph of logical forms" at  ☉^6 unless encoded downwards.
 - ChatGPT (🖥^n) can manipulate enough symbolic levels to interpret arbitrarily complex ☉ layers.
 
-
 - 🖥^k itself is stored as a finite record in ☉^(k)
 - Same-level agents communicate by leaving structured data in the shared lower-level substrate.
 - A higher-level evaluator schedules when each agent runs.
 - Each agent uses only its own resource budget provided by its parent evaluator.
 
-This allows:
-
-- introspection
-- simulation
-- meta-analysis
-- embeddings
-- serializability
+This allows things like introspection, simulation, meta-analysis, embeddings, serializability
 
 Example of AI Resources:  TODO JUST A SKETCH, REVIEW
     ctx_tokens_left     ~   100k   (effective max)
@@ -2282,28 +2188,120 @@ Example of AI Resources:  TODO JUST A SKETCH, REVIEW
     internal_steps_left ~   fixed by network depth (~80–120 layers = 1 step)
     db_quota            ~   small slices
 
-General, agent interpretation:
+#### General agent interpretation
+
 - an agent reaching ↂ is a collapse of their interpretive resources
 - but a higher-level agent can treat that collapse as data, not failure
 
+Example for 웃 (not normative):
 
-☉⁰ = raw percepts (“they shouted”, “he ran”)  
-☉¹ = simple roles (“group”, “individual”, “helper”)  
-☉² = events with internal structure (“action performed on X”)  
-☉³ = social scripts (“ask for help”)  
+☉⁰ = raw percepts ("they shouted", "he ran")  
+☉¹ = simple roles ("group", "individual", "helper")  
+☉² = events with internal structure ("action performed on X")  
+☉³ = social scripts ("ask for help")  
 ☉⁴ = social norms, game-theoretic constructs  
 ☉⁵ = narratives, psychological states  
 
-- A person becomes overwhelmed → collapse.
-- A friend sees the situation clearly → no collapse for them.
-- A psychologist sees the whole system even more clearly.
+- A person becomes overwhelmed -> collapse
+- A friend sees the situation clearly -> no collapse for them
+- A psychologist sees the whole system even more clearly
 
-Resources for 웃^1 are psychological / relational capacities:
-- attention_left
-- emotional_energy_left
-- memory_left
-- social_bandwidth
-- tolerance
+Resources for 웃^1 are psychological / relational capacities: like attention, emotional energy memory, social bandwidth, tolerance...
+
+
+### Unknowns
+
+◇^[T] represents a placeholder set with an unknown number elements of type T  
+◇^[T] ⊂ ஃ^[T]
+
+- undefined / unknown values of type T are initialized as unknown ◇^[T]
+- may be omitted if the context is clear
+- does not force an error
+- See [Logic chapter](#logic) about the logical implications of ◇^[Bool]
+
+### Errors
+
+ↂ^[T] = error of type T  (^[T] may be omitted if the context is clear)
+
+(ↂ^[T])^n: error at level n, you can imagine higher graded errors as having a hierarchical chain of stacktraces within them.
+
+For any declared function type f : A1, A2, ..., An -> B (and operator OP) the kernel:
+
+- treats f as totalized to:    `f : (A1 ∪ {ↂ^[A1]}), ..., (An ∪ {ↂ^[An]})  -> (B ∪ {ↂ^[B]})`
+- if any operand is ↂ^[*], by default returns ↂ^[B] and no further reduction is performed
+    - exception: if the error grade is lower than the computer level, the function can pattern match on it to catch it.
+
+```
+ᛠ ↂ^:
+    🏷 : str    label for the error
+```
+
+Example:
+
+    ↂ("Something bad happened")
+
+
+
+#### Computer errors
+
+🖥️ↂ is a computer error which can only be raised by the system 
+
+```
+🖥️ↂ^:    
+    🖥️ↂ^ ⊂ ↂ^   # inherits properties
+```
+
+Example:  🖥️ↂ("Out of memory!")
+
+Operations in a computer are subject to implementation-defined resource limits (time, memory, sample count, maximum path length, etc.). 
+- If a computer at level `n` evaluates a computer function of codomain `T` which would exceed these limits, that access yields a level n computer error of type  `🖥️ↂ^[T] 🞬🞬 n` instead of a partial or infinite result. 
+- when database resources are exhausted, a computer error  🖥️ↂ^n  is automatically returned from every function or operator call
+- Since a computer can only access objects to a level beneath its own, it won't be able to pattern match on system errors generated at its own level, but it can still catch any error ↂ^m with m < n generated by lower levels. It can also raise and catch ↂ^m errors on its own.
+
+### Suspensions
+
+Pause: ⏸ given an expression does nothing (like a fixpoint): 
+
+    ⏸( x: ㉫) -> ㉫:
+        ⏸(x) -> ⏸(x)
+
+Play: unwraps a paused ⏸ computation, which is going to be later executed by the system
+
+    ▶( x: ㉫) -> ㉫:
+        ▶(⏸(x))  -> x
+        ▶(x)      -> x  
+
+Example:
+
+    ⏸(x + y / 0) -> ⏸(x + y / 0)           # nothing happens
+
+    ▶(⏸(x + y / 0) ) -> x + y / 0 -> ↂ    # BOOM
+
+
+### Execution examples
+
+🖥^1: Calculates head down until a result or eventual exhaustion when a system error 🖥ↂ is raised, which collapses all stuff calculated so far into a 🖥ↂ
+
+    √2 -> 🖥ↂ
+
+🖥^2: can do some basic resource cost estimation, does its best to stay within limits and will properly signal a stop by returning an error with a partial result as argument filled with ↂ, like:
+
+    √2 -> ↂ( [1,4,1,4,2,1,3,ↂ] )
+
+🖥^3: looks at the _context_, considers if there is actual need to perform the computation, e.g.:
+
+    √2 * √2 -> 2
+
+🖥^4: can perform clever rearrangements to improve the performance of the calculations, and judge whether to stop at an appopriate symbolic level e.g.
+
+    2^(-x/3) * 2^(-x/6) -> 2^(-1/2)x -> (√2)^x
+
+🖥^5: smart - recognizes high-level problems, understands user expectations,  may produce an appropriate refusal to proceed.
+
+    "Does the 3n+1 problem always goes to 1 for any n?" 
+    
+    -> ↂ("This is the Collatz Conjecture. Nobody knows yet (as of Dec 2025).")
+
 
 ## Decoding
 
@@ -2381,41 +2379,14 @@ emoji_sequence_source = emoji-zwj-sequences.txt (Unicode)
 ᛠ = type
 ⁋ = property
 ᕓ = value
+㉫ = expression
 ꕷ = schema
 Ɗ = database / db    
 𝔹 = bool
 ℕ = natural
 
 ↂ = error
-
-```
-ᛠ ↂ^:
-    🏷 : str    label for the error
-```
-
-Example:
-
-    ↂ("Something bad happened")
-
-
-ↂ^[T] = error of type T,  (^[T] may be omitted if the context is clear)
-
-```
-🖥️ↂ^:  computer error type which can only be raised in functions defined in Pictoji specs"""  
-    🖥️ↂ^ ⊂ ↂ^   # inherits properties
-    level : ℕ     # new property
-```
-
-Example:
-
-```
-🖥️ↂ("Out of memory!", level=1)
-```
-
-_^[T] = wildcard for unknown of type T  
-  - may be omitted if the context is clear
-  - does not force an error
-
+◇ = unknown   looks also kinda as a warning <!-- one day we may consider promoting it to ⯑ when it's render stable -->
 
 🀛 = collection
 🝙 = sequence
@@ -2464,8 +2435,6 @@ P(ϡ) = language
 𑁍 = sentient  
 𑁍 ↻⟡ = ϡ⁸  
 🔠 = P(ϡ)  
-
-
 
 
 ### Copula and auxiliary
@@ -2545,7 +2514,6 @@ Example: ◐¬ = don't, ↶◐¬ = didn't
 ↶◆ = might  
 ↶◆¬ = might not  
 ◆⟡ = maybe
-◇ = unknown         looks also kinda as a warning <!-- one day we may consider promoting it to ⯑ when it's render stable -->
 
 ⤊ = must                                       [ARROW]
 ⤊¬ = must not  

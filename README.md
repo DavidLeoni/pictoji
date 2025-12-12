@@ -1,4 +1,4 @@
-<h1 align="center"> ㄕICTO<i>ji</i> <br><br> 🗿 ⨝ 웃²  </h1> <h2 align="center"> A Relatable Algebra <br>for the  People </h2> 
+﻿<h1 align="center"> ㄕICTO<i>ji</i> <br><br> 🗿 ⨝ 웃²  </h1> <h2 align="center"> A Relatable Algebra <br>for the  People </h2> 
 <br>
 <p align="center">
 <strong>A new old language to explore what  an AI-assisted <i>mathemojics of meaning</i>  could possibly be. </strong>

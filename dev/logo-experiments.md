@@ -1,4 +1,4 @@
-# ㄕ🗿 &nbsp; PICTO*ji*  SPECS v0.6.0  
+﻿# ㄕ🗿 &nbsp; PICTO*ji*  SPECS v0.6.0  
 
 # ㄕICTO*ji* &nbsp;&nbsp;&nbsp;  🗿 ⨝ 웃 
 
