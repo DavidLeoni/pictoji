@@ -12,6 +12,7 @@
 - Translation: non-deterministic, context dependent and AI assisted
 - cast: an engaging roster of actors to entertain you
 
+
 **Usage**: 
 
 Just copy/paste [pictoji.md](pictoji.md) specs into an AI chatbot and ask it to translate phrases.

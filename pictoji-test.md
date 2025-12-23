@@ -1,13 +1,14 @@
-﻿# PICTOJI Tests (v0.6.9)
+﻿# ㄕICTO<i>ji</i> TESTS (v0.6.15)
+
 
 DO NOT PLACE FANCY TYPOGRAPHICS LIKE “” HERE. 
 
-- to test expressions, prefer using ==, ->, <- over arrows
-- if ==, <-, -> is already part of a pictoji expression, quote the expression.
+- to test expressions, prefer using ==, ?>, <? over arrows
+- if ==, <?, ?> is already part of a pictoji expression, quote the expression.
 - If you need to quote, use: " ", ' ', or block quotes """ """, '''  ''' in this preference order.
 
 
-## Smoke tests — literal decoding
+## Smoke tests - literal decoding
 
 NOTE: these tests have awkward English _on purpose_ to show literal decoding is actually working the way it's intended.  
 
@@ -17,9 +18,8 @@ NOTE: these tests have awkward English _on purpose_ to show literal decoding is 
 
 👤 ⇗ ⚭ 👤👤 ↦ ⌖ == I will with we to place
 
-TODO THESE TWO WERE MESSED UP BY FIND/REPLACE
-🫵 🞋 ◐¬ ⸮ ⸮ ? == you can do not ask who ?  *(odd but literal; tests negation attach to aux)*
-⸮ ⟹ ◐ ⸮ 山 ? == who if…then do ask what ?
+🫵 🞋 ◐¬ ㉦ ⚇ ? == you can do not ask who ?  *(odd but literal; tests negation attach to aux)*
+⚇ ⸮ ◐ ㉦ 山 ? == who if do ask what ?
 ```
 
 ### Noun pluralization
@@ -49,7 +49,7 @@ TODO THESE TWO WERE MESSED UP BY FIND/REPLACE
 👤 ↶🞋 ⏢ == I could help
 👤 ↶🞋¬ ⏢ == I couldn't help
 👤 ⇗¬ 🏃 == I will not go
-👤 ↶◐¬ ⸮ 山 ? == I did not ask what ?
+👤 ↶◐¬ ㉦ 山 ? == I did not ask what ?
 
 ### Prepositions & compounds
 
@@ -62,7 +62,7 @@ TODO THESE TWO WERE MESSED UP BY FIND/REPLACE
 
 📍 ◙ ⌖ ? == where the place ?
 ❖ ☉ ◕ ⊳ ◔ ? == which thing most than some ? *(form test)*
-Ϣ 👤 ◐ ⸮ 🗣 ? == why I do ask speak ? *(order test)*
+Ϣ 👤 ◐ ㉦ 🗣 ? == why I do ask speak ? *(order test)*
 
 ## Time
 
@@ -74,8 +74,8 @@ TODO THESE TWO WERE MESSED UP BY FIND/REPLACE
 
 ## Edge cases / unknowns
 
-👤 [🧪] ⚒ == unknown symbol preserved
-👤 ⟹ ⚡ ⤳ 👌 == if…then happen so ok/yes
+👤 [🧪] ⚒  # unknown symbol preserved TODO improve test
+⸮ ⚡ ⤳ 👌 == if happens so ok/yes
 
 ## Ambiguity guard
 
@@ -91,15 +91,15 @@ TODO THESE TWO WERE MESSED UP BY FIND/REPLACE
 
 ## Gerund
 
-↻⟡ ☹ == being sad (add ☹ = "sad")
-↻⟡ ⚒ == being working (literal, by design)
+↻⟡ 🙁 == being sad
+↻⟡ ↻⚒ == being working (literal, by design)
 
 ## Passive progressive
 
-⟡ ↻⟡ ↶🧪 == is being tested (add 🧪 = "test")
+⟡ ↻⟡ ↶🧪 == is being tested 
 ↶⟡ ↻⟡ ↶🧪 == was being tested
 ↻⟡ ↶👀 == being watched
-↻⟡ ↶🏗 == being built (add 🏗 = "build")
+↻⟡ ↶🛠 == being made 
 ↻⟡ ↶❤ == being loved
 
 ## Perfect
@@ -138,19 +138,22 @@ TODO THESE TWO WERE MESSED UP BY FIND/REPLACE
 
 ### If (unary/binary)⟡
 
-⟹ 👤 ◐ ↦⚒, 👤 ◐ ↦🍴. == If I work, I eat.
+⸮ 👤 ⚒, 👤 ◐ 🍴. == If I work, I eat.
 
-👤 ⟹ ↻⚒ ⤳ 👤 ◐ ↦🍴. == If I am working, then I eat.
+⸮ 👤 ⟡ ↻⚒, ⇨ 👤 ◐ 🍴. == If I am working, then I eat.
 
 ### Since (temporal vs causal) with your chosen split⟡
 
+TODO this stuff is wrong, what's ∺ ?
 - Temporal: ⟡ 👤 ⧇ ∺ ⏮️📅.
 - Causal  : ⟡ 👤 ⧇ ⊣ ⚡.
 
 ### Possessive vs object
 
-- Possessive clitic: 👤⌎ 📖 == my book
-- Object pronoun (true object, no ⌎): 👤 ↶👀 👩OBJ. (define the object series explicitly)
+- Possessive clitic: 👤⎴ 📖 == my book
+
+TODO don't understand this
+- Object pronoun (true object, no ⎴): 👤 ↶👀 👩OBJ. (define the object series explicitly)
 
 ## Numbers
 
@@ -204,37 +207,37 @@ e3 = INVALID (missing leading digits)
 
 Mixed with attachers/punctuation (number is one token)
 
-☞ ⟡ 1 웃 -> there is one person
-☞ ⟡ 1 웃 <- there is one person
-☞ ⟡ 1 웃 <- there is 1e0 person
+☞ ⟡ 1 웃 ?> there is one person
+☞ ⟡ 1 웃 <? there is one person
+☞ ⟡ 1 웃 <? there is 1e0 person
 
-☞ ↶⟡ 2.5 🏠🏠 -> there were 2.5 houses
-☞ ↶⟡ 2.5 🏠🏠 <- there were 2.5 houses
-☞ ↶⟡ 2.5 🏠🏠 <- there were two point five houses
+☞ ↶⟡ 2.5 🏠🏠 ?> there were 2.5 houses
+☞ ↶⟡ 2.5 🏠🏠 <? there were 2.5 houses
+☞ ↶⟡ 2.5 🏠🏠 <? there were two point five houses
 
-☞ ⟡¬ 10^3 📖📖 -> there aren’t one thousand books
-☞ ⟡¬ 1e3 📖📖 -> there aren’t one thousand books
-☞ ⟡¬ 10^3 📖📖 <- there aren’t one thousand books
+☞ ⟡¬ 10^3 📖📖 ?> there aren’t one thousand books
+☞ ⟡¬ 1e3 📖📖 ?> there aren’t one thousand books
+☞ ⟡¬ 10^3 📖📖 <? there aren’t one thousand books
 
-6.02e23 ⚛⚛ -> Avogadro constant atoms
-6.02e23 ◈ ⚛⚛ -> Avogadro constant atoms
-6.02e23 ⚛⚛ <- Avogadro constant atoms
+6.02e23 ⚛⚛ ?> Avogadro constant atoms
+6.02e23 ◈ ⚛⚛ ?> Avogadro constant atoms
+6.02e23 ⚛⚛ <? Avogadro constant atoms
 
 
-✊ 10^9 🐶🐶 -> Take one billion dogs
-✊ 10^9 🐶🐶 <- Take 1 000 000 000 dogs  
-✊ 10^9 🐶🐶 <- Take one billion dogs 
-✊ 10^9 🐶🐶 <- Take 1,000,000,000 dogs
+✊ 10^9 🐶🐶 ?> Take one billion dogs
+✊ 10^9 🐶🐶 <? Take 1 000 000 000 dogs  
+✊ 10^9 🐶🐶 <? Take one billion dogs 
+✊ 10^9 🐶🐶 <? Take 1,000,000,000 dogs
 
 ✊ 5e18 ☉☉ == Take 5e18 things  
-✊ 5e18 ☉☉ <- Take 5*10^18 things  
+✊ 5e18 ☉☉ <? Take 5*10^18 things  
 
 ## There is / exists
 
 ### Setting-gated defaults
 
-☞ ⟡ ⚲ 🏠 ? <- is there a house?          # natural_language
-∃ 🏠 <- there exists a house           # formal
+☞ ⟡ ⚲ 🏠 ? <? is there a house?          # natural_language
+∃ 🏠 <-? there exists a house           # formal
 
 ### Tense/negation (natural_language only with be)
 
@@ -259,8 +262,52 @@ Mixed with attachers/punctuation (number is one token)
 ### Formal negation scope
 ¬ (∃ 🏠) == there exists no house
 
-## Stress test
 
-⚲ ↻⟡ ↶⟡ ↻⟡ ↶🧪, ⊸ ↶⟡ ↶🧪, ∧ ⇗ ⟡ ↶🧪 ⧘ 🔹 ⇗ ⟡ ↻💭 ~ ↻⟡ ⚲ 𑁍 ↻⟡. == "A being was being tested, has been tested, and will be tested until it will be thinking about being a sentient being."
+## Unknowns and errors
+
+Materialized runtime types:
+
+(ↂ^[Bool])^ ¬= (ↂ^[Int])^
+
+
+## Suspensions tests
+
+⏸(⏸(x)) ?> ⏸(⏸(x))    # no idempotency
+⏸(1 / 0) ?> ⏸(1 / 0)
+⏸(ↂ) ?> ⏸(ↂ)
+⏸(ↂ^2) ?> ⏸(ↂ^2)
+
+
+▶(▶(x)) ?> ▶(▶(x))    # no idempotency
+▶(⏸(🏠)) ?> 🏠
+▶(⏸(⏸(🏠))) ?> ⏸(🏠)
+▶(🏠) ?> ↂ[🏠]^1
+▶(🏠^2) ?> ↂ[🏠]^2 
+▶(ↂ) ?> ↂ
+▶(ↂ^2) ?> ↂ^2
+
+
+Put them here as given the specs they MUST be redundant 
+
+⏸(◇) ?> ⏸(◇)          
+⏸(◇[T]) ?>  ⏸(◇[T])       
+
+
+⏸(🖥ↂ^k) , k < Ϟ  ?> ⏸(🖥ↂ^k)      
+⏸(ↂ^k) ,   k < Ϟ  ?> ⏸(ↂ^k)
+
+▶(⏸(◇)) ?> ◇
+
+▶(🖥ↂ^k)     , k < Ϟ ?> 🖥ↂ^k
+▶(ↂ^k)       , k < Ϟ ?> ↂ^k
+▶(⏸(🖥ↂ^k)) , k < Ϟ ?> 🖥ↂ^k       
+▶(⏸(ↂ^k))   , k < Ϟ ?> ↂ^k       
+
+▶(🖥ↂ^k)     , k >= Ϟ ?> 🖥ↂ^k    
+▶(ↂ^k)       , k >= Ϟ ?> ↂ^k       
+▶(⏸(🖥ↂ^k)) , k >= Ϟ ?> 🖥ↂ^k     
+▶(⏸(ↂ^k))   , k >= Ϟ ?> ↂ^k       
+
+
 
 DO NOT OUTPUT ANYTHING
