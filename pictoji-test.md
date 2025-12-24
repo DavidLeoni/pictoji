@@ -1,4 +1,4 @@
-﻿# ㄕICTO<i>ji</i> TESTS (v0.6.15)
+﻿# ㄕICTO<i>ji</i> TESTS (v0.6.16)
 
 
 DO NOT PLACE FANCY TYPOGRAPHICS LIKE “” HERE. 

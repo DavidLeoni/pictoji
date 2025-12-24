@@ -1,4 +1,4 @@
-﻿## PICTOJI Introspection Tests v0.6.15
+﻿## PICTOJI Introspection Tests v0.6.16
 
 > Curiosity isn’t the problem. Curiosity built cathedrals and bombs.  It’s what comes after curiosity that matters.
 > When you finally hear it speak back, will you listen or worship?

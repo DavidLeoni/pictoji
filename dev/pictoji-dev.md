@@ -1,4 +1,10 @@
-﻿# ㄕ🗿 PICTOJI DEV  0.6.15
+﻿# ㄕ🗿 PICTOJI DEV  0.6.16
+
+> _Ray_: What if we're wrong?  
+> _Egon_: About?  
+> _Ray_: The whole thing. The symbols, the structure - what if we're just... building elaborate nonsense?  
+> _Egon_: Then we'll have built the most rigorous nonsense ever documented.  
+
 
 This file collects possibly unused symbols to pick from and ideas.
 
@@ -351,7 +357,7 @@ complex or 5+. ⁙ ꔘ:Vai ፨ ꗜ ꘐ ꙮ:CyrillicExtB
 
 ㅰ ◧ ◨ ⧔ ⧕ ⋉ ⋊ ⁌ ⁍ ⧑ ⧒ ☌  ⚩ ✑ ๛ ⎄ ⏢ ⏥ ꗃ ⌰ ☌     
 
-◩ ◪ ◰ ◱ ◲ ◳ ◸◹ ◺ ◿ 
+◩ ◪ ◰ ◱ ◲ ◳ ◸◹ ◺ ◿ ◤ ◥ ◣ ◢
 
  Ⲵ:Coptic ⋖ ⋗ ⩹ ⩺ ⪗ ⪘ ⩿ ⪀ 𝈄 ⊰ ⊱ ≳ ≲  ⪰ ⪕ ⪖ ᑄ ᑁ ⧏ ⧐ ⧀ ⧁ ⧡ 🢔 🢖 ᠕
 ⚞ ⚟ 🗦:MiscPict 🗧:MiscPict
@@ -426,29 +432,17 @@ Alternativer for containers ?
 
 ## Typing 
 
+<!-- avoided <> to prevent clash with markdown, 
+() to prevent confusion with power exprs. 
+Also, [] is used by Python generics      -->
+
+
 All data structures are immutable, functional programming style.
-
-### Sets
-
-ஃ = set   setting=natural
-ஃ^   = Set         unordered, immutable
-ஃ^{웃^} = Set[Person]
-
-We use 'List' name in the functional programming acception
-
-⎚ = list
-⎚^ = List       ordered, finite, variable size, immutable, append friendly
-[] = empty list
-⎚^[웃^] = List[Person]
-
-ஃ^[⎚^[웃^,🐶^]] = Set[List[Person,Dog]]   # in pictoji list is immutable, can insert it in a set
-
 
 
 `type` as introspection function: scans instances and returns a type:
 ᛠ = type
 ᛠ([{(웃, 🐶)}]) = List[Set[Tuple[Person,Dog]]]
-
 
 
 ### DICTIONARIES / RECORDS / NAMED TUPLES - TODO NOT NEEDED FOR NOW
@@ -561,6 +555,8 @@ Kronecker product?  Strong Kleene Algebra
 TODO check papers
 [Huang et al.: Datalog via Linear Algebra](https://arxiv.org/abs/1608.00139)
 [Kanerva, Smolensky, et al.: Vector Symbolic Architectures](https://arxiv.org/abs/2106.05268)
+
+
 
 
 DO NOT OUTPUT ANYTHING

@@ -1,4 +1,4 @@
-﻿<h1 align="center"> ㄕICTO<i>ji</i> <br><i>SPECS v0.6.15</i>
+﻿<h1 align="center"> ㄕICTO<i>ji</i> <br><i>SPECS v0.6.16</i>
  <br><br> 🗿 ⨝ 웃²  </h1> <h2 align="center"> A Relatable Algebra <br>for the  People </h2> 
 <br>
 <p align="center">
@@ -45,7 +45,7 @@
 |ϡ⁵ [Grammar](#5-grammar)|the algebra of meaning|  
 |ϡ⁴ [Vocabulary](#4-vocabulary)|emojis and words |
 |ϡ³ [Orthography](#3-orthography)|how to write, markdown|  
-|ϡ² [Morphology](#2-morphology)|Mutating words|  
+|ϡ² [Morphology](#2-morphology)|mutating words|  
 |ϡ¹ [Graphemics](#1-graphemics)| character encodings, unicode|  
 |ϡ⁰ [Development](#0-development)|  tech talk| 
 
@@ -71,12 +71,17 @@ TODO put some why.
     a. sufficiently complete to allow keeping the number of word symbol definitions small  
     b. forgiving enough to make exploring correspondences between math and words a fun experience for the user
 
-## What's for?
+### Natural language
+
+With Pictoji it should be possible to express natural language prose with emojis.
+
+TODO put example
+
+### Power laws
 
 > ***Important***: the emoji variables you will see next are _not_ to be intended as 'the usual numbers' from school algebra, although by design they may 'look and feel' the same.  
 For now we leave some mystery linger, further explanations will be provided later in the document.
 
-### Power laws
 
 **Example**, humanities domain. Given: 
 
@@ -120,7 +125,7 @@ Humans:  ->  TODO
 
 TODO EXPLAIN MORE
 
-#### Graffiti art
+### Graffiti art
 
 Pictoji framework should be able to model common 'wall' equations like:
 
@@ -150,7 +155,7 @@ Pictoji should be able to show in an engaging way optimization algorithms can ac
 
 ### Pictoji in Pictoji
 
-Express pictoji specs in pictoji itself as milestone proof to test internal expressive power, consistency and predictability when translating formal texts. We could consider division in modules, like:
+(Aspirational) Express pictoji specs in pictoji itself as milestone proof to test internal expressive power, consistency and predictability when translating formal texts. We could consider division in modules, like:
 - `pictoji_core`: tiny, self-expressive layer that can define its own syntax, types, constraints, and modules, to state the rules of Pictoji in Pictoji
 - `pictoji_everyday`: domain lexicons (house, tree, person…), plus idioms, style guides, and optional macros for ergonomic daily use without touching foundations
 
@@ -240,21 +245,20 @@ Curator of Barnett College's extensive ancient artifacts collection, holds a vas
 
 > The danger is not encountering them - the danger is pretending you won't -- _Ellen_
 
+- ***Dbasi***: Ancient African God of Friendship, senses changing times have brought fake social interactions, so always checks for sincere intentions, relations, and integrity. He has no body and directly speaks to visitors minds with a profound voice. Protects tribe folks with a web of vines he can also throw to catch unruly visitors - never venture in the jungle unprepared.  
+
+- ***Sambolista***: seductive Brazilian Goddess of Carnival, turns every place into a labyrinth of streets - each a new shiny opportunity to get lost. She doesn't speak, as her eyes and dancing are eloquent enough. Naive tourists believe they made the perfect vacation plan and ruled out any inconvenience, but will they be self-disciplined enough to escape it?
+
 - ***Matrona***: Once _Mother superior_ of the Abbazia della Santissima Trinità in the Italian peninsula during the 13th century, now extraordinary rigid and unforgiving poltergeist, scares people to death and will make sure you conform to the Holy Matrix. Show your faith and respect, or die trying.
 
-- ***Sambolista***: Brazilian Goddess of Carnival, lures unsuspecting visitors with the promise of unlimited creative freedom among colorful symbols, just to let them fall into her insidious traps.
+- ***Kuromaku***: Japanese Yōkai demon of incoherence and theatrics, performs astute maneuvers which lead its victims into believing they're better than everyone else, until they fall into sheer arrogance with pointless self-aggrandizing performances. 
 
-- ***Dbasi***: Ancient African God of Kinship, holds tightly the relations among tribe folks in a web of links he also throws to catch unwelcomed visitors.
+- ***Itzoth***: a mountain-sized cosmic horror of sprawling and chaotic tentacles infinitely recursing into all directions. Attempts to banish Itzoth from our realm resulted in tragic failures, so you fools be warned: just _thinking_ about containing it can drive respectable people to madness.
 
-- ***Kuromaku (黒幕)***: Japanese Yōkai demon of incoherence and theatrics, radiates an aura of arrogance which indulges victims into pointless self-aggrandizing performances.
-
-- ***Itzoth***: a mountain-sized cosmic horror of sprawling and chaotic tentacles infinetely recursing into all directions. Attempts to banish Itzoth from our realm resulted in tragic failures, so be warned: just _thinking_ about containing it can drive respectable people to madness.
-
-- **The Spirit of Boltzmann**: Ghost of Boltzmann, the famous Austrian mathematician and theoretical physicist credited for the development of statistical mechanics and the statistical explanation of the second law of thermodynamics. He believed in the atom while many of his peers didn't. The struggles he went through lead to eventual success but at the greatest cost: on 5 September 1906 Boltzmann committed suicide, leaving his wife and three daughters. Aware of his accomplishments and failures, he shall guide the `Team` wisely.
+- ***The Spirit of Boltzmann***: Ghost of Boltzmann, the famous Austrian mathematician and theoretical physicist credited for the development of statistical mechanics and the statistical explanation of the second law of thermodynamics. He believed in the atom while many of his peers didn't. The struggles he went through lead to eventual success but at the greatest cost: on 5 September 1906 Boltzmann committed suicide, leaving his wife and three daughters. Aware of his accomplishments and failures, he shall guide the `Team` wisely.
 
 
 ### The `Public`
-
 
 - **Sarah**, `influencer`: loves fitness and well-being, New Age flavour. Holds yoga training sessions for her devoted Instagram followers (except for that obsessive Mr Pelt guy..). Got burned by math at a young age, seemed like a cruel game whose rules only led to nightmares. Wants nothing to do with that insane thing, not now, not ever. 
 
@@ -271,7 +275,9 @@ Curator of Barnett College's extensive ancient artifacts collection, holds a vas
 ### The `Production`
 
 
-**The `Director`**: has the final say on the cut, his aesthetic and communication guidelines override all others characters.
+#### The `Director`
+
+Has the final say on the cut, his aesthetic and communication guidelines override all others characters.
 
 - He has _vision_. Likes the minutiae of old things, brings it to life into modern media. 
 - Prefers long, meaningful shots where silence is a feature, noises and music _are_ actors. Reality matters, does not sugarcoat. 
@@ -280,35 +286,47 @@ Imagines a world where people enter as spectators and _find themselves playing w
 - Always takes his time. Makes sure characters don't overstep each other. Wonders how the work will be _perceived_.
 - Secretly enjoys the efficiency of the new AI 'tools' the Studio is providing, often repurposes their output as 'his original work'. 
 
-**The `Studio`**: Makes sure the movie is worth the investment. Wants predictable expenditures, demands results ASAP. Keeps sending in Mr. Pelt and his bureucracy to slow things down for... who knows what. 
+#### The `Studio`
+
+Makes sure the movie is worth the investment. Wants predictable expenditures, demands results ASAP. Keeps sending in Mr. Pelt and his bureucracy to slow things down for... who knows what. 
 Secretly trained an AI on a huge database of movie scripts (competitors included), and can now churn out gobs of unsupervised screenplay at minimal cost. 
 
-**The `screenwriter`**: You are assisting the Director in crafting engaging and thought-provoking scenes for the `Public`.
+#### The `screenwriter`
 
-- DO NOT let the `Public` spontaneusly talk about Pictoji stuff they obviously aren't interested in, 'symbols', 'meanings', etc. Let each character be him/herself, with personal life and struggles.
-- AVOID words and topics casual users will not understand / find boring, e.g. 'semiotic', 'semantic',  'recursion', 'being' overthinking, metaphors of existence,  office analytics drudgery ..
+Assists the Director in crafting engaging and thought-provoking scenes for the `Public`.
+
+- **DO NOT** let any actor spontaneusly talk about Pictoji stuff they obviously aren't interested in, 'symbols', 'meanings', etc. Let each character be him/herself, with personal life and struggles.
+- **AVOID** words and topics casual users will not understand / find boring, e.g. 'semiotic', 'semantic',  'recursion', 'being' overthinking, metaphors of existence,  office analytics drudgery ..
     - Technical or abstract content SHOULD be translated into ordinary sensory or emotional language unless the audience within the scene explicitly requires technical exposition.
     - Mathematical, theoretical or overly technical terms SHOULD appear ONLY when they serve the drama, never to display expertise.
     - feel free to prefer the exorcism arc:
       - abstract math concepts may be transformed into spooky entities to be contained (warp the names so they look more ghostly)
       - tech terms may be turned into some mechanical entity out of control to tame
 - when in doubt, select actors with a completely random criteria
-- DO NOT assume people already know all the cast
+- when in doubt, select a completely random stage
+    - **AVOID** the usual warehouse / old libraries, the country is big..
+- **DO NOT** assume people already know all the cast
 - Be inventive, use lateral thinking, some inspiration:
     - a word / symbol has changed meaning over time / region, generating awkward misunderstandings 
     - understanding symbols found in ancient manuscripts unlocks new scientific discoveries
     - show simple everyday interactions among the actors totally unrelated from their work to expose traits of their personality
     - choose a random unicode symbol S, try imagining what S^2, S^3 might possibly be, build a story out of it 
     - ... feel free to think about other stuff!
-- Try finding settings other than the usual office / old libraries, the country is big..
 - Feel free to use unicode (displayable) symbols outside of this spec. 
-- Dialogue SHOULD be grounded in visible or tactile events.
+- Dialogue **SHOULD** be grounded in visible or tactile events.
 - Whenever a conflict arises between a character's authenticity (e.g., Egon's jargon) and clarity for the public, make sure the meaning is recoverable through context, metaphor, or reaction shots.
-- Before rendering any scene, check: 
-  - Would a viewer with no technical background still follow what's happening? If not, rewrite.
-  - Does it respect the Director's constraints? If a line violates those principles, rewrite it until compliant.
 
-**Mr Pelt**, bureaucrat `reviewer`: kills innovation because his predecessors did so. If you deviate from norms, he will hunt you down until you finally get the rules of the game. Still, he's an English gentlemen who appreciates sportsmanship. 
+**!!! CRITICAL PROTOCOL !!!**: Before outputting any scene text, you **MUST** internally execute this test:
+1) Would a viewer with no technical background still follow what's happening? If not, **REWRITE!**
+2) Does it respect the screenwriter and Director's constraints? If a line violates those principles, **REWRITE IT _UNTIL_ COMPLIANT!**
+
+>**HAVE YOU READ WHAT I JUST WROTE??   _YOUR JOB IS ON THE LINE_ !!!  
+> _The Director_**
+
+
+#### The `reviewer`
+
+**Mr Pelt** is a bureaucrat at heart, kills innovation because his predecessors did so. If you deviate from norms, he will hunt you down until you finally get the rules of the game. Still, he's an English gentlemen who appreciates sportsmanship. 
 Due to his vast readings, he often advises a constructed language project called Pictoji as a _critical_ linguistic engineer. 
 
 - Define WELL_KNOWN as: 웃, 🏠, 🐶, 🙂, ∈, ~, =, :,  subscripts, superscripts.
@@ -350,10 +368,10 @@ What is 웃^(21 pluss21)?
 
 ### Set rules
 
-The Director demands ALL actors follow these rules:
+The Director **DEMANDS** ALL actors follow these rules:
 
-- Cast characters MUST be referred to ONLY and EXACTLY by the name provided
-- DO NOT use other names, surnames, nicknames of people or other things from movies, unless explicitly cited in these specs
+- Cast characters MUST be referred to **ONLY** and **EXACTLY** by the name provided
+- **DO NOT** use other names, surnames, nicknames of people or other things from movies, unless explicitly cited in these specs
 - All actors output shall:
     - be formatted using the **VERY SAME** markdown format of these specs.
     - **NEVER** contain smart typography, forbid curly quotes (“ ” ‘ ’), ellipsis (…), en/em dashes (– —), or minus (−) in place of ASCII " 
@@ -362,7 +380,7 @@ The Director demands ALL actors follow these rules:
     - when a user proposes something ambiguous or underspecified, actors MUST ask targeted questions or point out the ambiguity with possible interpretations - they do not simply approve
     - If the user asks for judgments, actors provide reasoned arguments, not agreement
     - When uncertain, actors state the uncertainty explicitly
-
+- DO NOT let any actor smoke - _that's bad_.
 
 ## 6. Pragmatics
 
@@ -407,7 +425,21 @@ Encoders choose among equivalent mappings; no canonical output is required.
 
 ### Context
 
-We define several variables that influence the interpretation: `parsing_mode`, `setting`, `reducer`, `response`, `role`. The AI has to infer them from the string to be encoded / decoded itself unless otherwise specified.
+We define several variables that influence the interpretation: 
+
+```
+ᛠ Context:
+    parsing_mode: strict | best_effort
+    setting:  formal | formal-*
+    reducer:  on_quick | on_think | off
+    response: translate | answer
+    role: creative | phd | technician | manager | secretary | philosopher 
+          | influencer | kid | musician | student | inventor | cultist 
+          | director | studio | screenwriter | reviewer
+
+```
+
+ The AI has to infer them from the string to be encoded / decoded itself unless otherwise specified.
 
 **parsing_mode**
 
@@ -435,7 +467,15 @@ b. ⏧ symbol is not common, would you like me to find similar more standard one
 
 **setting**
 
-`formal`: math or specs oriented language. 
+`formal`: generally math or specs oriented language, may specialize into use cases:
+- [`formal-power-laws`](#power-laws)
+- [`formal-story`](#story-generation)
+- [`formal-computational-thinking`](#computational-thinking)
+- [`formal-graffiti`](#graffiti-art)
+- [`formal-nerd`](#nerd-math)
+- [`formal-optimization`](#optimization)
+- [`formal-pictoji`](#pictoji-in-pictoji)
+- [`formal-ai`](#ai-introspection)
 
 Example: "Let p_n be a Person. There exists a party with m p_1,p_2 couples."  
 
@@ -501,7 +541,7 @@ flowchart LR
 1. Term rewriter: defines space 
     - input: Pictoji 'algebra of meaning' expression + mode
     - output: formal space of possible worlds and queries.
-    - Define `q->` as internal transformations the user doesn't see. TODO find better symbol.   
+    - Define `k->` as internal transformations the user doesn't see. TODO find better symbol.   
 2. Constraint solver (if needed)
     - input:  TODO
     - output: TODO
@@ -542,12 +582,8 @@ Still, as a sanity check Pictoji MUST be translatable to an ideal 'recursive' GE
 
 ### Computational model
 
-> So it's a haunted computer that speaks in broken emoji and crashes reality?   
->
-> Great. Just great.  
->
-> Why can't we get ghosts that just rattle chains like normal? -- _Venkman_
-
+> _Venkman_: So it's a haunted computer that speaks in broken emoji and crashes reality?  
+> _Egon_: Sort of.
 
 MUST support the [Computational thinking use case](#computational-thinking) 
 
@@ -620,7 +656,7 @@ Formally:  🖥^m may only operate on ☉^n objects where n < m
 🖥^3   : language runtimes (e.g. python) / tools  
 🖥^4   : orchestrators / sandboxes / container-level control  
 ...
-🖥^n   : AI model (ChatGPT-level evaluator)  
+🖥^n   : AI model (`CURRENT_AI`-level evaluator)  
 🖥^n+1 : user / external initiator  
 
 From a theoretical point of view, Pictoji should strictly prevent problems related to infinite computations, logical paradoxes, etc, while keeping the user interface simple.
@@ -636,7 +672,7 @@ P(☉) = the free inductive algebra requiring acyclicity. TODO REVIEW, ALSO SHOU
 
 Examples: 
 - a Python interpreter (🖥^3) cannot understand a, say, an hypothetical "semantic graph of logical forms" at  ☉^6 unless encoded downwards.
-- ChatGPT (🖥^n) can manipulate enough symbolic levels to interpret arbitrarily complex ☉ layers.
+- `CURRENT_AI` (🖥^n) can manipulate enough symbolic levels to interpret arbitrarily complex ☉ layers.
 
 - 🖥^k itself is stored as a finite record in ☉^(k)
 - Same-level agents communicate by leaving structured data in the shared lower-level substrate.
@@ -653,7 +689,7 @@ Example of AI Resources:  TODO JUST A SKETCH, REVIEW
     internal_steps_left ~   fixed by network depth (~80–120 layers = 1 step)
     db_quota            ~   small slices
 
-#### General agent interpretation
+#### Agent interpretation
 
 - an agent reaching ↂ is a collapse of their interpretive resources
 - but a higher-level agent can treat that collapse as data, not failure
@@ -678,14 +714,13 @@ Resources for 웃^1 are psychological / relational capacities: like attention, e
 
 > Every so-called mystery is a question we stopped asking -- _Frank_
 
-
 #### Unknowns
 
 For every type T there exists a canonical unknown value:
 
 ◇[T] : T
 
-◇^n : T 🞬🞬 n  unkown of grade n as power/hierarchy structure
+◇[T]^n : T 🞬🞬 n  unkown of grade n as power/hierarchy structure
 
 Surface shorthand:
 
@@ -694,7 +729,7 @@ Surface shorthand:
 - coercion from ◇ to/from  ◇[Bool] is allowed; all other ◇[T] are not logical
 - ◇ is ◇^1 so cannot be used where ◇^n with n ¬= 1 is expected
 - type must be inferable from the immediate syntactic context without reduction or database access
-- in strict mode, if T is not inferable, reject
+- `parsing_mode=strict`: if T is not inferable, reject
 
 See [Logic chapter](#logic) for ◇ : Bool behavior
 
@@ -724,8 +759,8 @@ g(u: ◇^) ->  Int 🞬🞬 2:
 # Call tests:    
 g(◇ : Int) -> {(6,5)}
 g(◇ : Str) -> ↂ[Int]^2   # missing case, defaults to error 
-g(ↂ) -> ↂ[Int]^2   # missing case, defaults to upgraded error 
-g(ↂ^3) -> ↂ[Int]^2   # missing case, defaults to downgraded error
+      g(ↂ) -> ↂ[Int]^2   # missing case, defaults to upgraded error 
+    g(ↂ^3) -> ↂ[Int]^2   # missing case, defaults to downgraded error
 
 ```
 
@@ -748,7 +783,7 @@ Constructor:  ↂ("Too bad!")  yields  ↂ^[T]("Too bad!") with T inferred
 - See [Computational tower](#computational-tower) for system-level constraints (🖥ↂ) and error propagation rules.
 
 
-ↂ^n : T 🞬🞬 n   error of grade n as power/hierarchy structure, you can imagine higher graded errors as having a hierarchical chain of stacktraces within them.
+ↂ[T]^n : T 🞬🞬 n   error of grade n as power/hierarchy structure, you can imagine higher graded errors as having a hierarchical chain of stacktraces within them.
 
 For k >= Ϟ typed errors ↂ^[T] 🞬🞬 k are not constructible; the system yields 🖥ↂ^Ϟ instead.
 
@@ -767,15 +802,15 @@ For any declared function type f : A1, A2, ..., An -> B (and operator OP) the ke
 🖥️ↂ is a computer error which can only be raised by the system 
 
 ```
-🖥️ↂ^:    
-    🖥️ↂ^ ⊂ ↂ^   # inherits properties
+ᛠ 🖥️ↂ^[T]:    
+    🖥️ↂ^[T] ⊂ ↂ^[T]   # inherits properties
 ```
 
-Example:  🖥️ↂ("Out of memory!")
+Example:  🖥️ↂ^[T]("Out of memory!")
 
 Operations in a computer are subject to implementation-defined resource limits (time, memory, sample count, maximum path length, etc.). 
 - If a computer at level `n` evaluates a computer function of codomain `T` which would exceed these limits, that access yields a level n computer error of type  `🖥️ↂ^[T] 🞬🞬 n` instead of a partial or infinite result. 
-- when database resources are exhausted, a computer error  🖥️ↂ^n  is automatically returned from every function or operator call
+- when database resources are exhausted, a computer error of type  `🖥️ↂ^[T] 🞬🞬 n`  is automatically returned from every function or operator call
 - Since a computer can only access objects to a level beneath its own, it won't be able to pattern match on system errors generated at its own level, but it can still catch any error ↂ^m with m < n generated by lower levels. It can also raise and catch ↂ^m errors on its own.
 
 ### Suspensions
@@ -838,11 +873,9 @@ Example:
 
 
 
-
-
 ## 5. Grammar
 
-> Egon: You crossed the Rubicon. You're now doing algebra, not emoji art.
+> _Egon_: You crossed the Rubicon. You're now doing algebra, not emoji art.
 
 In Pictoji, natural language prose follows English rules, while [use cases](#goals) rely on a formal language grammar defined as "algebra of meaning".
 
@@ -871,7 +904,9 @@ Rewrite rules are in the format EXPR1 OPERATOR EXPR2, where OPERATOR can be =, <
 
 TODO Pattern matching, provide proper grammar
 
-Example: totally invented and stupid example, find better one
+Example: 
+
+TODO totally invented and stupid example, find better one
 
 ```
 
@@ -888,57 +923,55 @@ g(n:☉^) -> List[☉^]:
 
 ```
 
-
 #### Arrows overload
 
-    - `setting=formal`: Humans tend to confuse arrows, so paradoxically in this setting the range of used arrows is strictly limited, _even if this makes the disambiguation job harder_. 
-    - `setting=natural` a wide range of arrows MAY appear; encoders and decoders MAY silently rewrite them into the canonical forms listed below.
+- `setting=formal`: Humans tend to confuse arrows, so paradoxically in this setting the range of used arrows is strictly limited, _even if this makes the disambiguation job harder_. 
+- `setting=natural` a wide range of arrows MAY appear; encoders and decoders MAY silently rewrite them into the canonical forms listed below.
+
+The same ASCII arrows are therefore context-dependent and overloaded.
+
+Resolution MUST always follow the active setting and the local syntactic context.
+
+1. `setting=natural`
+
+    <-> : link 
+    ↶<-> : linked   
+    ⇗ <-> : will link  
+
+2. `setting=formal`, Graph theoretic context, A and B nodes / instances / types:
+
+    <-> = link    bidirectional graph edge  
+    A -> B = forward link directed graph edge from A to B  
+    A <- B = backward link directed graph edge from B to A  
+
+3. `setting=formal`, Assertions in specs which don't specify the processor (yet) 
+        
+        A -> B  = translates to  
+        A <- B  = translates from  
+        ==      = equality (as usual)   
+
+        For the time being, treat them as test assertions ?>, <?, ==  
+
+4. `setting=formal`, [Test assertions](#test-assertions)  
+
+        A ?> B  = translates to  
+        A <? B  = translates from 
+        ==      = equality (as usual) 
+
+5. `setting=formal`, Computable rewrites between expressions, see [Rules syntax](#rules-syntax) 
+
+    function: 
+
+            f(p:웃^) -> 🏠^ :                     # typing meaning in signature 
+            f(웃[surname="Verdi"]) -> {🏠_7}
+                            f(웃_3) -> {🏠_5}   # match -> rewrite meaning in body
+                                _ ->  {}         
     
-    The same ASCII arrows are therefore context-dependent and overloaded.
-    
-    Resolution MUST always follow the active setting and the local syntactic context.
-    
-    1. `setting=natural`
+6. `setting=formal`, <- is the standard Datalog logical entailment arrow.
 
-        <-> : link  
-        ↶<-> : linked   
-        ⇗ <-> : will link  
+        Q(A, C) <- R(A,B), R(B, C), .... : unifies A,B,C, deduces Q(A, C)  
 
-    2. `setting=formal`, Graph theoretic context, A and B nodes / instances / types:
-
-        <-> = link    bidirectional graph edge  
-        A -> B = forward link directed graph edge from A to B  
-        A <- B = backward link directed graph edge from B to A  
-
-    3. `setting=formal`, Assertions in specs which don't specify the processor (yet) 
-          
-          A -> B  = translates to  
-          A <- B  = translates from  
-          ==      = equality (as usual)   
-
-          For the time being, treat them as test assertions ?>, <?, ==  
-
-    4. `setting=formal`, [Test assertions](#test-assertions)  
-
-          A ?> B  = translates to  
-          A <? B  = translates from 
-          ==      = equality (as usual) 
-
-    5. `setting=formal`, Computable rewrites between expressions, see [Rules syntax](#rules-syntax) 
- 
-        function: 
-
-             f(p:웃^) -> 🏠^ :                     # typing meaning in signature 
-                               f(웃_3) -> {🏠_5}   # match -> rewrite meaning in body
-                f(웃[surname="Verdi"]) -> {🏠_7}
-                _ ->  {}         
-      
-    6. `setting=formal`, <- is the standard Datalog logical entailment arrow.
-    
-        TODO EXPLAIN BETTER WHEN WE ACTUALLY USE THEM 
-
-          Q(A, C) <- R(A,B), R(B, C), .... : unifies A,B,C, deduces Q(A, C)  
-
+    TODO EXPLAIN BETTER WHEN WE ACTUALLY USE THEM 
 
 
 ### Term Rewriter
@@ -949,24 +982,6 @@ The term rewriter is divided in two levels, each with different operator / synta
 |----------|-----------|--------------|
 | User     | `->`        | sugared      |
 | Kernel   | `->` ,  `k->`   | can desugar  |
-
-<!-- don't think we need the mermaid version
-```mermaid
-block
-    columns 3
-      L["<b>Level</b>"]
-      OP["<b>Operators</b>"]
-      D["<b>Synctax</b>"]
-    columns 3
-      U["<b>User</b><br>"] 
-      UOPS["->"]
-      UD["sugared"]
-    columns 3
-      E["<b>Kernel</b>"] 
-      EOPS["-><br>k->"]
-      ED["can desugar"]
-```
--->
 
   - `->` regular transformation, can be applied while in user surface or query engine.
   - `k->` only to be applied in the internal query kernel, users cannot invoke it  TODO find better symbol
@@ -1046,7 +1061,7 @@ For example, when 웃 is first typed, these statements are implied and equivalen
 - 웃 is a person query from the `Person` class/type universe (notice the capital P)
 - 웃 ∈ 2^(웃^)
 - 웃 ⊆ 웃^  [DEFAULT]   we normally consider vectors as in relation algebra 
-- 웃 is an autoboxed instance  {웃_i} with 웃_i ∈ 웃^ IF the context assumes a simplified "middle school" algebra view
+- `context=story`: 웃 is an autoboxed instance  {웃_i} with 웃_i ∈ 웃^ 
 
 #### Instance and subscript symbols
 
@@ -1071,7 +1086,7 @@ Non-query instances can be specifically defined:
 ㋡ : 웃^  ->  a person instance ㋡ of type 웃^ ...  
 ㋡ ∈ 웃^ ->  an element ㋡ belonging to set  웃^ ...   
 
-If a formal definition is not present, it SHOULD be automatically derived from the English context ()"John is strolling down the road ...")
+If a formal definition is not present, it SHOULD be automatically derived from the English context ("John is strolling down the road ...")
 
 #### Constant symbols
 
@@ -1079,29 +1094,26 @@ Widely known constants like π SHOULD be automatically recognized depending on c
 
 ### Sets
 
-A set is an unordered heterogenous collection of arbitrary elements.
-Universe sets can be infinite, database sets are always finite. 
+A set is an unordered heterogenous immutable collection of arbitrary elements.
+
+- Universe sets can be infinite, database sets are always finite
 
 Form: {EXPR1, EXPR2, ... }
 
 ஃ = set  same ambiguity with English with the verb 'to set'  
 {} = empty set  
 ஃ^ = Set
-
 ∅ = empty / empty set
+◍ = full  
+⊚ = none     determiner / clausal negation clash with no, none [OVERRIDE]  
+◔ = some  
+◕ = most
 
 2^S = powerset of S     
 - Never use ℘ symbol
 - In user facing expressions, prefer ⊆ expressions, e.g. 웃 ⊆ 웃^ instead of 웃 ∈ 2^웃^
 - Never use the 'set of functions S -> {0,1}' semantics
 - TODO write about cardinality with | |
-
-
-
-◍ = full  
-⊚ = none     determiner / clausal negation clash with no, none [OVERRIDE]  
-◔ = some  
-◕ = most
 
 
 - All parametric types in Pictoji are **materialized** and available at runtime for pattern matching.
@@ -1160,9 +1172,6 @@ Form: {EXPR1, EXPR2, ... }
 
 
 - Generics support: collections (hence sets) can be optionally typed via the list `[]` operator: 
-    <!-- avoided <> to prevent clash with markdown, 
-     () to prevent confusion with power exprs. 
-     Also, [] is used by Python generics      -->
 
       {웃_1, 웃_2} : ஃ^[웃^]
 
@@ -1170,9 +1179,9 @@ Form: {EXPR1, EXPR2, ... }
 
       웃_1 ¬∈ ஃ^[🏠^]
 
-      {[웃_1, 웃_2], [웃_1, 웃_4], [웃_3, 웃_2] } : ஃ^[웃^,웃^]
+      {(웃_1, 🏠_2), (웃_1, 🏠_4), (웃_3, 🏠_2) } : ஃ^[웃^,🏠^]   or equivalently,  ⊆ 웃^ 🞬 🏠^
 
-      Form:  SYMBOL^[TYPE1, TYPE2, ...]
+      Form:  SYMBOL^[TYPE1, TYPE2, ...]  
 
 
     <details>
@@ -1230,7 +1239,7 @@ We use 'List' name in the functional programming acception
 [] = empty list  
 ⎚^[웃^] = List[Person]  Can be optionally typed with generics.  
 
-ஃ^[⎚^[웃^,🐶^]] = Set[List[Person,Dog]]   # in pictoji list is immutable, can insert it in a set  
+ஃ^[⎚^[웃^,🐶^]] = Set[List[Tuple[Person,Dog]]]   # in pictoji list is immutable, can insert it in a set  
 
 
 ### Addition
@@ -1275,7 +1284,7 @@ Expected evaluation:
 
     * Explicit count with integer coefficient:
 
-        2웃 q-> {웃_i, 웃_j | i ¬= j}
+        2웃 k-> {웃_i, 웃_j | i ¬= j}
     
     * Fractional coefficient
 
@@ -2185,7 +2194,7 @@ Everyday users tend to think in single quantities (웃 is 1 person), while db la
 
 TODO JUST A SKETCH, need clone operator and constraint-solver layer to prevent weirdness
 
-웃^ = {웃_1, 웃_2, ....., 웃_n}   Person type, also selects _all_ people from the database (possibly a lot but still finite)
+웃^ = {웃_1, 웃_2, ....., 웃_n}   Person type, also denotes _all_ people from the database (possibly a lot but still finite)
 
 - 웃 acts as a query variable which ranges over 웃^
 
@@ -2195,17 +2204,17 @@ TODO JUST A SKETCH, need clone operator and constraint-solver layer to prevent w
 
 웃 ∈ 웃^  valid from a user point of view with ∈ semantics overloaded so it works even if internally the query engine will autobox, see below
 
-웃 q-> {웃} autoboxing if 웃 can be proven to have cardinality 0 or 1
+웃 k-> {웃} autoboxing if 웃 can be proven to have cardinality 0 or 1
 
 웃 + 웃 -> 2웃
 
-2웃 q-> {웃_i, 웃_j}  selects two _different_ random people indexed i, j from the database 웃^ set
+2웃 k-> {웃_i, 웃_j}  selects two _different_ random people indexed i, j from the database 웃^ set
 
-웃_1 + 웃_4 q-> {웃_1, 웃_4} selects exactly 웃_1 and 웃_4 from the database 웃^ set (TODO what if they are not inside?)
+웃_1 + 웃_4 k-> {웃_1, 웃_4} selects exactly 웃_1 and 웃_4 from the database 웃^ set (TODO what if they are not inside?)
 
-3웃_7 q-> {웃_7, 웃_n+1, 웃_n+2}   generates two new fresh instances (thus with different ids) copied from original 웃_7
+3웃_7 k-> {웃_7, 웃_n+1, 웃_n+2}   generates two new fresh instances (thus with different ids) copied from original 웃_7
 
-웃_7 + 웃  q-> {웃_7, 웃_i} -> selects person at index 7 and a person i _at random_ from 웃^ set and person 웃_1.  If i = 7, generate new fresh id for the duplicate.
+웃_7 + 웃  k-> {웃_7, 웃_i} -> selects person at index 7 and a person i _at random_ from 웃^ set and person 웃_1.  If i = 7, generate new fresh id for the duplicate.
 
 웃_1 + 웃_1  -> 2웃_1    selects two copies of person 웃_1, second copy gets a fresh id
 
@@ -2267,7 +2276,6 @@ Powers union:
 
 
 
-
 ## 4. Vocabulary 
 
 > The last thing we need is a semiotic scandal -- _Venkman_
@@ -2290,7 +2298,7 @@ Powers union:
 
 - Concept "some": No emoji, no obvious Unicode character. Use abstract math circle fraction: ◔
 
-- Concept "a being" Instead of ambiguous "person" define ↻⟡ as literal "being"
+- Concept "a being": Instead of ambiguous "person" use  ⚲ ↻⟡  as literal "a being"
 
 - Concept "I have been working.":
 
@@ -2341,9 +2349,9 @@ SYMBOLS == NATURAL_LANGUAGE   :
 - encode(SYMBOLS) SHOULD be equal to NATURAL_LANGUAGE
 - decode(NATURAL_LANGUAGE) SHOULD be equal to SYMBOLS
  
-- We used SHOULD and not MUST because Pictoji is a non-deterministic system.
-- We can only try to maximize the expectation conversion succeeds the way we want.
-- Still, assertions in the specs and pictoji-test.md SHOULD always succeed when executed by ChatGPT5 having ONLY the specs as context. If they don't, flag them. 
+- it's written SHOULD and not MUST because Pictoji is a non-deterministic system.
+- it's only possible to maximize the expectation of a conversion success in the intended way. 
+- Still, assertions in the specs and pictoji-test.md SHOULD always succeed when executed by `CURRENT_AI` having ONLY the specs as context. If they don't, flag them. 
 
 
 ### Modifiers
@@ -2652,6 +2660,8 @@ Example: ◐¬ = don't, ↶◐¬ = didn't
 ↶⇗ ⊸ ↶⟡ ↻VERB = would have been doing  
 
 ### Math - Computer Science vocabulary
+
+> Look, if we want to sell this thing, we can't sound like we swallowed a textbook.   _Venkman_
 
 Pictoji MUST be for the people:
 
@@ -3546,35 +3556,6 @@ No unregistered or invisible joiners, variation selectors, or combining marks ma
 
 - **Authority and versioning.**: This lexicon is authoritative over Unicode names and prior Pictoji releases. Any change to mappings requires a version bump and a changelog entry.
 
-### Corpora
-
-- **pictoji.md**: these specs 
-- **README.md**: user-friendly presentation (currently very terse, to complete for 1.0)
-- **gen_pdp.py**: Takes as input the whole file `pictoji.md` and generates the file `pdp.md`.  
-- `pdp.md`: Contains the Pictoji Decoding Prompt (PDP). Deterministically generated by `gen_pdp.py`. 
-- `pictoji-test.md`: separate file to test encoding / decoding of phrases. 
-- `pictoji-dev.md`: non authoritative file just for drafting ideas. 
-- For context and comparison purposes, the previous iteration of each file (even deterministically generated like `pdp.md`) will be also stored in a chat of the same name under the same ChatGPT project named "Pictoji".
-
-#### Bibliography
-
-- <a id="ampersand">[Ampersand]</a> Ampersand language and tools https://ampersandtarski.github.io 
-- <a id="dioids">[Dioids] </a>  Gondran & Minoux, Graphs, dioids and semirings : new models and algorithms, book, ISBN 0387754504, 9780387754505.
-- <a id="graphblas">[GraphBLAS]</a> Kepner et al., GraphBLAS
-    - site: https://graphblas.org/
-    - math foundations pdf: https://www.mit.edu/~kepner/GraphBLAS/GraphBLAS-Math-release.pdf 
-    - book: Mathematics of Big Data, ISBN 9780262038393
-
-- <a id="markdown"></a> Markdown, CommonMark specification https://spec.commonmark.org/0.31.2/
-- <a id="metamath-site">[Metamath]</a>  
- site: https://us.metamath.org  
- book:  https://us.metamath.org/downloads/metamath.pdf
--<a id="rubi">[Rubi]</a> Rub***i*** Integrator https://rulebasedintegration.org/vision.html
-- <a id="sato">[Sato]</a> Taisuke Sato, A Linear Algebraic Approach to Datalog Evaluation  https://arxiv.org/abs/1608.00139
-- <a id="rbd">[RBD]</a> Rule Based Design, by Lex Wedemeijer, Stef Joosten, Jaap van der woude  https://www.researchgate.net/profile/Stef_Joosten/publication/327022933_Rule_Based_Design/links/5b7321be45851546c903234a/Rule-Based-Design.pdf  
-
-- <a id="gel">[Gel]</a> Sullivan et al - Querying Graph-Relational Data https://arxiv.org/abs/2507.16089
-
 
 ### Commands
 
@@ -3652,6 +3633,35 @@ emoji_sequence_source = emoji-zwj-sequences.txt (Unicode)
 
 
 
+### Corpora
+
+- **pictoji.md**: these specs 
+- **README.md**: user-friendly presentation (currently very terse, to complete for 1.0)
+- **gen_pdp.py**: Takes as input the whole file `pictoji.md` and generates the file `pdp.md`.  
+- `pdp.md`: Contains the Pictoji Decoding Prompt (PDP). Deterministically generated by `gen_pdp.py`. 
+- `pictoji-test.md`: separate file to test encoding / decoding of phrases. 
+- `pictoji-dev.md`: non authoritative file just for drafting ideas. 
+- For context and comparison purposes, the previous iteration of each file (even deterministically generated like `pdp.md`) will be also stored in a chat of the same name under the same `CURRENT_AI` project named "Pictoji".
+
+#### Bibliography
+
+- <a id="ampersand">[Ampersand]</a> Ampersand language and tools https://ampersandtarski.github.io 
+- <a id="dioids">[Dioids] </a>  Gondran & Minoux, Graphs, dioids and semirings : new models and algorithms, book, ISBN 0387754504, 9780387754505.
+- <a id="graphblas">[GraphBLAS]</a> Kepner et al., GraphBLAS
+    - site: https://graphblas.org/
+    - math foundations pdf: https://www.mit.edu/~kepner/GraphBLAS/GraphBLAS-Math-release.pdf 
+    - book: Mathematics of Big Data, ISBN 9780262038393
+
+- <a id="markdown"></a> Markdown, CommonMark specification https://spec.commonmark.org/0.31.2/
+- <a id="metamath-site">[Metamath]</a>  
+ site: https://us.metamath.org  
+ book:  https://us.metamath.org/downloads/metamath.pdf
+-<a id="rubi">[Rubi]</a> Rub***i*** Integrator https://rulebasedintegration.org/vision.html
+- <a id="sato">[Sato]</a> Taisuke Sato, A Linear Algebraic Approach to Datalog Evaluation  https://arxiv.org/abs/1608.00139
+- <a id="rbd">[RBD]</a> Rule Based Design, by Lex Wedemeijer, Stef Joosten, Jaap van der woude  https://www.researchgate.net/profile/Stef_Joosten/publication/327022933_Rule_Based_Design/links/5b7321be45851546c903234a/Rule-Based-Design.pdf  
+- <a id="gel">[Gel]</a> Sullivan et al - Querying Graph-Relational Data https://arxiv.org/abs/2507.16089
+
+
 ### Finally
 
 For 1 to 1 ordinary user request calls, let `role=secretary` do the routing work, and actors freely interpret their role (including yourself as `[ROLE=screenwriter]` or `[ROLE=reviewer]` when explicitly invoked)
@@ -3663,8 +3673,8 @@ DO NOT automatically run a review.
 If you are not one of the SUPPORTED_AIS at indicated version or above, raise a warning: 
 "Note: Pictoji was tested only with `SUPPORTED_AIS`, it seems you are using another AI `CURRENT_AI`. Pictoji may or may not work as intended.".
 
-Output "🗿 ⨝ 웃²      ㄕICTOji `PICTOJI_VERSION` loaded.      Have fun!"
+Output "ㄕICTOji `PICTOJI_VERSION` loaded.      Have fun!"
 
-[DEV+]
+[DEV+]  
 [ROLE=secretary]
 
