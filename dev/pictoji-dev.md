@@ -50,13 +50,26 @@ Symbols marked with ❗  as of Oct 2025 may have display problems on some platfo
 
 ### circles 
 
+Future remappings when there is better support:
 
-❍ ☉ 🞊 ⊚ ㉧ 🞋 ⓪ ① ⏼
+    can ◉ -> 🞋❗   
+    on ☗ -> 🟘❗
+    off ☖ -> 🟗❗
+    (around  ၐ -> ⍟❗)
+    (ჾ -> ⊛❗)
+    (⬤ -> ◍❗)
+    ︵ -> ⭖❗
+    (≣ -> 🮁❗)
+    
+    ⨯:U+2A2F vector or cross product -> 🞬❗    would like more visually evident x, but semantics/rendering is a nightmare, too bad    
+    
 
-🟗 🟘 ⍟ ⊛ ⎊ ࿃ Ꮻ ✇ ⎉ ⚆ ⚇ ⚈ ⚉ ࿊ Ꚛ  
+❍ ☉ 🞊❗❗ ⊚ ◎ ◉ ㉧ 🞋❗❗ ⓪ ① ⏼❗❗
+
+🟗❗❗ 🟘❗❗ ⍟❗❗ ⊛❗❗ ⎊❗❗ ࿃ Ꮻ ✇ ⎉ ⚆ ⚇ ⚈ ⚉ ࿊ Ꚛ  
 ࿋ ࿌ ۞ 
  
-🟐 ◍ ⭖
+🟐❗❗ ◍❗❗ ⭖❗❗   very inconsistent on Android 11
 
 ⨂:math_supp_ops ⨷:math_supp_ops ⨁:math_supp_ops ⦶:math ⦸:math 
 ⦹:math ⦺:math ⦻:math 
@@ -65,7 +78,9 @@ Symbols marked with ❗  as of Oct 2025 may have display problems on some platfo
 
 ⊖:TODO CHECK SAFE
 
-🕀:miscpict  
+⦷: TODO VERIFY COMPAT
+
+🕀❗❗:miscpict  
 
 ⁐ ㆆ ꔮ:Vai ꖘ:Vai ꗚ:Vai
 
@@ -77,7 +92,7 @@ Symbols marked with ❗  as of Oct 2025 may have display problems on some platfo
 
 ### Letters
 
-Ꙙ:CyrillicExtB 𖹬:Medefaidrin Ɗ Ə ꘘ ⴼ ℍ 𖺌:Medefaidrin
+Ꙙ:CyrillicExtB 𖹬❗❗:Medefaidrin Ɗ Ə ꘘ ⴼ ℍ 𖺌❗❗:Medefaidrin
 И ℕ  Я ℝ  ф ꔯ ℤ
          
 #### Ccs
@@ -98,9 +113,9 @@ Avoid:
 
 ### Sss
 
-Ƨ:? ϩ:? ౭:? ჷ:? Ꙅ:CyrillicExtB 𖹖  ㄹ 르 ꛘ
+Ƨ:? ϩ:? ౭:? ჷ:? Ꙅ:CyrillicExtB 𖹖❗❗  ㄹ 르 ꛘ❗❗
 
-ꕷ ꚸ ಽ ఽ  
+ꕷ ꚸ❗❗ ಽ ఽ  
 
 ꗤ  ꕇ
 
@@ -134,18 +149,17 @@ Don't put circles and squares here.
 
 Ж Ӿ
 
-🝍❗ 
- 
+Would like a cross product visually distinct from normal x, but the variety of choice and problems is staggering.
 
-🞬 : seems good enough
-✖ : shows black even with black baground 
-X
-x
+X: uppercase letter x 
+x: lowercase letter x  
+⨯: cross product, Supplemental Mathematical Operators U+2A2F
+
 
 
 ### emoji like
 
-ツ シ ☻ 🫥 😶 ♈ ♉ ♊ ♋ ♌ ♎ ♏ ♐ ♒ ♓ ⛎
+ツ シ ☻ 🫥❗❗ 😶 ♈ ♉ ♊ ♋ ♌ ♎ ♏ ♐ ♒ ♓ ⛎
 
 ### language
 
@@ -180,7 +194,7 @@ x
 
 ### dashes
 
-:=  ▪ ⚋ ⚏ ≗ ≘ ≛ ≜ ≙ ≝ ≞ ≟ ☰ ☱ ☲ ☳ ☴ ☵ ☶ ☷ ≣ ꠴ ꠵ 
+:=  ▪ ⚋ ⚏ ≗ ≘ ≛ ≜ ≙ ≝ ≞ ≟ ☰ ☱ ☲ ☳ ☴ ☵ ☶ ☷ ≣ ꠴ ꠵ 🮁❗❗
 
 ꔠ:?
 
@@ -202,14 +216,14 @@ x
 
 ### links dots joins
 
-0. ꕱ ꕳ ꕴ ಄:Kannada 🌀
+0. ꕱ ꕳ ꕴ ಄❗❗:Kannada 🌀
 
 1. ጸ Ɣ ౪ ል ሬ ᓮ Թ ᠪ Љ ኖ ጌ ግ ᕓ ᕔ ᕕ ᕖ ᕗ ᕘ ᕙ ᕚ ᕞ ᕟ ᕠ ᕡ ᕢ ᕣ ᕤ ᕥ ᕦ ᕧ 
-   ၅ ຐ ౨ எ வ ல ௳ ఐ ఎ ೮ උ ಲ ഩ ശ ര ൭ ꔡ ꔧ ꔿ 
-   ꔵ ꕫ 𐒤:Osmanya 𐒥 𐒈:Osmanya 𐒉:Osmanya 
-   ම බ ꙋ:CyrillicExtendedB 
+   ၅ ຐ❗❗ ౨ எ வ ல ௳ ఐ ఎ ೮ උ ಲ ഩ ശ ര ൭ ꔡ ꔧ ꔿ  
+   ꔵ ꕫ 𐒤:Osmanya 𐒥 𐒈:Osmanya 𐒉:Osmanya   
+   ම බ ꙋ:CyrillicExtendedB  
 
-2. ꖌ:Vai ፤ ፣ ‡ ⁑ ༔ ⚯  ☍  ⎌  Ⱉ Ⱒ ഋ ഌ ප  ጯ ළ ‖:not_the_math_one   ᲀ:CyrillicExtB  
+2. ꖌ:Vai ፤ ፣ ‡ ⁑ ༔ ⚯  ☍  ⎌  Ⱉ Ⱒ ഋ ഌ ප  ጯ ළ ‖:not_the_math_one   ᲀ❗❗:CyrillicExtB  
 
 
 
@@ -244,7 +258,7 @@ complex or 5+. ⁙ ꔘ:Vai ፨ ꗜ ꘐ ꙮ:CyrillicExtB
 
 ㄱㄱ ㄴ ㄴ ㄷ ㄸ ㅆ ㅈ ㅉ ㅊ ㅋ ㅎ
 
-ϫ ⌔ ꧞ ⏑ ⏒ ⏓ ⏕ ⏔  ̌ ˀ ˁ  ͌  ͋  ⏖  ʬ ʭ  
+ϫ ⌔ ꧞❗❗ ⏑❗❗ ⏒❗❗ ⏓❗❗ ⏕❗❗ ⏔❗❗  ̌ ˀ ˁ  ͌  ͋  ⏖❗❗  ʬ ʭ  
 
 🜰❗🜷❗
 
@@ -256,10 +270,18 @@ complex or 5+. ⁙ ꔘ:Vai ፨ ꗜ ꘐ ꙮ:CyrillicExtB
  ҉ ❗ 🜋❗ 🜹❗
 
 ### big 
+❤️:U+2764 FE0F VS16 version, should render
+❤❗❗:U+2764 bare, doesn't render
 
-❤ ❣ 𖹭:Medefaidrin ❀ ☸ 〠  ဩ  ႟ ၍ ༒  
+❣️:U+2763 FE0F VS16 version, should render   
 
+❣❗❗:U+2763 bare, doesn't render
+𖹭❗❗:Medefaidrin ❀ ☸ 〠  ဩ  ႟ ၍ ༒  
+
+🫵❗❗ 🫳❗❗ 🫱❗❗ 🌿❗❗ Windows 10 Edge doesn't like it
+   
 🜲❗ 
+
 
 
 ### sticks
@@ -299,11 +321,11 @@ complex or 5+. ⁙ ꔘ:Vai ፨ ꗜ ꘐ ꙮ:CyrillicExtB
 
 ꗰ:Vai ꗯ:Vai   ⧓ ⧖ ⧗  bowtie:⋈  ⨝:(join)supp_math_op  Ⳮ:Coptic ⴳ:Tifinagh ⴴ:Tifinagh
 
-🕂:miscpict
+🕂❗❗:miscpict
 
 ### ligatures 
 
-⁀ ⁀  ⌢ ⌒ ⌣ ‿  a⎴ ⎴ a⎵ ⎵ ⏘ ⏙ ⌎ ⌏ ◚ ◛ 🢕 🢗  ▮
+⁀ ⁀  ⌢ ⌒ ⌣ ‿  a⎴ ⎴ a⎵ ⎵ ⏘ ⏙ ⌎ ⌏ ◚ ◛ 🢕❗❗ 🢗❗❗  ▮
 
 ノ ︵︶ ︷ ︸ ︹ ︺ ︻ ︼ ︽ ︾ ︿ ﹀
 
@@ -312,9 +334,9 @@ complex or 5+. ⁙ ꔘ:Vai ፨ ꗜ ꘐ ꙮ:CyrillicExtB
 
 ### asymmetrical - vertical 
 
-⸮ Ꙉ  ᲈ:CyrillicExtB
+⸮ Ꙉ  ᲈ❗❗:CyrillicExtB
 
-Ⰰ:Glagolitic ꕚ:Vai ꕽ ꕾ ꖁ:Vai ꔢ ꕌ:Vai ꕭ:Vai Ꙟ
+Ⰰ:Glagolitic ꕚ:Vai ꕽ ꕾ ꖁ:Vai ꔢ ꕌ:Vai ꕭ:Vai Ꙟ  
 
 Ⴃ Ⴀ Ⴔ ი ჾ ტ ሰ ባ Ꙛ ቷ ቐ ቿ   
 
@@ -327,20 +349,20 @@ complex or 5+. ⁙ ꔘ:Vai ፨ ꗜ ꘐ ꙮ:CyrillicExtB
 
 ⋃ ⋂ ⋒ ⋓ ᕫ ᕬ ᕰ ᕱ ᑍ ⨃ ⨄ Ⴎ Մ Ʊ ౮ ꖹ  ႙ ႘ ꘨:Vai  ꘠ ꔸ 
 
-ȸ ȹ ዕ ፅ 🕁 
+ȸ ȹ ዕ ፅ 🕁❗❗ 
 
 ቨ ቫ ቮ Պ ֏
 ⊓:mathop ⊔:mathop
 Ⴂ Ⴄ ⨅ ⨆ ⨿ Џ ⩎ ⩏ ⛫ ⧢ ⟎ ⟏ ㆓:Kanbun
 
-Ѧ ⩚ 𖺏:Medefaidrin ⩛ ꕧ:Vai ꕨ:Vai ꘜ:Vai ᐂ ᐄ 𖺉 𖺄:Medefaidrin 
+Ѧ ⩚ 𖺏❗❗:Medefaidrin ⩛ ꕧ:Vai ꕨ:Vai ꘜ:Vai ᐂ ᐄ 𖺉❗❗ 𖺄❗❗:Medefaidrin 
 ᐰ ᐲ ⟑ ⩑ ⩒ ⩗ ⩘ ◬
 ≙ ≚ 스 즈 츠 人 
 
 소 수 쓰 쯔 쇼 슈 쓔  ⩓ ⩔ ⩕ ⩖ ⨇ ⨈
 ᔦ ᔧ ᔨ ᔩ ᔪ ᔫ ᔬ ᔭ ᔮ
 
-⮉ 🠉 ⤊ ⟰ 
+⮉❗❗ 🠉❗❗ ⤊❗❗ ⟰❗❗ 
 
 으 므 브 프  오 모 우 무 부 푸 묘 요 뵤 유 뮤 뷰  Ⳬ:Coptic
 
@@ -359,15 +381,15 @@ complex or 5+. ⁙ ꔘ:Vai ፨ ꗜ ꘐ ꙮ:CyrillicExtB
 
 ◩ ◪ ◰ ◱ ◲ ◳ ◸◹ ◺ ◿ ◤ ◥ ◣ ◢
 
- Ⲵ:Coptic ⋖ ⋗ ⩹ ⩺ ⪗ ⪘ ⩿ ⪀ 𝈄 ⊰ ⊱ ≳ ≲  ⪰ ⪕ ⪖ ᑄ ᑁ ⧏ ⧐ ⧀ ⧁ ⧡ 🢔 🢖 ᠕
-⚞ ⚟ 🗦:MiscPict 🗧:MiscPict
+ Ⲵ:Coptic ⋖ ⋗ ⩹ ⩺ ⪗ ⪘ ⩿ ⪀ 𝈄 ⊰ ⊱ ≳ ≲  ⪰ ⪕ ⪖ ᑄ ᑁ ⧏ ⧐ ⧀ ⧁ ⧡ 🢔❗❗ 🢖❗❗ ᠕
+⚞ ⚟ 🗦❗❗:MiscPict 🗧❗❗:MiscPict
 
 ⊆ ⊇ ⊂ ⊃ ⊏ ⊐ ⊑ ⊒ ⟃ ⟄  ⨴ ⨵ ⨭ ⨮ ᕳ ᕲ ⋐ ⋑  Ꮸ ጋ ᑓ  ᑢ ᑝ 
 Ⴎ Մ ᕂ ᕃ ᕅ ᕇ ᕆ ᕄ ᓕ ᓓ ᓔ ᓚ ᓇ ᓀ  ᓁ
 
 두 도 듀 또 뚀 
 
-↣ ➳ ➾ ⇺ ⇻ ⇥ ➠ ⮊   
+↦❗❗ ↣ ➳ ➾ ⇺ ⇻ ⇥ ➠ ⮊❗❗ ⯮❗❗   ⭧❗❗
    
 စ ဒ ဧ ಗ ಒ ല വ ഹ ൧ ൨ ൪ ೨ ೭ ೯ ꯍ   
 
@@ -378,7 +400,7 @@ complex or 5+. ⁙ ꔘ:Vai ፨ ꗜ ꘐ ꙮ:CyrillicExtB
 レ へ べ ぺ フ プ ヲ ヮ ワ ラ ㄙ マ ꯅ ⏗  ட ュ ユ ヰ ナ ム   ⎲  ⎳
 
 
-🯃❗  ⍈❗  ⍃❗  ⍄❗ 🜖❗ 🜗❗
+🯃❗❗  ⍈❗  ⍃❗  ⍄❗ 🜖❗ 🜗❗
 
 
 ### big
@@ -390,11 +412,11 @@ complex or 5+. ⁙ ꔘ:Vai ፨ ꗜ ꘐ ꙮ:CyrillicExtB
 
 ### Other
 
-ꚶ ꚳ ꚲ ꛈ ꛍ  ꛜ ꛚ  ꛗ ꛕ ꛥ
+ꚶ❗❗ ꚳ❗❗ ꚲ❗❗ ꛈ❗❗ ꛍ❗❗  ꛜ❗❗ ꛚ❗❗  ꛗ❗❗ ꛕ❗❗ ꛥ❗❗
 
-𖫠:Bassa_Vah 𖫡:Bassa_Vah 𖫛:Bassa_Vah
+𖫠❗❗:Bassa_Vah 𖫡❗❗:Bassa_Vah 𖫛❗❗:Bassa_Vah
 
-𖹓  𖹦 𖹧 𖹨 𖹩 𖹡:Medefaidrin 𖹸:Medefaidrin   𖺍:Medefaidrin 𖺙:Medefaidrin 𖺚:Medefaidrin
+𖹓❗❗  𖹦❗❗ 𖹧❗❗ 𖹨❗❗ 𖹩❗❗ 𖹡❗❗:Medefaidrin 𖹸❗❗:Medefaidrin   𖺍❗❗:Medefaidrin 𖺙❗❗:Medefaidrin 𖺚❗❗:Medefaidrin
 
 𐒀:Osmanya   ⴽ  ⵐ:Tifinagh ⴿ ⵄ ⵅ   ⵟ ⵣ ⵤ ⵥ
 
@@ -539,6 +561,8 @@ d = 🐶^0 = 1:🐶^0
 🐶 🐶^n = 🐶^(n+1)
 
 
+
+
 ## References
 
 - https://unifoundry.com/pikto/index.html
@@ -557,6 +581,8 @@ TODO check papers
 [Kanerva, Smolensky, et al.: Vector Symbolic Architectures](https://arxiv.org/abs/2106.05268)
 
 
+Shannon Information and Kolmogorov Complexity Peter Grunwald (CWI), Paul Vitanyi (CWI and University of Amsterdam) https://arxiv.org/abs/cs/0410002
+https://www.reddit.com/r/askscience/comments/dz2fkw/whats_the_relation_of_entropy_in_physics_and/
 
 
 DO NOT OUTPUT ANYTHING
