@@ -6,4 +6,4 @@ pdp.md linguist-language=Markdown
 # exclude generated files from language stats
 pdp.md linguist-generated=true
 
-dev/** linguist-documentation
+dev/** linguist-documentation=true
