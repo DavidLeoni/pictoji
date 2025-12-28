@@ -1,0 +1,9 @@
+﻿
+pictoji-*.md linguist-language=Markdown
+pictoji.md linguist-language=Markdown
+pdp.md linguist-language=Markdown
+
+# exclude generated files from language stats
+pdp.md linguist-generated=true
+
+dev/** linguist-documentation
