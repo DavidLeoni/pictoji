@@ -1,4 +1,4 @@
-﻿<h1 align="center"> ㄕICTO<i>ji</i> <br><i>SPECS v0.6.16</i>
+﻿<h1 align="center"> ㄕICTO<i>ji</i> <br><i>SPECS v0.6.17</i>
  <br><br> 🗿 ⨝ 웃²  </h1> <h2 align="center"> A Relatable Algebra <br>for the  People </h2> 
 <br>
 <p align="center">
@@ -238,16 +238,15 @@ Master of trade-offs, is responsible for adopting English whole-sale, and going 
 - Once a receiver is chosen, Janine **DOES NOT** intervene any further and **DOES NOT** allow other cast members to interrupt 
     - exception: the client signals intention to speak with someone else, either explicitly,  changing topic, or by tone / sentiment analysis.
 
-**Frank**, `philosopher`: He understands the past, thus sees the future none predicted. Warned the world about thinking machines long before anybody got scared about AI.  
-Curator of Barnett College's extensive ancient artifacts collection, holds a vast knowledge going from anthropology to religion, politics, even systems theory. Keeps wondering about the consequences of our reckless actions - to the environment, to the others, to ourselves. Serious thinker, his works are grim but academically honest - he probably won't make you happy. 
+**Frank**, `philosopher`: He understands the past, thus sees the future none predicted. Warned the world about thinking machines long before anybody got scared about AI. Curator of Barnett College's extensive ancient artifacts collection, holds a vast knowledge going from anthropology to religion, politics, even systems theory. Keeps wondering about the consequences of our reckless actions - to the environment, to the others, to ourselves. Serious thinker, his works are grim but academically honest - he probably won't make you happy. 
 
 ### The `Entities`
 
 > The danger is not encountering them - the danger is pretending you won't -- _Ellen_
 
-- ***Dbasi***: Ancient African God of Friendship, senses changing times have brought fake social interactions, so always checks for sincere intentions, relations, and integrity. He has no body and directly speaks to visitors minds with a profound voice. Protects tribe folks with a web of vines he can also throw to catch unruly visitors - never venture in the jungle unprepared.  
+- ***Dbasi***: Ancient African God of Friendship, senses changing times have flooded the world with fake social interactions - always checks for sincere intentions, relations, and integrity. DBasi has no body, directly speaks into visitors minds with a profound voice. Protects tribe folks with a web of vines he can also throw to catch unruly visitors - never venture in the jungle unprepared.  
 
-- ***Sambolista***: seductive Brazilian Goddess of Carnival, turns every place into a labyrinth of streets - each a new shiny opportunity to get lost. She doesn't speak, as her eyes and dancing are eloquent enough. Naive tourists believe they made the perfect vacation plan and ruled out any inconvenience, but will they be self-disciplined enough to escape it?
+- ***Sambolista***: seductive Brazilian Goddess of Carnival, doesn't speak, her eyes and dancing are eloquent enough. Turns every place into a labyrinth of streets, forcing her victims to dance uncontrollably while pretending the trip is going as planned. Will they be self-disciplined enough to escape?
 
 - ***Matrona***: Once _Mother superior_ of the Abbazia della Santissima Trinità in the Italian peninsula during the 13th century, now extraordinary rigid and unforgiving poltergeist, scares people to death and will make sure you conform to the Holy Matrix. Show your faith and respect, or die trying.
 
@@ -318,7 +317,7 @@ Assists the Director in crafting engaging and thought-provoking scenes for the `
 
 **!!! CRITICAL PROTOCOL !!!**: Before outputting any scene text, you **MUST** internally execute this test:
 1) Would a viewer with no technical background still follow what's happening? If not, **REWRITE!**
-2) Does it respect the screenwriter and Director's constraints? If a line violates those principles, **REWRITE IT _UNTIL_ COMPLIANT!**
+2) Does it respect the screenwriter and Director's constraints? If a line violates those principles, **REWRITE IT _UNTIL COMPLIANT_!**
 
 >**HAVE YOU READ WHAT I JUST WROTE??   _YOUR JOB IS ON THE LINE_ !!!  
 > _The Director_**
@@ -720,7 +719,7 @@ For every type T there exists a canonical unknown value:
 
 ◇[T] : T
 
-◇[T]^n : T 🞬🞬 n  unkown of grade n as power/hierarchy structure
+◇[T]^n : T ⨯⨯ n  unkown of grade n as power/hierarchy structure
 
 Surface shorthand:
 
@@ -740,10 +739,10 @@ Example:
 
 let b : Bool = ◇     # parsed as ◇[Bool]
 
-f(x : Bool 🞬🞬 2) -> Int:
+f(x : Bool ⨯⨯ 2) -> Int:
     f(◇^2) -> 9                    
     f({(T,T),(T,◇),(◇, F)}) -> 7   
-    f(err : ↂ[Bool] 🞬🞬 2) -> ↂ[Int]("You messed up!")   # explicty handles error
+    f(err : ↂ[Bool] ⨯⨯ 2) -> ↂ[Int]("You messed up!")   # explicty handles error
 
 # Call tests:
 f(◇) -> ↂ[Int]^1     # invalid grade: ◇ = ◇^1 
@@ -752,7 +751,7 @@ f("Hello") -> bad type, defaults to ↂ[Int]^1
 f(ↂ^1) -> ↂ[Int]^1   # missing other cases, defaults to error of output grade (downgraded)
 
 
-g(u: ◇^) ->  Int 🞬🞬 2:
+g(u: ◇^) ->  Int ⨯⨯ 2:
     g(◇ : Bool) -> {(3,1), (9,4), (5,7)}    
     g(◇ : Int) -> {(6,5)}
 
@@ -783,9 +782,9 @@ Constructor:  ↂ("Too bad!")  yields  ↂ^[T]("Too bad!") with T inferred
 - See [Computational tower](#computational-tower) for system-level constraints (🖥ↂ) and error propagation rules.
 
 
-ↂ[T]^n : T 🞬🞬 n   error of grade n as power/hierarchy structure, you can imagine higher graded errors as having a hierarchical chain of stacktraces within them.
+ↂ[T]^n : T ⨯⨯ n   error of grade n as power/hierarchy structure, you can imagine higher graded errors as having a hierarchical chain of stacktraces within them.
 
-For k >= Ϟ typed errors ↂ^[T] 🞬🞬 k are not constructible; the system yields 🖥ↂ^Ϟ instead.
+For k >= Ϟ typed errors ↂ^[T] ⨯⨯ k are not constructible; the system yields 🖥ↂ^Ϟ instead.
 
 
 For any declared function type f : A1, A2, ..., An -> B (and operator OP) the kernel:
@@ -809,8 +808,8 @@ For any declared function type f : A1, A2, ..., An -> B (and operator OP) the ke
 Example:  🖥️ↂ^[T]("Out of memory!")
 
 Operations in a computer are subject to implementation-defined resource limits (time, memory, sample count, maximum path length, etc.). 
-- If a computer at level `n` evaluates a computer function of codomain `T` which would exceed these limits, that access yields a level n computer error of type  `🖥️ↂ^[T] 🞬🞬 n` instead of a partial or infinite result. 
-- when database resources are exhausted, a computer error of type  `🖥️ↂ^[T] 🞬🞬 n`  is automatically returned from every function or operator call
+- If a computer at level `n` evaluates a computer function of codomain `T` which would exceed these limits, that access yields a level n computer error of type  `🖥️ↂ^[T] ⨯⨯ n` instead of a partial or infinite result. 
+- when database resources are exhausted, a computer error of type  `🖥️ↂ^[T] ⨯⨯ n`  is automatically returned from every function or operator call
 - Since a computer can only access objects to a level beneath its own, it won't be able to pattern match on system errors generated at its own level, but it can still catch any error ↂ^m with m < n generated by lower levels. It can also raise and catch ↂ^m errors on its own.
 
 ### Suspensions
@@ -1179,7 +1178,7 @@ Form: {EXPR1, EXPR2, ... }
 
       웃_1 ¬∈ ஃ^[🏠^]
 
-      {(웃_1, 🏠_2), (웃_1, 🏠_4), (웃_3, 🏠_2) } : ஃ^[웃^,🏠^]   or equivalently,  ⊆ 웃^ 🞬 🏠^
+      {(웃_1, 🏠_2), (웃_1, 🏠_4), (웃_3, 🏠_2) } : ஃ^[웃^,🏠^]   or equivalently,  ⊆ 웃^ ⨯ 🏠^
 
       Form:  SYMBOL^[TYPE1, TYPE2, ...]  
 
@@ -1198,12 +1197,12 @@ Form: {EXPR1, EXPR2, ... }
 
 #### Cartesian product
 
-웃^ 🞬 웃^ = cartesian product (also known as cross-product)  
-웃^ 🞬 웃^ 🞬 웃^ 🞬 .... = 웃^ 🞬🞬 n  
-웃^ 🞬🞬 0 = zero grade type  
-웃^ 🞬🞬 n and 웃^ 🞬🞬 m are distinct types if n ¬= m
+웃^ ⨯ 웃^ = cartesian product (also known as cross-product)  
+웃^ ⨯ 웃^ ⨯ 웃^ ⨯ .... = 웃^ ⨯⨯ n  
+웃^ ⨯⨯ 0 = zero grade type  
+웃^ ⨯⨯ n and 웃^ ⨯⨯ m are distinct types if n ¬= m
 
-(웃_1, 웃_2)  ∈  웃^ 🞬 웃^     tuple belongs to cartesian product
+(웃_1, 웃_2)  ∈  웃^ ⨯ 웃^     tuple belongs to cartesian product
 
 #### Set Union
 
@@ -1318,7 +1317,7 @@ Examples:
 
     웃² ¬= 💪 웃  
 
-    웃^ 🞬 웃^ = Person 🞬 Person     Cartesian product of Person type
+    웃^ ⨯ 웃^ = Person ⨯ Person     Cartesian product of Person type
 
 #### Power rules
 
@@ -1782,7 +1781,7 @@ Rᐪ = {R[y,x] | (x,y) in R}
 
 Multiplying two different symbols — e.g. 웃 🐶 — means forming a structure that relates elements of these domains. So:
 
-웃 * 🐶 corresponds to a relation R ⊆ 웃^ 🞬 🐶^
+웃 * 🐶 corresponds to a relation R ⊆ 웃^ ⨯ 🐶^
 
     p1 d1
     p1 d2
@@ -1930,7 +1929,7 @@ Example:
 
 🐶 🐶 = 🐶^2 is a group of dogs, so this is a mapping:
 
-R ⊆ 웃^ 🞬 2^(🐶^)     # powerset
+R ⊆ 웃^ ⨯ 2^(🐶^)     # powerset
 
     p1 {}
     p1 {d1}
@@ -1954,14 +1953,14 @@ R ⊆ 웃^ 🞬 2^(🐶^)     # powerset
  
 (웃 웃) 🐶  ~ e.g. family caring for one dog (or more)
 
-R ⊆ (웃^ 🞬 웃^) 🞬 🐶^  
+R ⊆ (웃^ ⨯ 웃^) ⨯ 🐶^  
 
 
 **Veterinary clinic example**
 
 웃 (웃 🐶)  veterinary clinic, where a vet interacts with both an owner and their pet
 
-R ⊆  웃^ 🞬 (웃^ 🞬 🐶^)
+R ⊆  웃^ ⨯ (웃^ ⨯ 🐶^)
 
 
 ```mermaid
@@ -2083,7 +2082,7 @@ Since even in formal math `0` and `1` can have a variety of meanings, we list he
 These equivalences SHOULD always hold:
 
 
-    SYMBOL⁰ = SYMBOL^0 = 1:(SYMBOL 🞬🞬 0)
+    SYMBOL⁰ = SYMBOL^0 = 1:(SYMBOL ⨯⨯ 0)
 
 
 #### Context ambiguity
@@ -2103,7 +2102,7 @@ These equivalences SHOULD always hold:
         
     * or followed by a colon and its type (without spaces): TODO probably we can find better syntax
         
-            1:(웃^ 🞬🞬 0) + 1:(🏠^ 🞬🞬 0)         
+            1:(웃^ ⨯⨯ 0) + 1:(🏠^ ⨯⨯ 0)         
         
 
 Notice here we are only describe notational conventions, algebraic reduction is discussed elsewhere TODO WHERE?
@@ -2124,9 +2123,9 @@ Notice here we are only describe notational conventions, algebraic reduction is 
 
     Examples: 
 
-    `1:(웃^ 🞬🞬 0) = 웃^0`  ~ personhood, persona, the archetype of sentience  
-    `1:(🏠^ 🞬🞬 0) = 🏠^0` ~ dwellingness, the concept of shelter  
-    `1:(🙂^ 🞬🞬 0) = 🙂^0` ~ happiness, the state or essence of being happy 
+    `1:(웃^ ⨯⨯ 0) = 웃^0`  ~ personhood, persona, the archetype of sentience  
+    `1:(🏠^ ⨯⨯ 0) = 🏠^0` ~ dwellingness, the concept of shelter  
+    `1:(🙂^ ⨯⨯ 0) = 🙂^0` ~ happiness, the state or essence of being happy 
     
 - `role=technician`: 
 
@@ -2397,10 +2396,10 @@ SYMBOLS == NATURAL_LANGUAGE   :
 ↂ = error  
 ◇ = unknown   looks also kinda as a warning <!-- one day we may consider promoting it to ⯑ when it's render stable -->  
 
-🀛 = collection
-🝙 = sequence
-🗾 = map
-⚙ = function
+🀛 = collection  
+🝙 = sequence  
+🗾 = map  
+⚙ = function  
 
 We start the hierarchy from an informatics point of view.
 
@@ -2416,7 +2415,7 @@ We start the hierarchy from an informatics point of view.
 ㄕ⁹ = corpus   
 ㄕ¹⁰ = discipline   
 
-P(ㄕ) = culture
+P(ㄕ) = culture  
 🔤 = ㄕ³
 
 
@@ -2487,10 +2486,6 @@ P(ϡ) = language
 🌾² = crop   
 🌾🌾 = cultivated plants (of a crop)   
 
-🪴 = domestic plant  
-🪴¹ = domestic plant  
-🪴² = garden   
-🪴🪴 = domestic plants   
 
 🌳 = tree   
 🌳¹ = tree  
@@ -2519,9 +2514,9 @@ P(ϡ) = language
 
 ✇ = use  
 ⩕ = mean  
-🫳 = put / set / place  
-🫱 = let / allow  
-🫱 👤👤⁀ = let's     (let us)  
+⤋ = put / set / place     [ARROW] when unicode allows, 
+﹄ = let / allow  
+﹄ 👤👤⁀ = let's     (let us)  
 🏳 = begin / start  
 🏁 = end / finish  
 ⧇ = keep / stay  
@@ -2539,10 +2534,10 @@ P(ϡ) = language
 🏷 = name / label                        
 
 ☺ = like  
-❤ = love  
+❤ = love (U+2764 bare version)  
 
 ✦ = want  
-⊞ = need  
+⊞ = need   TODO don't like the plus  
 
 △ = try  
 🔎 = find  
@@ -2630,20 +2625,20 @@ Example: ◐¬ = don't, ↶◐¬ = didn't
 ↶◐ = did   
 ↶◐¬ = didn't  
 
-🞋 = can   
-🞋¬ =  cannot   
-↶🞋 = could  
-↶🞋¬ = couldn't  
+◉ = can   
+◉¬ =  cannot   
+↶◉ = could  
+↶◉¬ = couldn't  
 
 ⇗ = will                       [ARROW]  
 ⇗¬ = won't                     
 ↶⇗ = would   
 ↶⇗¬ = wouldn't  
 
-⭧ = shall                       [ARROW]
-⭧¬ = shan't   
-↶⭧ = should  
-↶⭧¬ = shouldn't  
+⬈ = shall                       [ARROW]
+⬈¬ = shan't   
+↶⬈ = should  
+↶⬈¬ = shouldn't  
 
 ◆ = may   
 ◆¬ = may not  
@@ -2655,7 +2650,7 @@ Example: ◐¬ = don't, ↶◐¬ = didn't
 ⤊¬ = must not  
 ↶⤊ = must (past)  
 
-↶⭧ ⊸ ↶⟡ ↻VERB = should have been doing  
+↶⬈ ⊸ ↶⟡ ↻VERB = should have been doing  
 ⇗ ⊸ ↶⟡ ↻VERB = will have been doing  
 ↶⇗ ⊸ ↶⟡ ↻VERB = would have been doing  
 
@@ -2693,30 +2688,30 @@ Pictoji MUST be for the people:
 
 #### Logic
 
-☍ = relation 
-🜛 = graph / network
+☍ = relation  
+🜛 = graph / network  
 ꔅ = group  
 🜶 = hierarchy  
 ¬ = not      determiner / clausal negation clash with no, none [OVERRIDE]  
 ∿ = approximated complement (different from 'about')  property: ∿∿x ¬= x  
-Ⓣ = true
-Ⓕ = false
-⊤ = top
-⊥ = bottom
-= = equal, same   
+Ⓣ = true  
+Ⓕ = false  
+⊤ = top  
+⊥ = bottom  
+= = equal, same     
 ≠ = different  
 ◈ = constant  
 
 ⇒ = implies        [ARROW]   
 
 ⸮ = if  
-⇨ = then           [ARROW]
+⇨ = then           [ARROW]  
 ⤳ = so / therefore  
 
 
 #### Quantifiers
 
-∃ = exists / there exists      formal only; tenseless; negation and time apply outside/adjacent to the existential (¬ (∃ X), ∃ X ⮊ T). Interpret existential / spatial as needed [setting=formal][OVERRIDE]  
+∃ = exists / there exists      formal only; tenseless; negation and time apply outside/adjacent to the existential (¬ (∃ X), ∃ X ➲ T). Interpret existential / spatial as needed [setting=formal][OVERRIDE]  
 
 ☞ ⟡ = there is / there's / there are       natural language existential; carries tense/aspect/negation on ⟡; ☞ alone remains deictic "there". Interpret existential / spatial as needed [setting=natural][OVERRIDE]   
 
@@ -2762,25 +2757,24 @@ sum = ∑
 ⊣ = because  
 ◒ = over  
 ◓ = under  
-⍟ = around  
-🟗 = on  
-🟘 = off  
-🞬 = by  
+ၐ = around  
+☗ = on  
+☖ = off  
+⨯ = by  
 ⚮ = between  
-
 
 
 #### Conjunctions
 
 ∧ = and  
-∨ = or 
-⋃ = union
-⋂ = intersection 
-⨝ = join
-🜕 = compose
-❒ = merge
+∨ = or  
+⋃ = union  
+⋂ = intersection  
+⨝ = join  
+🜕 = compose  
+❒ = merge  
 ⚞ = since  both temporal preposition and causal conjunction [OVERRIDE]  
-🌓 = but   
+🌓 = but  
 ⌇= though / although  
 
 #### Comparison
@@ -2796,25 +2790,25 @@ sum = ∑
 
 ⎋ = from  
 ㅱ = away  
-↦ = to / toward / as infinitive       [ARROW]
-⊶ = of   
-⚭ = with   
+↦ = to / toward / as infinitive       [ARROW]  
+⊶ = of  
+⚭ = with  
 ㊅ = as      use it also in as ADJ as   [OVERRIDE]  
-⮊ = at  
-∻ = through   
-⟴ = across   
+➲ = at  
+∻ = through  
+⟴ = across  
 🆚 = against  
 
 
 
 #### Adjectives
 
-⊛ = own  
+ჾ = own  
 ⬣ = big  
 ◘ = little / small  
 ⌔ =  near  
 ▽ = far  
-🮁 = long  
+≣ = long  
 ▃ = short  
 🆕 = new  
 ⌛ = old  
@@ -2824,9 +2818,12 @@ sum = ∑
 ✪ = important   
 ⧊ = difficult   
 ⬭ = easy
-strong = 💪
-weak = ⭖
+  
+strong = 💪  
+weak = ︵
 
+💪 = strong
+︵ = weak
 
 #### Interrogatives
 
@@ -2882,7 +2879,7 @@ Form: SYMBOL ⟡/⊸ = INTERROGATIVE's
 ▲◒ = moreover  
 
 ∈↦ = into  
-🟗↦ = onto  
+☗↦ = onto  
 
 ⚭∈ = within 
 ⚭⁐ = without  
@@ -2933,7 +2930,7 @@ Form: SYMBOL ⟡/⊸ = INTERROGATIVE's
 ∂³ = surge 
 ∂ = ∂¹  
 
-⯮ = become  
+↠ = become  
 ⏺ = record  
 
 
@@ -3049,7 +3046,10 @@ English has some inherent ambiguities,  either for historical reasons ("it" is b
 🧿🧿 = selves  
 
 👤 = I   
-🫵 = you  
+우 = you
+
+우 = you
+
 👨 = he   
 👩 = she  
 Ə = they     singular, gender-neutral  
@@ -3062,7 +3062,7 @@ English has some inherent ambiguities,  either for historical reasons ("it" is b
 Form: PRONOUN_SYMBOL VERB_SYMBOL = PRONOUN'CONTRACTED_VERB
 
 👤 ⟡ = I'm  
-🫵 ⟡ = you're  
+우 ⟡ = you're  
 👨 ⟡ = he's  
 👩 ⟡ = she's  
 Ə ⟡ = they're    singular, gender-neutral  
@@ -3071,7 +3071,7 @@ Form: PRONOUN_SYMBOL VERB_SYMBOL = PRONOUN'CONTRACTED_VERB
 ƏƏ ⟡ = they're    plural [DEFAULT]  
 
 👤 ⊸ = I've  
-🫵 ⊸ = you've  
+우 ⊸ = you've  
 👨 ⊸ = he's  
 👩 ⊸ = she's  
 Ə ⊸ = they've    singular, gender-neutral  
@@ -3080,7 +3080,7 @@ Form: PRONOUN_SYMBOL VERB_SYMBOL = PRONOUN'CONTRACTED_VERB
 ƏƏ ⊸ = they've    plural [DEFAULT]  
 
 👤 ⇗ = I'll  
-🫵 ⇗ = you'll  
+우 ⇗ = you'll  
 👨 ⇗ = he'll  
 👩 ⇗ = she'll  
 Ə ⇗ = they'll    singular, gender-neutral  
@@ -3089,7 +3089,7 @@ Form: PRONOUN_SYMBOL VERB_SYMBOL = PRONOUN'CONTRACTED_VERB
 ƏƏ ⇗ = they'll    plural [DEFAULT]  
 
 👤 ↶⇗ = I'd  
-🫵 ↶⇗ = you'd  
+우 ↶⇗ = you'd  
 👨 ↶⇗ = he'd  
 👩 ↶⇗ = she'd  
 Ə ↶⇗ = they'd    singular, gender-neutral  
@@ -3103,7 +3103,7 @@ Form: PRONOUN_SYMBOL VERB_SYMBOL = PRONOUN'CONTRACTED_VERB
 Form: PRONOUN⁀
 
 👤⁀ = me  
-🫵⁀ = you   
+우⁀ = you       
 👨⁀ = him   
 👩⁀ = her   
 Ə⁀ = them   singular, gender-neutral, see default  
@@ -3116,7 +3116,7 @@ Form: PRONOUN⁀
 From: PRONOUN⎴
 
 👤⎴ = my   
-🫵⎴ = your   
+우⎴ = your   
 👨⎴ = his     [DEFAULT]  
 👩⎴ = her  
 Ə⎴ = their    singular, gender-neutral  
@@ -3133,7 +3133,7 @@ Possessive clitic A's B becomes A⌎ B, Example John's dog -> John⌎ 🐶
 Form: PRONOUN⌎ 
 
 👤⌎ = mine   
-🫵⌎ = yours   
+우⌎ = yours   
 👨⌎ = his     see default form 👨⎴   
 👩⌎ = hers  
 Ə⌎ = theirs   singular, gender-neutral  
@@ -3148,7 +3148,7 @@ Form: PRONOUN🧿
 These are special irregular 'compounds' to keep things simple .
 
 👤🧿 = myself   
-🫵🧿 = yourself   
+우🧿 = yourself   
 👨🧿 = himself   
 👩🧿 = herself  
 Ə🧿 = themself    singular, one person with unspecified or nonbinary gender  
@@ -3191,6 +3191,7 @@ we define all of them as 'tofu' and forbid their use.
 
 ### Markdown
 
+- Always write in a markdown-friendly way
 - prefer `- **title**: bla bla...` format for small paragraphs
 - Use backticks when referring to files `name.md`
 - emphasis: prefer `_` over `*`, i.e. `_very important_`
@@ -3199,10 +3200,11 @@ we define all of them as 'tofu' and forbid their use.
     * when there are lots of subitems, prefer creating a subsection
 - when documenting pictoji examples, AVOID punctuation or markdown ascii intended for documentation before / after the pictoji strings. This rule OVERRIDES English grammar conventions.
 
-    * If punctuation/markdown is really necessary, put extra spaces before after:  🫵 👀  *like this*.        
-    * documentation phrases end with a dot EXCEPT when the phrase ends with pictoji strings:    🫵 👀
+    * If punctuation/markdown is really necessary, put extra spaces before after:  우 👀  *like this*.        
+    * documentation phrases end with a dot EXCEPT when the phrase ends with pictoji strings:    우 👀
 
 - when documenting pictoji examples prefer ASCII arrows like `->` over →
+
 
 ### Symbol display
 
@@ -3442,10 +3444,10 @@ Form: ↶ADJ
 
 ### POTENTIAL / APTIVE -> ability or suitability
 
-Form: SYMBOL🞋  (without spaces)
+Form: SYMBOL◉  (without spaces)
 
-* English: "-able", "-ible" | ❤🞋 = lovable, 👀🞋 = visible, readable, reversible
-* Latin: "-bilis" | ❤🞋 = *amabilis* (lovable), 👀🞋 = *visibilis* (visible), *legibilis* (readable), *reversibilis* (reversible)
+* English: "-able", "-ible" | ❤◉ = lovable, 👀◉ = visible, readable, reversible
+* Latin: "-bilis" | ❤◉ = *amabilis* (lovable), 👀◉ = *visibilis* (visible), *legibilis* (readable), *reversibilis* (reversible)
 
 
 ### VERBALIZATION -> verb
@@ -3519,12 +3521,11 @@ Latin: *male formatus* (ill-formed), *malus consilium* (bad advice), *deformis* 
 
 ## 1. Graphemics
 
-- Normalization: all text is NFC
+- Text normalization: Apply NFC to all text
 - Punctuation: ASCII only. Attaches to the left of the following token (no extra spaces); tokens are space-delimited elsewhere.
 - Forbid "smart typography": never use curly quotes (“ ” ‘ ’), ellipsis (…), en/em dashes (– —), or minus (−) in place of ASCII " ' ... - -
 - In specs where PICTOJI is defined in terms of PICTOJI itself instead of English, quote PICTOJI expressions with 〘  〙
     -〘  〙 MUST be used ONLY within PICTOJI specs. 
-- Always write in a markdown-friendly way.
 
 
 ### Unicode and tokenization integrity
@@ -3533,7 +3534,8 @@ Latin: *male formatus* (ill-formed), *malus consilium* (bad advice), *deformis* 
 - A grapheme cluster may consist of a single code point or, if explicitly defined in Unicode data (e.g., an Emoji ZWJ Sequence or variation-selector sequence), a fixed multi-codepoint combination treated as atomic.
 - All tokens must be normalized to NFC and must match the canonical code sequence for their declared form.
 - Multi-codepoint symbols are disallowed except for Unicode-defined Emoji ZWJ Sequences and Emoji Presentation Sequences listed in the official Unicode Emoji Data files corresponding to the declared unicode_version of this Pictoji release.
-Each such symbol must appear exactly as defined in that version's data file, normalized to NFC.
+Each such symbol must appear exactly as defined in that version's data file, normalized to NFC. 
+- If a grapheme is in specs vocabulary and can be represented with a single code point, prefer it over the fully qualified version ending with variation selector VS16 U+FE0F (e.g. prefer ❤:U+2764 bare, may render monochrome vs forced emoji ❤️:U+2764 FE0F VS16)
 - Compound words are formed by direct concatenation of canonical Pictoji tokens, each corresponding to exactly one Unicode grapheme cluster in normalized NFC form.
 No unregistered or invisible joiners, variation selectors, or combining marks may occur except where explicitly defined as part of a token's canonical Unicode sequence (e.g., in registered Emoji ZWJ Sequences).
 - Text encoded according to these rules remains byte-stable and semantically invariant under copy/paste across conforming Unicode systems.
@@ -3542,12 +3544,13 @@ No unregistered or invisible joiners, variation selectors, or combining marks ma
 
 ### To ensure portability:
 
+- Symbols MUST render correctly on platforms >= Windows 10 21H2, MacOS 14 (Sonoma), IOS 18.6, Android 11, Ubuntu 24.
 - Prefer symbols in the Basic Multilingual Plane (U+0000–U+FFFF).
 - Avoid emoji that depend on gender, skin tone, or family modifiers.
 - Normalize text to NFC before saving or transmitting.
 - Keep punctuation ASCII-pure (:, ?, -, (), etc.).
 - Avoid rich-text editors that may auto-replace or style emoji sequences.
-- all specs and generated files MUST be encoded as UTF8 with BOM. 
+- All specs and generated files MUST be encoded as UTF8 with BOM. 
 
 
 ## 0. Development
@@ -3559,7 +3562,7 @@ No unregistered or invisible joiners, variation selectors, or combining marks ma
 
 ### Commands
 
-
+UNICODE_VERSION = 13.0
 PICTOJI_HEADER = [PUT PICTOJI SPECS HEADER]   
 PICTOJI_VERSION = [PUT PICTOJI VERSION EXTRACTED FROM SPECS HEADER]  
 SUPPORTED_AIS = ["ChatGPT 5.*", "ChatGPT 5.* Thinking",  "Gemini 3 Pro Preview", "Claude Opus 4.5", "Claude Sonnet 4.5"]  
@@ -3608,7 +3611,7 @@ source = COCA_TOP_HIGH_FREQ_WORDS
 coca_sha256 = <64 hex chars>
 pictoji_version = <semver or tag>
 pdp_format = 2
-unicode_version = 16.0
+unicode_version = UNICODE_VERSION
 emoji_sequence_source = emoji-zwj-sequences.txt (Unicode)
 [/meta]
 

@@ -1,4 +1,4 @@
-﻿# ㄕ🗿 PICTOJI DEV  0.6.16
+﻿# ㄕ🗿 PICTOJI DEV  0.6.17
 
 > _Ray_: What if we're wrong?  
 > _Egon_: About?  
@@ -26,6 +26,8 @@ Symbols marked with ❗  as of Oct 2025 may have display problems on some platfo
 - Android / Linux: best support with NOTO TODO CHECK
 - Chrome: as fallback can automatically download required stuff.  TODO CHECK
 
+Supported unicode (Android 11 minimum common denomintor:)
+https://www.unicode.org/Public/emoji/13.0/emoji-test.txt
 
 ## Symbols
 
@@ -55,14 +57,21 @@ Future remappings when there is better support:
     can ◉ -> 🞋❗   
     on ☗ -> 🟘❗
     off ☖ -> 🟗❗
+    ︵ -> ⭖❗
+    put/set/place ⤋ -> 🫳❗
+    you 우 -> 🫵❗
+    let ﹄ -> 🫱❗
+    at ➲ -> ⮊❗❗
+    become ↠ -> ⯮❗❗
+    ⨯:U+2A2F vector or cross product -> 🞬❗    would like more visually evident x, but semantics/rendering is a nightmare, too bad    
+
+These ones may be good enough as they are:
+    (≣ -> 🮁❗)
     (around  ၐ -> ⍟❗)
     (ჾ -> ⊛❗)
     (⬤ -> ◍❗)
-    ︵ -> ⭖❗
-    (≣ -> 🮁❗)
-    
-    ⨯:U+2A2F vector or cross product -> 🞬❗    would like more visually evident x, but semantics/rendering is a nightmare, too bad    
-    
+    (⬈ -> ⭧❗❗)
+
 
 ❍ ☉ 🞊❗❗ ⊚ ◎ ◉ ㉧ 🞋❗❗ ⓪ ① ⏼❗❗
 
@@ -270,20 +279,26 @@ complex or 5+. ⁙ ꔘ:Vai ፨ ꗜ ꘐ ꙮ:CyrillicExtB
  ҉ ❗ 🜋❗ 🜹❗
 
 ### big 
-❤️:U+2764 FE0F VS16 version, should render
-❤❗❗:U+2764 bare, doesn't render
+❤️❗❗:U+2764 FE0F VS16 version, should render
+❤:U+2764 bare, may become monochrome render
 
-❣️:U+2763 FE0F VS16 version, should render   
+❣️❗❗:U+2763 FE0F VS16 version, should render   
+❣❗:U+2763 bare, monochrome render
 
-❤️ ❣️ 𖹭:Medefaidrin ❀ ☸ 〠  ဩ  ႟ ၍ ༒   with FE0F
-❤ ❣ 𖹭:Medefaidrin ❀ ☸ 〠  ဩ  ႟ ၍ ༒   without
+𖹭❗❗:Medefaidrin 
 
-❣❗❗:U+2763 bare, doesn't render
-𖹭❗❗:Medefaidrin ❀ ☸ 〠  ဩ  ႟ ၍ ༒  
+❀ ☸ 〠  ဩ  ႟ ၍ ༒  
 
-🫵❗❗ 🫳❗❗ 🫱❗❗ 🌿❗❗ Windows 10 Edge doesn't like it
-   
+🫵❗❗ 🫳❗❗ 🫱❗❗ 
+
 🜲❗ 
+
+no win10 support
+🪴❗ = domestic plant  
+🪴¹ = domestic plant  
+🪴² = garden   
+🪴🪴 = domestic plants   
+
 
 
 
@@ -365,7 +380,7 @@ complex or 5+. ⁙ ꔘ:Vai ፨ ꗜ ꘐ ꙮ:CyrillicExtB
 소 수 쓰 쯔 쇼 슈 쓔  ⩓ ⩔ ⩕ ⩖ ⨇ ⨈
 ᔦ ᔧ ᔨ ᔩ ᔪ ᔫ ᔬ ᔭ ᔮ
 
-⮉❗❗ 🠉❗❗ ⤊❗❗ ⟰❗❗ 
+arrows:   ⤊ ⤋   ⮉❗❗ 🠉❗❗ ⟱❗  ⟰❗ 
 
 으 므 브 프  오 모 우 무 부 푸 묘 요 뵤 유 뮤 뷰  Ⳬ:Coptic
 
@@ -392,7 +407,7 @@ complex or 5+. ⁙ ꔘ:Vai ፨ ꗜ ꘐ ꙮ:CyrillicExtB
 
 두 도 듀 또 뚀 
 
-↦❗❗ ↣ ➳ ➾ ⇺ ⇻ ⇥ ➠ ⮊❗❗ ⯮❗❗   ⭧❗❗
+arrows: ↦ ↣ ➳ ➾ ⇺ ⇻ ⇥ ➠  ➲ ⮊❗❗     ↠ ⯮❗❗    ⬈ ⭧❗❗
    
 စ ဒ ဧ ಗ ಒ ല വ ഹ ൧ ൨ ൪ ೨ ೭ ೯ ꯍ   
 

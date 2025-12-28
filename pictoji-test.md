@@ -1,4 +1,4 @@
-﻿# ㄕICTO<i>ji</i> TESTS (v0.6.16)
+﻿# ㄕICTO<i>ji</i> TESTS (v0.6.17)
 
 
 DO NOT PLACE FANCY TYPOGRAPHICS LIKE “” HERE. 
@@ -18,7 +18,7 @@ NOTE: these tests have awkward English _on purpose_ to show literal decoding is 
 
 👤 ⇗ ⚭ 👤👤 ↦ ⌖ == I will with we to place
 
-🫵 🞋 ◐¬ ㉦ ⚇ ? == you can do not ask who ?  *(odd but literal; tests negation attach to aux)*
+우 ◉ ◐¬ ㉦ ⚇ ? == you can do not ask who ?  *(odd but literal; tests negation attach to aux)*
 ⚇ ⸮ ◐ ㉦ 山 ? == who if do ask what ?
 ```
 
@@ -40,21 +40,21 @@ NOTE: these tests have awkward English _on purpose_ to show literal decoding is 
 👤 ⊸ ⚒ == I have work *(literal)*
 👤 ⊸ ↶⟡ ↻⚒ == I have been working
 👤 ↶⇗ ⊸ ↶⟡ ↻⚒ == I would have been working
-👤 ↶⭧ ⊸ ↶⟡ ↻⚒ == I should have been working
+👤 ↶⬈ ⊸ ↶⟡ ↻⚒ == I should have been working
 
 ### Modals & negation
 
-👤 🞋 ⏢ == I can help
-👤 🞋¬ ⏢ == I cannot help
-👤 ↶🞋 ⏢ == I could help
-👤 ↶🞋¬ ⏢ == I couldn't help
+👤 ◉ ⏢ == I can help
+👤 ◉¬ ⏢ == I cannot help
+👤 ↶◉ ⏢ == I could help
+👤 ↶◉¬ ⏢ == I couldn't help
 👤 ⇗¬ 🏃 == I will not go
 👤 ↶◐¬ ㉦ 山 ? == I did not ask what ?
 
 ### Prepositions & compounds
 
 👤 👐 ☉ ∈↦ ⌖ == I give thing into place
-👤 ✊ ☉ 🟗↦ ⌖ == I take thing onto place
+👤 ✊ ☉ ☗↦ ⌖ == I take thing onto place
 👤 ⚭∈ ⌖ == I within place
 👤 ⚭⁐ ⌖ == I without place
 
@@ -100,20 +100,20 @@ NOTE: these tests have awkward English _on purpose_ to show literal decoding is 
 ↶⟡ ↻⟡ ↶🧪 == was being tested
 ↻⟡ ↶👀 == being watched
 ↻⟡ ↶🛠 == being made 
-↻⟡ ↶❤ == being loved
+↻⟡ ↶❤️ == being loved
 
 ## Perfect
 
 ⊸ ↶⟡ 🙂 == have been happy
 ↶⊸ ↶⟡ 🙂 == had been happy
 👤 ⊸ ↶⟡ ↻⚒ == I have been working
-👩 ↶⊸ ↶⟡ ↶❤ == she had been loved
+👩 ↶⊸ ↶⟡ ↶❤️ == she had been loved
 
 ## Future and modals
 
 👤 ⇗ ⟡ ↻⚒ == I will be working
 👤 ⇗ ⊸ ↶⟡ ↻⚒ == I will have been working
-👤 ⭧ ⊸ ↶⟡ ↻⚒ == I should have been working
+👤 ⬈ ⊸ ↶⟡ ↻⚒ == I should have been working
 ƏƏ ◆ ⊸ ↶⟡ ↻🏃 == they might have been going
 
 
@@ -121,8 +121,8 @@ NOTE: these tests have awkward English _on purpose_ to show literal decoding is 
 
 ↦📅 == today
 ↦ 📅 == to day
-🟗↦ == onto
-🟗 ↦ ◙ ⌖ == on to the place
+☗↦ == onto
+☗ ↦ ◙ ⌖ == on to the place
 
 ### Negation (aux-first)⟡
 
@@ -245,11 +245,11 @@ Mixed with attachers/punctuation (number is one token)
 ☞ ⟡¬ ⚲ 🏠 == there is not a house
 
 ### Formal atemporality with explicit time adjunct
-∃ 🏠 ⮊ ⏰ == there exists a house now
+∃ 🏠 ➲ ⏰ == there exists a house now
 
 ### Deictic vs existential "there"
-☞ ⮊ ⌖ == there at the place
-☞ ⟡ ⮊ ⌖ == there is (something) at the place
+☞ ➲ ⌖ == there at the place
+☞ ⟡ ➲ ⌖ == there is (something) at the place
 
 ### Interrogatives separated by setting
 ☞ ⟡ ⚲ 🏠 ? == is there a house?
