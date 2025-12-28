@@ -275,6 +275,9 @@ complex or 5+. ⁙ ꔘ:Vai ፨ ꗜ ꘐ ꙮ:CyrillicExtB
 
 ❣️:U+2763 FE0F VS16 version, should render   
 
+❤️ ❣️ 𖹭:Medefaidrin   with FE0F
+❤ ❣ 𖹭:Medefaidrin   without
+
 ❣❗❗:U+2763 bare, doesn't render
 𖹭❗❗:Medefaidrin ❀ ☸ 〠  ဩ  ႟ ၍ ༒  
 
