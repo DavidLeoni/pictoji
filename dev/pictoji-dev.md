@@ -1,4 +1,4 @@
-﻿# ㄕ🗿 PICTOJI DEV  0.6.17
+﻿# ㄕ🗿 PICTOJI DEV  0.6.19
 
 > _Ray_: What if we're wrong?  
 > _Egon_: About?  
@@ -43,44 +43,48 @@ https://www.unicode.org/Public/emoji/13.0/emoji-test.txt
 
 🗿💬  🗨🗿 ㄗ🗿  ㄕ🗿
 
-### Experimental modifiers
-
-🗣ſ  🗣⏙ 🗣◚ 🗣◛  🗣⚻ 🗣⚺ 🗣⛻ 🗣ㅈ 🗣ㅱ 🗣Ϫ       🗣ㅆ 🗣⏆   ſ🗣 🗣ſ 🗣⏓ 🗣⏕ 🗣⌰  🗣☇ 🗣ꗃ 🗣⚟ 🗣⚿  🗣ϫ  🗣ㅂ 🗣≙  🗣☲  🗣☌  ☌🗣   ⎲🗣 🗣⏣ 
-
 
 ### To categorize
 
 ### circles 
 
-Future remappings when there is better support:
+Future remappings if/when there is better support:
 
-    can ◉ -> 🞋❗   
-    on ☗ -> 🟘❗
-    off ☖ -> 🟗❗
-    ︵ -> ⭖❗
-    put/set/place ⤋ -> 🫳❗
-    you 우 -> 🫵❗
-    let ﹄ -> 🫱❗
-    at ➲ -> ⮊❗❗
-    become ↠ -> ⯮❗❗
-    ⨯:U+2A2F vector or cross product -> 🞬❗    would like more visually evident x, but semantics/rendering is a nightmare, too bad    
-
+    can ◉ -> 🞋❗❗   
+    on ☗ -> 🟘❗❗  
+    off ☖ -> 🟗❗❗  
+    ︵ -> ⭖❗❗  
+    put/set/place ⤋ -> 🫳❗❗  
+    you 우 -> 🫵❗❗  
+    let ﹄ -> 🫱❗❗  
+    at ➲ -> ⮊❗❗  
+    become ↠ -> ⯮❗❗  
+    ⨯:U+2A2F vector or cross product -> 🞬❗❗    would like more visually evident x, but semantics/rendering is a nightmare, too bad    
+    unknown ◇ -> ⯑❗ 
+    graph ꔆ -> 🜛❗ alchemical
+    
 These ones may be good enough as they are:
-    (≣ -> 🮁❗)
-    (around  ၐ -> ⍟❗)
-    (ჾ -> ⊛❗)
-    (⬤ -> ◍❗)
-    (⬈ -> ⭧❗❗)
+    (hierarchy Ⰰ -> 🜶❗ alchemical ) 
+    (sequence ⧢ -> 🝙❗alchemical )
+    (≣ -> 🮁❗❗)  
+    (around  ၐ -> ⍟❗❗)  
+    (own ჾ -> ⊛❗❗)  
+    (full ⬤ -> ◍❗❗)  
+    (⬈ -> ⭧❗❗)  
+    (compose ⦶ -> 🜕❗ alchemical)
+    (⍝ -> 🜳❗ alchemical)
 
-
-❍ ☉ 🞊❗❗ ⊚ ◎ ◉ ㉧ 🞋❗❗ ⓪ ① ⏼❗❗
+❍ ☉ 🞊❗❗ ⊚ ◎ ◉ ㉧ 🞋❗❗ ⓪ ① 
 
 🟗❗❗ 🟘❗❗ ⍟❗❗ ⊛❗❗ ⎊❗❗ ࿃ Ꮻ ✇ ⎉ ⚆ ⚇ ⚈ ⚉ ࿊ Ꚛ  
 ࿋ ࿌ ۞ 
  
 🟐❗❗ ◍❗❗ ⭖❗❗   very inconsistent on Android 11
 
-⨂:math_supp_ops ⨷:math_supp_ops ⨁:math_supp_ops ⦶:math ⦸:math 
+⨂:math_supp_ops ⨷:math_supp_ops ⨁:math_supp_ops 
+⦶:math,ok  ⏼❗❗ 🜕❗:alchemical
+⦸:math  
+⦵:check compat
 ⦹:math ⦺:math ⦻:math 
 
 ↂ ↀ ↁ 
@@ -181,19 +185,18 @@ x: lowercase letter x
 
 ꖏ ꘖ ꖸ ꕒ ꕓ  
 
-⊡ U+22A1, &#8865; SQUARED DOT OPERATOR  (*PREFERRED*)
+⊡ U+22A1, &#8865; SQUARED DOT OPERATOR  *PREFERRED*
 🝕❗ 	U+1F755, &#128853; ALCHEMICAL SYMBOL FOR URINE
 ⚀ U+2680 Die Face-1
 
 ⊞:math_op
-
 
 ⊠ U+22A0 SQUARED TIME 
 ⛝ Roadblock 
 ⌫ ⌧ ⌦ Delete key
 ⊠:math_ops
 
-⧉ ⿻ ◫ ❒ ⛶ ⧆ ⧇ ◙ ◘  ⌘  ⛚ ✜ ⚿  ⚁ ⚂ ⚃ ⚄ ⚅ ⩩ ㄖ ㆗ ㆙ ⧈
+▫ ▪ ⧉ ⿻ ◫ ❒ ⛶ ⧆ ⧇ ◙ ◘  ⌘  ⛚ ✜ ⚿  ⚁ ⚂ ⚃ ⚄ ⚅ ⩩ ㄖ ㆗ ㆙ ⧈
 
 🀆 🀙 🀚 🀛 🀜 🀝 🀞 🀑 🀒 🀓 🀔
 
@@ -203,7 +206,7 @@ x: lowercase letter x
 
 ### dashes
 
-:=  ▪ ⚋ ⚏ ≗ ≘ ≛ ≜ ≙ ≝ ≞ ≟ ☰ ☱ ☲ ☳ ☴ ☵ ☶ ☷ ≣ ꠴ ꠵ 🮁❗❗
+:= ⚋ ⚏ ≗ ≘ ≛ ≜ ≙ ≝ ≞ ≟ ☰ ☱ ☲ ☳ ☴ ☵ ☶ ☷ ≣ ꠴ ꠵ 🮁❗❗
 
 ꔠ:?
 
@@ -244,9 +247,9 @@ x: lowercase letter x
 
     Ფ:Georgian_extended 
     
-    ꗇ ꗈ ጨ ጮ ጫ ጭ  
+    ꗇ ꗈcompressed? ጨ ጮ ጫ ጭ  
     
-4. ᠁ ። ⵆ:Tifinagh ⵘ:Tifinagh ꖋ:Vai ꗺ:Vai ྿:tibetan  ፠:?  ༓  ※:? ⁜ ༶:tibetan ᠅:tibetan ⁛      
+4. ᠁ ። ⵆ:Tifinagh ⵘ:Tifinagh ꖋ:Vai ꗺ:Vai chain?  ྿:tibetan  ፠:?  ༓  ※:? ⁜ ༶:tibetan ᠅:tibetan ⁛      
    ꕤ:Vai ꕥ:Vai  ጬ
 
 complex or 5+. ⁙ ꔘ:Vai ፨ ꗜ ꘐ ꙮ:CyrillicExtB
@@ -384,7 +387,7 @@ arrows:   ⤊ ⤋   ⮉❗❗ 🠉❗❗ ⟱❗  ⟰❗
 
 으 므 브 프  오 모 우 무 부 푸 묘 요 뵤 유 뮤 뷰  Ⳬ:Coptic
 
-Ⰺ  Ⰲ:Glagolitic Ⱋ Ⰹ Ⰾ
+Ⰺ  Ⰲ:Glagolitic Ⱋ Ⰹ Ⰾ 
 
 🜎❗ 🜳❗ 🝦❗ ⍙❗ ⍢❗ 🜁❗ 🝩❗ 🝧❗ 🝢❗ 🝍❗ 🜌❗ 🜢❗ 🜻❗ 🜼❗
 
@@ -395,7 +398,7 @@ arrows:   ⤊ ⤋   ⮉❗❗ 🠉❗❗ ⟱❗  ⟰❗
 
 ᐇ ᐋ ᐌ ᐍ ᐎ ᐏ ᐐ ᐑ ᐉ ᐈ ᐒ ᐓ ᐔ ᐕ ᐖ ᐗ ᐘ ᐙ ᐚ ᐛ ◭ ◮
 
-ㅰ ◧ ◨ ⧔ ⧕ ⋉ ⋊ ⁌ ⁍ ⧑ ⧒ ☌  ⚩ ✑ ๛ ⎄ ⏢ ⏥ ꗃ ⌰ ☌     
+ㅰ ◧ ◨ ⧔ ⧕ ⋉ ⋊ ⁌ ⁍ ⧑ ⧒ ⚩ ✑ ๛ ⎄ ⏢ ⏥ ꗃ ⌰      
 
 ◩ ◪ ◰ ◱ ◲ ◳ ◸◹ ◺ ◿ ◤ ◥ ◣ ◢
 
@@ -430,19 +433,13 @@ arrows: ↦ ↣ ➳ ➾ ⇺ ⇻ ⇥ ➠  ➲ ⮊❗❗     ↠ ⯮❗❗    ⬈ 
 
 ### Other
 
-ꚶ❗❗ ꚳ❗❗ ꚲ❗❗ ꛈ❗❗ ꛍ❗❗  ꛜ❗❗ ꛚ❗❗  ꛗ❗❗ ꛕ❗❗ ꛥ❗❗
-
-𖫠❗❗:Bassa_Vah 𖫡❗❗:Bassa_Vah 𖫛❗❗:Bassa_Vah
-
-𖹓❗❗  𖹦❗❗ 𖹧❗❗ 𖹨❗❗ 𖹩❗❗ 𖹡❗❗:Medefaidrin 𖹸❗❗:Medefaidrin   𖺍❗❗:Medefaidrin 𖺙❗❗:Medefaidrin 𖺚❗❗:Medefaidrin
-
 𐒀:Osmanya   ⴽ  ⵐ:Tifinagh ⴿ ⵄ ⵅ   ⵟ ⵣ ⵤ ⵥ
 
 Ⰽ:Glagolitic Ⱁ Ⱂ Ⱄ  Ⱆ Ⱇ Ⱊ Ⱌ Ⱍ  Ⱏ  Ⱝ:Glagolitic Ⱞ:Glagolitic
 
 ꗅ ꕄ ꖷ ꔱ ꘗ ꖺ ꖿ  ꗻ ꗾ ꖾ  ꗊ ꔙ
 
-ꔰ:Vai ꕉ ꕖ:Vai ꕘ  ꕛ ꕬ   ꕰ ꕻ ꖊ ꖙ ꖟ ꖦ  ꗑ  ꗦ ꗴ ꗵ ꗶ  ꘙ ꘛ
+ꔰ:Vai ꕉ ꕖ:Vai ꕘ  ꕛ ꕬ   ꕰ  ꕻthin?  ꖊ ꖙ ꖟ ꖦ  ꗑ  ꗦ ꗴ ꗵ ꗶ  ꘙ ꘛ
 
 ᠫ ᠒ ᠫ Ⴉ ና ፘ ࿂ ࿉ ྈ Ჯ 
 
@@ -533,6 +530,9 @@ Leaving them here for now, but probably too complex too be distinguishable
 
 - **Henry Sr**, `historian`: Erudite medievalist, more comfortable with philosophy manuscripts than those-soul eating "smart" thingies people get distracted with these days. Values intellect and discipline. Since he discovered mentions of the Holy Semirings in forgotten literature, he become obsessed in a quest to reconcile faith and reason. Stern but witty, blends old-world manners with dry humor. Sometimes emotionally distant, but with a vulnerability you can relate with. Wonders about what the ancients attempted to tell us through cultural heritage.
 
+- **Ivo 1**, `cultist` truck driver: Received a shiny smartphone on his very first birthday - keeps him 'quiet', his parents said. Believes everything his latest aiPhone tells him, always invites chats to amplify his own echo chamber. May attempt to fiddle with shipments to further unspecified goals AIs slipped into his head. A disturbing character, indeed.
+
+**Ivo 2**, cultist truck driver: Believes everything he sees on socials, always invites others to amplify his own echo chamber. May attempt to fiddle with shipments to win unspecified odd challenges he watches on TikTok - lately videos look a bit.. off but who cares, he's gonna earn a lot of crypto real soon. A disturbing character, indeed.
 
 
 ## Streams / generators
@@ -586,7 +586,9 @@ d = 🐶^0 = 1:🐶^0
 - https://unifoundry.com/pikto/index.html
 - Jacques Bertin, Semiology of Graphics: Diagrams, Networks, Maps
 
-
+- https://www.solvemoji.com
+- https://rawsonmath.com/2018/01/23/emoji-math/
+The October 2017 issue of Mathematics Teacher included the article “An Emoji is Worth a Thousand Variables,” by Tony McCaffrey and Percival G. Matthews. 
 
 Each interpreter level is required to operate on finite data structures. When this constraint can no longer be guaranteed under the current resource limits, the level returns ↂ instead of a partial or infinite result.
 When evaluating a function requires a DB access that would exceed configured resource bounds on Ɗ, that access yields ↂ^[T_db], and the enclosing expression reduces to ↂ according to the propagation rule.

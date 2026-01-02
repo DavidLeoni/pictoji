@@ -1,4 +1,4 @@
-﻿# ㄕICTO<i>ji</i> TESTS (v0.6.17)
+﻿# ㄕICTO<i>ji</i> TESTS (v0.6.19)
 
 
 DO NOT PLACE FANCY TYPOGRAPHICS LIKE “” HERE. 
@@ -10,11 +10,10 @@ DO NOT PLACE FANCY TYPOGRAPHICS LIKE “” HERE.
 
 ## Smoke tests - literal decoding
 
-NOTE: these tests have awkward English _on purpose_ to show literal decoding is actually working the way it's intended.  
+**NOTE:** these tests have awkward English _on purpose_ to test decoding is actually literal as it should be.  
 
 ```
-👤 ⊸ ↶⟡ ↻⚒ == I have been working
-◙ ⌖ ∈ ▣ ☟ == the place in this here
+▪ ⌖ ∈ ▣ ☟ == the place in this here
 
 👤 ⇗ ⚭ 👤👤 ↦ ⌖ == I will with we to place
 
@@ -28,10 +27,32 @@ NOTE: these tests have awkward English _on purpose_ to show literal decoding is 
 📖📖 == books
 웃² == people/crowd
 
+1 == 1
+<!-- 11 == ones ??? TODO REAL BAD 
+
+1s == ones ??? SEEMS 1 sec    -->
+
+👤👤, ▪ 웃²     -> we, the people    
+👤👤^, ▪ 웃^²   -> We, the People    
+웃² ⚒ ∈ ▫ 웃³  -> people work in a society
+▫ 웃³ ⊶ ↶⚒ 웃² -> a society of working people
+우 ∧ 👤⁀ -> you and me
+웃³ ⟡ 🛠 ⨯ 👤👤⁀ -> society is made by us
+
+<!-- possibly others
+? -> society is made by people   
+? -> a person in a society
+? -> society is us
+? -> a person in a group
+? -> our society 
+>
+
+
+
 ### Comparatives & superlatives
 
 ▲⬣ ⊳ ▽ == more big than far
-▲▲◘ == most small
+▲▲᠅ == most small
 ▼▼⬣ == least big
 
 ### Tense / aspect combos
@@ -54,13 +75,13 @@ NOTE: these tests have awkward English _on purpose_ to show literal decoding is 
 ### Prepositions & compounds
 
 👤 👐 ☉ ∈↦ ⌖ == I give thing into place
-👤 ✊ ☉ ☗↦ ⌖ == I take thing onto place
+👤 ✊ ☉ ◙↦ ⌖ == I take thing onto place
 👤 ⚭∈ ⌖ == I within place
 👤 ⚭⁐ ⌖ == I without place
 
 ### Questions
 
-📍 ◙ ⌖ ? == where the place ?
+📍 ▪ ⌖ ? == where the place ?
 ❖ ☉ ◕ ⊳ ◔ ? == which thing most than some ? *(form test)*
 Ϣ 👤 ◐ ㉦ 🗣 ? == why I do ask speak ? *(order test)*
 
@@ -121,8 +142,8 @@ NOTE: these tests have awkward English _on purpose_ to show literal decoding is 
 
 ↦📅 == today
 ↦ 📅 == to day
-☗↦ == onto
-☗ ↦ ◙ ⌖ == on to the place
+◙↦ == onto
+◙ ↦ ▪ ⌖ == on to the place
 
 ### Negation (aux-first)⟡
 
@@ -132,9 +153,8 @@ NOTE: these tests have awkward English _on purpose_ to show literal decoding is 
 
 ### Articles overt⟡
 
-👤 ↶👀 ⚲ 🐶. == I saw a dog.
-
-👤 ↶👀 ◙ 🐶. == I saw the dog.
+👤 ↶👀 ▫ 🐶. == I saw a dog.
+👤 ↶👀 ▪ 🐶. == I saw the dog.
 
 ### If (unary/binary)⟡
 
@@ -236,13 +256,13 @@ Mixed with attachers/punctuation (number is one token)
 
 ### Setting-gated defaults
 
-☞ ⟡ ⚲ 🏠 ? <? is there a house?          # natural_language
+☞ ⟡ ▫ 🏠 ? <? is there a house?          # natural_language
 ∃ 🏠 <-? there exists a house           # formal
 
 ### Tense/negation (natural_language only with be)
 
-☞ ↶⟡ ⚲ 🏠 == there was a house
-☞ ⟡¬ ⚲ 🏠 == there is not a house
+☞ ↶⟡ ▫ 🏠 == there was a house
+☞ ⟡¬ ▫ 🏠 == there is not a house
 
 ### Formal atemporality with explicit time adjunct
 ∃ 🏠 ➲ ⏰ == there exists a house now
@@ -252,7 +272,7 @@ Mixed with attachers/punctuation (number is one token)
 ☞ ⟡ ➲ ⌖ == there is (something) at the place
 
 ### Interrogatives separated by setting
-☞ ⟡ ⚲ 🏠 ? == is there a house?
+☞ ⟡ ▫ 🏠 ? == is there a house?
 ∃ 🏠 ? == does a house exist?
 
 ### Quantifier placement

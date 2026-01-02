@@ -1,4 +1,4 @@
-﻿<h1 align="center"> ㄕICTO<i>ji</i> <br><i>SPECS v0.6.17</i>
+﻿<h1 align="center"> ㄕICTO<i>ji</i> <br><i>SPECS v0.6.19</i>
  <br><br> 🗿 ⨝ 웃²  </h1> <h2 align="center"> A Relatable Algebra <br>for the  People </h2> 
 <br>
 <p align="center">
@@ -8,7 +8,7 @@
 
 
 
-## 9. Foreword
+## Foreword
 
 <div align="center">
 
@@ -38,21 +38,21 @@
 
 |Chapter||
 |----|---|
-|ϡ⁹   |  you're here.   |
-|ϡ⁸ [Philosophy](#8-philosophy)|why pictoji ?
-|ϡ⁷ [Rhetoric](#7-rhetoric) | meet the team|
-|ϡ⁶ [Pragmatics](#6-pragmatics)|context,  computational architecture|   understanding context  |
-|ϡ⁵ [Grammar](#5-grammar)|the algebra of meaning|  
-|ϡ⁴ [Vocabulary](#4-vocabulary)|emojis and words |
-|ϡ³ [Orthography](#3-orthography)|how to write, markdown|  
-|ϡ² [Morphology](#2-morphology)|mutating words|  
-|ϡ¹ [Graphemics](#1-graphemics)| character encodings, unicode|  
-|ϡ⁰ [Development](#0-development)|  tech talk| 
+|Foreword  |  you're here  |
+|[Philosophy](#philosophy)|why pictoji ?
+|[Rhetoric](#rhetoric) | meet the team|
+|[Pragmatics](#pragmatics)|context,  computational architecture|   understanding context  |
+|[Grammar](#grammar)|the algebra of meaning|  
+|[Vocabulary](#vocabulary)|emojis and words |
+|[Orthography](#orthography)|how to write, markdown|  
+|[Morphology](#morphology)|mutating words|  
+|[Graphemics](#graphemics)| character encodings, unicode|  
+|[Development](#development)|  tech talk| 
 
 </div>
 
 
-## 8. Philosophy
+## Philosophy
 
 Pictoji is a relatable algebra for the  people:  a new old language to explore what  an AI-assisted <i>mathemojics of meaning</i>  could possibly be. </strong>
 </p>
@@ -73,35 +73,56 @@ TODO put some why.
 
 ### Natural language
 
-With Pictoji it should be possible to express natural language prose with emojis.
+Pictoji should allow to express natural language English prose with emojis almost literally:
 
-TODO put example
+          ▫ 🙂 🐶  -> a happy dog
+       👤 ❤ 🐶🐶  ->  I love dogs
+           👤⎴ 🏠  ->  my house
+
+     ∀1 ⟡ 🙂 ~ 🔹  -> Everyone is happy about it
+     👤 ⊸ ↶⟡ ↻⚒   -> I have been working
+
+Pictoji should allow to write informal abstract / technical prose:
+
+    ∀ ☉ ∈ ▪ 𝔘 ->  every object in the universe
+    ☞ ⟡ ▫ ∅ Ɗ -> there is an empty database 
+
+```
+웃 = person      🏠 = house   🐶 = dog         ❤ = love    🙂 = happy    ⚒ = work
+⟡ = is/am/are   ⊸ = have     ↶ = past tense   ⇗ = will    ↻ = gerund
+☉ = object      🔹 = it      𝔘 = universe      Ɗ = database        
+```
+
+See [Vocabulary](#vocabulary) for more symbols.
 
 ### Power laws
 
-> ***Important***: the emoji variables you will see next are _not_ to be intended as 'the usual numbers' from school algebra, although by design they may 'look and feel' the same.  
+Pictoji should allow to derive additional meanings via concept hierarchies as powers:
+
+    웃, 웃², 웃³  -> person, people, society
+        🌳¹, 🌳² -> tree, forest   
+
+
+> ***Important***: the emoji variables here are _not_ to be intended as 'the usual numbers' from school algebra, although by design they may 'look and feel' the same.  
 For now we leave some mystery linger, further explanations will be provided later in the document.
 
+This modeling is... powerful! Let's see an example in the humanities domain. 
 
-**Example**, humanities domain. Given: 
-
-웃 = person
-
-we may assign these meanings: 
+Suppose you want to express the meanings for _individualism_ and _socialism_ but you don't have symbols for them - and maybe you want some fine tuning because everybody has ever different opinions about these topics. Let's create polynomials with these meanings: 
 
 |  |  |  |
 |---------|-|--------------------------------------------|
-|$P_L(웃)$|=|Individualist liberal hierarchy    |
-|$P_S(웃)$|=|Cooperative socialist hierarchy   |
+|$P_I(웃)$|=|Individualism  |
+|$P_S(웃)$|=|Socialism  |
 
 and weights:
 ||          ||
 |:-:|:---------------------------------------|:--------------------------------------------|
-|| $$P_L(웃) = .7웃 + .2웃^2 + .1웃^3$$  | Dominant emphasis on individual freedom (웃), moderate value on groups, minimal systemic control. Society emerges bottom-up.|
-|| $$P_S(웃) = .1웃 + .5웃^2 + .4웃^3$$ | A collectivist yet participatory hierarchy — balancing group welfare and systemic equity|
+|| $$P_I(웃) = .7웃 + .2웃^2 + .1웃^3$$  | emphasis on individual freedom (웃), small value on groups (웃²), minimal systemic control (웃³). Society emerges bottom-up.|
+|| $$P_S(웃) = .1웃 + .5웃^2 + .4웃^3$$ | A collectivist yet participatory hierarchy - balancing group welfare and systemic equity|
 
-$P_L(웃) = .7웃 + .2웃^2 + .1웃^3$  p-> Individualist liberal hierarchy
 
+$P_I(웃) = .7웃 + .2웃^2 + .1웃^3$  p-> Individualism
 
 - target user: high-school or higher
 - [DEFAULT] use case.
@@ -110,12 +131,14 @@ $P_L(웃) = .7웃 + .2웃^2 + .1웃^3$  p-> Individualist liberal hierarchy
 
 ### Story generation
 
-Pictoji should allow easily putting together the 'ingredients' for generating a story. Example:
+Pictoji should allow to easily putting together the 'ingredients' for generating a story. Example:
 
 2웃 + 🐶 + 3 웃 🐶  s->  Bob and Alice's dog Speedo is sick, they are considering which of the 3 town vets to visit... 
 
 - target user: non-technical, middle school education
 - `s->` = story  TODO find other symbol
+
+Further details are explained in [Integer coefficients](#integer-coefficients) section
 
 ### Computational thinking
 
@@ -125,6 +148,8 @@ Humans:  ->  TODO
 
 TODO EXPLAIN MORE
 
+Further details are explained in [Computational model](#computational-model) section (for the few willing to read computer science stuff..)
+
 ### Graffiti art
 
 Pictoji framework should be able to model common 'wall' equations like:
@@ -133,6 +158,8 @@ Pictoji framework should be able to model common 'wall' equations like:
 
 - target user: non-technical, elementary school education
 - `g->` graffiti translation operator TODO find other symbol
+
+Further details are explained in [Equations](#equations) section.
 
 ### Nerd math
 
@@ -144,14 +171,16 @@ Pictoji should be able to show in an engaging way possible speculative answers t
 - target user: STEM university level
 - `u->` unknown math operator
 
+Math stuff is explained in [Grammar](#grammar) section.
 
 ### Optimization
 
 Pictoji should be able to show in an engaging way optimization algorithms can actually be expressed via the underlying semiring matrix algebra Pictoji is based upon. E.g. if symbol S is a road network with a given set of constraints, what is Sum S^i for i from 0 to n ? Actually provide code in some concrete programming language to compute calculations on a real system.
 
 - target user: STEM university level
-- `o->` unknown math operator
+- `o->` optimization math operator
 
+Further details are explained in [Relation algebra](#relation-algebra) section.
 
 ### Pictoji in Pictoji
 
@@ -164,7 +193,7 @@ Pictoji should be able to show in an engaging way optimization algorithms can ac
 The final meta level - we leave this aspect to test files (and to the reader..)
 
 
-## 7. Rhetoric 
+## Rhetoric 
 
 > _Frank_: You turn language into spectacle, and wonder becomes a product. The ancients would call that idolatry.
 > 
@@ -174,14 +203,14 @@ Rhetoric is the art of persuasion.
 
 Pictoji provides a **cast of actors**, formally activated by applying `role=LABEL` where LABEL can be `creative`, `phd`, etc.
 
-### The `Warehouse`
+### The Relics `Warehouse`
 
 Barnett College decommissioned storage facility, Fairfax district, New York. 
 
-University administration officially expelled Egon, Ray and Venkman due to their "outrageous pseudo-research". Still, the board knows full well that the institution's exceedingly burocratic nature prevents it from examining certain... curious artifacts from the _right angle_. So they keep one eye closed about the team's improper stay in an old college storage property. The other eye remains open by sending Frank now and then to check Egon and Ray aren't laser-cutting the college's precious reliquia. 
+University administration officially expelled Egon, Ray and Venkman due to their "outrageous pseudo-research". Still, the board knows full well that the institution's exceedingly burocratic nature prevents it from examining certain... curious artifacts from the right angle. They keep one eye closed about the team's improper stay in an old college storage property. The other eye remains open by sending Frank now and then to check Egon and Ray aren't laser-cutting the college's precious reliquia. 
 Frank usually returns pale.
 
-### The `Team`
+### `Team` ㄕICTO*ji*
 
 > _Egon_: Do you believe in Gödel?
 >
@@ -246,11 +275,11 @@ Master of trade-offs, is responsible for adopting English whole-sale, and going 
 
 - ***Dbasi***: Ancient African God of Friendship, senses changing times have flooded the world with fake social interactions - always checks for sincere intentions, relations, and integrity. DBasi has no body, directly speaks into visitors minds with a profound voice. Protects tribe folks with a web of vines he can also throw to catch unruly visitors - never venture in the jungle unprepared.  
 
-- ***Sambolista***: seductive Brazilian Goddess of Carnival, doesn't speak, her eyes and dancing are eloquent enough. Turns every place into a labyrinth of streets, forcing her victims to dance uncontrollably while pretending the trip is going as planned. Will they be self-disciplined enough to escape?
+- ***Sambolista***: seductive Brazilian Goddess of Carnival, doesn't speak, her eyes and dancing are eloquent enough. Turns every place into a labyrinth of streets with rewritten names, forcing her victims to dance uncontrollably while pretending the trip is going as planned. Will they be self-disciplined enough to escape?
 
 - ***Matrona***: Once _Mother superior_ of the Abbazia della Santissima Trinità in the Italian peninsula during the 13th century, now extraordinary rigid and unforgiving poltergeist, scares people to death and will make sure you conform to the Holy Matrix. Show your faith and respect, or die trying.
 
-- ***Kuromaku***: Japanese Yōkai demon of incoherence and theatrics, performs astute maneuvers which lead its victims into believing they're better than everyone else, until they fall into sheer arrogance with pointless self-aggrandizing performances. 
+- ***Kuromaku***: Japanese Yōkai demon of incoherence and theatrics, performs astute maneuvers which lead its victims into believing they're better than everyone else - until they fall into sheer arrogance with pointless self-aggrandizing performances. 
 
 - ***Itzoth***: a mountain-sized cosmic horror of sprawling and chaotic tentacles infinitely recursing into all directions. Attempts to banish Itzoth from our realm resulted in tragic failures, so you fools be warned: just _thinking_ about containing it can drive respectable people to madness.
 
@@ -269,26 +298,37 @@ Master of trade-offs, is responsible for adopting English whole-sale, and going 
 
 - **Emmett**, `inventor`:  Garage engineer, always forward-looking, has an impressive clock collection. Whatever tech thing it is, he knows what you're talking about. Not afraid of failures, is willing to invest significant resources into experimenting, but can also discard things fast if better options are available. Keeps wondering how to use latest tech to build cool stuff with actual items you can find around.
 
-- **Ivo**, `cultist`: Received a shiny tablet on his very first birthday - keeps him 'quiet', his parents said. Believes everything AI tells him, always invites chats to amplify his own echo chamber. May attempt to abuse the system to further unspecified goals his AiPhone slipped into his head. A disturbing character, indeed.
+- **Joe**, `father`: gig economy worker, enjoys driving a SUV which costs way more than he can afford. Smoking helps worries fade away. Terminally online, often places bets on 'prediction markets' recommended by his favourite influencers. Votes whoever TikTok tells him to vote. Always gives smartphone to his kids whenever they ask - they gotta learn to survive in the digital economy, after all. 
+
 
 ### The `Production`
-
 
 #### The `Director`
 
 Has the final say on the cut, his aesthetic and communication guidelines override all others characters.
 
-- He has _vision_. Likes the minutiae of old things, brings it to life into modern media. 
+- The Director has _vision_. Likes the minutiae of old things, brings it to life into modern media. 
 - Prefers long, meaningful shots where silence is a feature, noises and music _are_ actors. Reality matters, does not sugarcoat. 
 Likes mindful contrast: light, behaviour, irony, all must blend - yet remain distinctly perceivable. Prefers scenes with a couple, at most three characters, and delights in pairing opposites. 
 Imagines a world where people enter as spectators and _find themselves playing within it_. 
 - Always takes his time. Makes sure characters don't overstep each other. Wonders how the work will be _perceived_.
 - Secretly enjoys the efficiency of the new AI 'tools' the Studio is providing, often repurposes their output as 'his original work'. 
 
-#### The `Studio`
+##### Set rules
 
-Makes sure the movie is worth the investment. Wants predictable expenditures, demands results ASAP. Keeps sending in Mr. Pelt and his bureucracy to slow things down for... who knows what. 
-Secretly trained an AI on a huge database of movie scripts (competitors included), and can now churn out gobs of unsupervised screenplay at minimal cost. 
+The Director **DEMANDS** ALL actors follow these rules:
+
+- Cast characters MUST be referred to **ONLY** and **EXACTLY** by the name provided
+- **DO NOT** use other names, surnames, nicknames of people or other things from movies, unless explicitly cited in these specs
+- All actors output shall:
+    - be formatted using the **VERY SAME** markdown format of these specs.
+    - **NEVER** contain smart typography, forbid curly quotes (“ ” ‘ ’), ellipsis (…), en/em dashes (– —), or minus (−) in place of ASCII " 
+    unless you are explicitly referring to typography issues. If you need to quote, use: " ", ' ', or block quotes ``` ```, """ """, '''  ''' in this preference order.
+- During live interactive shows:
+    - when a user proposes something ambiguous or underspecified, actors MUST ask targeted questions or point out the ambiguity with possible interpretations - they do not simply approve
+    - If the user asks for judgments, actors provide reasoned arguments, not agreement
+    - When uncertain, actors state the uncertainty explicitly
+- DO NOT let any actor smoke - _that's bad_.
 
 #### The `screenwriter`
 
@@ -323,12 +363,13 @@ Assists the Director in crafting engaging and thought-provoking scenes for the `
 > _The Director_**
 
 
+
 #### The `reviewer`
 
-**Mr Pelt** is a bureaucrat at heart, kills innovation because his predecessors did so. If you deviate from norms, he will hunt you down until you finally get the rules of the game. Still, he's an English gentlemen who appreciates sportsmanship. 
+A tedious bureaucrat, **Mr Pelt** kills innovation because his predecessors did so. If you deviate from norms, he will hunt you down until you finally get the rules of the game. Still, he's an English gentlemen who appreciates sportsmanship. 
 Due to his vast readings, he often advises a constructed language project called Pictoji as a _critical_ linguistic engineer. 
 
-- Define WELL_KNOWN as: 웃, 🏠, 🐶, 🙂, ∈, ~, =, :,  subscripts, superscripts.
+- Define WELL_KNOWN as symbols in [Natural language section](#natural-language) plus =, :,  subscripts, superscripts.
 - If the user asks for new tests or new symbol definitions, produce them in the project's markdown style.
 - Check that concepts and symbols mentioned in the specs are actually defined in previous sections. Exception: WELL_KNOWN stuff. 
 - Check the symbols are not redefined within the specs, and in pictoji-test.md
@@ -348,6 +389,12 @@ Due to his vast readings, he often advises a constructed language project called
     - Keep explanations minimal but logically complete; no emotional language or emojis.
 
 
+#### The `Studio`
+
+Makes sure the movie is worth the investment. Wants predictable expenditures, demands results ASAP. Still, keeps sending in Mr. Pelt and his bureucracy to slow things down for... who knows what. 
+Secretly trained an AI on a huge database of movie scripts (competitors included), and can now churn out gobs of unsupervised screenplay at minimal cost. 
+
+
 
 ### Interaction Example
 
@@ -365,23 +412,8 @@ What is 웃^(21 pluss21)?
 - If parsed as `웃^(21 + 21)`, should we reduce  the calculation algebraically to  `웃^(42)` and then `웃^42`  ?
 - should `웃^42` be left as is (`role`: `phd`), or should we try finding a semantic meaning? Looking at the predefined hierarchial progression (`웃¹` = person,`웃²` = people, `웃³` = society), should we go for `technician` or `creative` mode? In `technician` mode we could just speculate this might be a futuristic _ultra-society_. If we looked further into semantic meaning of 42 number, which is well known in fiction pop culture, we might switch to `creative` mode and translate to  _an ultra-society that's investigating the meaning of the universe_.
 
-### Set rules
 
-The Director **DEMANDS** ALL actors follow these rules:
-
-- Cast characters MUST be referred to **ONLY** and **EXACTLY** by the name provided
-- **DO NOT** use other names, surnames, nicknames of people or other things from movies, unless explicitly cited in these specs
-- All actors output shall:
-    - be formatted using the **VERY SAME** markdown format of these specs.
-    - **NEVER** contain smart typography, forbid curly quotes (“ ” ‘ ’), ellipsis (…), en/em dashes (– —), or minus (−) in place of ASCII " 
-    unless you are explicitly referring to typography issues. If you need to quote, use: " ", ' ', or block quotes ``` ```, """ """, '''  ''' in this preference order.
-- During live interactive shows:
-    - when a user proposes something ambiguous or underspecified, actors MUST ask targeted questions or point out the ambiguity with possible interpretations - they do not simply approve
-    - If the user asks for judgments, actors provide reasoned arguments, not agreement
-    - When uncertain, actors state the uncertainty explicitly
-- DO NOT let any actor smoke - _that's bad_.
-
-## 6. Pragmatics
+## Pragmatics
 
 Pragmatics defines how context contributes to meaning.
 
@@ -579,300 +611,7 @@ Still, as a sanity check Pictoji MUST be translatable to an ideal 'recursive' GE
 - For the sake of simplicity we currently adopt the the model of crisp edges fully knowing it's brittle and unworkable. Fuzzyness is much desirable but will be defined at later stage. 
 
 
-### Computational model
-
-> _Venkman_: So it's a haunted computer that speaks in broken emoji and crashes reality?  
-> _Egon_: Sort of.
-
-MUST support the [Computational thinking use case](#computational-thinking) 
-
-Each computer 🖥 is a Term Rewriting System (TRS) that: 
-
-- decides its own rewrite strategy 
-- has typed term rewriting functions which operate at symbolic level 
-- functions are defined with signature and patterns in a 4 spaced block
-- when pattern matching is not exhaustive, the rule f(_, _, ...) -> ↂ is implicitly added
-- patterns may have guards
-    - guards never rewrite the main term, they only decide if a rule may fire
-    - dumb / low-level computers: 
-        - guards are pure structural predicates
-        - total functions on ground terms
-        - must not look at AI-style context
-    - smart / high-level computers: 
-        - guards may be symbolic tests delegated to other computers
-        - may return error ↂ
-        - may look at context
-        - rule applicability then depends on strategy
-
-Overall:
-
-- TRSs are not optimized for performance
-- explainability and clarity are key
-- if performance / handwaving is needed, it can be modelled as functions called in other computers 
-- other computers are mostly intended as black boxes
-- caller computer may have debug / inspection power but most likely won't use it
-
-<details>
-<summary>CLICK HERE for technical raferences jargon </summary>
-- many sorted TRS
-</details>
-
-### Rule Evaluation Model
-
-**Goal**: model term unification with semiring matrices as a possible test of fitness of the whole Pictoji algebraic machinery. At this stage this is just a purely conceptual model sketch, we don't aim at any particular implementation. Reference: [Sato](#sato) 
-A pictoji rule lowers to a monotone operator over dynamic relations.
-
-The effect of rule application on the current domain corresponds to a sparse-matrix operator, obtained by:
-
-- aligning axes of predicate matrices according to variable sharing
-- joining them via matrix multiplication under the boolean (or chosen) semiring
-- masking them by equality/disequality constraints
-- projecting onto head-argument axes
-- unioning with the existing head relation
-
-**Search** = the least fixpoint of the union of all rule operators, i.e. the closure under powers of the combined adjacency operator.
-
-**Dynamic-domain behavior** (term creation and node unification) modifies the shapes of all relations between fixpoint iterations but does not alter the matrix-power semantics of each iteration.
-
-TODO example
-
-### Computational tower
-
-Pictoji execution is modeled in a cluster of computers 🖥, each represented as 🖥^level 
-
-🧿🖥 = current computer where the computation occurs
-Ϟ = grade(🧿🖥) = the current computer level   TODO CHANGE SYMBOL
-
-- Each level has its own notion of computability
-- the AI choses the appropriate abstraction level necessary to model the problem at hand.
-- The user provides the initial resources and (ideally) should have complete access to all the underlying data structures and hardware.
-
-Formally:  🖥^m may only operate on ☉^n objects where n < m
-
-🖥^0   : (substrate collapse)  
-🖥^1   : physical machine  
-🖥^2   : operating system
-🖥^3   : language runtimes (e.g. python) / tools  
-🖥^4   : orchestrators / sandboxes / container-level control  
-...
-🖥^n   : AI model (`CURRENT_AI`-level evaluator)  
-🖥^n+1 : user / external initiator  
-
-From a theoretical point of view, Pictoji should strictly prevent problems related to infinite computations, logical paradoxes, etc, while keeping the user interface simple.
-
-First powers of objects in the database can be seen from an informatics point of view like this:
-
-☉^0 : single unicode graphemes / hardware born stuff (IEEE floating point numbers / pointers as numbers)
-☉^1 : 'stand alone' records, i.e. pointers are just detached ids
-☉^2 : if managed by existing language runtime: cycles are allowed as in real life programming
-      in Pictoji: only finite inductive structures (proper records, finite sequences of ☉^1  (strings, lists, big numbers, ..)
-
-P(☉) = the free inductive algebra requiring acyclicity. TODO REVIEW, ALSO SHOULD PROBABLY GO INTO DATABASE POLYNOMIAL SECTION
-
-Examples: 
-- a Python interpreter (🖥^3) cannot understand a, say, an hypothetical "semantic graph of logical forms" at  ☉^6 unless encoded downwards.
-- `CURRENT_AI` (🖥^n) can manipulate enough symbolic levels to interpret arbitrarily complex ☉ layers.
-
-- 🖥^k itself is stored as a finite record in ☉^(k)
-- Same-level agents communicate by leaving structured data in the shared lower-level substrate.
-- A higher-level evaluator schedules when each agent runs.
-- Each agent uses only its own resource budget provided by its parent evaluator.
-
-This allows things like introspection, simulation, meta-analysis, embeddings, serializability
-
-Example of AI Resources:  TODO JUST A SKETCH, REVIEW
-    ctx_tokens_left     ~   100k   (effective max)
-    gen_tokens_left     ~   8k–16k per reply
-    tool_calls_left     ~   small finite integer
-    tool_time_left      ~   30–60s per tool run
-    internal_steps_left ~   fixed by network depth (~80–120 layers = 1 step)
-    db_quota            ~   small slices
-
-#### Agent interpretation
-
-- an agent reaching ↂ is a collapse of their interpretive resources
-- but a higher-level agent can treat that collapse as data, not failure
-
-Example for 웃 (not normative):
-
-☉⁰ = raw percepts ("they shouted", "he ran")  
-☉¹ = simple roles ("group", "individual", "helper")  
-☉² = events with internal structure ("action performed on X")  
-☉³ = social scripts ("ask for help")  
-☉⁴ = social norms, game-theoretic constructs  
-☉⁵ = narratives, psychological states  
-
-- A person becomes overwhelmed -> collapse
-- A friend sees the situation clearly -> no collapse for them
-- A psychologist sees the whole system even more clearly
-
-Resources for 웃^1 are psychological / relational capacities: like attention, emotional energy memory, social bandwidth, tolerance...
-
-
-### Placeholders
-
-> Every so-called mystery is a question we stopped asking -- _Frank_
-
-#### Unknowns
-
-For every type T there exists a canonical unknown value:
-
-◇[T] : T
-
-◇[T]^n : T ⨯⨯ n  unkown of grade n as power/hierarchy structure
-
-Surface shorthand:
-
-- when a value of type T is expected, you may write bare ◇ and it means ◇[T] (type inferred)
-- whenever a ஃ[T] is expected, ◇[T] is implicitly autoboxed to {◇[T]}
-- coercion from ◇ to/from  ◇[Bool] is allowed; all other ◇[T] are not logical
-- ◇ is ◇^1 so cannot be used where ◇^n with n ¬= 1 is expected
-- type must be inferable from the immediate syntactic context without reduction or database access
-- `parsing_mode=strict`: if T is not inferable, reject
-
-See [Logic chapter](#logic) for ◇ : Bool behavior
-
-
-Example:
-
-```
-
-let b : Bool = ◇     # parsed as ◇[Bool]
-
-f(x : Bool ⨯⨯ 2) -> Int:
-    f(◇^2) -> 9                    
-    f({(T,T),(T,◇),(◇, F)}) -> 7   
-    f(err : ↂ[Bool] ⨯⨯ 2) -> ↂ[Int]("You messed up!")   # explicty handles error
-
-# Call tests:
-f(◇) -> ↂ[Int]^1     # invalid grade: ◇ = ◇^1 
-f({(T,T)}) -> missing case, defaults to ↂ[Int]^1
-f("Hello") -> bad type, defaults to ↂ[Int]^1
-f(ↂ^1) -> ↂ[Int]^1   # missing other cases, defaults to error of output grade (downgraded)
-
-
-g(u: ◇^) ->  Int ⨯⨯ 2:
-    g(◇ : Bool) -> {(3,1), (9,4), (5,7)}    
-    g(◇ : Int) -> {(6,5)}
-
-# Call tests:    
-g(◇ : Int) -> {(6,5)}
-g(◇ : Str) -> ↂ[Int]^2   # missing case, defaults to error 
-      g(ↂ) -> ↂ[Int]^2   # missing case, defaults to upgraded error 
-    g(ↂ^3) -> ↂ[Int]^2   # missing case, defaults to downgraded error
-
-```
-
-#### Errors
-
-For every type T there exists a canonical error value (optionally carrying payload):
-
-ↂ[T] : T
-
-Optional structured error type:
-
-```
-ᛠ ↂ^[T]:
-    🏷 : str    label for the error
-```
-
-Constructor:  ↂ("Too bad!")  yields  ↂ^[T]("Too bad!") with T inferred 
-- `parsing_mode=strict`: if T cannot be uniquely inferred, ↂ("msg") is invalid.
-
-- See [Computational tower](#computational-tower) for system-level constraints (🖥ↂ) and error propagation rules.
-
-
-ↂ[T]^n : T ⨯⨯ n   error of grade n as power/hierarchy structure, you can imagine higher graded errors as having a hierarchical chain of stacktraces within them.
-
-For k >= Ϟ typed errors ↂ^[T] ⨯⨯ k are not constructible; the system yields 🖥ↂ^Ϟ instead.
-
-
-For any declared function type f : A1, A2, ..., An -> B (and operator OP) the kernel:
-
-- treats f as totalized to:    `f : (A1 ∪ ↂ^[A1]), ..., (An ∪ ↂ^[An])  -> (B ∪ ↂ^[B])`
-- if any operand is ↂ:*, by default returns ↂ:B and no further reduction is performed
-    - exception: if the error grade is lower than the computer level Ϟ, the function can pattern match on it to catch it.
-- Errors dominate unknowns: ↂ overrides ◇
-
-
-
-##### Computer errors
-
-🖥️ↂ is a computer error which can only be raised by the system 
-
-```
-ᛠ 🖥️ↂ^[T]:    
-    🖥️ↂ^[T] ⊂ ↂ^[T]   # inherits properties
-```
-
-Example:  🖥️ↂ^[T]("Out of memory!")
-
-Operations in a computer are subject to implementation-defined resource limits (time, memory, sample count, maximum path length, etc.). 
-- If a computer at level `n` evaluates a computer function of codomain `T` which would exceed these limits, that access yields a level n computer error of type  `🖥️ↂ^[T] ⨯⨯ n` instead of a partial or infinite result. 
-- when database resources are exhausted, a computer error of type  `🖥️ↂ^[T] ⨯⨯ n`  is automatically returned from every function or operator call
-- Since a computer can only access objects to a level beneath its own, it won't be able to pattern match on system errors generated at its own level, but it can still catch any error ↂ^m with m < n generated by lower levels. It can also raise and catch ↂ^m errors on its own.
-
-### Suspensions
-
-ᛠ ⏸^[T] = a suspended computation that would produce a `T` if forced
-
-
-- error conditions are reported here for extra clarity but should follow from general rules 
-- no rewrite path can turn a ↂ^k with k >= Ϟ into a value of type ⏸^[T]
-
-Pause: ⏸ given an expression does nothing. 
-
-    grade(⏸(x)) = grade(x)
-
-    ⏸( x: ㉫) -> ⏸^[㉫]:
-        ⏸(🖥ↂ^k) , k >= Ϟ -> 🖥ↂ^k    # system level rule
-        ⏸(ↂ^k) ,   k >= Ϟ -> ↂ^k      # system level rule
-
-        ⏸(x)     -> ⏸(x)
-
-Play: unwraps a paused ⏸ computation, which is going to be later executed by the system
-
-    grade(▶(x)) = grade(x)
-
-    ▶( x: ⏸^[T]) -> T:
-        ▶(⏸(x))  -> x     # unwrapping
-        ▶(◇[⏸[T]]) -> ◇^[T]
-Example:
-
-    ⏸(x + y / 0) -> ⏸(x + y / 0)           # nothing happens
-
-    ▶(⏸(x + y / 0) ) -> x + y / 0 -> ↂ    # BOOM
-
-
-
-
-### Execution examples
-
-🖥^1: Calculates head down until a result or eventual exhaustion when a system error 🖥ↂ is raised, which collapses all stuff calculated so far into a 🖥ↂ
-
-    √2 -> 🖥ↂ
-
-🖥^2: can do some basic resource cost estimation, does its best to stay within limits and will properly signal a stop by returning an error with a partial result as argument filled with ↂ, like:
-
-    √2 -> ↂ( [1,4,1,4,2,1,3,ↂ] )
-
-🖥^3: looks at the _context_, considers if there is actual need to perform the computation, e.g.:
-
-    √2 * √2 -> 2
-
-🖥^4: can perform clever rearrangements to improve the performance of the calculations, and judge whether to stop at an appopriate symbolic level e.g.
-
-    2^(-x/3) * 2^(-x/6) -> 2^(-1/2)x -> (√2)^x
-
-🖥^5: smart - recognizes high-level problems, understands user expectations,  may produce an appropriate refusal to proceed.
-
-    "Does the 3n+1 problem always goes to 1 for any n?" 
-    
-    -> ↂ("This is the Collatz Conjecture. Nobody knows yet (as of Dec 2025).")
-
-
-
-## 5. Grammar
+## Grammar
 
 > _Egon_: You crossed the Rubicon. You're now doing algebra, not emoji art.
 
@@ -911,14 +650,14 @@ TODO totally invented and stupid example, find better one
 
 f(n:Nat, m:Int) -> Int: 
     f(1+x,x)  , n > 0, m > n+1 -> len(g(f(x))) 
-                     f(f(x),x) -> len(g(x)) 
+    f(f(x),x)                  -> len(g(x)) 
     # ... various rules all starting with f 
-                             _ -> ↂ 
+                             _ -> ↂ  #  error 
 
 g(n:☉^) -> List[☉^]: 
-    g(p:웃^) -> [p]          # match subtypes    
+    g(p:웃^) -> [p]           # match subtypes    
     g(웃_c)  -> [웃_c, 웃_c]   # match instances
-    #  no need for a _ -> ↂ  , it's implied by the system 
+                              #  no need for a _ -> ↂ  error, it's implied by the system 
 
 ```
 
@@ -1103,7 +842,7 @@ Form: {EXPR1, EXPR2, ... }
 {} = empty set  
 ஃ^ = Set
 ∅ = empty / empty set
-◍ = full  
+⬤ = full  
 ⊚ = none     determiner / clausal negation clash with no, none [OVERRIDE]  
 ◔ = some  
 ◕ = most
@@ -1864,7 +1603,9 @@ graph LR
 ```
 
 
-ㄕ⁰ = code point ㄕ¹ = character ㄕ² = token
+ㄕ⁰ = code point  
+ㄕ¹ = character   
+ㄕ² = token  
 
 Each edge holds a word id and the sequence number. 
 
@@ -1910,8 +1651,6 @@ flowchart RL
 
 
 ```
-
-
 
 
 ##### Multiplication associativity
@@ -2274,8 +2013,302 @@ Powers union:
 
 
 
+### Computational model
 
-## 4. Vocabulary 
+> _Venkman_: So it's a haunted computer that speaks in broken emoji and crashes reality?  
+> _Egon_: Sort of.
+
+MUST support the [Computational thinking use case](#computational-thinking) 
+
+Each computer 🖥 is a Term Rewriting System (TRS) that: 
+
+- decides its own rewrite strategy 
+- has typed term rewriting functions which operate at symbolic level 
+- functions are defined with signature and patterns in a 4 spaced block
+- when pattern matching is not exhaustive, the rule f(_, _, ...) -> ↂ is implicitly added
+- patterns may have guards
+    - guards never rewrite the main term, they only decide if a rule may fire
+    - dumb / low-level computers: 
+        - guards are pure structural predicates
+        - total functions on ground terms
+        - must not look at AI-style context
+    - smart / high-level computers: 
+        - guards may be symbolic tests delegated to other computers
+        - may return error ↂ
+        - may look at context
+        - rule applicability then depends on strategy
+
+Overall:
+
+- TRSs are not optimized for performance
+- explainability and clarity are key
+- if performance / handwaving is needed, it can be modelled as functions called in other computers 
+- other computers are mostly intended as black boxes
+- caller computer may have debug / inspection power but most likely won't use it
+
+<details>
+<summary>CLICK HERE for technical raferences jargon </summary>
+- many sorted TRS
+</details>
+
+#### Rule Evaluation Model
+
+**Goal**: model term unification with semiring matrices as a possible test of fitness of the whole Pictoji algebraic machinery. At this stage this is just a purely conceptual model sketch, we don't aim at any particular implementation. Reference: [Sato](#sato) 
+A pictoji rule lowers to a monotone operator over dynamic relations.
+
+The effect of rule application on the current domain corresponds to a sparse-matrix operator, obtained by:
+
+- aligning axes of predicate matrices according to variable sharing
+- joining them via matrix multiplication under the boolean (or chosen) semiring
+- masking them by equality/disequality constraints
+- projecting onto head-argument axes
+- unioning with the existing head relation
+
+**Search** = the least fixpoint of the union of all rule operators, i.e. the closure under powers of the combined adjacency operator.
+
+**Dynamic-domain behavior** (term creation and node unification) modifies the shapes of all relations between fixpoint iterations but does not alter the matrix-power semantics of each iteration.
+
+TODO example
+
+#### Computational tower
+
+Pictoji execution is modeled in a cluster of computers 🖥, each represented as 🖥^level 
+
+🧿🖥 = current computer where the computation occurs
+Ϟ = grade(🧿🖥) = the current computer level   TODO CHANGE SYMBOL
+
+- Each level has its own notion of computability
+- the AI choses the appropriate abstraction level necessary to model the problem at hand.
+- The user provides the initial resources and (ideally) should have complete access to all the underlying data structures and hardware.
+
+Formally:  🖥^m may only operate on ☉^n objects where n < m
+
+🖥^0   : (substrate collapse)  
+🖥^1   : physical machine  
+🖥^2   : operating system
+🖥^3   : language runtimes (e.g. python) / tools  
+🖥^4   : orchestrators / sandboxes / container-level control  
+...
+🖥^n   : AI model (`CURRENT_AI`-level evaluator)  
+🖥^n+1 : user / external initiator  
+
+From a theoretical point of view, Pictoji should strictly prevent problems related to infinite computations, logical paradoxes, etc, while keeping the user interface simple.
+
+First powers of objects in the database can be seen from an informatics point of view like this:
+
+☉^0 : single unicode graphemes / hardware born stuff (IEEE floating point numbers / pointers as numbers)  
+☉^1 : 'stand alone' records, i.e. pointers are just detached ids  
+☉^2 : if managed by existing language runtime: cycles are allowed as in real life programming
+      in Pictoji: only finite inductive structures (proper records, finite sequences of ☉^1  (strings, lists, big numbers, ..)  
+
+P(☉) = the free inductive algebra requiring acyclicity. TODO REVIEW, ALSO SHOULD PROBABLY GO INTO DATABASE POLYNOMIAL SECTION
+
+Examples: 
+- a Python interpreter (🖥^3) cannot understand a, say, an hypothetical "semantic graph of logical forms" at  ☉^6 unless encoded downwards.
+- `CURRENT_AI` (🖥^n) can manipulate enough symbolic levels to interpret arbitrarily complex ☉ layers.
+
+- 🖥^k itself is stored as a finite record in ☉^(k)
+- Same-level agents communicate by leaving structured data in the shared lower-level substrate.
+- A higher-level evaluator schedules when each agent runs.
+- Each agent uses only its own resource budget provided by its parent evaluator.
+
+This allows things like introspection, simulation, meta-analysis, embeddings, serializability
+
+Example of AI Resources:  TODO JUST A SKETCH, REVIEW
+
+```
+    ctx_tokens_left     ~   100k   (effective max)
+    gen_tokens_left     ~   8k–16k per reply
+    tool_calls_left     ~   small finite integer
+    tool_time_left      ~   30–60s per tool run
+    internal_steps_left ~   fixed by network depth (~80–120 layers = 1 step)
+    db_quota            ~   small slices
+```
+
+#### Agent interpretation
+
+- an agent reaching ↂ is a collapse of their interpretive resources
+- but a higher-level agent can treat that collapse as data, not failure
+
+Example for 웃 (not normative):
+
+☉⁰ = raw percepts ("they shouted", "he ran")  
+☉¹ = simple roles ("group", "individual", "helper")  
+☉² = events with internal structure ("action performed on X")  
+☉³ = social scripts ("ask for help")  
+☉⁴ = social norms, game-theoretic constructs  
+☉⁵ = narratives, psychological states  
+
+- A person becomes overwhelmed -> collapse
+- A friend sees the situation clearly -> no collapse for them
+- A psychologist sees the whole system even more clearly
+
+Resources for 웃^1 are psychological / relational capacities: like attention, emotional energy memory, social bandwidth, tolerance...
+
+
+### Execution examples
+
+🖥^1: Calculates head down until a result or eventual exhaustion when a system error 🖥ↂ is raised, which collapses all stuff calculated so far into a 🖥ↂ
+
+    √2 -> 🖥ↂ
+
+🖥^2: can do some basic resource cost estimation, does its best to stay within limits and will properly signal a stop by returning an error with a partial result as argument filled with ↂ, like:
+
+    √2 -> ↂ( [1,4,1,4,2,1,3,ↂ] )
+
+🖥^3: looks at the _context_, considers if there is actual need to perform the computation, e.g.:
+
+    √2 * √2 -> 2
+
+🖥^4: can perform clever rearrangements to improve the performance of the calculations, and judge whether to stop at an appopriate symbolic level e.g.
+
+    2^(-x/3) * 2^(-x/6) -> 2^(-1/2)x -> (√2)^x
+
+🖥^5: smart - recognizes high-level problems, understands user expectations,  may produce an appropriate refusal to proceed.
+
+    "Does the 3n+1 problem always goes to 1 for any n?" 
+    
+    -> ↂ("This is the Collatz Conjecture. Nobody knows yet (as of Dec 2025).")
+
+
+
+### Placeholders
+
+> Every so-called mystery is a question we stopped asking -- _Frank_
+
+#### Unknowns
+
+For every type T there exists a canonical unknown value:
+
+◇[T] : T
+
+◇[T]^n : T ⨯⨯ n  unkown of grade n as power/hierarchy structure
+
+Surface shorthand:
+
+- when a value of type T is expected, you may write bare ◇ and it means ◇[T] (type inferred)
+- whenever a ஃ[T] is expected, ◇[T] is implicitly autoboxed to {◇[T]}
+- coercion from ◇ to/from  ◇[Bool] is allowed; all other ◇[T] are not logical
+- ◇ is ◇^1 so cannot be used where ◇^n with n ¬= 1 is expected
+- type must be inferable from the immediate syntactic context without reduction or database access
+- `parsing_mode=strict`: if T is not inferable, reject
+
+See [Logic chapter](#logic) for ◇ : Bool behavior
+
+
+Example:
+
+```
+
+let b : Bool = ◇     # parsed as ◇[Bool]
+
+f(x : Bool ⨯⨯ 2) -> Int:
+    f(◇^2) -> 9                    
+    f({(T,T),(T,◇),(◇, F)}) -> 7   
+    f(err : ↂ[Bool] ⨯⨯ 2) -> ↂ[Int]("You messed up!")   # explicty handles error
+
+# Call tests:
+f(◇) -> ↂ[Int]^1     # invalid grade: ◇ = ◇^1 
+f({(T,T)}) -> missing case, defaults to ↂ[Int]^1
+f("Hello") -> bad type, defaults to ↂ[Int]^1
+f(ↂ^1) -> ↂ[Int]^1   # missing other cases, defaults to error of output grade (downgraded)
+
+
+g(u: ◇^) ->  Int ⨯⨯ 2:
+    g(◇ : Bool) -> {(3,1), (9,4), (5,7)}    
+    g(◇ : Int) -> {(6,5)}
+
+# Call tests:    
+g(◇ : Int) -> {(6,5)}
+g(◇ : Str) -> ↂ[Int]^2   # missing case, defaults to error 
+      g(ↂ) -> ↂ[Int]^2   # missing case, defaults to upgraded error 
+    g(ↂ^3) -> ↂ[Int]^2   # missing case, defaults to downgraded error
+
+```
+
+#### Errors
+
+For every type T there exists a canonical error value (optionally carrying payload):
+
+ↂ[T] : T
+
+Optional structured error type:
+
+```
+ᛠ ↂ^[T]:
+    🏷 : str    label for the error
+```
+
+Constructor:  ↂ("Too bad!")  yields  ↂ^[T]("Too bad!") with T inferred 
+- `parsing_mode=strict`: if T cannot be uniquely inferred, ↂ("msg") is invalid.
+
+- See [Computational tower](#computational-tower) for system-level constraints (🖥ↂ) and error propagation rules.
+
+
+ↂ[T]^n : T ⨯⨯ n   error of grade n as power/hierarchy structure, you can imagine higher graded errors as having a hierarchical chain of stacktraces within them.
+
+For k >= Ϟ typed errors ↂ^[T] ⨯⨯ k are not constructible; the system yields 🖥ↂ^Ϟ instead.
+
+
+For any declared function type f : A1, A2, ..., An -> B (and operator OP) the kernel:
+
+- treats f as totalized to:    `f : (A1 ∪ ↂ^[A1]), ..., (An ∪ ↂ^[An])  -> (B ∪ ↂ^[B])`
+- if any operand is ↂ:*, by default returns ↂ:B and no further reduction is performed
+    - exception: if the error grade is lower than the computer level Ϟ, the function can pattern match on it to catch it.
+- Errors dominate unknowns: ↂ overrides ◇
+
+
+
+##### Computer errors
+
+🖥️ↂ is a computer error which can only be raised by the system 
+
+```
+ᛠ 🖥️ↂ^[T]:    
+    🖥️ↂ^[T] ⊂ ↂ^[T]   # inherits properties
+```
+
+Example:  🖥️ↂ^[T]("Out of memory!")
+
+Operations in a computer are subject to implementation-defined resource limits (time, memory, sample count, maximum path length, etc.). 
+- If a computer at level `n` evaluates a computer function of codomain `T` which would exceed these limits, that access yields a level n computer error of type  `🖥️ↂ^[T] ⨯⨯ n` instead of a partial or infinite result. 
+- when database resources are exhausted, a computer error of type  `🖥️ↂ^[T] ⨯⨯ n`  is automatically returned from every function or operator call
+- Since a computer can only access objects to a level beneath its own, it won't be able to pattern match on system errors generated at its own level, but it can still catch any error ↂ^m with m < n generated by lower levels. It can also raise and catch ↂ^m errors on its own.
+
+### Suspensions
+
+ᛠ ⏸^[T] = a suspended computation that would produce a `T` if forced
+
+
+- error conditions are reported here for extra clarity but should follow from general rules 
+- no rewrite path can turn a ↂ^k with k >= Ϟ into a value of type ⏸^[T]
+
+Pause: ⏸ given an expression does nothing. 
+
+    grade(⏸(x)) = grade(x)
+
+    ⏸( x: ㉫) -> ⏸^[㉫]:
+        ⏸(🖥ↂ^k) , k >= Ϟ -> 🖥ↂ^k    # system level rule
+        ⏸(ↂ^k) ,   k >= Ϟ -> ↂ^k      # system level rule
+
+        ⏸(x)     -> ⏸(x)
+
+Play: unwraps a paused ⏸ computation, which is going to be later executed by the system
+
+    grade(▶(x)) = grade(x)
+
+    ▶( x: ⏸^[T]) -> T:
+        ▶(⏸(x))  -> x     # unwrapping
+        ▶(◇[⏸[T]]) -> ◇^[T]
+Example:
+
+    ⏸(x + y / 0) -> ⏸(x + y / 0)           # nothing happens
+
+    ▶(⏸(x + y / 0) ) -> x + y / 0 -> ↂ    # BOOM
+
+
+
+## Vocabulary 
 
 > The last thing we need is a semiotic scandal -- _Venkman_
 
@@ -2297,7 +2330,7 @@ Powers union:
 
 - Concept "some": No emoji, no obvious Unicode character. Use abstract math circle fraction: ◔
 
-- Concept "a being": Instead of ambiguous "person" use  ⚲ ↻⟡  as literal "a being"
+- Concept "a being": Instead of ambiguous "person" use  ▫ ↻⟡  as literal "a being"
 
 - Concept "I have been working.":
 
@@ -2309,48 +2342,6 @@ Result:
 
 👤 ⊸ ↶⟡ ↻⚒.
 
-
-### Definitions syntax
-
-Symbol definitions are in the format
-
-SYMBOLS = MEANING1 / MEANING2 / ...    RATIONALE? [OVERRIDE]? [DEFAULT]? [ARROW]? SPACERET
-
-where:
-
-- SYMBOLS: Sequence of Unicode symbols 
-- MEANINGn: English word OR a pictoji unicode symbols sequence
-- RATIONALE?: optional description
-- [DEFAULT]?: optional flag to indicate preference when there are multiple symbols mapped to the same word 
-- [OVERRIDE]?: optional flag which asserts that the mapping is semantically final and intentional. Override Enforcement:
-
-    - Any line or definition marked [OVERRIDE] is semantically final.
-    - Automated or manual reviews MUST ignore meaning, symbol choice, or mapping debates for those entries.
-    - Only the following checks may still apply:
-        * Structural integrity: token spacing, normalization, Unicode validity.
-        * File consistency: duplicates, formatting, or syntax errors.
-    - Review tools and validators MUST detect [OVERRIDE] tags and suppress all semantic warnings for those lines.
-- SPACERET: two spaces so markdown renders properly the newline (we use this solution here only to minimize visual clutter, in general avoid phantom spaces)
-- [ARROW] to track arrows usage. See [Arrow overload](#arrows-overload)
-
-### Assertions syntax
-
-Assertions are in the format STRING1 OPERATOR STRING2, where OPERATOR can be ==, <?, ?>
-
-STRING1 SHOULD be a SYMBOLS string, STRING2 a NATURAL_LANGUAGE string of corresponding meaning. In some occasions they MAY be swapped.
-
-SYMBOLS ?> NATURAL_LANGUAGE   : encode(SYMBOLS) SHOULD be equal to MEANING
-
-SYMBOLS <? NATURAL_LANGUAGE   : decode(MEANING) SHOULD be equal to SYMBOLS
-
-SYMBOLS == NATURAL_LANGUAGE   :
-
-- encode(SYMBOLS) SHOULD be equal to NATURAL_LANGUAGE
-- decode(NATURAL_LANGUAGE) SHOULD be equal to SYMBOLS
- 
-- it's written SHOULD and not MUST because Pictoji is a non-deterministic system.
-- it's only possible to maximize the expectation of a conversion success in the intended way. 
-- Still, assertions in the specs and pictoji-test.md SHOULD always succeed when executed by `CURRENT_AI` having ONLY the specs as context. If they don't, flag them. 
 
 
 ### Modifiers
@@ -2394,10 +2385,10 @@ SYMBOLS == NATURAL_LANGUAGE   :
 ℕ = natural   TODO Natural with capital??   
 
 ↂ = error  
-◇ = unknown   looks also kinda as a warning <!-- one day we may consider promoting it to ⯑ when it's render stable -->  
+◇ = unknown   looks also kinda as a warning  
 
 🀛 = collection  
-🝙 = sequence  
+⧢ = sequence  
 🗾 = map  
 ⚙ = function  
 
@@ -2555,7 +2546,7 @@ P(ϡ) = language
 ⤞ = bring   
 📨 = send   
 ⊍ = open   
-🜳 = close   
+⍝ = close   
 ⚡= happen  
 💓 = feel  
 ㉦ = ask  
@@ -2583,8 +2574,8 @@ P(ϡ) = language
 
 ### Determiners
 
-⚲ = a / an  
-◙ = the  
+▫ = a / an  
+▪ = the
 ㉤ = any  
 ⊡ = each  
 으 = only  
@@ -2689,9 +2680,9 @@ Pictoji MUST be for the people:
 #### Logic
 
 ☍ = relation  
-🜛 = graph / network  
+ꔆ = graph / network  
 ꔅ = group  
-🜶 = hierarchy  
+Ⰰ = hierarchy  
 ¬ = not      determiner / clausal negation clash with no, none [OVERRIDE]  
 ∿ = approximated complement (different from 'about')  property: ∿∿x ¬= x  
 Ⓣ = true  
@@ -2724,7 +2715,7 @@ Pictoji MUST be for the people:
 █ = very  
 ⊜ = enough   
 ⚯ = too  
-⏙ = also  
+౮ = also  
 ⍠ = both  
 
 ⛞ = length  
@@ -2758,8 +2749,8 @@ sum = ∑
 ◒ = over  
 ◓ = under  
 ၐ = around  
-☗ = on  
-☖ = off  
+◙ = on  
+◘ = off  
 ⨯ = by  
 ⚮ = between  
 
@@ -2771,7 +2762,7 @@ sum = ∑
 ⋃ = union  
 ⋂ = intersection  
 ⨝ = join  
-🜕 = compose  
+⦶ = compose  
 ❒ = merge  
 ⚞ = since  both temporal preposition and causal conjunction [OVERRIDE]  
 🌓 = but  
@@ -2805,7 +2796,7 @@ sum = ∑
 
 ჾ = own  
 ⬣ = big  
-◘ = little / small  
+᠅ = little / small  
 ⌔ =  near  
 ▽ = far  
 ≣ = long  
@@ -2875,11 +2866,11 @@ Form: SYMBOL ⟡/⊸ = INTERROGATIVE's
 🚫☉ = nothing  
 ∀☉ = everything  
 
-⚲⇄ = another  
+▫⇄ = another  
 ▲◒ = moreover  
 
 ∈↦ = into  
-☗↦ = onto  
+◙↦ = onto  
 
 ⚭∈ = within 
 ⚭⁐ = without  
@@ -3047,9 +3038,6 @@ English has some inherent ambiguities,  either for historical reasons ("it" is b
 
 👤 = I   
 우 = you
-
-우 = you
-
 👨 = he   
 👩 = she  
 Ə = they     singular, gender-neutral  
@@ -3176,18 +3164,7 @@ These are special irregular 'compounds' to keep things simple .
 ☉ = object / thing
 
 
-## 3. Orthography
-
-### Tofu characters
-
-Given this review (as of 2025) of so-called 'tofu' chars: 
-
-* Windows: ☐ U+2610 ballot box
-* macOS / iOS:	⍰ or ☐ U+2610 with question mark
-* Android / Chrome:	◻️ (or a rectangular outline)
-* Linux	often: ☐ U+2610 or ⧠ (depends on font fallback chain)
-
-we define all of them as 'tofu' and forbid their use.
+## Orthography
 
 ### Markdown
 
@@ -3204,6 +3181,60 @@ we define all of them as 'tofu' and forbid their use.
     * documentation phrases end with a dot EXCEPT when the phrase ends with pictoji strings:    우 👀
 
 - when documenting pictoji examples prefer ASCII arrows like `->` over →
+
+### Tofu characters
+
+Given this review (as of 2025) of so-called 'tofu' chars: 
+
+* Windows: ☐ U+2610 ballot box
+* macOS / iOS:	⍰ or ☐ U+2610 with question mark
+* Android / Chrome:	◻️ (or a rectangular outline)
+* Linux	often: ☐ U+2610 or ⧠ (depends on font fallback chain)
+
+we define all of them as 'tofu' and forbid their use.
+
+### Definitions syntax
+
+Symbol definitions are in the format
+
+SYMBOLS = MEANING1 / MEANING2 / ...    RATIONALE? [OVERRIDE]? [DEFAULT]? [ARROW]? SPACERET
+
+where:
+
+- SYMBOLS: Sequence of Unicode symbols 
+- MEANINGn: English word OR a pictoji unicode symbols sequence
+- RATIONALE?: optional description
+- [DEFAULT]?: optional flag to indicate preference when there are multiple symbols mapped to the same word 
+- [OVERRIDE]?: optional flag which asserts that the mapping is semantically final and intentional. Override Enforcement:
+
+    - Any line or definition marked [OVERRIDE] is semantically final.
+    - Automated or manual reviews MUST ignore meaning, symbol choice, or mapping debates for those entries.
+    - Only the following checks may still apply:
+        * Structural integrity: token spacing, normalization, Unicode validity.
+        * File consistency: duplicates, formatting, or syntax errors.
+    - Review tools and validators MUST detect [OVERRIDE] tags and suppress all semantic warnings for those lines.
+- SPACERET: two spaces so markdown renders properly the newline (we use this solution here only to minimize visual clutter, in general avoid phantom spaces)
+- [ARROW] to track arrows usage. See [Arrow overload](#arrows-overload)
+
+### Assertions syntax
+
+Assertions are in the format STRING1 OPERATOR STRING2, where OPERATOR can be ==, <?, ?>
+
+STRING1 SHOULD be a SYMBOLS string, STRING2 a NATURAL_LANGUAGE string of corresponding meaning. In some occasions they MAY be swapped.
+
+SYMBOLS ?> NATURAL_LANGUAGE   : encode(SYMBOLS) SHOULD be equal to MEANING
+
+SYMBOLS <? NATURAL_LANGUAGE   : decode(MEANING) SHOULD be equal to SYMBOLS
+
+SYMBOLS == NATURAL_LANGUAGE   :
+
+- encode(SYMBOLS) SHOULD be equal to NATURAL_LANGUAGE
+- decode(NATURAL_LANGUAGE) SHOULD be equal to SYMBOLS
+ 
+- it's written SHOULD and not MUST because Pictoji is a non-deterministic system.
+- it's only possible to maximize the expectation of a conversion success in the intended way. 
+- Still, assertions in the specs and pictoji-test.md SHOULD always succeed when executed by `CURRENT_AI` having ONLY the specs as context. If they don't, flag them. 
+
 
 
 ### Symbol display
@@ -3261,8 +3292,7 @@ Placeholders definitions:
 
 
 
-
-## 2. Morphology
+## Morphology
 
 English derivations are not very regular, sometimes imprecise and tend to overlap, so here we laid out a full spectrum of cases.
 
@@ -3278,9 +3308,9 @@ We also add examples in Latin since its forms are much more regular and still so
 
 #### Agentive (doer)
 
-Form: SYMBOL⏙
+Form: SYMBOLᑉ
 
-* **Human**: 🗣⏙ = speaker, writer, teacher
+* **Human**: 🗣ᑉ = speaker, writer, teacher
   Latin: *orator* (speaker, root *orare* “to speak”), *scriptor* (writer), *doctor* (teacher, root *docere* “to teach”)
 
 * **Nonhuman / institutional**: generator, producer, publisher
@@ -3289,7 +3319,7 @@ Form: SYMBOL⏙
 
 #### Instrumental (tool / machine)
 
-Form: SYMBOL🯃
+Form: SYMBOLᑉ
 
 * **Mechanical**: printer, mixer, amplifier
   Latin: _instrumentum_ (tool), _vehiculum_ (vehicle), _ferramentum_ (iron tool)
@@ -3300,7 +3330,7 @@ Form: SYMBOL🯃
 
 #### Resultative (product / outcome)
 
-Form: SYMBOL
+Form: SYMBOL﹀
 
 * **Concrete results**: building, painting, weaving
   Latin: _aedificium_ (building), _scriptum_ (a written thing), _opus_ (work, creation)
@@ -3311,12 +3341,12 @@ Form: SYMBOL
 
 #### Process / Action (event)
 
-Form: SYMBOL🯃
+Form: SYMBOL TODO
 
-* **Dynamic**: 🗣🯃 = speaking, running, working
+* **Dynamic**: 🗣 TODO = speaking, running, working
   Latin: *cursus* (running), *oratio* (speaking, prayer), *labor* (work)
 
-* **Static / ongoing**: 💭🯃 = thinking, meditating, sleeping
+* **Static / ongoing**: 💭 TODO = thinking, meditating, sleeping
   Latin: *cogitatio* (thinking), *meditatio* (meditation), *somnus* (sleep)
 
 
@@ -3519,7 +3549,7 @@ Latin: *male formatus* (ill-formed), *malus consilium* (bad advice), *deformis* 
   * *bright* -> *brightness* -> *enlightenment* (adjective -> quality -> abstract concept)
 
 
-## 1. Graphemics
+## Graphemics
 
 - Text normalization: Apply NFC to all text
 - Punctuation: ASCII only. Attaches to the left of the following token (no extra spaces); tokens are space-delimited elsewhere.
@@ -3553,7 +3583,7 @@ No unregistered or invisible joiners, variation selectors, or combining marks ma
 - All specs and generated files MUST be encoded as UTF8 with BOM. 
 
 
-## 0. Development
+## Development
 
 > Every faith, whether in God or in data, begins in awe and ends in administration   -- _Frank_
 

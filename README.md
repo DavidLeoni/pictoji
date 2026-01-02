@@ -17,9 +17,10 @@
 
 Just copy/paste [pictoji.md](pictoji.md) specs into an AI chatbot and ask it to translate phrases.
 
-- currently works best with ChatGPT5
+- currently works best with ChatGPT5, Gemini 3, Claude Sonnet / Opus 4.5 
 
-**Warning**: Pictoji is a very experimental and wacky thing: currently it can give some satisfaction / entertainment value, but do not expect it to be formally sound.
+> **Warning**: Pictoji is a very experimental and wacky thing: currently it can give some satisfaction / 
+entertainment value, but do not expect it to be formally sound.
  
 
 **Author**: David Leoni (info@davidleoni.it)
