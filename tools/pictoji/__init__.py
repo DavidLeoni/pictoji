@@ -6,9 +6,9 @@ A new old language to explore what an AI-assisted mathemojics of meaning could p
 This package includes:
 - AI token counter for Claude, GPT, and Gemini models
 - Unicode block analyzer
-- Complete Pictoji language specifications
 """
 
+# Version should match /pyproject.toml (single source of truth)
 __version__ = "1.0.0"
 __author__ = "Pictoji Team"
 
