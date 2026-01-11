@@ -1,5 +1,9 @@
 # Pictoji - A Relatable Algebra for the People
-# Monorepo configuration with shared metadata
+# Single package with multiple submodules (Option B)
+
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
 
 [project]
 name = "pictoji"
@@ -11,7 +15,55 @@ license = {file = "LICENSE.txt"}
 authors = [
     {name = "Pictoji Team"}
 ]
-keywords = ["pictoji", "emoji", "unicode", "language", "specification"]
+keywords = ["pictoji", "emoji", "unicode", "language", "specification", "ai", "tokens"]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Text Processing :: Linguistic",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+
+# Core dependencies (if any shared across all submodules)
+dependencies = []
+
+[project.optional-dependencies]
+# v1.0 CLI tools
+cli = [
+    "tiktoken>=0.5.0",
+]
+cli-ai = [
+    "tiktoken>=0.5.0",
+    "anthropic>=0.39.0",
+    "google-genai>=0.3.0",
+]
+# v2.0 web (future)
+web = [
+    # "pyscript>=2024.1.1",
+]
+# v3.0 runtime (future)
+runtime = [
+    # "cffi>=1.15.0",
+]
+# Development dependencies
+dev = [
+    "build",
+    "twine",
+    "pytest",
+]
+# Install everything
+all = [
+    "tiktoken>=0.5.0",
+    "anthropic>=0.39.0",
+    "google-genai>=0.3.0",
+]
 
 [project.urls]
 Homepage = "https://github.com/DavidLeoni/pictoji"
@@ -19,8 +71,14 @@ Repository = "https://github.com/DavidLeoni/pictoji"
 Documentation = "https://github.com/DavidLeoni/pictoji/blob/main/pictoji.md"
 Specification = "https://github.com/DavidLeoni/pictoji/blob/main/pictoji.md"
 
-# Note: This is the root configuration for the Pictoji monorepo.
-# Individual packages have their own pyproject.toml:
-# - tools/pyproject.toml - Python development tools (v1.0)
-# - pictoji-web/pyproject.toml - PyScript browser implementation (v2.0 future)
-# - pictoji-runtime/pyproject.toml - C/WASM runtime (v3.0 future)
+[project.scripts]
+pictoji = "pictoji.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["pictoji*"]
+
+# Note: This is a single package with multiple submodules:
+# - pictoji.cli - Python development tools (v1.0)
+# - pictoji.web - PyScript browser implementation (v2.0 future)
+# - pictoji.runtime - C/WASM runtime (v3.0 future)

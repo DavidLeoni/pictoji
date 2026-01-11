@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-ㄕICTOji DEV TOOL
+ㄕICTOji CLI - Development Tools
 
 AI Token Counter:
     Counts tokens for text files across different AI models:
@@ -58,7 +58,7 @@ def count_gemini_tokens(text: str) -> int:
     try:
         import google.genai as genai
         # Gemini uses similar tokenization to GPT models
-        # Using character-based estimate as Google's SDK token counting 
+        # Using character-based estimate as Google's SDK token counting
         # requires API key and model initialization
 
         return len(text) // 4
@@ -122,19 +122,19 @@ UNICODE_BLOCKS = [
 def get_unicode_block(char: str) -> str:
     """Get the Unicode block for a character using code point ranges."""
     code = ord(char)
-    
+
     # Special handling for whitespace and control chars
     category = unicodedata.category(char)
     if category == 'Zs':
         return 'Whitespace'
     elif category in ('Cc', 'Cf'):
         return 'Control Characters'
-    
+
     # Find matching block from ranges
     for start, end, name in UNICODE_BLOCKS:
         if start <= code <= end:
             return name
-    
+
     # Unknown block
     return f'Other (U+{code:04X})'
 
@@ -156,11 +156,11 @@ def format_number(num: int) -> str:
 
 def analyze_unicode_blocks(text: str, verbose: bool = False, space : bool = True):
     """Analyze and display Unicode block distribution in text."""
-    
+
     # Count characters by block
     block_chars = defaultdict(set)
     block_counts = Counter()
-    
+
     for char in text:
         if char not in '\n\r☐⍰◻️⧠':
             block = get_unicode_block(char)
@@ -175,23 +175,23 @@ def analyze_unicode_blocks(text: str, verbose: bool = False, space : bool = True
     print("UNICODE BLOCK ANALYSIS")
     print("=" * 70)
     print()
-    
+
     total_unique_chars = 0
-    
+
     for block, cs in sorted_blocks:
         count = len(cs)
         unique_chars = len(block_chars[block])
         total_unique_chars += unique_chars
 
         chars_sorted = sorted(block_chars[block], key=ord)
-        
+
         chars_display = (' ' if space else '').join(chars_sorted)
 
         print(f"{block}={format_number(unique_chars)}, occ={format_number(count)} : {chars_display}")
-        
+
         if space:
             print()
-    
+
     # Summary
     print("=" * 70)
     print("SUMMARY")
@@ -203,55 +203,55 @@ def analyze_unicode_blocks(text: str, verbose: bool = False, space : bool = True
 
 def analyze_files(filepaths: list[Path], verbose: bool = False):
     """Analyze token counts for given files."""
-    
+
     print("=" * 70)
     print("ㄕICTOji DEV - AI TOKEN COUNTER")
     print("=" * 70)
     print()
-    
+
     total_chars = 0
     total_claude = 0
     total_gpt4 = 0
     total_gpt5 = 0
     total_gemini = 0
-    
+
     for filepath in filepaths:
         if not filepath.exists():
             print(f"Error: File not found: {filepath}", file=sys.stderr)
             continue
-        
+
         print(f"📄 File: {filepath.name}")
         print("-" * 70)
-        
+
         text = read_file(filepath)
         char_count = len(text)
-        
+
         # Count tokens for each model
         claude_tokens = count_claude_tokens(text)
         gpt4_tokens = count_gpt_tokens(text, "gpt-4")
         gpt5_tokens = count_gpt_tokens(text, "gpt-5")
         gemini_tokens = count_gemini_tokens(text)
-        
+
         # Display results
         print(f"Characters:        {format_number(char_count)}")
         print(f"Claude 4.5:        {format_number(claude_tokens)} tokens (tiktoken estimate)")
         print(f"GPT-4/GPT-4o:      {format_number(gpt4_tokens)} tokens")
         print(f"GPT-5:             {format_number(gpt5_tokens)} tokens")
         print(f"Gemini 2.0 Pro:    {format_number(gemini_tokens)} tokens (estimate)")
-        
+
         if verbose:
             print(f"\nFirst 100 characters:")
             print(f"  {text[:100]}...")
-        
+
         print()
-        
+
         # Add to totals
         total_chars += char_count
         total_claude += claude_tokens
         total_gpt4 += gpt4_tokens
         total_gpt5 += gpt5_tokens
         total_gemini += gemini_tokens
-    
+
     # Show totals if multiple files
     if len(filepaths) > 1:
         print("=" * 70)
@@ -276,31 +276,31 @@ Examples:
   %(prog)s *.txt --verbose
   %(prog)s document.txt --unicode-blocks
   %(prog)s *.md --unicode-blocks --verbose
-  
+
 Supported Models (Token Counter):
   - Claude 4.5 (Anthropic)
   - GPT-4/GPT-4o (OpenAI)
   - GPT-5 (OpenAI)
   - Gemini 2.0 Pro (Google)
-  
+
 Note: Install required libraries for accurate counting:
   pip install tiktoken
         """
     )
-    
+
     parser.add_argument(
         'files',
         nargs='+',
         type=Path,
         help='Text file(s) to analyze'
     )
-    
+
     parser.add_argument(
         '-v', '--verbose',
         action='store_true',
         help='Show verbose output including text preview and character lists'
     )
-    
+
     parser.add_argument(
         '-u', '--unicode-blocks',
         action='store_true',
@@ -310,24 +310,24 @@ Note: Install required libraries for accurate counting:
     parser.add_argument(
         '-s','--spaces',
         action='store_true',
-        help='show a space and a return carriage between characters' 
+        help='show a space and a return carriage between characters'
     )
-    
+
     args = parser.parse_args()
-    
+
     if args.unicode_blocks:
         # Unicode block analysis mode
         for filepath in args.files:
             if not filepath.exists():
                 print(f"Error: File not found: {filepath}", file=sys.stderr)
                 continue
-            
+
             print(f"📄 File: {filepath.name}")
             print()
-            
+
             text = read_file(filepath)
-            analyze_unicode_blocks(text, args.verbose)
-            
+            analyze_unicode_blocks(text, args.verbose, args.spaces)
+
             if len(args.files) > 1:
                 print("\n" + "=" * 70 + "\n")
     else:
@@ -337,3 +337,14 @@ Note: Install required libraries for accurate counting:
 
 if __name__ == "__main__":
     main()
+
+
+# Export public API
+__all__ = [
+    "count_claude_tokens",
+    "count_gpt_tokens",
+    "count_gemini_tokens",
+    "analyze_unicode_blocks",
+    "get_unicode_block",
+    "main",
+]
