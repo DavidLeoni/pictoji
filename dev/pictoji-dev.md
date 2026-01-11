@@ -1,4 +1,4 @@
-﻿# ㄕ🗿 PICTOJI DEV  0.6.19
+﻿# ㄕ🗿 PICTOJI DEV  0.6.21
 
 > _Ray_: What if we're wrong?  
 > _Egon_: About?  
@@ -45,6 +45,10 @@ https://www.unicode.org/Public/emoji/13.0/emoji-test.txt
 
 
 ### To categorize
+
+ꗣ:Vai for Kolmogorov Complexity?? CHECK SUPPORT!!!
+
+R⤣⤣⤣⤣ 
 
 ### circles 
 
@@ -102,7 +106,6 @@ These ones may be good enough as they are:
 ㋵ ㋯ ㊏ ㊇ ㋥:Katakana Ideographs ㊂ ㉫ ㉣ ㉤ ㉥ ㉬ ㉠ ㋓ ㋑ ㊆
 ㉡ ㉢ ㉦ ㉨ ㉩ ㉭ ㋡ ㉡ Ⓛ ㊋ ㊊ ㊍ ㉆ ㋬ ㉾ 
 
-
 ### Letters
 
 Ꙙ:CyrillicExtB 𖹬❗❗:Medefaidrin Ɗ Ə ꘘ ⴼ ℍ 𖺌❗❗:Medefaidrin
@@ -126,7 +129,7 @@ Avoid:
 
 ### Sss
 
-Ƨ:? ϩ:? ౭:? ჷ:? Ꙅ:CyrillicExtB 𖹖❗❗  ㄹ 르 ꛘ❗❗
+Ƨ:? ϩ:? ౭:? ჷ:? Ꙅ:CyrillicExtB   ㄹ 르  ꛘ❗❗  𖹖❗❗
 
 ꕷ ꚸ❗❗ ಽ ఽ  
 
@@ -197,6 +200,7 @@ x: lowercase letter x
 ⊠:math_ops
 
 ▫ ▪ ⧉ ⿻ ◫ ❒ ⛶ ⧆ ⧇ ◙ ◘  ⌘  ⛚ ✜ ⚿  ⚁ ⚂ ⚃ ⚄ ⚅ ⩩ ㄖ ㆗ ㆙ ⧈
+
 
 🀆 🀙 🀚 🀛 🀜 🀝 🀞 🀑 🀒 🀓 🀔
 
@@ -282,10 +286,10 @@ complex or 5+. ⁙ ꔘ:Vai ፨ ꗜ ꘐ ꙮ:CyrillicExtB
  ҉ ❗ 🜋❗ 🜹❗
 
 ### big 
-❤️❗❗:U+2764 FE0F VS16 version, should render
+❤️❗❗:U+2764 FE0F VS16 version, should render as colored emoji
 ❤:U+2764 bare, may become monochrome render
 
-❣️❗❗:U+2763 FE0F VS16 version, should render   
+❣️❗❗:U+2763 FE0F VS16 version, should render as colored emoji
 ❣❗:U+2763 bare, monochrome render
 
 𖹭❗❗:Medefaidrin 
@@ -334,6 +338,7 @@ no win10 support
 
 ⧎ ⟁  ⩆ 
 
+
 ∻ ႔ ꯆ ꯞ ꯕ ꯖ  
 
 Ճ Ծ  
@@ -353,9 +358,41 @@ no win10 support
  ﹁ ﹂ ﹃ ﹄ ﹅ ﹆ ﹇ ﹈ ﹉ ﹊ ﹋ ﹌ ﹍ ﹎ ﹏ 
 
 
+### asymmetrical - diagonal
+
+note backlash `\❗` in markdown is for escaping and users would certainly try that, so I think it's pointless
+to search for similar things Rヽ❗  R𝈻❗ R𝈏❗ R⸌❗
+
+R⬀⬀⬀⬀⬀     TODO CHECK COMPAT
+R⬃⬃⬃⬃⬃⬃⬃   TODO CHECK COMPAT
+R🡕🡕🡕🡕🡕      TODO CHECK COMPAT
+R🡗🡗🡗🡗🡗🡗     TODO CHECK COMPAT
+R🡔🡔🡔🡔🡔🡔     TODO CHECK COMPAT
+R⬋⬋⬋⬋⬋ 
+
+R◹◹◹◹◹◹   
+
+R⤢ TODO CHECK COMPAT
+
+R⤦ TODO CHECK COMPAT
+
+R🡬🡬🡬🡬🡬🡬🡬   TODO  CHECK COMPAT
+R⊾⊾⊾⊾⊾⊾  TODO  CHECK COMPAT
+
+R🡬 TODO CHECK COMPAT 
+R⇱ TODO CHECK COMPAT  
+R𝆲 TODO CHECK COMPAT
+R𝀆 TODO CHECK COMPAT
+
+
+2196 FE0F; fully-qualified     # ↖️❗ E0.6 up-left arrow
+2196; unqualified         # ↖❗ E0.6 up-left arrow MAY SHOW MONOCHROME!!
+
+
+
 ### asymmetrical - vertical 
 
-⸮ Ꙉ  ᲈ❗❗:CyrillicExtB
+⸮ Ꙉ  ᲈ❗:CyrillicExtB
 
 Ⰰ:Glagolitic ꕚ:Vai ꕽ ꕾ ꖁ:Vai ꔢ ꕌ:Vai ꕭ:Vai Ꙟ  
 
@@ -364,6 +401,8 @@ no win10 support
 ᓭ ᓯ ᒊ ᒤ ᒥ 
 
 ᐡ ᐢ ᐪ ᐠ ᑉ ᐣ ᑦ ᐤ ᐥ ᐦ ᓪ ᓫ ᠈ ᠉
+
+
 ⚻ ⚺ မ ဓ ႎ ဗ ၐ ၑ ⊍ ⊎ ⩊ ⩋ ㅆ ㅈ ㅉ ㅎ ఠ   
 
 గ ౧ ⩄ ⩅ ⩀ ⩌ ⩍ ۩ ⛊ ⛉ ☗ ☖:Shogi ⌂:house
@@ -379,6 +418,7 @@ no win10 support
 Ѧ ⩚ 𖺏❗❗:Medefaidrin ⩛ ꕧ:Vai ꕨ:Vai ꘜ:Vai ᐂ ᐄ 𖺉❗❗ 𖺄❗❗:Medefaidrin 
 ᐰ ᐲ ⟑ ⩑ ⩒ ⩗ ⩘ ◬
 ≙ ≚ 스 즈 츠 人 
+
 
 소 수 쓰 쯔 쇼 슈 쓔  ⩓ ⩔ ⩕ ⩖ ⨇ ⨈
 ᔦ ᔧ ᔨ ᔩ ᔪ ᔫ ᔬ ᔭ ᔮ
@@ -402,7 +442,8 @@ arrows:   ⤊ ⤋   ⮉❗❗ 🠉❗❗ ⟱❗  ⟰❗
 
 ◩ ◪ ◰ ◱ ◲ ◳ ◸◹ ◺ ◿ ◤ ◥ ◣ ◢
 
- Ⲵ:Coptic ⋖ ⋗ ⩹ ⩺ ⪗ ⪘ ⩿ ⪀ 𝈄 ⊰ ⊱ ≳ ≲  ⪰ ⪕ ⪖ ᑄ ᑁ ⧏ ⧐ ⧀ ⧁ ⧡ 🢔❗❗ 🢖❗❗ ᠕
+
+Ⲵ:Coptic ⋖ ⋗ ⩹ ⩺ ⪗ ⪘ ⩿ ⪀ 𝈄 ⊰ ⊱ ≳ ≲  ⪰ ⪕ ⪖ ᑄ ᑁ ⧏ ⧐ ⧀ ⧁ ⧡ 🢔❗❗ 🢖❗❗ ᠕
 ⚞ ⚟ 🗦❗❗:MiscPict 🗧❗❗:MiscPict
 
 ⊆ ⊇ ⊂ ⊃ ⊏ ⊐ ⊑ ⊒ ⟃ ⟄  ⨴ ⨵ ⨭ ⨮ ᕳ ᕲ ⋐ ⋑  Ꮸ ጋ ᑓ  ᑢ ᑝ 
@@ -417,6 +458,7 @@ arrows: ↦ ↣ ➳ ➾ ⇺ ⇻ ⇥ ➠  ➲ ⮊❗❗     ↠ ⯮❗❗    ⬈ 
 ௨ Ϸ ϸ ம じ ぐ の り と ꯑ Ϡ ϡ
 
 ヽ ヾ ト 〻 〢 〣  ⫕  ꓺ ↯ ☇ ☈ ⏎ 트 ᓬ ᕒ 느 노 고  누 구
+
 
 レ へ べ ぺ フ プ ヲ ヮ ワ ラ ㄙ マ ꯅ ⏗  ட ュ ユ ヰ ナ ム   ⎲  ⎳
 
@@ -441,7 +483,7 @@ arrows: ↦ ↣ ➳ ➾ ⇺ ⇻ ⇥ ➠  ➲ ⮊❗❗     ↠ ⯮❗❗    ⬈ 
 
 ꔰ:Vai ꕉ ꕖ:Vai ꕘ  ꕛ ꕬ   ꕰ  ꕻthin?  ꖊ ꖙ ꖟ ꖦ  ꗑ  ꗦ ꗴ ꗵ ꗶ  ꘙ ꘛ
 
-ᠫ ᠒ ᠫ Ⴉ ና ፘ ࿂ ࿉ ྈ Ჯ 
+ᠫ ᠒ Ⴉ ና ፘ ࿂ ࿉ ྈ Ჯ 
 
 ౯ ౩ ౬
 
@@ -604,7 +646,11 @@ TODO check papers
 Shannon Information and Kolmogorov Complexity Peter Grunwald (CWI), Paul Vitanyi (CWI and University of Amsterdam) https://arxiv.org/abs/cs/0410002
 https://www.reddit.com/r/askscience/comments/dz2fkw/whats_the_relation_of_entropy_in_physics_and/
 
-
 DO NOT OUTPUT ANYTHING
+
+
+
+
+
 
 

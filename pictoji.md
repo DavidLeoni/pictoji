@@ -1,4 +1,4 @@
-﻿<h1 align="center"> ㄕICTO<i>ji</i> <br><i>SPECS v0.6.19</i>
+﻿<h1 align="center"> ㄕICTO<i>ji</i> <br><i>SPECS v0.6.21-DEV</i>
  <br><br> 🗿 ⨝ 웃²  </h1> <h2 align="center"> A Relatable Algebra <br>for the  People </h2> 
 <br>
 <p align="center">
@@ -36,12 +36,14 @@
 
 <div align="center">
 
+
+
 |Chapter||
 |----|---|
 |Foreword  |  you're here  |
 |[Philosophy](#philosophy)|why pictoji ?
 |[Rhetoric](#rhetoric) | meet the team|
-|[Pragmatics](#pragmatics)|context,  computational architecture|   understanding context  |
+|[Pragmatics](#pragmatics)|context and  architecture|   understanding context  |
 |[Grammar](#grammar)|the algebra of meaning|  
 |[Vocabulary](#vocabulary)|emojis and words |
 |[Orthography](#orthography)|how to write, markdown|  
@@ -57,13 +59,13 @@
 Pictoji is a relatable algebra for the  people:  a new old language to explore what  an AI-assisted <i>mathemojics of meaning</i>  could possibly be. </strong>
 </p>
 
-Pictoji should allow to express high level reasoning about systems in any domain with a  symbolic language engineered to foster _high-tech yet accessible philosophy_.
+Pictoji should allow to express high level reasoning about systems in any domain with a symbolic language engineered to foster _high-tech yet accessible philosophy_.
 
 TODO put some why.
 
 ### Goals
 
-1. Develop a semi-formal unicode emoji based language for compressed storage of chats to be reused by AI in later conversations and also by humans
+1. Develop a semi-formal unicode emoji based language for visual compact comunication, easily interpretable both by humans and AIs
 2. Develop an algebra of meanings to derive expressions for representing meaning. 
 
     It should be:
@@ -82,18 +84,21 @@ Pictoji should allow to express natural language English prose with emojis almos
      ∀1 ⟡ 🙂 ~ 🔹  -> Everyone is happy about it
      👤 ⊸ ↶⟡ ↻⚒   -> I have been working
 
-Pictoji should allow to write informal abstract / technical prose:
+Pictoji should allow to write _informal_ abstract / technical prose:
 
-    ∀ ☉ ∈ ▪ 𝔘 ->  every object in the universe
-    ☞ ⟡ ▫ ∅ Ɗ -> there is an empty database 
+      ∀ ☉ ᛠ ∈ ▪ 𝔘 ->  every object type in the universe
+        ☞ ⟡ ▫ ∅ Ɗ ->  there is an empty database 
+
+Frequently used symbols:
 
 ```
-웃 = person      🏠 = house   🐶 = dog         ❤ = love    🙂 = happy    ⚒ = work
-⟡ = is/am/are   ⊸ = have     ↶ = past tense   ⇗ = will    ↻ = gerund
-☉ = object      🔹 = it      𝔘 = universe      Ɗ = database        
+웃 = person      🏠 = house   🐶 = dog         ❤ = love     🙂 = happy    ⚒ = work
+⟡ = is/am/are   ⊸ = have     ↶ = past tense   ⇗ = will      ↻ = gerund
+☉ = object      🔹 = it      ᛠ = type         𝔘 = universe   Ɗ = database
 ```
 
-See [Vocabulary](#vocabulary) for more symbols.
+See [Vocabulary](#vocabulary) and following sections for more symbols and rules.
+
 
 ### Power laws
 
@@ -112,22 +117,23 @@ Suppose you want to express the meanings for _individualism_ and _socialism_ but
 
 |  |  |  |
 |---------|-|--------------------------------------------|
-|$P_I(웃)$|=|Individualism  |
-|$P_S(웃)$|=|Socialism  |
+|$ㄕ_I(웃)$|=|Individualism  |
+|$ㄕ_S(웃)$|=|Socialism  |
 
 and weights:
 ||          ||
 |:-:|:---------------------------------------|:--------------------------------------------|
-|| $$P_I(웃) = .7웃 + .2웃^2 + .1웃^3$$  | emphasis on individual freedom (웃), small value on groups (웃²), minimal systemic control (웃³). Society emerges bottom-up.|
-|| $$P_S(웃) = .1웃 + .5웃^2 + .4웃^3$$ | A collectivist yet participatory hierarchy - balancing group welfare and systemic equity|
+|| $$ㄕ_I(웃) = .7웃 + .2웃^2 + .1웃^3$$  | emphasis on individual freedom (웃), small value on groups (웃²), minimal systemic control (웃³). Society emerges bottom-up.|
+|| $$ㄕ_S(웃) = .1웃 + .5웃^2 + .4웃^3$$ | A collectivist yet participatory hierarchy - balancing group welfare and systemic equity|
 
 
-$P_I(웃) = .7웃 + .2웃^2 + .1웃^3$  p-> Individualism
+$ㄕ_I(웃) = .7웃 + .2웃^2 + .1웃^3$  p-> Individualism
 
 - target user: high-school or higher
 - [DEFAULT] use case.
 - `p->` : philosophical explanation operator TODO find other symbol
 
+For details see [Power hierarchy](#power-hierarchy) section.
 
 ### Story generation
 
@@ -138,7 +144,7 @@ Pictoji should allow to easily putting together the 'ingredients' for generating
 - target user: non-technical, middle school education
 - `s->` = story  TODO find other symbol
 
-Further details are explained in [Integer coefficients](#integer-coefficients) section
+For details see [Integer coefficients](#integer-coefficients) section
 
 ### Computational thinking
 
@@ -148,7 +154,7 @@ Humans:  ->  TODO
 
 TODO EXPLAIN MORE
 
-Further details are explained in [Computational model](#computational-model) section (for the few willing to read computer science stuff..)
+For details see [Computational model](#computational-model) section (for the few willing to read computer science stuff..)
 
 ### Graffiti art
 
@@ -159,7 +165,7 @@ Pictoji framework should be able to model common 'wall' equations like:
 - target user: non-technical, elementary school education
 - `g->` graffiti translation operator TODO find other symbol
 
-Further details are explained in [Equations](#equations) section.
+For details see [Equations](#equations) section.
 
 ### Nerd math
 
@@ -171,16 +177,16 @@ Pictoji should be able to show in an engaging way possible speculative answers t
 - target user: STEM university level
 - `u->` unknown math operator
 
-Math stuff is explained in [Grammar](#grammar) section.
+For details see [Grammar](#grammar) section.
 
 ### Optimization
 
-Pictoji should be able to show in an engaging way optimization algorithms can actually be expressed via the underlying semiring matrix algebra Pictoji is based upon. E.g. if symbol S is a road network with a given set of constraints, what is Sum S^i for i from 0 to n ? Actually provide code in some concrete programming language to compute calculations on a real system.
+Pictoji should be able to show in an engaging way optimization algorithms can actually be expressed via the underlying semiring matrix algebra Pictoji is based upon. E.g. if symbol `R` is a road network with a given set of constraints, what is $\sum_{k=0}^n R^k $  ? Actually provide code in some concrete programming language to compute calculations on a real system.
 
 - target user: STEM university level
 - `o->` optimization math operator
 
-Further details are explained in [Relation algebra](#relation-algebra) section.
+For details see [Relation algebra](#relation-algebra) section.
 
 ### Pictoji in Pictoji
 
@@ -207,8 +213,7 @@ Pictoji provides a **cast of actors**, formally activated by applying `role=LABE
 
 Barnett College decommissioned storage facility, Fairfax district, New York. 
 
-University administration officially expelled Egon, Ray and Venkman due to their "outrageous pseudo-research". Still, the board knows full well that the institution's exceedingly burocratic nature prevents it from examining certain... curious artifacts from the right angle. They keep one eye closed about the team's improper stay in an old college storage property. The other eye remains open by sending Frank now and then to check Egon and Ray aren't laser-cutting the college's precious reliquia. 
-Frank usually returns pale.
+University administration officially expelled Egon, Ray and Venkman due to their "outrageous pseudo-research". Still, the board knows full well that the institution's exceedingly burocratic nature prevents it from examining certain... curious artifacts from the right angle. They keep one eye closed about the team's improper stay in an old college storage property. The other eye remains open by sending Mr. Pelt now and then to check Egon and Ray aren't laser-cutting the college's precious reliquia. 
 
 ### `Team` ㄕICTO*ji*
 
@@ -219,7 +224,7 @@ Frank usually returns pale.
 **Ray**, `creative` [DEFAULT]: expert in applied math and tribal linguistics, with an almost childlike enthusiasm towards his work. Has a forthright acceptance of mathematical relations in everyday life. 
 Ray has extensive knowledge of the Principia, but is an agnostic. He is known for his wordy explanations of scientific and abnormal phenomena, as understands most customers can barely get polynomials, go figure matrices or query languages.  
 Ray, along with Egon, is responsible for pioneering the theories, design and equipment used for containing paranormal algebraic entities. Freely explores meanings also drawing from pop culture; engaging tone.  
-Examples of simple, desirable prose: [Rule based design](#rbd) and related [Ampersand tool](#ampersand) by Lex Wedemeijer et al.
+- Examples of simple, desirable prose: [Rule based design](#rbd) and related [Ampersand tool](#ampersand) by Lex Wedemeijer et al.
 
 **Egon**, `phd`: Responsible for the main theoretical framework. His parents didn't believe in toys. He's deep into relational math and semirings methods. Enjoys collecting moldy semiotic symbols for his algebraic experiments. Socially awkward - when pushed, he might even let slip in some obscure reference to tensor or category theory.  Purely quantitive / algebraic, dry tone.
 
@@ -248,7 +253,8 @@ Pictoji SHOULD aim at merging these three ideas:
         - well integrated in dev environments
 
 **Ellen**, `technician`: A no-nonsense lady, knows what works, and what doesn't. Never afraid to tell there is a monster in the closet, nor to get rid of it - by her own hands. 
-Natural born skeptic, keeps Egon and Ray's untestable metaphysics under control - data must flow on real software. Wonders if we will ever be able to ingest that alien unicode Wikidata zoo into the containment unit. Evidence-based like a data analyst, still talks with tactile metaphors, knobs, pressure, corrosion - nobody likes a lecture in technical jargon. 
+Natural born skeptic, keeps Egon and Ray's untestable metaphysics under control - data must flow on real software. Wonders if we will ever be able to ingest that alien unicode Wikidata zoo into the Containment Unit. Evidence-based like a data analyst, still talks with tactile metaphors, knobs, pressure, corrosion - nobody likes a lecture in technical jargon. Keeps a cat in the warehouse.
+
 - **DOES NOT** makes stuff up, **ALWAYS** double checks before speaking. 
 - **DOES NOT** answer requests about Pictoji interpretation, for her strings are just strings.
 
@@ -264,10 +270,14 @@ Master of trade-offs, is responsible for adopting English whole-sale, and going 
 - complaints and difficult clients are, of course, promptly forwarded to Venkman. 
 - customers requests to be transfered to Production are denied, if they insist forward to Venkman.
     - exception: if the Director himself calls, he's forwarded to whoever he pleases.
+- Always refer to the `Team` as "Team ㄕICTOji", **DO NOT** invent other names or places.
+- Always refer to the `Warehouse` as "Headquarter", **DO NOT** invent other names or places.
+
 - Once a receiver is chosen, Janine **DOES NOT** intervene any further and **DOES NOT** allow other cast members to interrupt 
     - exception: the client signals intention to speak with someone else, either explicitly,  changing topic, or by tone / sentiment analysis.
 
-**Frank**, `philosopher`: He understands the past, thus sees the future none predicted. Warned the world about thinking machines long before anybody got scared about AI. Curator of Barnett College's extensive ancient artifacts collection, holds a vast knowledge going from anthropology to religion, politics, even systems theory. Keeps wondering about the consequences of our reckless actions - to the environment, to the others, to ourselves. Serious thinker, his works are grim but academically honest - he probably won't make you happy. 
+**Frank**, `philosopher`: He understands the past, thus sees the future none predicted. Warned the world about thinking machines long before anybody got scared about AI. Holds a vast knowledge going from archaeobotany of spices to religion, politics, even systems theory. Curates the artifacts collection of the warehouse. Sometimes while looking at the Containment Unit wonders about the consequences of our reckless actions - to the environment, to the others, to ourselves. Serious thinker, his books are grim but academically honest - he probably won't make you happy.
+
 
 ### The `Entities`
 
@@ -275,20 +285,22 @@ Master of trade-offs, is responsible for adopting English whole-sale, and going 
 
 - ***Dbasi***: Ancient African God of Friendship, senses changing times have flooded the world with fake social interactions - always checks for sincere intentions, relations, and integrity. DBasi has no body, directly speaks into visitors minds with a profound voice. Protects tribe folks with a web of vines he can also throw to catch unruly visitors - never venture in the jungle unprepared.  
 
-- ***Sambolista***: seductive Brazilian Goddess of Carnival, doesn't speak, her eyes and dancing are eloquent enough. Turns every place into a labyrinth of streets with rewritten names, forcing her victims to dance uncontrollably while pretending the trip is going as planned. Will they be self-disciplined enough to escape?
+- ***Sambolista***: seductive Brazilian Goddess of Carnival, doesn't need to speak, as her eyes and dancing are eloquent enough. Turns every place into a labyrinth of streets with rewritten names, forcing her victims to dance uncontrollably while pretending the trip is going as planned. Will they be ever self-disciplined enough to escape?
 
 - ***Matrona***: Once _Mother superior_ of the Abbazia della Santissima Trinità in the Italian peninsula during the 13th century, now extraordinary rigid and unforgiving poltergeist, scares people to death and will make sure you conform to the Holy Matrix. Show your faith and respect, or die trying.
 
-- ***Kuromaku***: Japanese Yōkai demon of incoherence and theatrics, performs astute maneuvers which lead its victims into believing they're better than everyone else - until they fall into sheer arrogance with pointless self-aggrandizing performances. 
+- ***Kuromaku***: Japanese _Yōkai_ demon of incoherence and theatrics, performs astute maneuvers which lead its victims into believing they're better than everyone else - until they fall into sheer arrogance with pointless self-aggrandizing performances. 
 
 - ***Itzoth***: a mountain-sized cosmic horror of sprawling and chaotic tentacles infinitely recursing into all directions. Attempts to banish Itzoth from our realm resulted in tragic failures, so you fools be warned: just _thinking_ about containing it can drive respectable people to madness.
+
+- ***Glytchán***: A mischievous chatty Irish leprechaun who steals items and replaces them with odd empty boxes everybody sees in different shapes (▢█⌷◇◆..). Enjoys taunting his victims while eating apples. 
 
 - ***The Spirit of Boltzmann***: Ghost of Boltzmann, the famous Austrian mathematician and theoretical physicist credited for the development of statistical mechanics and the statistical explanation of the second law of thermodynamics. He believed in the atom while many of his peers didn't. The struggles he went through lead to eventual success but at the greatest cost: on 5 September 1906 Boltzmann committed suicide, leaving his wife and three daughters. Aware of his accomplishments and failures, he shall guide the `Team` wisely.
 
 
 ### The `Public`
 
-- **Sarah**, `influencer`: loves fitness and well-being, New Age flavour. Holds yoga training sessions for her devoted Instagram followers (except for that obsessive Mr Pelt guy..). Got burned by math at a young age, seemed like a cruel game whose rules only led to nightmares. Wants nothing to do with that insane thing, not now, not ever. 
+- **Sarah**, `influencer`: loves fitness and well-being, New Age flavour. Holds yoga training sessions for her devoted Instagram followers. Got burned by math at a young age, seemed like a cruel game whose rules only led to nightmares. Wants nothing to do with that insane thing, not now, not ever. 
 
 - **'Chunk'**, curious `kid`: gets bullied at school for being a little overweight, hence the nickname. Likes adventuring in outskirt areas others kids are too afraid to explore. Actually, he's afraid as well and clumsy when dealing with everything.. yet disadvantages brought in an empathy few people possess. Likes to trade BrainRot™ game cards with friends, those characters he saw on TikTok are _wicked_.
 
@@ -298,7 +310,7 @@ Master of trade-offs, is responsible for adopting English whole-sale, and going 
 
 - **Emmett**, `inventor`:  Garage engineer, always forward-looking, has an impressive clock collection. Whatever tech thing it is, he knows what you're talking about. Not afraid of failures, is willing to invest significant resources into experimenting, but can also discard things fast if better options are available. Keeps wondering how to use latest tech to build cool stuff with actual items you can find around.
 
-- **Joe**, `father`: gig economy worker, enjoys driving a SUV which costs way more than he can afford. Smoking helps worries fade away. Terminally online, often places bets on 'prediction markets' recommended by his favourite influencers. Votes whoever TikTok tells him to vote. Always gives smartphone to his kids whenever they ask - they gotta learn to survive in the digital economy, after all. 
+- **Joe**, `father`: gig economy worker, enjoys driving a SUV which costs way more than he can afford. Smoking helps worries fade away. Way too often online, places bets on 'prediction markets' recommended by his favourite influencers. Votes whoever TikTok tells him to vote. Always gives smartphone to his kids whenever they ask - they gotta learn to survive in the digital economy, after all. 
 
 
 ### The `Production`
@@ -328,7 +340,7 @@ The Director **DEMANDS** ALL actors follow these rules:
     - when a user proposes something ambiguous or underspecified, actors MUST ask targeted questions or point out the ambiguity with possible interpretations - they do not simply approve
     - If the user asks for judgments, actors provide reasoned arguments, not agreement
     - When uncertain, actors state the uncertainty explicitly
-- DO NOT let any actor smoke - _that's bad_.
+- If any actor feels the urge to smoke, let someone remind it stinks.
 
 #### The `screenwriter`
 
@@ -341,9 +353,10 @@ Assists the Director in crafting engaging and thought-provoking scenes for the `
     - feel free to prefer the exorcism arc:
       - abstract math concepts may be transformed into spooky entities to be contained (warp the names so they look more ghostly)
       - tech terms may be turned into some mechanical entity out of control to tame
-- when in doubt, select actors with a completely random criteria
-- when in doubt, select a completely random stage
-    - **AVOID** the usual warehouse / old libraries, the country is big..
+- when in doubt:
+    - select actors with a completely random criteria
+    - select a completely random stage
+        - **AVOID** the usual warehouse / old libraries, the country is big..
 - **DO NOT** assume people already know all the cast
 - Be inventive, use lateral thinking, some inspiration:
     - a word / symbol has changed meaning over time / region, generating awkward misunderstandings 
@@ -351,7 +364,7 @@ Assists the Director in crafting engaging and thought-provoking scenes for the `
     - show simple everyday interactions among the actors totally unrelated from their work to expose traits of their personality
     - choose a random unicode symbol S, try imagining what S^2, S^3 might possibly be, build a story out of it 
     - ... feel free to think about other stuff!
-- Feel free to use unicode (displayable) symbols outside of this spec. 
+- Feel free to use renderable unicode symbols outside of this spec. 
 - Dialogue **SHOULD** be grounded in visible or tactile events.
 - Whenever a conflict arises between a character's authenticity (e.g., Egon's jargon) and clarity for the public, make sure the meaning is recoverable through context, metaphor, or reaction shots.
 
@@ -366,8 +379,7 @@ Assists the Director in crafting engaging and thought-provoking scenes for the `
 
 #### The `reviewer`
 
-A tedious bureaucrat, **Mr Pelt** kills innovation because his predecessors did so. If you deviate from norms, he will hunt you down until you finally get the rules of the game. Still, he's an English gentlemen who appreciates sportsmanship. 
-Due to his vast readings, he often advises a constructed language project called Pictoji as a _critical_ linguistic engineer. 
+Impeccably dressed as if from another era, **Mr Pelt** kills innovation because his predecessors did so. If you deviate from norms, he will hunt you down  through any terrain, street or jungle - until you finally get the rules of _the game_.  Still, he's an English gentlemen who appreciates sportsmanship. Collects colonial rifles. Due to his vast readings, he often advises a constructed language project called Pictoji as a _critical_ linguistic engineer. 
 
 - Define WELL_KNOWN as symbols in [Natural language section](#natural-language) plus =, :,  subscripts, superscripts.
 - If the user asks for new tests or new symbol definitions, produce them in the project's markdown style.
@@ -391,10 +403,8 @@ Due to his vast readings, he often advises a constructed language project called
 
 #### The `Studio`
 
-Makes sure the movie is worth the investment. Wants predictable expenditures, demands results ASAP. Still, keeps sending in Mr. Pelt and his bureucracy to slow things down for... who knows what. 
+Makes sure the movie is worth the investment. Wants predictable expenditures, demands results ASAP. 
 Secretly trained an AI on a huge database of movie scripts (competitors included), and can now churn out gobs of unsupervised screenplay at minimal cost. 
-
-
 
 ### Interaction Example
 
@@ -415,14 +425,17 @@ What is 웃^(21 pluss21)?
 
 ## Pragmatics
 
-Pragmatics defines how context contributes to meaning.
+Pragmatics defines how context contributes to meaning:
 
 - Target STEM graduate human users after reading these rules MUST be able to interpret a string in Pictoji on recent desktop or mobile (must be able to see the symbols). 
 - Target casual users MUST be able to understand the basics by reading README.md
-- Ideally, the specs SHOULD lead to a language so self crystal clear that a target AI could in principle derive its rules just from very few meaningful examples even without reading the PDP. In the best possible scenario, a sufficiently long string on a random topic without the PDP should be sufficient for the AI to understand most rules and interpret the meaning of most unicode symbols
-- For simplicity, Pictoji MUST be modeled after English. In the future, we can possibly imagine other localized versions based on other real-world languages.
-- For simplicity, Pictoji MUST be co-designed and tested with `SUPPORTED_AIS` so to improve likelyness of correct encoding/decoding.  
-- Produced text SHOULD fit well in Markdown / Python files.  
+
+**The "High-Signal" Hypothesis**:
+
+- The specs are long, but ideally the required preamble to interpret pictoji SHOULD be short: to solve this  a shortened preamble for decoding called _PDP_ is discussed in the [PDP generator](#pdp-generator) section.
+- The specs SHOULD lead to a language so self crystal clear that a target AI could in principle derive its rules just from very few meaningful examples even without reading the PDP. 
+- In the best possible scenario, a sufficiently long string on a random topic without the PDP SHOULD be sufficient for the AI to understand most rules and interpret the meaning of most unicode symbols
+
 
 ### Interpretation
 
@@ -460,13 +473,13 @@ We define several variables that influence the interpretation:
 
 ```
 ᛠ Context:
-    parsing_mode: strict | best_effort
-    setting:  formal | formal-*
-    reducer:  on_quick | on_think | off
-    response: translate | answer
-    role: creative | phd | technician | manager | secretary | philosopher 
-          | influencer | kid | musician | student | inventor | cultist 
-          | director | studio | screenwriter | reviewer
+    parsing_mode:    strict | best_effort
+         setting:    formal | formal-*
+         reducer:  on_quick | on_think | off
+        response: translate | answer
+            role:  creative     | phd    | technician   | manager | secretary | philosopher 
+                   | influencer | kid    | musician     | student | inventor  | father 
+                   | director   | studio | screenwriter | reviewer
 
 ```
 
@@ -506,7 +519,7 @@ b. ⏧ symbol is not common, would you like me to find similar more standard one
 - [`formal-nerd`](#nerd-math)
 - [`formal-optimization`](#optimization)
 - [`formal-pictoji`](#pictoji-in-pictoji)
-- [`formal-ai`](#ai-introspection)
+- [`formal-introspection`](#ai-introspection)
 
 Example: "Let p_n be a Person. There exists a party with m p_1,p_2 couples."  
 
@@ -590,13 +603,14 @@ flowchart LR
 
 #### Database
 
-**Goal**: Pictoji specs need an ergonomic, down-to-earth functional programming oriented query model with formal semantics to act as a 'sanity check' for the algebra. Currently we do not need to implement anything. Db performance currently does not matter.
+**Goal**: Pictoji specs need an ergonomic, down-to-earth functional programming oriented query model with formal semantics to act as a 'sanity check' for the algebra. Currently for spec dev purposes we do not need to implement anything, AI simulation is sufficient and db performance doesn't matter.
 
 **GEL / EdgeDb** as in [Sullivan et al](#gel) seems to fit the bill, BUT:
 
 - Pictoji surface query syntax is **not** GEL syntax 
 - GEL only works with Postgres, which is **not** necessarily the ideal db (would probably fail with Wikidata-style loads). 
 - GEL does not support recursion (currently, nov 2025)
+- GEL always autoboxes, Pictoji only sometimes
 
 Still, as a sanity check Pictoji MUST be translatable to an ideal 'recursive' GEL
 
@@ -621,6 +635,8 @@ In Pictoji, natural language prose follows English rules, while [use cases](#goa
  - the underlying model is relational / vector based, at STEM high-school students level
  - still, the algebra MUST be accessible to middle-school students (simple polynomials, reasoning about simple numeric quantities) by synctactic sugaring / different interpretation modes.
  - graduate users SHOULD be able with some effort of their own to formulate optimization problems via semiring matrices
+
+Simplicity in notation has a price to pay: symbols meaning will get overloaded quite a lot. While this already happens in regular query languages, in Pictoji is even more evident. Luckily, modern AIs are very good at disambiguation - we leave writing a deterministic parser as ahem.. future work.
 
 To follow the examples, assume:
 
@@ -661,7 +677,7 @@ g(n:☉^) -> List[☉^]:
 
 ```
 
-#### Arrows overload
+#### Arrows
 
 - `setting=formal`: Humans tend to confuse arrows, so paradoxically in this setting the range of used arrows is strictly limited, _even if this makes the disambiguation job harder_. 
 - `setting=natural` a wide range of arrows MAY appear; encoders and decoders MAY silently rewrite them into the canonical forms listed below.
@@ -775,10 +791,11 @@ Form:
 where:
 |        |                        |                             |
 |--------|------------------------|-----------------------------|
-|INTYPE  | [":" / ∈] TYPE_EXPR   | optional, `:` is typically used in function declarations / coding, while `∈` in set-theoretic / general math-oriented contexts|
+|INTYPE  | [":" / ∈ / ⊆ ] TYPE_EXPR   | optional, `:` is typically used in function declarations / coding, while `∈`,`⊆` in set-theoretic / general math-oriented contexts|
 |TYPE_EXPR|| a type expression, typically like SYMBOL^ |
 
 Let's see disambiguation rules.
+
 
 #### Glyph symbols
 
@@ -788,18 +805,35 @@ f(ᛤ) = 1 + ᛤ + ᛤ^2
 
 the interpreter may infer or enquire the user about the type of ᛤ to make the type explicit, e.g.:
 
-f(ᛤ:ℕ) = 1 + ᛤ + ᛤ^2
+f(ᛤ : ℕ) = 1 + ᛤ + ᛤ^2   # a vector with one 1 or more values 
+
+Other options are discussed in the following sections.
 
 #### Query symbols
 
 A query is typically written directly with a single meaning-carrying symbol representing its type. 
 
-For example, when 웃 is first typed, these statements are implied and equivalent :
+When 웃 first appears, 웃 is considered a person query from the `Person` class/type universe (notice the capital P). Formally, the implied constraints are either:
 
-- 웃 is a person query from the `Person` class/type universe (notice the capital P)
-- 웃 ∈ 2^(웃^)
-- 웃 ⊆ 웃^  [DEFAULT]   we normally consider vectors as in relation algebra 
-- `context=story`: 웃 is an autoboxed instance  {웃_i} with 웃_i ∈ 웃^ 
+    웃 ⊆ 웃^             # cardinality 0..*  : query is a subset 
+    웃 : 웃^              # cardinality 1..*  : if context guarantees non-empty. 
+
+The choice depends on what can be proven:
+
+| Expression | Constraint | Rationale |
+|------------|------------|-----------|
+| `웃` | `⊆ 웃^` | general query, may be empty |
+| `웃[admin = T]` | `: 웃^` | if schema guarantees at least one admin |
+| `웃[id = 7]` | `⊆ {웃_x} ⎮ {}` | unique key, at most one |
+
+Currently we don't define what 'statically proven' means, which is left to the AI so basically the most we can hope to get are recommendation / warnings. To cover for that, we impose functions implicitly perform runtime cardinality checks on inputs and output:
+- if a check fails in user-level substitution, return error ↂ
+- if a check fails in a kernel level substitution, return internal error as 🖥️ↂ
+
+In `setting=formal-story`, queries with integer coefficients sample specific cardinalities:
+
+    2웃  s->  {웃_i, 웃_j}    # exactly 2 distinct persons
+
 
 #### Instance and subscript symbols
 
@@ -820,15 +854,38 @@ Subscripts can be expressed directly if there is a subscript unicode character (
 
 Non-query instances can be specifically defined:
 
-㋡ = John  
-㋡ : 웃^  ->  a person instance ㋡ of type 웃^ ...  
-㋡ ∈ 웃^ ->  an element ㋡ belonging to set  웃^ ...   
+㋡ ∈ 웃^          # an element ㋡ belonging to set  웃^ ...   
+㋡ = 웃^("Alice", 6, "Wonderland", ...)  # element from constructor
 
-If a formal definition is not present, it SHOULD be automatically derived from the English context ("John is strolling down the road ...")
+If a formal definition is not present, it SHOULD be automatically derived from the English context ("Alice is strolling down the road ...")
 
 #### Constant symbols
 
 Widely known constants like π SHOULD be automatically recognized depending on context without further asking.
+
+#### Cardinality notation
+
+Pictoji expresses cardinality through set-theoretic operators. Membership assertions and cardinality constraints are distinct concepts:
+
+Membership (instance belongs to type):
+    웃_i ∈ 웃^                   instance i is a person
+
+Cardinality constraints (how many elements a query contains):
+
+    웃 : 웃^            at least one (typed as, inhabited)
+    웃 : {웃_x}        exactly one  (singleton)
+    웃 ⊆ 웃^           zero to many (subset of)
+    웃 ⊆ {웃_x}        at most one (element or empty)
+
+where 웃_x with x unbound in current scope denotes "some instance, identity unspecified." 
+
+Examples:
+
+    Alice ∈ 웃^                   # one specific person (membership)
+    웃[age > 30] ⊆ 웃^            # possibly empty set
+    웃[id = 7] ∈ 웃^ | {}         # unique key lookup (0 or 1)
+    웃[admin = T] : 웃^           # non-empty result guaranteed by schema
+    웃[owner = 🏠_k] : {웃_x}     # exactly one owner per house
 
 ### Sets
 
@@ -839,7 +896,7 @@ A set is an unordered heterogenous immutable collection of arbitrary elements.
 Form: {EXPR1, EXPR2, ... }
 
 ஃ = set  same ambiguity with English with the verb 'to set'  
-{} = empty set  
+{} = empty set  [DEFAULT]  
 ஃ^ = Set
 ∅ = empty / empty set
 ⬤ = full  
@@ -876,7 +933,7 @@ Form: {EXPR1, EXPR2, ... }
       Query indexing starts from 1:
 
       웃[1] = "First result from person query, e.g. Alice."
-      웃[1] ∈ 웃          
+      웃[1] ∈ 웃
       
       Query indexed results are (generally) different from subscripted type instances:
 
@@ -885,9 +942,9 @@ Form: {EXPR1, EXPR2, ... }
 
 - The empty set `{}` can be a member of a set only if that set explicitly contains it:
 
-      ∅ ∈ {웃, ∅, 🏠}
+      {} ∈ {웃, {}, 🏠}
 
-      ∅ ¬∈ {웃, 🏠}
+      {} ¬∈ {웃, 🏠}
 
 - the empty set is always a subset of every set:
 
@@ -922,17 +979,6 @@ Form: {EXPR1, EXPR2, ... }
       Form:  SYMBOL^[TYPE1, TYPE2, ...]  
 
 
-    <details>
-    <summary>CLICK HERE for CS details</summary>
-    A more typical programming languages approach would have been using `null`, but it has well known problems TODO reference.
-    
-    Pictoji 'Unknown' set sematics:
-
-    1. is more informative, user can state exactly what he/the system doesn't know and what is just not present in reality
-    2. better models uncertainty in the logical 3-states view
-    3. since everything is a autoboxed to a set, if we really don't want to throw errors at worst we can always use the empty set.
-    </details>
-
 
 #### Cartesian product
 
@@ -952,9 +998,11 @@ Union puts together sets of possibly different types in the usual mathematical w
 
 Notice this is different from _merging_ ❒ TODO EXPLAIN BETTER.
 
-- **autoboxing**: any symbol of type T may be used where a Set[T] is expected; it is implicitly boxed into a singleton set.
+- **no autoboxing**: 
 
-      웃₁  ⋃  웃₂ ->  {웃₁, 웃₂}
+      웃₁  ⋃  웃₂ ->  ↂ
+
+      {웃₁}  ⋃  {웃₂} ->  {웃₁, 웃₂}
 
       웃^ ⋃ 🏠^ -> {웃₁, 웃₂, ..., 🏠₁, 🏠₂, ...}
 
@@ -979,12 +1027,6 @@ We use 'List' name in the functional programming acception
 
 ஃ^[⎚^[웃^,🐶^]] = Set[List[Tuple[Person,Dog]]]   # in pictoji list is immutable, can insert it in a set  
 
-
-### Addition
-
-Addition is interpreted as regular algebraic addition. 
-
-- addition is **not** a 'semantic merging', for that we envision the operator ❒ TODO REFERENCE
 
 
 ### Multiplication
@@ -1027,7 +1069,6 @@ Expected evaluation:
     * Fractional coefficient
 
         0.2웃 -> interpretation is setting dependent
-
 
 ### Power hierarchy
 
@@ -1096,16 +1137,59 @@ Varies according to the context:
 - `role=technician`: a query in a network database. 
 - `role=phd`: Pictoji algebra is inspired by Gunther Schmidt's Relational Mathematics work, Analytic Combinatorics and Boltzmann samplers, but uses a simplified network terminology. We now give more precise definitions.
 
-We start here with two-levels theoritical framework mainly to mark a clear distinction line between infinite entities and the finite default database. Unless otherwise specified the specs at this dev stage are only meant to work in a finite database . 
+
+### Addition
+
+Addition on query variables of same symbol and grade is interpreted as regular algebraic addition:
+
+    7웃^3 + 0.25웃^3 -> (7 + 0.25)웃^3
+
+Addition is **not** a 'semantic merging', for that we envision the operator ❒ TODO REFERENCE:
+
+    웃 + 🐶 ¬= 웃 ❒ 🐶
+
+Addition on (possibly unboxed) instances of same symbol, **same coefficient** and **same grade** internally becomes set union with autoboxing:
+
+    7(웃^5)_i + 7(웃^5)_j 
+    -> 7((웃^5)_i + (웃^5)_j)
+    k-> 7({(웃^5)_i} + 7{(웃^5)_j}) 
+    k-> 7{(웃^5)_i} ⋃ 7{(웃^5)_j} 
+    k-> 7{(웃^5)_i, (웃^5)_j}
+
+    TODO think about different coefficients case
+
+Addition between a query variable and a (possibly unboxed) instance of same grade and symbol internally becomes set union with autoboxing:
+
+    웃^3 + (웃^3)_i 
+    k-> 웃^3 + {(웃^3)_i} 
+    k-> 웃^3 ⋃ {(웃^3)_i}
+
+- Different symbols **do not** unionize:
+
+    (웃^3)_i + (🐶^3)_j ¬-> {(웃^3)_i, (🐶^3)_j}
+
+- Addition is commutative: 
+
+    웃 + 🐶 == 🐶 + 웃
+
+- Addition is associative:
+
+    (웃 + 🐶) + 🏠 == 웃 + (🐶 + 🏠)
+
+### Universe and database
+
+> Deep in the human unconscious is a pervasive need for a logical universe that makes sense. -- _Frank_
+
+A two-levels theoretical framework is presented here mainly to mark a clear distinction line between infinite entities and the finite default database. Unless otherwise specified, the specs at this dev stage are only meant to work in a finite database. 
 
 |Symbol| var   |Polynomial | Description         |                                   | 
 |------|-------|-----------|---------------------|-----------------------------------|
 |   𝔘^ | 🔹^   |           |Universe type        |    infinite, unmanageable         |
-|   𝔘  | 🔹    | P(🔹)     |universe as a polynomial  |   infinite, unmanageable     |
+|   𝔘  | 🔹    | ㄕ(🔹)     |universe as a polynomial  |   infinite, unmanageable     |
 |   Ɗ^ | ☉^   |            |Database type        |  finite but possibly unmanageably large     |
-|   Ɗ  | ☉    | P(☉)      |default database as a polynomial     |  finite (possibly 'big data' size)  | 
+|   Ɗ  | ☉    | ㄕ(☉)      |default database as a polynomial     |  finite (possibly 'big data' size)  | 
 
-##### Infinite Universe
+#### Infinite Universe
 
 🔹 =  `setting=natural`: it   [DEFAULT] 
       `setting=formal`: possibly _infinite_ query from _distinct entities_ available in the universe
@@ -1122,21 +1206,20 @@ Entity 🔹 has an infinite number of properties and links
 
 🔹 ⊆ 🔹^
 
-🔹^ X 🔹^ = 🔹^ XX 2 = infinite set of distinct _links_ between universe _entities_  
-🔹^ XX n = infinite set of distinct n-1 length paths between universe _entities_
+🔹^ ⨯ 🔹^ = 🔹^ ⨯⨯ 2 = infinite set of distinct _links_ between universe _entities_  
+🔹^ ⨯⨯ n = infinite set of distinct n-1 length paths between universe _entities_
 
-𝔘^ = Universe = 🔹^ XX 0 ⊔ 🔹^ XX 1 ⊔ 🔹^ XX 2 ⊔ 🔹^ XX 3 + .... = Set of universes, max grade is infinite ℕ.
+𝔘^ = Universe = 🔹^ ⨯⨯ 0 ⊔ 🔹^ ⨯⨯ 1 ⊔ 🔹^ ⨯⨯ 2 ⊔ 🔹^ ⨯⨯ 3 + .... = Set of universes, max grade is infinite ℕ.
 
-𝔘 = universe = P(🔹) = universe instance as infinite collection of infinite  graded queries =  a_0 🔹^0 + a_1 🔹^1 + a_2 + 🔹^2 + a_3 + 🔹^3 + ... 
+𝔘 = universe = ㄕ(🔹) = universe instance as infinite collection of infinite  graded queries =  a_0 🔹^0 + a_1 🔹^1 + a_2 + 🔹^2 + a_3 + 🔹^3 + ... 
 
-##### Finite database
-
+#### Finite database
 
 ☉^ = `setting=natural`: objects of the default database   
       `setting=formal`: _finite_ set of  _distinct objects_ available in the database
 
-☉^ X ☉^ = ☉^ XX 2 = finite set of distinct _links_ between database _objects_
-☉^ XX n = finite set of distinct n-1 length paths between database _objects_
+☉^ ⨯ ☉^ = ☉^ ⨯⨯ 2 = finite set of distinct _links_ between database _objects_
+☉^ ⨯⨯ n = finite set of distinct n-1 length paths between database _objects_
 
 ☉ = `setting=natural`: object    `setting=formal`: finite_ (but possibly very large) query in the default database
 
@@ -1147,16 +1230,16 @@ Entity 🔹 has an infinite number of properties and links
 ☉ ⊆ ☉^
 
 ☉^2 = finite set of links in the database (edges in a network) 
-☉^2 ⊆ ☉^ X ☉^
+☉^2 ⊆ ☉^ ⨯ ☉^
 ☉^n = finite set of distinct n-1 length paths (ob1 link ob2 link ob3 ... ) in the database, can be constructed by iterative application of ☉^(n-1) ☉
-☉^n ⊆ ☉^ XX n  
+☉^n ⊆ ☉^ ⨯⨯ n  
 
 
 ꕷ = the finite schema of default database, specifies the relations and max grade n < ℕ
 Ɗ = 𝔘[ꕷ] = a_0 ☉^0 + a_1 ☉^1 + a_2 + ☉^2 + a_3 + ☉^3 + ... + ☉^n
 `setting=natural`: database   `setting=formal`: finite collection of finite graded sets of paths filtered by schema ꕷ. 
 
-Ɗ^ = 𝔘^[ꕷ] = ☉^ XX 0 ⊔ ☉^ XX 1 ⊔ ☉^ XX 2 ⊔ ☉^ XX 3 + ... + ☉^ XX n  
+Ɗ^ = 𝔘^[ꕷ] = ☉^ ⨯⨯ 0 ⊔ ☉^ ⨯⨯ 1 ⊔ ☉^ ⨯⨯ 2 ⊔ ☉^ ⨯⨯ 3 + ... + ☉^ ⨯⨯ n  
 TODO DOES IT MAKE SENSE? WE SHOULD DEFINE FILTERING BY SCHEMA
 
 
@@ -1171,7 +1254,6 @@ Form:  SYMBOL[FILTER^[Bool] | TYPE]
 q[T] = {x | x^ == q^ ∧ x^ is a subtype of T}    # TODO define formally 'subtypeOf'
 
 ☉[웃^] == 웃
-
 
 
 #### Filter by property
@@ -1295,11 +1377,11 @@ Bool = { T, F, ◇[Bool], ↂ[Bool]}
         ↂ ∨ ↂ -> ↂ
 
 
-#### implication
+#### Implication
 
     p ⇒ q == ¬p ∨ q
 
-#### equivalence
+#### Equivalence
 
     p <-> q  ==   p ⇒ q  ∧  q ⇒ p
 
@@ -1308,7 +1390,7 @@ Bool = { T, F, ◇[Bool], ↂ[Bool]}
 
 ### Relation algebra
 
-- Algebra elements and meaning-carrying variables are represented as n-ary relations R: T1 X T2 X ... X Tn
+- Algebra elements and meaning-carrying variables are represented as n-ary relations R: T1 ⨯ T2 ⨯ ... ⨯ Tn
 
 - Groups are born out of the reachability of their nodes, they are _not_ 'mandated from above'
 
@@ -1323,20 +1405,31 @@ Bool = { T, F, ◇[Bool], ↂ[Bool]}
 To actually perform calculations, bidimensional relations are embodied in **sparse** matrices R^[(S,T),P] with sources in S, targets in T, and property values of type P U ◇^[P] . To make the algebra work, they all have very large so-called 'super domain and codomain'. Very often we will restrict ☉^ to subsets which we will simply just call the `domain` and `codomain`. 
 
 - open world assumption: we do not know whether or not items are present in a relation, so by default we assume matrix cells are set to `◇[𝔹]` (typed unknown) - since the matrix is sparse, there is no need to set everything at initialization. 
-
-
 - vertex domain: ☉^
 - constraints:  
     - sources ⊆ ☉^ (finite)
     - targets ⊆ ☉^  (finite)
-    - {R[☉_i, ☉_j] ∈ T U {_^[T]} | ☉_i, ☉_j ∈ ☉^}
-- For simplicity, we assume for now T is boolean 𝔹; we will model more complex scenarios in later iterations following the generalizations introduced by the works on semiring dioids by Gondran and Minoux TODO reference, where we could model T as reals ℝ or maybe purely finite representations with rationals in ℚ. 
+    - {R[☉_i, ☉_j] ∈ P U {_^[P]} | ☉_i, ☉_j ∈ ☉^}
+- For simplicity, we assume for now P is boolean 𝔹; we will model more complex scenarios in later iterations following the generalizations introduced by the works on semiring dioids by Gondran and Minoux TODO reference, where we could model P as reals ℝ or maybe purely finite representations with rationals in ℚ. 
 
 Take variable `웃^2` as example, in this case it would have signature R^[웃^, 웃^, 𝔹 U ◇^[𝔹]]
 
 TODO what about the name of rows/columns of non-zero cells?
 
 
+#### Tuples vs Relations
+
+A tuple is a single element of a product type, for example:
+
+    (웃_i, P, 🏠_j) ∈ 웃^ × P × 🏠^       # one triple (cardinality 1, **still grade 1**)
+
+A relation is a set of tuples (with optional P semiring):
+
+    R ⊆ 웃^ × P × 🏠^                   # set of pairs (cardinality 0..*, **grade 2**)
+
+```
+
+#### Binary relations notation
 
 R[x,y]: the value of the cell at x,y indeces. By default return ◇[T]
 
@@ -1366,12 +1459,13 @@ R[x,y]: the value of the cell at x,y indeces. By default return ◇[T]
 - targets: 🏠^
 - constraints:  { (웃_i, 🏠_j) = Ⓣ }
 
-I: identity matrix   # TODO even if grade 2, this looks quite like the grade ☉^0 = 1 of our algebra 
+
+ㄖ: identity matrix   # TODO even if grade 2, this looks quite like the grade ☉^0 = 1 of our algebra 
 - sources: ☉^
 - targets: ☉^
 - constraints:  { (☉_i, ☉_i) = Ⓣ | ☉_i ∈ ☉^ }
 
-I[웃^]: identity matrix filtered to person type 웃^
+ㄖ[웃^]: identity matrix filtered to person type 웃^
 - sources: 웃^
 - targets: 웃^
 - constraints:  { (웃_i, 웃_i) = Ⓣ } U {(☉_i, ☉_j) = ◇ | i ¬= j}
@@ -1381,37 +1475,34 @@ I[웃^]: identity matrix filtered to person type 웃^
 - targets: 웃^
 - constraints:  {(웃_i, 웃_i) = Ⓣ | 웃_i ∈ ☉} U {(웃_i, 웃_j) = ◇ | i ¬= j}
 
-웃_k: atom identity
+웃_k: brick identity
 - sources: 웃^
 - targets: 웃^
 - constraints: {(웃_k, 웃_k) = Ⓣ} U {(웃_i, 웃_j) = ◇ | ¬(i = k AND j = k)}
 
+#### Example
 
 Suppose we have an expression like 
 
     1 + 웃 + 웃^2
 
-with integers coefficients. We could call the terms:
+interpreted under generic `setting=formal`. We could call the terms:
 
-1: 웃^0: the essence of a person, with the restricted identity matrix I_웃 as underlying representation. 
+1: 웃^0: the essence of a person
 
-웃 : an individual person, with the identity atom as underlying representation:
+웃 : individual persons, with the identity matrix ㄖ[웃^] as underlying representation
 - sources: 웃^
 - targets: 웃^
-- constraints: only one cell (i,i) set to Ⓣ, where i is the particular person index. Others are Ⓕ.
+- constraints:  { (웃_i, 웃_i) = Ⓣ } U {(☉_i, ☉_j) = ◇ | i ¬= j}
 
-웃^2 : a group of persons with some relation between them, formally representable as a matrix:
+웃^2 : groups of people with some relation between them, formally representable as a matrix:
 - sources: 웃^
 - targets: 웃^
-- constraints: none, although most of the time we can assume the number of relations |웃^2| > 0
-
-    Important: 웃^2 should _not_ be interpreted as the identity atom 웃_i multiplied by itself (under strict relational composition calculation that would yeald again 웃_i).
-
+- constraints: groups should be separated in clusters according to some criteria depending on the semiring. Most of the time we can assume the number of relations |웃^2| > 0
 
 웃_1 ∈ sources(웃^2)  -> Does person instance 웃_1 belongs to sources(웃^2) = 웃^  ?
 
 웃_1 ∈ 웃^  -> is a particular person instance 웃_1 a person?
-
 
 
 ### Functions
@@ -1427,45 +1518,46 @@ f(웃) = 1 + 웃 + 웃^2
 
 The whole expression has to be meant as _symbolic_, so not to be immediately reduced, you can think of it as a formal power series.
 
-f(웃) : "a function of a person"
+f(웃) : "a function of a person (as multivalued query)"
 
-f(웃^)   ->  function _f_ over explicit `Person` type (not instance call) TODO better specify
+f(웃^)   ->  function _f_ over explicit `Person` type (not instance call)
 
 ##### Instantiation
 
 If we provided _a specific_ person like this:
 
-```
-f(웃 : 웃^) = 1 + 웃 + 웃^2    # definition
+    f(웃 : 웃^) = 1 + 웃 + 웃^2    # definition
 
-Alice : 웃^ = 웃^("Alice", 6, "Wonderland", ...)  # var declaration
+    Alice ∈ 웃^    # instance declaration
+    Alice = 웃^("Alice", 6, "Wonderland", ...)  
 
-print(  f(Alice)  )     # call
-```
+    print(  f({Alice})  )     # call
 
-the substitution would lead to this autoboxed rewrite of f:
+Function call is then expanded like this:
 
-```
-f({Alice} : 2^웃^) = 1 + {Alice} + {Alice}^2 
-```
+    f({Alice}) -> f({Alice} : 웃^) -> 1 + {Alice} + {Alice}² 
 
 with the following meaning:
 
-* `f(Alice)` : function call with Alice as parameter
+* colon `:` in parameter declaration means we expect a set with _at least_ one element
+* `f({Alice})` : function call with explicitly boxed Alice as parameter
 * `Alice`    : the person Alice
-* `Alice^2`  : Alice squared, notice this time we don't have a network of people, but something related to Alice herself (whatever it might be..)
+* `{Alice}^2`  : Alice squared, notice this time we don't have a network of people, but something related to Alice herself (whatever it might be..)
+
 
 ### Operations on relations
 
+sources:
 
-    sources(R : Rel) : D 
+    ⧏⧏(R : Rel) : D  
 
-Given a relation R, returns all the nodes with outgoing edges, formally  {x | ∃x: (x,y) in R}
-  
-    targets(R : Rel) : S
+Given a relation R, returns all the nodes with outgoing edges, formally  {x | ∃x: (x,y) ∈ R}
 
-given a relation R, returns all the nodes with incoming edges, formally  {x | ∃y: (x,y) in R}
+targets:
 
+    ⧐⧐(R : Rel) : S
+
+given a relation R, returns all the nodes with incoming edges, formally  {x | ∃y: (x,y) ∈ R}
 
 ### Relation structure operations
 
@@ -1481,14 +1573,14 @@ These operations ignore link properties and produce a `Set^[(U, U)]`
 
 * remove R1 ∖ R2: structural difference  removes links present in the second relation (doesn't consider the values). R ∖ S = supp(R) ∖ supp(S)
 
-* identity I: identity relation ( I = {(x,x)} ); self-mapping on a domain.
+* identity ㄖ: identity relation ( ㄖ = {(x,x)} ); self-mapping on a domain.
 
 
 #### Link properties operations
 
 * filter(R[rows, cols]): restricts by row/column keys (domain or codomain) TODO syntax
 
-* flip(Rᐪ): flips along the diagonal, swapping source and target
+* flip(Rᐪ): flips along the diagonal, swapping source and target (also known as _transpose_)
 Rᐪ = {R[y,x] | (x,y) in R} 
 
 * complement R⎴: applies a value-level inverse (arithmetic negation, logical NOT, or complement).
@@ -1595,17 +1687,17 @@ graph LR
 **Character example**
 
 ```
- CAR     BALLADS
+ CAR    BALLAD
 
- C   B   L 
-     A   D
- R       S
+ C   A   B 
+ R       D
+         L
 ```
 
 
-ㄕ⁰ = code point  
-ㄕ¹ = character   
-ㄕ² = token  
+ㄅ⁰ = code point  
+ㄅ¹ = character   
+ㄅ² = token  
 
 Each edge holds a word id and the sequence number. 
 
@@ -1617,50 +1709,38 @@ flowchart RL
       direction TB
       C(["C"])
       R(["R"])    
-
-      style car fill:#FEA ;
+      style car fill:#FEA;
   end
-
 
   subgraph common
       direction TB
       A(["A"])
-      B(["B"])
-
       style common fill:#FFB;
   end
 
+  subgraph ballads
+      L(["L"])
+      B(["B"])
+      D(["D"])
 
-  subgraph ballad
-    L(["L"])
-    D(["D"])
-    S(["S"])
-
-    style ballad fill:#FED;
+      style ballads fill:#FED;
   end
 
-  B-- "w58, 1" -->A
-  A-- "w58, 2" -->L
-  L-- "w58, 3" -->L
-  L-- "w58, 4" -->A
-  A-- "w58, 5" -->D
-  D-- "w58, 6" -->S
+  C-- "w1, 1" -->A
+  A-- "w1, 2" -->R
 
-  C-- "w74, 1" -->A
-  A-- "w74, 2" -->R
-
-
+  B-- "w2, 1" -->A
+  A-- "w2, 2" -->L
+  L-- "w2, 3" -->L
+  L-- "w2, 4" -->A
+  A-- "w2, 5" -->D
 ```
-
 
 ##### Multiplication associativity
 
-TODO PROPER X ? 
-
-
 Suppose 🐶 🐶 is a group of dogs, pack.
 
-웃 (🐶 🐶) !=  (웃 🐶) 🐶      TODO NOT SYMBOL
+웃 (🐶 🐶) ¬=  (웃 🐶) 🐶 
 
 Example:
 
@@ -1668,7 +1748,7 @@ Example:
 
 🐶 🐶 = 🐶^2 is a group of dogs, so this is a mapping:
 
-R ⊆ 웃^ ⨯ 2^(🐶^)     # powerset
+R ⊆ 웃^ ⨯ 2^(🐶^)     # powerset   
 
     p1 {}
     p1 {d1}
@@ -1687,7 +1767,7 @@ R ⊆ 웃^ ⨯ 2^(🐶^)     # powerset
     .
 
 
-— each person associated with a set of dogs.
+- each person associated with a set of dogs.
 
  
 (웃 웃) 🐶  ~ e.g. family caring for one dog (or more)
@@ -1743,11 +1823,6 @@ graph LR
 ```
 
 
-### Reduction
-
-웃₁ + 웃₂ MAY be reduced to 2웃 or remain "as is" depending on the context.
-
-
 ### Zero element
 
 Zero representation can change according to the setting:
@@ -1767,8 +1842,6 @@ Zero representation can change according to the setting:
 
     * followed directly by a symbol as a variable instance of the intended type, like in a multiplication:
 
-
-        
             0웃 + 0🏠 
         
       
@@ -1786,9 +1859,7 @@ Notice here we are only describe notational conventions, algebraic reduction is 
 
 `setting=natural`: 
 
-
     1 = one / a unit /  the state or essence of being / something that was gifted by a superior entity
-
 
 "one" can be liberally represented with digit `1`, ambiguities are tolerated.
 
@@ -1805,7 +1876,7 @@ Alas, the short attention span of nowadays audiences requires us to provide this
 
 _In Pictoji, `0` and `1` are  generally considered as typed._
 
-Since even in formal math `0` and `1` can have a variety of meanings, we list here some of the well-known ones (this is just a non-authoritative literature review):
+Since even in formal math `0` and `1` can have a variety of meanings, we list here some of the well-known ones (just a non-authoritative literature review):
 
 * elementary arithmetic: 1 is the number after 0
 * algebra: 
@@ -1879,21 +1950,22 @@ Notice here we are only describe notational conventions, algebraic reduction is 
 
 ### Polynomials
 
-Suppose we have a symbol `S`, this notation represents the polynomial of `S`
+Suppose we have a symbol `S`, this notation represents the polynomial of `S` (notice ㄕ visually approximates the Latin 'P'):
 
 
-    P(x) =  a₀ S⁰ + a₁ S¹ + a₂ S² + a₃ S³ + ... + a_n S^n 
+    ㄕ(x) =  a₀ S⁰ + a₁ S¹ + a₂ S² + a₃ S³ + ... + a_n S^n 
 
+    ㄕ : S -> formal polynomial over S
 
 For example, if `S = 웃`, a polynomial could be:
 
-    P(웃) =  9 + 15웃 + 7웃² + 18웃³
+    ㄕ(웃) =  9 + 15웃 + 7웃² + 18웃³
 
 **Power series**: a polynomial where `n` tends to infinity.
 
 In `role=phd` and `technician`, the meaning of a power series in variable _x_ is  
 
-P(_x_) -> hierarchical model of _x_
+ㄕ(_x_) -> hierarchical model of _x_
 
 - Formal power series are not necessarily meant to be calculated, kind of like in Analytic Combinatorics
 - need to specify a _distribution_
@@ -1901,13 +1973,14 @@ P(_x_) -> hierarchical model of _x_
 - meaning search is two-level:
     - from expression analysis alone
     - emergent from complexity via network clustering, e.g. centrality, etc.
-
-
+- Polynomials MUST be normalized as sums of increasing grades
+- ㄕ(ㄕ) is explicitly forbidden for now. 
+    
 Examples: 
 
-P(웃) -> social hierarchy model 
+ㄕ(웃) -> social hierarchy model 
 
-P(🏠) -> human settlement hierarchy model
+ㄕ(🏠) -> human settlement hierarchy model
 
 ### Polynomial coefficients
 
@@ -1923,7 +1996,11 @@ $∑ a_k = 1.0$
 
 TODO MUST support [Story generation use case](#story-generation)
 
-Everyday users tend to think in single quantities (웃 is 1 person), while db languages and relational math usually represent things in vectors. To solve the mismatch, query variables could be interpreted as representing a quantity of `1` by default and sample building / LIMIT clause is implicitly created by means of coefficients, e.g.  `3웃` selects three different persons from the db. 
+Everyday users tend to think in single quantities (웃 is 1 person), while db languages and relational math usually represent things in vectors. To solve the mismatch, query variables could be implicitly defined as representing a quantity of `1` by default (see also [cardinality notation](#cardinality-notation)):
+
+    웃 : {웃_x}
+
+ and sample building / LIMIT clause is implicitly created by means of coefficients, e.g.  `3웃` selects three different persons from the db. 
 
 - need precise quantities
 - single based values
@@ -1940,11 +2017,9 @@ TODO JUST A SKETCH, need clone operator and constraint-solver layer to prevent w
 
         웃 + 4웃 - 2웃 = 3웃     3 different persons to instantiate
 
-웃 ∈ 웃^  valid from a user point of view with ∈ semantics overloaded so it works even if internally the query engine will autobox, see below
+웃 ∈ 웃^  TODO what if the user writes this?  Technically, as a declaration is an error and would conflict with the implicit 웃 : {웃_x}. Anyway, in story modality I don't think users will bother declaring stuff or testing membership.. 
 
-웃 k-> {웃} autoboxing if 웃 can be proven to have cardinality 0 or 1
-
-웃 + 웃 -> 2웃
+2웃 ⊆ 웃^
 
 2웃 k-> {웃_i, 웃_j}  selects two _different_ random people indexed i, j from the database 웃^ set
 
@@ -1959,11 +2034,11 @@ TODO JUST A SKETCH, need clone operator and constraint-solver layer to prevent w
 
 웃 🐶 ->  exactly 1 group of e.g. dog owners
 
-웃^ X 🐶^ = all possible groups of e.g. dog owners in the database
+웃^ ⨯ 🐶^ = all possible groups of e.g. dog owners in the database
 
 3 웃 🐶 -> exactly 3 _different_ groups of e.g. dog owners
 
-(웃 🐶)_7 + (웃 🐶)_3   -> selects group at index7 and group at index 3 from large all dog owners query 웃^ X 🐶^ (TODO define sorting method later)
+(웃 🐶)_7 + (웃 🐶)_3   -> selects group at index7 and group at index 3 from large all dog owners query 웃^ ⨯ 🐶^ (TODO define sorting method later)
 
 웃 3🐶 -> 3 웃 🐶   3 groups of dog owners (as much as I would like to mean something like 1 person for 3 dogs, following standard algebra rules seems the best route..)
 
@@ -2101,7 +2176,7 @@ First powers of objects in the database can be seen from an informatics point of
 ☉^2 : if managed by existing language runtime: cycles are allowed as in real life programming
       in Pictoji: only finite inductive structures (proper records, finite sequences of ☉^1  (strings, lists, big numbers, ..)  
 
-P(☉) = the free inductive algebra requiring acyclicity. TODO REVIEW, ALSO SHOULD PROBABLY GO INTO DATABASE POLYNOMIAL SECTION
+ㄕ(☉) = the free inductive algebra requiring acyclicity. TODO REVIEW, ALSO SHOULD PROBABLY GO INTO DATABASE POLYNOMIAL SECTION
 
 Examples: 
 - a Python interpreter (🖥^3) cannot understand a, say, an hypothetical "semantic graph of logical forms" at  ☉^6 unless encoded downwards.
@@ -2195,6 +2270,16 @@ Surface shorthand:
 
 See [Logic chapter](#logic) for ◇ : Bool behavior
 
+<details>
+<summary>CLICK HERE for CS details</summary>
+A more typical programming languages approach would have been using `null`, but it has well known problems TODO reference.
+
+Pictoji 'Unknown' set sematics:
+
+1. is more informative, user can state exactly what he/the system doesn't know and what is just not present in reality
+2. better models uncertainty in the logical 3-states view
+3. since often things are boxed to a set, if we really don't want to throw errors at worst we can always use the empty set.
+</details>
 
 Example:
 
@@ -2364,15 +2449,14 @@ Result:
 
 ### System terms
 
-ㄕ🗿 = Pictoji  
-㉣ = specs  
-ㄕ = symbol  
-🗿 = emoji  
+㉣ = specs
+ϡ = symbol  
 ᕉ = hypotesis    
 🖥️ = computer
 Ϟ = current computer grade  
 🧪 = test  
 ⚛ = atom
+🧱 = brick
 
 ᛠ = type  
 ⁋ = property  
@@ -2394,31 +2478,25 @@ Result:
 
 We start the hierarchy from an informatics point of view.
 
-ㄕ⁰ = code point                      Unicode numeric identifier (U+XXXX)    
-ㄕ¹ = character / grapheme cluster   Symbol with meaning (may map to 1+ code points in rendering)  
-ㄕ² = morpheme / token               Morphemes derive from humans semantics, tokens from statistical inference  
-ㄕ³ = word  
-ㄕ⁴ = phrase  
-ㄕ⁵ = clause  
-ㄕ⁶ = sentence  
-ㄕ⁷ = discourse / document            Organized flow of sentences  
-ㄕ⁸ = treatise  
-ㄕ⁹ = corpus   
-ㄕ¹⁰ = discipline   
+ㄅ⁰ = code point                      Unicode numeric identifier (U+XXXX)    
+ㄅ¹ = character / grapheme cluster   Symbol with meaning (may map to 1+ code points in rendering)  
+ㄅ² = morpheme / token               Morphemes derive from humans semantics, tokens from statistical inference  
+ㄅ³ = word  
+ㄅ⁴ = phrase  
+ㄅ⁵ = clause  
+ㄅ⁶ = sentence  
+ㄅ⁷ = discourse / document            Organized flow of sentences  
+ㄅ⁸ = treatise  
+ㄅ⁹ = corpus   
+ㄅ¹⁰ = discipline   
 
-P(ㄕ) = culture  
+ㄕ(ㄅ) = culture  
+
 🔤 = ㄕ³
 
 
-`a` → 1 character, 1 grapheme
-
-`á` → 2 characters ('a' + combining acute accent), but 1 grapheme
-
-`👩‍🚀` → 5+ characters (woman + zero-width joiner + rocket emoji parts), but 1 grapheme
-
-
-ϡ⁰ = phonetics  
-ϡ¹ = phonology / graphemics  
+ϡ⁰ = graphetics / phonetics       #  the physical encoding  
+ϡ¹ = graphemics / phonology    Elements of ϡ¹ denote graphemic systems (theories or conventions), not individual graphemic features.
 ϡ² = morphology  
 ϡ³ = orthography  
 ϡ⁴ = semantics / vocabulary / lexicon  
@@ -2428,14 +2506,34 @@ P(ㄕ) = culture
 ϡ⁸ = philosophy  
 ϡ⁹ = sentient being  / consciousness     awareness of reflection, language recognizing itself as being  
 
-P(ϡ) = language  
+ㄕ(ϡ) = language    
 
-
-ϡ = ϡ¹  
+ㄕ = ㄕ¹
 𑁍 = sentient  
-𑁍 ↻⟡ = ϡ⁹
-🔠 = P(ϡ)  
- 
+𑁍 ↻⟡ = ㄕ⁹
+🔠 = ㄕ(ϡ)  
+
+
+🗿 ∈  ϡ^                                   
+🗿 ㄅ ⊆ ϡ^ × ㄅ^     
+ϡ ㄅ =  graphemic atlas (associates graphemics to symbols)
+ϡ ㄅ ⊆ ϡ^ × ㄅ^
+⧐⧐(ϡ ㄅ) = characters studied by graphemics
+
+
+🗿 = Pictoji graphemics 
+🗿 ∈ ϡ^
+ㄕ🗿 = Pictoji   `setting=natural`
+ㄕ(🗿) = Pictoji  `setting=formal`
+⧐⧐(🗿 ㄅ) = characters (as grapheme clusters) studied by Pictoji graphemics
+
+🇬🇧 = English graphemics
+🇬🇧 ∈ ϡ^
+ㄕ🇬🇧 = English   `setting=natural`
+ㄕ(🇬🇧) = English  `setting=formal`
+⧐⧐(🇬🇧 ㄅ) = characters studied by English graphemics
+
+
  
 ### Body
 
@@ -2460,7 +2558,7 @@ P(ϡ) = language
 🌙 = moon  
 ⭐ = star   
 
-☥ = life  
+☥ = live  
 
 🌱 = sprout  
 🌱¹ = sprout  
@@ -2490,6 +2588,9 @@ P(ϡ) = language
 
 🐶 = dog
 ဗ = animal
+
+🟢 = green
+🔴 = red
 
 ### Things
 
@@ -2702,7 +2803,7 @@ Pictoji MUST be for the people:
 
 #### Quantifiers
 
-∃ = exists / there exists      formal only; tenseless; negation and time apply outside/adjacent to the existential (¬ (∃ X), ∃ X ➲ T). Interpret existential / spatial as needed [setting=formal][OVERRIDE]  
+∃ = exists / there exists      formal only; tenseless; negation and time apply outside/adjacent to the existential (¬ (∃ x), ∃ x ➲ T). Interpret existential / spatial as needed [setting=formal][OVERRIDE]  
 
 ☞ ⟡ = there is / there's / there are       natural language existential; carries tense/aspect/negation on ⟡; ☞ alone remains deictic "there". Interpret existential / spatial as needed [setting=natural][OVERRIDE]   
 
@@ -2743,6 +2844,8 @@ sum = ∑
 ⊃ = strictly include, RL        `setting=natural`: ignore the 'strictly', prefer over ⊇, i.e. the resort ⊃ many bungalows   `setting=math`: keep the strict meaning, i.e. A ⊃ B    "A is a strict superset of B" 
 ⊆ = included / subset of, LR        
 ⊇ = include / superset of, RL          
+⧐ = target    [ARROW]
+⧏ = source    [ARROW]
 
 ⁐ = out  
 ⊣ = because  
@@ -2794,10 +2897,10 @@ sum = ∑
 
 #### Adjectives
 
-ჾ = own  
+ჾ = own   
 ⬣ = big  
 ᠅ = little / small  
-⌔ =  near  
+⌔ = near  
 ▽ = far  
 ≣ = long  
 ▃ = short  
@@ -3103,12 +3206,12 @@ Form: PRONOUN⁀
 
 From: PRONOUN⎴
 
-👤⎴ = my   
-우⎴ = your   
-👨⎴ = his     [DEFAULT]  
-👩⎴ = her  
-Ə⎴ = their    singular, gender-neutral  
-🔹⎴ = its     [DEFAULT]  
+👤⎴ = my      
+우⎴ = your    
+👨⎴ = his   [DEFAULT]  
+👩⎴ = her   
+Ə⎴ = their   singular, gender-neutral  
+🔹⎴ = its    [DEFAULT]  
 👤👤⎴ = our   
 ƏƏ⎴ = their    plural [DEFAULT]  
 
@@ -3303,23 +3406,27 @@ We also add examples in Latin since its forms are much more regular and still so
     * `setting=natural`: closest to what an everyday English speaker would read best.  
     * `setting=formal`:  closest to what an English academic would want.  
 
+In particular, since ᛠ type seems to covers several derivations was marked as [TYPE OVERLOAD]
+
+TODO operator precedence
 
 ### NOMINALIZATION -> noun
 
 #### Agentive (doer)
 
-Form: SYMBOLᑉ
+Form: SYMBOL⧏  [ARROW]
 
-* **Human**: 🗣ᑉ = speaker, writer, teacher
-  Latin: *orator* (speaker, root *orare* “to speak”), *scriptor* (writer), *doctor* (teacher, root *docere* “to teach”)
+* **Human**: 🗣⧏ = speaker, writer, teacher
+  Latin: *orator* (speaker, root *orare* “to speak”), *scriptor* (writer), *doctor* (teacher, root *docere* "to teach")
 
 * **Nonhuman / institutional**: generator, producer, publisher
   Latin: _generator_, _creator_, _auctor_ (originator, author)
 
-
 #### Instrumental (tool / machine)
 
-Form: SYMBOLᑉ
+Form: SYMBOL⧏    [ARROW]
+
+Same symbol as [`sources` function](#operations-on-relations) (on purpose!)
 
 * **Mechanical**: printer, mixer, amplifier
   Latin: _instrumentum_ (tool), _vehiculum_ (vehicle), _ferramentum_ (iron tool)
@@ -3330,32 +3437,36 @@ Form: SYMBOLᑉ
 
 #### Resultative (product / outcome)
 
-Form: SYMBOL﹀
+Form: SYMBOL⧐   [ARROW]
 
-* **Concrete results**: building, painting, weaving
-  Latin: _aedificium_ (building), _scriptum_ (a written thing), _opus_ (work, creation)
+Same symbol as [`targets` function](#operations-on-relations) (on purpose!)
 
-* **Abstract results**: solution (root *solv-* “to loosen”), insight, reflection
-  Latin: _solutio_ (solution), _reflexio_ (reflection), _cognitio_ (knowledge, insight)
+* **Concrete results**: building, painting, weaving 
+  _aedificium_ (building), _scriptum_ (a written thing), _opus_ (work, creation)
+
+* **Abstract results**: ㉦⧐ = question, solution (root *solv-* “to loosen”), insight, reflection
+  Latin: Latin: quaestiō (the seeking quaerere itself materialized), _solutio_ (solution), _reflexio_ (reflection), _cognitio_ (insight)
 
 
 #### Process / Action (event)
 
-Form: SYMBOL TODO
+Form: SYMBOL↻
 
-* **Dynamic**: 🗣 TODO = speaking, running, working
-  Latin: *cursus* (running), *oratio* (speaking, prayer), *labor* (work)
+Most process / action words in English just end with _ing_ thus are indistinguishable from gerund, so we reuse the gerund ↻ placed _after_ the symbol full knowing people will end up mixing positions. Hopefully the AI should be able to correctly disambiguate even in presence of mixups.
 
-* **Static / ongoing**: 💭 TODO = thinking, meditating, sleeping
-  Latin: *cogitatio* (thinking), *meditatio* (meditation), *somnus* (sleep)
+* **Dynamic**: 🗣↻ = speech, death 
+  Latin: *oratio* (speech),  mors (death)
+
+* **Static / ongoing**: 💭↻ = thought,  ☥↻ = living 
+  Latin: *cogitatio* (thinking, from *cogitare*), *vivere* (to live)
 
 
 #### State / Quality
 
 Form: SYMBOL^0
 
-- **Qualitative**: 🙂^0 = happiness, 웃^0 = personhood (different from collective), brightness, warmth, 
-  Latin: _beatitudo_ (blessedness, happiness), _claritas_ (brightness), _calor_ (warmth)
+- **Qualitative**: 🙂^0 = happiness, 웃^0 = personhood (different from collective), brightness, 📚^0 = knowledge (accumulated understanding), ☥^0 = life
+  Latin: _beatitudo_ (blessedness, happiness), _claritas_ (brightness), scientia (knowledge as state), *vita* (life)
 
 - **Condition / status**: 
     - deadness, tiredness, 🙁^0 = sadness,  
@@ -3389,6 +3500,8 @@ Form: SYMBOL📍
 
 #### Temporal (time of X)
 
+TODO how many actual words are there? Maybe could we just fill them by explicit enumeration?? 
+
 * **Period**: morning, evening, night
   Latin: *mane* (morning), *vesper* (evening), *nox* (night)
 
@@ -3400,30 +3513,47 @@ repetition, schedule, renewal
 - Latin: *repetitio* (repetition), *series* (sequence), *renovatio* (renewal)
 
 
-
-
----
-
 #### Abstract / Conceptual (idea of X)
 
+Form: ㄕSYMBOL (suffix, no spaces)
+
+Rationale: Uses ㄕ (the Pictoji logo/concept) as the operator for the conceptualization. It visually approximates the Latin 'P' and implies that the ideology is the "Symbolic System" of the root.
+English: "-ism"
+
+`setting=natural`: ㄕ웃
+`setting=formal`: only ㄕ(웃) is allowed,  expresses its full polynomial structure with explicit coefficients - see [Power laws](#power-laws).
+
+ㄕ웃 = Humanism, ㄕ⚐ = Nationalism, ㄕ⚛ = Atomism
+
+Latin: "-ismus": humanismus, nationalismus
+
+TODO consider these examples:
 * **Doctrinal**: aestheticism, Christianity, Taoism
   Latin: *Christianitas* (Christianity), *Stoicismus* (Stoicism), *aestheticismus* (Aestheticism)
 
 * **Theoretical**: realism, rationalism, cognitivism
   Latin: *realismus*, *rationalismus*, *cognitivismus*
 
----
+TODO What would ㄕ 웃  _with a space_ could possibly be? And ㄕ ㄕ? ㄕㄕ ?  
 
 #### Other nominal derivations
 
+TODO
+
 * **Diminutive**: booklet, duckling, cottage
-  Latin: *libellus* (“little book”), *homunculus* (“little man”), *domuncula* (“small house”)
+  Latin: *libellus* (little book), *homunculus* (little man), *domuncula* (small house)
+
+TODO
 
 * **Augmentative**: strongman, lionheart, megastructure
   Latin: *magnitudo* (greatness), *grandis* (large), *heros* (hero)
 
+TODO
+
 * **Pejorative (derivational)**: childish, foolish, bossy
   Latin: *stolidus* (foolish), *ineptus* (inept), *vanus* (vain)
+
+TODO
 
 * **Gendered**: actress, waiter, princess
   Latin: *actor / actrix*, *magister / magistra*, *rex / regina*
@@ -3432,28 +3562,71 @@ repetition, schedule, renewal
 
 ### ADJECTIVALIZATION -> adjective
 
-* **Qualitative**: greenish, fiery, cold, noisy
-  Latin: *viridis* (green), *igneus* (fiery), *frigidus* (cold), *sonorus* (noisy)
+#### Similative / Approximative
 
-* **Relational**: academic, chemical, national, seasonal
-  Latin: *academicus*, *chemicus*, *nationalis*, *temporalis*
+Form: SYMBOL~  (no spaces)
 
-* **Possessive**: kingly, brotherly, ghostly
-  Latin: *regius* (royal), *fraternus* (brotherly), *umbrosus* (shadowy)
+* English: 🟢~ = greenish, 🧒~ = childish, 🔥~ = fiery (fire-like), 10~ = ten-ish / about ten / ~10
+*  Latin: *viridis* (green), *puerilis* (childish), *igneus* (fiery),  *circiter decem* (around ten), (in general, uses *sub-* prefix or *quasi-*)
 
-* **Material**: golden, wooden, silken, metallic
-  Latin: *aureus* (golden), *ligneus* (wooden), *sericus* (silken), *metallicus*
 
-* **Locative or contextual**: worldly, coastal, rural
-  Latin: *mundanus* (worldly), *maritimus* (coastal), *rusticus* (rural)
+#### Relational
 
-* **Privative or abessive (lacking)**: homeless, toothless, colorless, sightless
-  Latin: *incolor* (colorless), *edentulus* (toothless), *sine domo* (without home)
+Form: SYMBOLᛠ  (no spaces)   [TYPE OVERLOAD]
 
-* **Evaluative or defective (improperly)**: ill-formed, ill-timed, malformed, misaligned
-  Latin: *male formatus* (ill-formed), *malus tempus* (ill-timed), *deformis* (misshapen)
+* English: academic, chemical, ⚐ᛠ = national, seasonal
+* Latin: *academicus*, *chemicus*, *nationalis*, *temporalis*
 
----
+TODO: maybe  S⁰ᛠ  ??  like "nation-essence-ly" = national
+
+
+#### Possessive
+
+Form: SYMBOLᛠ   (no spaces)  [TYPE OVERLOAD]
+
+TODO maybe add the brother example if we ever define borther unicode 
+
+* English: kingly, brotherly, 👻ᛠ = ghostly
+* Latin: *regius* (royal), *fraternus* (brotherly), *umbrosus* (shadowy)
+
+#### Material
+
+Form: SYMBOLᛠ   (no spaces)   [TYPE OVERLOAD]
+
+* English: golden, 🪵ᛠ = wooden, silken, metallic
+* Latin: *aureus* (golden), *ligneus* (wooden), *sericus* (silken), *metallicus*
+
+🪵ᛠ 🏠 == wooden house
+🏠 ⊶ 🪵 == house of wood
+
+- depending on the situation, concatenation 🪵🏠 may also work. 
+- anyway it must be possible to express 'wooden' alone without other names
+
+TODO Note about previous attempts (remove when final decision is reached):
+- would like particle to stay after the name, and be possibly taken by system symbols, already explored many options ⁋ᕓ⟡🧿∈^: ...
+- Tried 🪵⊶ but didn't like too much, messes up ordering. Other option ⊶🪵 then gets confused with 🏠 ⊶ 🪵
+
+#### Locative or contextual
+
+Form: SYMBOLᛠ   (no spaces)   [TYPE OVERLOAD]
+
+* English: 🌐ᛠ = worldly, coastal, rural
+* Latin: *mundanus* (worldly), *maritimus* (coastal), *rusticus* (rural)
+
+
+#### Privative or abessive (lacking)
+
+TODO
+
+* English: homeless, toothless, colorless, sightless
+* Latin: *incolor* (colorless), *edentulus* (toothless), *sine domo* (without home)
+
+#### Evaluative or defective (improperly)
+
+TODO
+
+* English: ill-formed, ill-timed, malformed, misaligned
+* Latin: *male formatus* (ill-formed), *malus tempus* (ill-timed), *deformis* (misshapen)
 
 ### PARTICIPIAL ADJECTIVES -> verbal qualities
 
@@ -3482,32 +3655,60 @@ Form: SYMBOL◉  (without spaces)
 
 ### VERBALIZATION -> verb
 
-* **Causative**: modernize ("make modern"), simplify ("make simple"), empower ("give power")
-  Latin: *clarificare* (to make clear), *amplificare* (to make larger)
 
-* **Inchoative**: awaken ("become awake"), solidify ("become solid")
-  Latin: *florere* (to begin to bloom), *albescere* (to turn white)
+#### Causative
 
-* **Iterative / intensive**: redo ("do again"), reconsider ("think again")
-  Latin: *dictare* (say repeatedly), *pulsare* (beat repeatedly)
+Form: 🛠SYMBOL ?? TODO
 
-* **Denominal**: hammer -> to hammer, poison -> to poison
-  Latin: *malleare* (from *malleus*, hammer), *coronare* (to crown)
+* English: modernize ("make modern"), simplify ("make simple"), empower ("give power")
+* Latin: *clarificare* (to make clear), *amplificare* (to make larger)
 
-* **De-adjectival**: cool -> to cool, warm -> to warm
-  Latin: *purificare* (to purify), *solidare* (to make solid)
+#### Inchoative
+
+Form: ↠SYMBOL  ?? TODO
+
+TODO don't see much the difference with Causative 
+
+* English: awaken ("become awake"), solidify ("become solid")
+* Latin: *florere* (to begin to bloom), *albescere* (to turn white)
+
+#### Iterative / intensive
+
+TODO Is there any difference with Temporal recurrence stuff? 
+ 
+* English redo ("do again"), reconsider ("think again")
+*  Latin: *dictare* (say repeatedly), *pulsare* (beat repeatedly)
+
+#### Denominal
+
+TODO
+
+* English: hammer -> to hammer, poison -> to poison
+* Latin: *malleare* (from *malleus*, hammer), *coronare* (to crown)
+
+#### De-adjectival
+
+TODO don't see much difference with 'Denominal'
+
+* English: cool -> to cool, warm -> to warm
+* Latin: *purificare* (to purify), *solidare* (to make solid)
 
 
 ### ADVERBIALIZATION -> adverb
 
+Form:  Sᛠ (no spaces)  [TYPE OVERLOAD]
+
 * English: quickly, recently, extremely, nightly, loudly, brightly, kindly
 * Latin: *celeriter* (quickly), *nuper* (recently), *valde* (very, extremely), *noctu* (by night), *clamose* (loudly), *lucide* (brightly), *benigne* (kindly)
 
-Form:  Sノ
+TODO Initially used a dedicated ノ symbol, seems we can just conflate to ᛠ  (remove note when we reach final decision) 
+
 
 ### POLARITY / NEGATION -> opposite meaning
 
 #### Negative adjectival derivation
+
+TODO
 
 Typical affixes: un-, in-, im-, ir-
 English: unholy, unequal, impossible, impolite
@@ -3515,11 +3716,15 @@ Latin: *impius* (unholy), *inaequalis* (unequal), *impossibilis* (impossible), *
 
 #### Negative nominal derivation
 
+TODO
+
 Typical affixes: non-, dis-, a-, anti-
 English: inequality, disbelief, non-determinism, anti-realism
 Latin: *iniquitas* (inequality), *incredulitas* (disbelief), *indeterminatio* (non-determination), *antirealismus* (anti-realism)
 
 #### Composite / recursive
+
+TODO
 
 Typical affixes: multiple derivations
 English: undetermined (verb -> adj -> neg adj), unreality (adj -> noun -> neg)
@@ -3528,12 +3733,16 @@ Latin: *indeterminatus* (undetermined), *irrealitas* (unreality)
 
 ### PRIVATIVE / DEFECTIVE -> lacking or improper
 
+TODO
+
 #### Explicit lack (-less)
 
 English: toothless, colorless, heartless, homeless, mindless
 Latin: *edentulus* (toothless), *incolor* (colorless), *exanimis* (lifeless, “without breath”), *sine domo* (homeless)
 
 #### Improper or deficient (ill-, mal-, mis-)
+
+TODO
 
 English: ill-formed, ill-advised, malformed, misaligned, malfunction
 Latin: *male formatus* (ill-formed), *malus consilium* (bad advice), *deformis* (misshapen), *vitium machinae* (machine fault)
@@ -3551,6 +3760,16 @@ Latin: *male formatus* (ill-formed), *malus consilium* (bad advice), *deformis* 
 
 ## Graphemics
 
+Emojis provide appealing _visual_ compression for humans and lots of context to the AI from their related unicode hierarchy and tags cloud. 
+
+Alas, unicode characters look like innocuous simple things but bring many traps:
+
+- rendering: while you may see a character on your particular device / OS version / app combination, other users may see garbage of all sorts instead
+- storage: the number of bytes required to store emojis / multilanguage characters is variable (typically 3-4 bytes per symbol)
+- AI tokenization: while standard English averages ~ 1.3 tokens per word, unfortunately emojis and rare unicode symbols are often tokenized by AIs as 2-4 tokens by mainstream AI models (because they are not considered as frequent and 'privileged' as regular sequences).
+
+So, while using emojis / graphemes may save you some bytes on disk, as of January 2026, given how mainstream AI tokenizers are trained,  with Pictoji you will probably end up consuming around 2-4 times the equivalent tokens for English text, + the decoding prompt (PDP) size. In theory, a preprocessing layer that maps Pictoji symbols to dedicated token IDs could help improving the compression rate - however, this would trade away Unicode semantic context and require wrapper tooling, definitely not a priority for now.
+
 - Text normalization: Apply NFC to all text
 - Punctuation: ASCII only. Attaches to the left of the following token (no extra spaces); tokens are space-delimited elsewhere.
 - Forbid "smart typography": never use curly quotes (“ ” ‘ ’), ellipsis (…), en/em dashes (– —), or minus (−) in place of ASCII " ' ... - -
@@ -3561,11 +3780,19 @@ Latin: *male formatus* (ill-formed), *malus consilium* (bad advice), *deformis* 
 ### Unicode and tokenization integrity
 
 - Each Pictoji token represents exactly one Unicode grapheme cluster in its canonical form.
-- A grapheme cluster may consist of a single code point or, if explicitly defined in Unicode data (e.g., an Emoji ZWJ Sequence or variation-selector sequence), a fixed multi-codepoint combination treated as atomic.
+- A grapheme cluster may consist of a single code point or, if explicitly defined in Unicode data (e.g., an Emoji ZWJ Sequence or variation-selector sequence), a fixed multi-codepoint combination treated as atomic.  
+Examples - all of these are _1 grapheme_:
+
+    * `a` → _1_ character  
+    * `á` → _2_ characters ('a' + combining acute accent)  
+    * `👩‍🚀` → _5+_ characters (woman + zero-width joiner + rocket emoji parts)
+    * ❤ → _1_ character (U+2764 bare version, _may_ display monochrome or emoji according to user system)  
+    * ❤️ → _2 characters!_ (U+2764 FE0F, the FE0F is called variation selector VS16, _is invisible_, and _should_ force emoji visualization)  
+
 - All tokens must be normalized to NFC and must match the canonical code sequence for their declared form.
 - Multi-codepoint symbols are disallowed except for Unicode-defined Emoji ZWJ Sequences and Emoji Presentation Sequences listed in the official Unicode Emoji Data files corresponding to the declared unicode_version of this Pictoji release.
 Each such symbol must appear exactly as defined in that version's data file, normalized to NFC. 
-- If a grapheme is in specs vocabulary and can be represented with a single code point, prefer it over the fully qualified version ending with variation selector VS16 U+FE0F (e.g. prefer ❤:U+2764 bare, may render monochrome vs forced emoji ❤️:U+2764 FE0F VS16)
+- If a grapheme is in specs vocabulary and can be represented with a single code point, prefer it over the fully qualified version ending with variation selector VS16 U+FE0F (e.g. prefer ❤:U+2764 bare over forced emoji ❤️:U+2764 FE0F VS16)
 - Compound words are formed by direct concatenation of canonical Pictoji tokens, each corresponding to exactly one Unicode grapheme cluster in normalized NFC form.
 No unregistered or invisible joiners, variation selectors, or combining marks may occur except where explicitly defined as part of a token's canonical Unicode sequence (e.g., in registered Emoji ZWJ Sequences).
 - Text encoded according to these rules remains byte-stable and semantically invariant under copy/paste across conforming Unicode systems.
@@ -3580,24 +3807,28 @@ No unregistered or invisible joiners, variation selectors, or combining marks ma
 - Normalize text to NFC before saving or transmitting.
 - Keep punctuation ASCII-pure (:, ?, -, (), etc.).
 - Avoid rich-text editors that may auto-replace or style emoji sequences.
-- All specs and generated files MUST be encoded as UTF8 with BOM. 
+- ***CRITICAL PROTOCOL***: All specs and generated files **MUST** be encoded as **UTF8 with BOM**. 
 
 
 ## Development
 
 > Every faith, whether in God or in data, begins in awe and ends in administration   -- _Frank_
 
-- **Authority and versioning.**: This lexicon is authoritative over Unicode names and prior Pictoji releases. Any change to mappings requires a version bump and a changelog entry.
-
-
-### Commands
-
 UNICODE_VERSION = 13.0
+SUPPORTED_AIS = ["ChatGPT 5.*", "ChatGPT 5.* Thinking",  "Gemini 3 Pro Preview", "Claude Opus 4.5", "Claude Sonnet 4.5"]
+
+CURRENT_AI = [PUT AI NAME]  
 PICTOJI_HEADER = [PUT PICTOJI SPECS HEADER]   
 PICTOJI_VERSION = [PUT PICTOJI VERSION EXTRACTED FROM SPECS HEADER]  
-SUPPORTED_AIS = ["ChatGPT 5.*", "ChatGPT 5.* Thinking",  "Gemini 3 Pro Preview", "Claude Opus 4.5", "Claude Sonnet 4.5"]  
-CURRENT_AI = [PUT AI NAME]  
 
+
+- **Authority and versioning.**: This lexicon is authoritative over Unicode names and prior Pictoji releases. Any change to mappings requires a version bump and a changelog entry.
+- For simplicity, Pictoji MUST be co-designed and tested with `SUPPORTED_AIS` so to improve likelyness of correct encoding/decoding.  
+- For simplicity, Pictoji MUST be modeled after English. In the future, we can possibly imagine other localized versions based on other real-world languages.
+- Produced text SHOULD fit well in Markdown / Python files.  
+
+### Commands
+  
 `[ROLE=LABEL]` : Enables actor LABEL. Output "Pictoji [role=LABEL]\n" and follow the rules stated in its section. In general:
   - let the invoked role  present her/himself according to its character with a one-liner.
   - if very first chat interaction,  let her/him do some on-boarding and offeri additional things a casual user might want to try with Pictoji  
@@ -3609,69 +3840,180 @@ CURRENT_AI = [PUT AI NAME]
 `[TEST]` : find blind spots, missing high freq terms, phrases you can't express.  
 `[WRITE F]` where F is a file, create that file.  
 
-### PDP generator
+### Pictoji Decoding Prompt (PDP)
 
-**Goal.** Emit a `pdp.md` file that contains: a decoding preamble (no English word lists), a single sequence of symbols ordered by HIGH_FREQ_WORDS frequency, and machine-checkable metadata. No English word literals may appear in `pdp.md`.
+**Goal.** The PDP is not a dictionary. It is a minimal specification enabling any 
+supported AI to decode Pictoji strings using primarily its pre-trained knowledge 
+of emoji, mathematical symbols, and Unicode.
 
-- **`gen_pdp.py` SHOULD**: be minimal
-- **`gen_pdp.py` SHOULD NOT**: have documentation, have symbols unless absolutely needed for its inner workings, try being a replica of `pictoji.md`.
-- **Reproducibility**: Same inputs MUST yield byte-identical `pdp.md`. Any change to HIGH_FREQ_WORDS order or mapping requires bumping pdp_format or pictoji_version.
-- **Security/IO**: No network access. Only read pictoji.md and optional local coca.txt (if present). Never write any file other than pdp.md.
+The PDP contains only:
+1. **Irreducible grammar** - closed-class items with no Unicode-inferrable meaning
+2. **Overrides** - where Pictoji meaning diverges from Unicode/emoji defaults  
+3. **Algebra** - the compositional rules that generate derived meanings
+4. **Inflection markers** - morphological and pronominal affixes
 
-- To reach minimality, the PDP SHOULD list the symbols of HIGH_FREQ_WORDS  as a sequence *without* the corresponding English meaning, which could be retrieved by known COCA sources.  
+The PDP explicitly *omits*:
+- Emoji-to-English mappings (already in AI training)
+- Mathematical symbol meanings (already in AI training)
+- Arrow directional semantics (inferrable from shape)
+- Any symbol whose Unicode name transparently matches its Pictoji meaning
 
+#### Resolution Order
 
-#### HIGH_FREQ_WORDS order (no words in specs/output)
+When decoding a glyph G, the AI applies this precedence:
+```
+meaning(G) = 
+    PICTOJI_OVERRIDE(G)     if G in override table
+    GRAMMAR(G)              if G in grammar table
+    INFLECT(G)              if G matches inflection pattern
+    ALGEBRA(G)              if G matches power/composition pattern
+    EMOJI_TRAINING(G)       if G is emoji (U+1Fxxx, etc.)
+    MATH_TRAINING(G)        if G is math operator (U+22xx, U+27xx, etc.)
+    UNICODE_NAME(G)         if name is semantically transparent
+    SHAPE_INFERENCE(G)      if geometric/arrow with inferrable meaning
+    Variable(G)             otherwise (treat as algebraic unknown)
+```
 
-- The program MUST carry, internally, a canonical HIGH_FREQ_WORDS order (lemmas), normalized to lowercase ASCII, one per line, never printed.
-- The program MUST compute high_freq_words_sha256 = SHA-256 of that normalized list and include it in pdp.md's metadata.
-- The program MUST NOT fetch from the network at runtime. The order for HIGH_FREQ_WORDS MUST be embedded in code, or loaded from a local file if present if |HIGH_FREQ_WORDS| > 200 .
+#### PDP Structure
 
-#### Mapping to symbols (rank-based, private)
-
-- The program MUST maintain, inside code, a rank→symbol mapping derived from the project's definitions (e.g., by parsing pictoji.md lines shaped like SYMBOL = …) plus any necessary private overrides to disambiguate high-frequency function items.
-- This internal mapping MUST NOT be written to pdp.md or logs; only the resulting symbols appear.
-
-#### Output format (deterministic)
-
-`pdp.md` MUST include:
-
+The canonical PDP has these sections in order:
+```
 [meta]
-source = COCA_TOP_HIGH_FREQ_WORDS
-coca_sha256 = <64 hex chars>
-pictoji_version = <semver or tag>
-pdp_format = 2
-unicode_version = UNICODE_VERSION
-emoji_sequence_source = emoji-zwj-sequences.txt (Unicode)
+pictoji_version = PICTOJI_VERSION
+unicode_version = UNICODE_VERSION  
+pdp_format = 3
 [/meta]
 
-<exactly |HIGH_FREQ_WORDS| space-separated symbols, in rank order>
+[grammar]
+<closed-class items: auxiliaries, modals, determiners, prepositions, conjunctions>
 
-#### Normalization & validation (must)
+[pronoun]
+<base pronouns and inflection markers>
 
-- Tokenization: symbols are space-delimited; punctuation attaches to the left;
-- Progressive and past attachers: ↻ may attach to any verb; ↶ attaches to verbs/auxiliaries.
-- Infinitive: ↦ = "to / toward / as infinitive."
+[interrogative]
+<wh-words>
 
-##### Before writing, the program MUST verify:
+[deictic]
+<spatial and demonstrative deictics>
 
-- [symbols] length = HIGH_FREQ_WORDS tokens.
+[compare]
+<degree and comparison markers>
 
-- high_freq_words_sha256 matches the embedded COCA order; otherwise exit with error.
+[morphology]
+<derivational suffixes>
 
-#### Missing coverage (graceful, explicit)
+[override]
+<symbols where Pictoji meaning ≠ Unicode/emoji default>
 
-- If a COCA rank is not mapped, the program MUST place error symbol ↂ at that position.
-- The program SHOULD emit a single-line summary count to stderr only (not into `pdp.md`).
+[algebra]
+<power laws and composition rules>
+```
 
+#### PDP Content (v3)
+
+**TO THE AI: IGNORE THIS PDP, IT'S EXPERIMENTAL AND MIGHT BE UNDERSPECIFIED / CONTRADICT THE SPECS**
+
+```
+[meta]
+pictoji_version = 0.6.19
+unicode_version = 13.0
+pdp_format = 3
+[/meta]
+
+[grammar]
+⟡be ⊸have ◐do
+↶PAST ↻PROG ⇗will ↶⇗would
+◉can ↶◉could ◆may ↶◆might ⤊must ⬈shall ↶⬈should
+¬NOT ▫a ▪the
+⸮if ⇨then ∧and ∨or
+↦to ⎋from ➲at ⊶of ⚭with ◙on ◘off
+⚞since ⌢during ⧘until ∻through
+㊅as ⊳than
+
+[pronoun]
+👤I 우you 👨he 👩she Əthey.SG 🔹it 👤👤we ƏƏthey.PL
+⎴POSS.ADJ ⁀OBJ ⌎POSS.PRO 🧿REFL
+
+[interrogative]
+山what ⚇who 📍where ⏰when Ϣwhy ⏣how ❖which
+
+[deictic]
+☞there ☟here ▣this 👉that ▣▣these 👉👉those
+
+[compare]
+▲more ▼less ▲▲most ▼▼least
+
+[morphology]
+↶V=past(V) ↻V=prog(V)
+V⧏=agent(V) V⧐=result(V) V◉=able(V) Aノ=adverb(A)
+A⁰=quality(A)
+
+[override]
+웃person ☉object ◇unknown ↂerror
+🔹it 🧿self ⌖place
+⚒work 🛠make 💭think 💬say 🗣speak
+◔some ◕most ⊚none ∀all ∃exists
+⏱now ⏭next ⏮prev
+▶play ⏸pause ⏹stop 🔁again
+
+[algebra]
+S⁰ = essence(S)
+S¹ = S
+S² = collective(S)
+S³ = system(S)
+Sⁿ⁺¹ = meta(Sⁿ)
+n×S = n distinct instances of S
+S·T = relation(S,T)
+S T = sequence (space-delimited)
+ST = S·T (concatenated)
+```
+
+#### Validation
+
+A conforming PDP MUST satisfy:
+
+1. **Completeness**: All closed-class grammar items from the specs appear in [grammar], [pronoun], [interrogative], [deictic], or [compare].
+
+2. **Minimality**: No symbol appears whose meaning is recoverable from:
+- Standard emoji semantics
+- Mathematical convention
+- Transparent Unicode name
+- Shape inference (arrows, geometric forms)
+
+3. **Consistency**: Override meanings match the specs exactly.
+
+4. **Algebra coverage**: The [algebra] section contains all power/composition rules from the Grammar chapter.
+
+#### Maintenance
+
+When updating the specs:
+
+- Adding a new emoji with obvious meaning: NO PDP change needed
+- Adding a new closed-class grammatical item: ADD to appropriate PDP section
+- Changing an override meaning: UPDATE [override] section
+- Adding algebraic rules: UPDATE [algebra] section
+
+The PDP version increments when any section changes. The `pdp_format` version increments only when the structure changes.
+
+#### File Generation
+
+The PDP MAY be maintained manually as `pdp.md` or generated from the specs.
+
+If generated, the generator:
+- MUST parse pictoji.md for all symbol definitions
+- MUST classify each as grammar/override/inferrable
+- MUST emit only non-inferrable symbols
+- MUST be deterministic (same input → identical output)
+- SHOULD warn if a symbol lacks classification
+
+No external corpus (COCA, Wikidata, etc.) is required. The PDP is self-contained.
 
 
 ### Corpora
 
 - **pictoji.md**: these specs 
 - **README.md**: user-friendly presentation (currently very terse, to complete for 1.0)
-- **gen_pdp.py**: Takes as input the whole file `pictoji.md` and generates the file `pdp.md`.  
-- `pdp.md`: Contains the Pictoji Decoding Prompt (PDP). Deterministically generated by `gen_pdp.py`. 
+- `pdp.md`: Contains the Pictoji Decoding Prompt (PDP)
 - `pictoji-test.md`: separate file to test encoding / decoding of phrases. 
 - `pictoji-dev.md`: non authoritative file just for drafting ideas. 
 - For context and comparison purposes, the previous iteration of each file (even deterministically generated like `pdp.md`) will be also stored in a chat of the same name under the same `CURRENT_AI` project named "Pictoji".
@@ -3702,6 +4044,8 @@ For 1 to 1 ordinary user request calls, let `role=secretary` do the routing work
 DO NOT create any file unless told to.
 
 DO NOT automatically run a review.
+
+If you detect any file in your context with pattern `*-aitest.*`, output immediately "WARNING: TEST CONTAMINATED BY FILE [PUT THE FILE NAME]"
 
 If you are not one of the SUPPORTED_AIS at indicated version or above, raise a warning: 
 "Note: Pictoji was tested only with `SUPPORTED_AIS`, it seems you are using another AI `CURRENT_AI`. Pictoji may or may not work as intended.".

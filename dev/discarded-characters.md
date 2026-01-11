@@ -23,6 +23,7 @@ Windows 10's emoji font, Segoe UI Emoji, hasn't been updated to include them.
 ⊗⃝: U+2297 + U+20DD: composite, avoid, use this instead ⨷
 田:CJK_Unified_Ideograph too similar to ⊞:math_op
 ➰: emoji, bad contrast
+⛿: | — | WHITE FLAG WITH HORIZONTAL MIDDLE BLACK STRIPE | U+26FF [CPs:1 BMP+] ⚠: 🍎 🤖 🪟 🐧 (Rare Misc Symbol); {Norm+ Pres– ZWJ– Flag/RI– Cat=So EAW=N Bidi=ON} | [setting=natural, override–, collisions=[]]
 
 ∴: has already math meaning 'therefore', only found in old math papers
 ට: looks too much like derivative

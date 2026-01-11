@@ -1,4 +1,4 @@
-﻿# ㄕICTO<i>ji</i> TESTS (v0.6.19)
+﻿# ㄕICTO<i>ji</i> TESTS (v0.6.21)
 
 
 DO NOT PLACE FANCY TYPOGRAPHICS LIKE “” HERE. 
@@ -21,19 +21,14 @@ DO NOT PLACE FANCY TYPOGRAPHICS LIKE “” HERE.
 ⚇ ⸮ ◐ ㉦ 山 ? == who if do ask what ?
 ```
 
-### Noun pluralization
+### Noun pluralization and types
 
 🐶🐶 == dogs
 📖📖 == books
 웃² == people/crowd
 
-1 == 1
-<!-- 11 == ones ??? TODO REAL BAD 
+1 == 1   <!-- 11 == ones ??? TODO REAL BAD 1s == ones ??? SEEMS 1 sec    -->
 
-1s == ones ??? SEEMS 1 sec    -->
-
-👤👤, ▪ 웃²     -> we, the people    
-👤👤^, ▪ 웃^²   -> We, the People    
 웃² ⚒ ∈ ▫ 웃³  -> people work in a society
 ▫ 웃³ ⊶ ↶⚒ 웃² -> a society of working people
 우 ∧ 👤⁀ -> you and me
@@ -45,8 +40,49 @@ DO NOT PLACE FANCY TYPOGRAPHICS LIKE “” HERE.
 ? -> society is us
 ? -> a person in a group
 ? -> our society 
->
+-->
 
+
+웃웃 == persons
+웃^2 == (network of) people
+웃² == (network of) people
+웃^ == Person
+웃웃^ == Persons
+(웃^2)^ == People     # type operator ^ applied to query variable
+
+
+🏠 == house
+🏠^ == House
+🏠🏠 == houses
+🏠🏠^ == Houses
+🏠^2 == houses group == village
+(🏠^2)^ == Houses
+
+
+☉[웃^] == object filtered by Person  
+☉[웃^]^ == Object filtered by Person  
+
+☉[웃^]^n == object n-ry relation filtered by Person
+(☉[웃^]^n)^ == Object n-ry relation filtered by Person
+
+
+'People' proposals: TODO REVIEW
+(웃^)^2 -> People  ??
+웃^² -> People   ??
+웃^ ⨯ 웃^ -> People  ??
+
+### Cardinalities and autoboxing TODO REVIEW
+
+[setting=formal-story]
+
+    {웃} + {웃} ?s> {웃_i} + {웃_j}   # explicit story mode -> 웃 is assumed singleton, already boxed  
+                                     # -> doesn't autobox -> assigns i ¬= j for story mode
+               ?k> {웃_i, 웃_j}      # same grade, unionize  
+    i ¬== j
+
+[setting=formal-x] ∧ x ¬= story
+    {웃} + {웃} ?> 2{웃}    # no story mode -> 웃 is _not_ assumed singleton, explicit {} is kept 
+               ?> 2{웃}    # no further rewrites
 
 
 ### Comparatives & superlatives
@@ -283,6 +319,8 @@ Mixed with attachers/punctuation (number is one token)
 ¬ (∃ 🏠) == there exists no house
 
 
+## Types
+
 ## Unknowns and errors
 
 Materialized runtime types:
@@ -328,6 +366,80 @@ Put them here as given the specs they MUST be redundant
 ▶(⏸(🖥ↂ^k)) , k >= Ϟ ?> 🖥ↂ^k     
 ▶(⏸(ↂ^k))   , k >= Ϟ ?> ↂ^k       
 
+
+
+
+
+## Famous phrases
+
+👤 💭, ⤳ 👤 ⟡. == I think, therefore I am.
+
+
+👤^ ⊸^ ▫ 😴💭^ == I Have a Dream        # the original, note unnecessary extra-caret emphasis on 👤^ 
+👤 ⊸ ▫ 😴💭 == I have a dream 
+👤👤, ▪ 웃²     == we, the people
+👤👤^, ▪ 웃²^   == We, the People    
+
+↦ ⟡, ∨ ¬ ↦ ⟡, 👉 ⟡ ▪ ㉦⧐ == to be, or not to be, that is the question
+
+㉦ ¬ 山 우⎴ 🏠⁶ ◉ ◐ ㊐ 우 - ㉦ 山 우 ◉ ◐ ㊐ 우⎴ 🏠⁶ == ask not what your country can do for you - ask what you can do for your country
+
+#### without capitalization:
+
+I have a dream
+we, the people
+to be, or not to be, that is the question
+ask not what your country can do for you - ask what you can do for your country
+
+👤 ⊸ ▫ 😴💭   
+👤👤, ▪ 웃²     
+↦ ⟡, ∨ ¬ ↦ ⟡, 👉 ⟡ ▪ ㉦⧐
+㉦ ¬ 山 우⎴ 🏠⁶ ◉ ◐ ㊐ 우 - ㉦ 山 우 ◉ ◐ ㊐ 우⎴ 🏠⁶
+
+
+With labels, without capitalization:
+
+MLK:I have a dream
+US:we, the people
+Sh:to be, or not to be, that is the question
+JFK:ask not what your country can do for you - ask what you can do for your country
+
+
+MLK:👤 ⊸ ▫ 😴💭 
+US:👤👤, ▪ 웃² 
+Sh:↦ ⟡, ∨ ¬ ↦ ⟡, 👉 ⟡ ▪ ㉦⧐ 
+JFK:㉦ ¬ 山 우⎴ 🏠⁶ ◉ ◐ ㊐ 우 - ㉦ 山 우 ◉ ◐ ㊐ 우⎴ 🏠⁶
+
+
+A B C DE
+AA, F G²
+H I, J K H I, L I F MN
+M K O PQ R⁶ S T U P - M O P S T U PQ R⁶
+
+
+#### With capitalization:
+
+I Have a Dream
+We, the People
+To be, or not to be, that is the question
+Ask not what your country can do for you - ask what you can do for your country
+
+👤 ⊸^ ▫ 😴💭^   
+👤👤^, ▪ 웃²^     
+↦^ ⟡, ∨ ¬ ↦ ⟡, 👉 ⟡ ▪ ㉦⧐
+㉦^ ¬ 山 우⎴ 🏠⁶ ◉ ◐ ㊐ 우 - ㉦ 山 우 ◉ ◐ ㊐ 우⎴ 🏠⁶
+
+A B^ C DE^
+AA^, F G²^
+H^ I, J K H I, L I F MN
+M^ K O PQ R⁶ S T U P - M O P S T U PQ R⁶
+
+With labels and capitalization:
+
+MLK:👤 ⊸^ ▫ 😴💭^ 
+US:👤👤^, ▪ 웃²^ 
+Sh:↦^ ⟡ ∨ ¬ ↦ ⟡, 👉 ⟡ ▪ ㉦⧐ 
+JFK:㉦^ ¬ 山 우⎴ 🏠⁶ ◉ ◐ ㊐ 우 - ㉦ 山 우 ◉ ◐ ㊐ 우⎴ 🏠⁶
 
 
 DO NOT OUTPUT ANYTHING
