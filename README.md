@@ -13,7 +13,20 @@
 - cast: an engaging roster of actors to entertain you
 
 
-**Usage**: 
+**Installation (v1.0+)**:
+
+```bash
+# Install from source
+pip install -e .
+
+# Use the CLI tool
+pictoji --help
+pictoji document.txt --unicode-blocks
+```
+
+See [INSTALL.md](INSTALL.md) for complete installation instructions.
+
+**Usage**:
 
 Just copy/paste [pictoji.md](pictoji.md) specs into an AI chatbot and ask it to translate phrases.
 

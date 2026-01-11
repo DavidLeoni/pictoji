@@ -1,0 +1,4 @@
+include README.md
+include LICENSE.txt
+include pictoji.md
+recursive-include src/pictoji/specs *.md
