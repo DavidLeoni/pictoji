@@ -12,20 +12,6 @@
 - Translation: non-deterministic, context dependent and AI assisted
 - cast: an engaging roster of actors to entertain you
 
-
-**Installation (v1.0+)**:
-
-```bash
-# Install from source
-pip install -e .
-
-# Use the CLI tool
-pictoji --help
-pictoji document.txt --unicode-blocks
-```
-
-See [INSTALL.md](INSTALL.md) for complete installation instructions.
-
 **Usage**:
 
 Just copy/paste [pictoji.md](pictoji.md) specs into an AI chatbot and ask it to translate phrases.
@@ -34,7 +20,8 @@ Just copy/paste [pictoji.md](pictoji.md) specs into an AI chatbot and ask it to 
 
 > **Warning**: Pictoji is a very experimental and wacky thing: currently it can give some satisfaction / 
 entertainment value, but do not expect it to be formally sound.
- 
+
+**Development**: See [dev](dev/) folder.
 
 **Author**: David Leoni (info@davidleoni.it)
 
