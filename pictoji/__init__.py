@@ -7,14 +7,9 @@ This package contains:
 - pictoji.cli - tools for developing Pictoji specs and lexicons (target for v1.0)
 """
 
-# Version should match /pyproject.toml (single source of truth)
-
-#from importlib.metadata import version
-#__version__ = version("pictoji")
-#__author__ = version("author")
-
-__version__ = ''
-__author__ = ''
+from importlib.metadata import version
+__version__ = version("pictoji")
+__author__ = "Pictoji Team"
 
 
 __all__ = [
