@@ -80,6 +80,10 @@ jobs:
 
       - name: Checkout gh-pages branch
         run: |
+          # Configure git user for commits
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
           # Fetch gh-pages branch
           git fetch origin gh-pages:gh-pages 2>/dev/null || {
             echo "📄 gh-pages branch doesn't exist, creating it..."
