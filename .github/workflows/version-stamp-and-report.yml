@@ -78,7 +78,12 @@ jobs:
           echo "✅ Report generated"
           cat report.txt
 
-      - name: Checkout gh-pages branch
+      - name: Save report to temp location
+        run: |
+          # Save report outside of git working directory
+          cp report.txt /tmp/pictoji-report.txt
+
+      - name: Setup gh-pages branch
         run: |
           # Configure git user for commits
           git config user.name "github-actions[bot]"
@@ -107,9 +112,8 @@ jobs:
           # Create directory structure
           mkdir -p "${REPORT_DIR}"
 
-          # Copy report
-          git checkout ${GITHUB_REF##*/} -- report.txt
-          mv report.txt "${REPORT_DIR}/report.txt"
+          # Copy report from temp location
+          cp /tmp/pictoji-report.txt "${REPORT_DIR}/report.txt"
 
           # Create a simple index file
           if [ ! -f "ci/README.md" ]; then
