@@ -107,48 +107,21 @@ jobs:
           git checkout ${GITHUB_REF##*/} -- report.txt
           mv report.txt "${REPORT_DIR}/report.txt"
 
-          # Create index if it doesn't exist
-          if [ ! -f "ci/index.html" ]; then
-            cat > ci/index.html << 'EOF'
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Pictoji CI Reports</title>
-    <style>
-        body { font-family: monospace; padding: 20px; }
-        h1 { color: #333; }
-        a { display: block; padding: 5px 0; }
-    </style>
-</head>
-<body>
-    <h1>ㄕICTOji CI Reports</h1>
-    <p>Build reports organized by version:</p>
-    <ul id="reports"></ul>
-    <script>
-        // Auto-generate list from directory structure
-        fetch('.')
-            .then(r => r.text())
-            .then(html => {
-                const parser = new DOMParser();
-                const doc = parser.parseFromString(html, 'text/html');
-                const links = Array.from(doc.querySelectorAll('a'))
-                    .filter(a => a.href.match(/\/[0-9]/))
-                    .map(a => {
-                        const version = a.href.split('/').pop();
-                        return `<li><a href="${version}/report.txt">${version}</a></li>`;
-                    });
-                document.getElementById('reports').innerHTML = links.join('');
-            });
-    </script>
-</body>
-</html>
-EOF
+          # Create a simple index file
+          if [ ! -f "ci/README.md" ]; then
+            echo "# Pictoji CI Reports" > ci/README.md
+            echo "" >> ci/README.md
+            echo "Build reports organized by version." >> ci/README.md
+            echo "" >> ci/README.md
           fi
+
+          # Add entry to index
+          echo "- [${VERSION}](${VERSION}/report.txt)" >> ci/README.md
 
           # Add and commit
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add "${REPORT_DIR}/report.txt" ci/index.html
+          git add "${REPORT_DIR}/report.txt" ci/README.md
           git commit -m "Add CI report for version ${VERSION}" || echo "No changes to commit"
           git push origin gh-pages
 
