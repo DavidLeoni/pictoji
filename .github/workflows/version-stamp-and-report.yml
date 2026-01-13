@@ -19,16 +19,6 @@ jobs:
         with:
           fetch-depth: 0  # Fetch all history for tags
 
-      - name: Set up Python
-        uses: actions/setup-python@v5
-        with:
-          python-version: '3.11'
-
-      - name: Install dependencies
-        run: |
-          python -m pip install --upgrade pip
-          pip install -e ".[cli]"
-
       - name: Get version from git tags
         id: version
         run: |
@@ -69,6 +59,16 @@ jobs:
         run: |
           echo "📝 Files modified:"
           git diff
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -e ".[cli]"
 
       - name: Run pictoji CLI on pictoji.md
         id: report
