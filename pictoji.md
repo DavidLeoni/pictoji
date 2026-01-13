@@ -3819,7 +3819,7 @@ SUPPORTED_AIS = ["ChatGPT 5.*", "ChatGPT 5.* Thinking",  "Gemini 3 Pro Preview",
 
 CURRENT_AI = [PUT AI NAME]  
 PICTOJI_HEADER = [PUT PICTOJI SPECS HEADER]   
-PICTOJI_VERSION = [PUT PICTOJI VERSION EXTRACTED FROM SPECS HEADER]  
+PICTOJI_VERSION = [PICTOJI.VERSION]  
 
 
 - **Authority and versioning.**: This lexicon is authoritative over Unicode names and prior Pictoji releases. Any change to mappings requires a version bump and a changelog entry.
@@ -3915,7 +3915,7 @@ pdp_format = 3
 
 ```
 [meta]
-pictoji_version = 0.6.19
+pictoji_version = [PICTOJI.VERSION]
 unicode_version = 13.0
 pdp_format = 3
 [/meta]

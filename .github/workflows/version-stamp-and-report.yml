@@ -1,0 +1,169 @@
+name: Version Stamping and Report Generation
+
+on:
+  push:
+    branches:
+      - main
+      - dev
+
+permissions:
+  contents: write
+
+jobs:
+  version-stamp-and-report:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0  # Fetch all history for tags
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -e ".[cli]"
+
+      - name: Get version from git tags
+        id: version
+        run: |
+          # Get the latest tag matching vX.Y.Z-* format
+          VERSION_TAG=$(git describe --tags --match "v*" --abbrev=0 2>/dev/null || echo "v0.0.0-dev")
+
+          # Extract version without 'v' prefix (e.g., v0.6.21-12af3 -> 0.6.21-12af3)
+          VERSION=${VERSION_TAG#v}
+
+          # If no tag exists, use commit hash
+          if [ "$VERSION_TAG" = "v0.0.0-dev" ]; then
+            COMMIT_HASH=$(git rev-parse --short HEAD)
+            VERSION="0.0.0-${COMMIT_HASH}"
+          fi
+
+          echo "version=${VERSION}" >> $GITHUB_OUTPUT
+          echo "version_tag=${VERSION_TAG}" >> $GITHUB_OUTPUT
+          echo "📌 Detected version: ${VERSION}"
+
+      - name: Stamp version in files
+        run: |
+          VERSION="${{ steps.version.outputs.version }}"
+          echo "🔖 Stamping version: ${VERSION}"
+
+          # Update pyproject.toml version
+          sed -i "s/^version = \".*\"/version = \"${VERSION}\"/" pyproject.toml
+
+          # Replace [PICTOJI.VERSION] placeholders in all .md files
+          find . -name "*.md" -type f -exec sed -i "s/\[PICTOJI\.VERSION\]/${VERSION}/g" {} +
+
+          # Also update hardcoded version numbers in pictoji.md if they exist
+          # Update lines like: pictoji_version = 0.6.19
+          find . -name "*.md" -type f -exec sed -i "s/^pictoji_version = .*/pictoji_version = ${VERSION}/" {} +
+
+          echo "✅ Version stamping complete"
+
+      - name: Show changes
+        run: |
+          echo "📝 Files modified:"
+          git diff
+
+      - name: Run pictoji CLI on pictoji.md
+        id: report
+        run: |
+          echo "🔍 Running pictoji CLI analysis on pictoji.md..."
+          pictoji pictoji.md > report.txt 2>&1 || true
+          echo "✅ Report generated"
+          cat report.txt
+
+      - name: Checkout gh-pages branch
+        run: |
+          # Fetch gh-pages branch
+          git fetch origin gh-pages:gh-pages 2>/dev/null || {
+            echo "📄 gh-pages branch doesn't exist, creating it..."
+            git checkout --orphan gh-pages
+            git rm -rf .
+            git commit --allow-empty -m "Initialize gh-pages branch"
+            git push origin gh-pages
+            git checkout ${GITHUB_REF##*/}
+          }
+
+      - name: Store report in gh-pages
+        run: |
+          VERSION="${{ steps.version.outputs.version }}"
+          REPORT_DIR="ci/${VERSION}"
+
+          echo "📦 Preparing report for gh-pages..."
+
+          # Switch to gh-pages branch
+          git checkout gh-pages
+
+          # Create directory structure
+          mkdir -p "${REPORT_DIR}"
+
+          # Copy report
+          git checkout ${GITHUB_REF##*/} -- report.txt
+          mv report.txt "${REPORT_DIR}/report.txt"
+
+          # Create index if it doesn't exist
+          if [ ! -f "ci/index.html" ]; then
+            cat > ci/index.html << 'EOF'
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Pictoji CI Reports</title>
+    <style>
+        body { font-family: monospace; padding: 20px; }
+        h1 { color: #333; }
+        a { display: block; padding: 5px 0; }
+    </style>
+</head>
+<body>
+    <h1>ㄕICTOji CI Reports</h1>
+    <p>Build reports organized by version:</p>
+    <ul id="reports"></ul>
+    <script>
+        // Auto-generate list from directory structure
+        fetch('.')
+            .then(r => r.text())
+            .then(html => {
+                const parser = new DOMParser();
+                const doc = parser.parseFromString(html, 'text/html');
+                const links = Array.from(doc.querySelectorAll('a'))
+                    .filter(a => a.href.match(/\/[0-9]/))
+                    .map(a => {
+                        const version = a.href.split('/').pop();
+                        return `<li><a href="${version}/report.txt">${version}</a></li>`;
+                    });
+                document.getElementById('reports').innerHTML = links.join('');
+            });
+    </script>
+</body>
+</html>
+EOF
+          fi
+
+          # Add and commit
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add "${REPORT_DIR}/report.txt" ci/index.html
+          git commit -m "Add CI report for version ${VERSION}" || echo "No changes to commit"
+          git push origin gh-pages
+
+          echo "✅ Report stored at: ci/${VERSION}/report.txt"
+          echo "🌐 View at: https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/ci/${VERSION}/report.txt"
+
+      - name: Return to original branch
+        run: |
+          git checkout ${GITHUB_REF##*/}
+
+      - name: Summary
+        run: |
+          VERSION="${{ steps.version.outputs.version }}"
+          echo "## 🎉 Workflow Complete" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "- **Version**: \`${VERSION}\`" >> $GITHUB_STEP_SUMMARY
+          echo "- **Report Location**: \`ci/${VERSION}/report.txt\`" >> $GITHUB_STEP_SUMMARY
+          echo "- **Branch**: \`${GITHUB_REF##*/}\`" >> $GITHUB_STEP_SUMMARY
