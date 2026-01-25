@@ -1,0 +1,142 @@
+Loading specs..
+Couldn't load from proper package, trying relative path dev-time hack...
+  Loaded /home/runner/work/pictoji/pictoji/pictoji.md
+📄 File: pictoji.md
+
+======================================================================
+UNICODE BLOCK ANALYSIS
+======================================================================
+
+Basic Latin=93, occ=121,448 : ! " # $ % & ' ( ) * + , - . / 0 1 2 3 4 5 6 7 8 9 : ; < = > ? A B C D E F G H I J K L M N O P Q R S T U V W X Y Z [ \ ] ^ _ ` a b c d e f g h i j k l m n o p q r s t u v w x y z { | } ~
+
+Miscellaneous Symbols and Pictographs=72, occ=541 : 🌃 🌅 🌆 🌐 🌓 🌙 🌱 🌳 🌴 🌾 🌿 🍎 🍴 🍷 🏁 🏃 🏘 🏙 🏛 🏠 🏢 🏳 🏷 🐕 🐣 🐧 🐩 🐶 👀 👄 👈 👉 👌 👐 👤 👥 👦 👧 👨 👩 👻 💓 💧 💪 💬 💭 💻 📄 📅 📍 📖 📚 📡 📢 📨 📱 🔁 🔎 🔗 🔠 🔤 🔥 🔨 🔴 🔹 🕒 🖥 🗓 🗣 🗺 🗾 🗿
+
+Mathematical Operators=41, occ=262 : ∀ ∂ ∃ ∅ ∆ ∈ ∑ − ∖ √ ∧ ∨ ∪ ∻ ∽ ∿ ≈ ≠ ≣ ≥ ⊂ ⊃ ⊆ ⊇ ⊍ ⊔ ⊚ ⊜ ⊞ ⊟ ⊡ ⊣ ⊤ ⊥ ⊳ ⊶ ⊸ ⋂ ⋃ ⋎ ⋏
+
+Miscellaneous Symbols=28, occ=176 : ☀ ☁ ☉ ☍ ☞ ☟ ☥ ☯ ☺ ♀ ♂ ♥ ⚇ ⚐ ⚒ ⚕ ⚙ ⚛ ⚞ ⚠ ⚡ ⚭ ⚮ ⚯ ⛉ ⛊ ⛞ ⛰
+
+Miscellaneous Technical=27, occ=131 : ⌇ ⌎ ⌔ ⌖ ⌛ ⌢ ⌷ ⍝ ⍠ ⎋ ⎔ ⎚ ⎮ ⎴ ⏢ ⏣ ⏧ ⏩ ⏪ ⏭ ⏮ ⏰ ⏱ ⏳ ⏸ ⏹ ⏺
+
+Geometric Shapes=24, occ=481 : ▢ ▣ ▥ ▩ ▪ ▫ ▲ △ ▶ ▼ ▽ ◆ ◇ ◈ ◉ ◐ ◒ ◓ ◔ ◕ ◘ ◙ ◫ ◳
+
+Superscripts and Subscripts=17, occ=219 : ⁰ ⁴ ⁵ ⁶ ⁷ ⁸ ⁹ ⁺ ⁻ ⁿ ₀ ₁ ₂ ₃ ₄ ₐ ₓ
+
+Dingbats=16, occ=74 : ✅ ✇ ✊ ✋ ✝ ✦ ✪ ✴ ✺ ❌ ❍ ❒ ❖ ❤ ➡ ➲
+
+Arrows=16, occ=142 : ← ↑ → ↓ ↔ ↘ ↠ ↦ ↶ ↻ ⇄ ⇒ ⇗ ⇠ ⇢ ⇨
+
+Supplemental Symbols and Pictographs=16, occ=39 : 🤏 🤖 🤜 🤝 🥣 🦮 🦶 🧍 🧑 🧒 🧘 🧩 🧪 🧭 🧱 🧿
+
+Latin-1 Supplement=11, occ=264 : ¬ ° ± ² ³ · ¹ × à á ö
+
+General Punctuation=11, occ=66 : – — ‖ ‘ ’ “ ” … ⁀ ⁋ ⁐
+
+Enclosed CJK Letters and Months=8, occ=23 : ㉣ ㉤ ㉦ ㉫ ㊅ ㊐ ㊷ ㋡
+
+Miscellaneous Mathematical Symbols-B=7, occ=49 : ⦶ ⧇ ⧊ ⧏ ⧐ ⧘ ⧢
+
+Letterlike Symbols=6, occ=16 : ℕ ℘ ℚ ℝ ™ ℤ
+
+Emoticons=5, occ=56 : 😄 😎 😶 🙁 🙂
+
+Greek and Coptic=5, occ=40 : Σ π Ϟ ϡ Ϣ
+
+Miscellaneous Symbols and Arrows=5, occ=16 : ⬈ ⬣ ⬤ ⬭ ⭐
+
+Block Elements=4, occ=8 : ▃ ▇ █ ▓
+
+Unified Canadian Aboriginal Syllabics=4, occ=27 : ᐪ ᕉ ᕓ ᕟ
+
+Enclosed Alphanumerics=4, occ=15 : ① Ⓕ Ⓣ ⓪
+
+Enclosed Alphanumeric Supplement=4, occ=13 : 🆕 🆚 🇧 🇬
+
+Supplemental Arrows-B=4, occ=8 : ⤊ ⤋ ⤞ ⤳
+
+Control Characters=3, occ=25 : 	 ‍ ﻿
+
+Bopomofo=3, occ=70 : ㄅ ㄕ ㄖ
+
+Supplemental Mathematical Operators=3, occ=92 : ⨝ ⨯ ⩕
+
+Hangul Syllables=3, occ=487 : 우 웃 으
+
+Vai=3, occ=9 : ꔅ ꔆ ꕷ
+
+Transport and Map Symbols=3, occ=27 : 🚀 🚫 🛠
+
+CJK Symbols and Punctuation=3, occ=5 : 〘 〙 〽
+
+Whitespace=2, occ=30,797 :    
+
+Runic=2, occ=49 : ᛠ ᛤ
+
+Mathematical Alphanumeric Symbols=2, occ=15 : 𝔘 𝔹
+
+Latin Extended-B=2, occ=39 : Ɗ Ə
+
+CJK Unified Ideographs=2, occ=8 : 山 文
+
+Myanmar=2, occ=2 : ဗ ၐ
+
+CJK Compatibility Forms=2, occ=4 : ︵ ﹄
+
+Symbols and Pictographs Extended-A=2, occ=8 : 🪟 🪵
+
+Miscellaneous Mathematical Symbols-A=1, occ=52 : ⟡
+
+Latin Extended-A=1, occ=2 : ō
+
+Number Forms=1, occ=93 : ↂ
+
+Phonetic Extensions=1, occ=9 : ᵢ
+
+Latin Extended-C=1, occ=1 : ⱼ
+
+Tamil=1, occ=15 : ஃ
+
+Cyrillic Extended-B=1, occ=3 : Ꙍ
+
+Geometric Shapes Extended=1, occ=134 : 🟢
+
+Mahjong Tiles=1, occ=1 : 🀛
+
+Brahmi=1, occ=2 : 𑁍
+
+Arabic=1, occ=1 : ۞
+
+Glagolitic=1, occ=1 : Ⰰ
+
+Supplemental Punctuation=1, occ=2 : ⸮
+
+Telugu=1, occ=1 : ౮
+
+Hangul Compatibility Jamo=1, occ=2 : ㅱ
+
+Supplemental Arrows-A=1, occ=2 : ⟴
+
+Georgian=1, occ=1 : ჾ
+
+Mongolian=1, occ=1 : ᠅
+
+Katakana=1, occ=1 : ノ
+
+======================================================================
+SUMMARY
+----------------------------------------------------------------------
+Unicode supported version: 13 (308 blocks)
+     Total Unicode Blocks: 57
+  Total Unique Characters: 484
+
+======================================================================
+ㄕICTOji CLI - AI TOKEN COUNTER
+======================================================================
+
+📄 File: pictoji.md
+----------------------------------------------------------------------
+Characters:        160,952
+Claude 4.5:        48,340 tokens (tiktoken estimate)
+GPT-4/GPT-4o:      48,340 tokens
+GPT-5:             46,961 tokens
+Gemini 2.0 Pro:    40,238 tokens (estimate)
+
