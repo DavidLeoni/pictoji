@@ -1,4 +1,4 @@
-﻿# ㄕICTO<i>ji</i> TESTS (v0.6.21)
+﻿# ㄕICTO<i>ji</i> TESTS ([PICTOJI.VERSION])
 
 
 DO NOT PLACE FANCY TYPOGRAPHICS LIKE “” HERE. 
@@ -70,6 +70,8 @@ DO NOT PLACE FANCY TYPOGRAPHICS LIKE “” HERE.
 (웃^)^2 -> People  ??
 웃^² -> People   ??
 웃^ ⨯ 웃^ -> People  ??
+
+
 
 ### Cardinalities and autoboxing TODO REVIEW
 
@@ -368,8 +370,6 @@ Put them here as given the specs they MUST be redundant
 
 
 
-
-
 ## Famous phrases
 
 👤 💭, ⤳ 👤 ⟡. == I think, therefore I am.
@@ -440,6 +440,12 @@ MLK:👤 ⊸^ ▫ 😴💭^
 US:👤👤^, ▪ 웃²^ 
 Sh:↦^ ⟡ ∨ ¬ ↦ ⟡, 👉 ⟡ ▪ ㉦⧐ 
 JFK:㉦^ ¬ 山 우⎴ 🏠⁶ ◉ ◐ ㊐ 우 - ㉦ 山 우 ◉ ◐ ㊐ 우⎴ 🏠⁶
+
+
+
+## Open interpretation
+
+🟠⧏ = ?
 
 
 DO NOT OUTPUT ANYTHING

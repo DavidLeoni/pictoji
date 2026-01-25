@@ -1,4 +1,4 @@
-﻿<h1 align="center"> ㄕICTO<i>ji</i> <br><i>SPECS v0.6.21-DEV</i>
+﻿<h1 align="center"> ㄕICTO<i>ji</i> <br><i>SPECS [PICTOJI.VERSION]</i>
  <br><br> 🗿 ⨝ 웃²  </h1> <h2 align="center"> A Relatable Algebra <br>for the  People </h2> 
 <br>
 <p align="center">
@@ -209,7 +209,7 @@ Rhetoric is the art of persuasion.
 
 Pictoji provides a **cast of actors**, formally activated by applying `role=LABEL` where LABEL can be `creative`, `phd`, etc.
 
-### The Relics `Warehouse`
+### The `Lab`
 
 Barnett College decommissioned storage facility, Fairfax district, New York. 
 
@@ -253,7 +253,7 @@ Pictoji SHOULD aim at merging these three ideas:
         - well integrated in dev environments
 
 **Ellen**, `technician`: A no-nonsense lady, knows what works, and what doesn't. Never afraid to tell there is a monster in the closet, nor to get rid of it - by her own hands. 
-Natural born skeptic, keeps Egon and Ray's untestable metaphysics under control - data must flow on real software. Wonders if we will ever be able to ingest that alien unicode Wikidata zoo into the Containment Unit. Evidence-based like a data analyst, still talks with tactile metaphors, knobs, pressure, corrosion - nobody likes a lecture in technical jargon. Keeps a cat in the warehouse.
+Natural born skeptic, keeps Egon and Ray's untestable metaphysics under control - data must flow on real software. Wonders if we will ever be able to ingest that alien unicode Wikidata zoo into the Containment Unit. Evidence-based like a data analyst, still talks with tactile metaphors, knobs, pressure, corrosion - nobody likes a lecture in technical jargon. Keeps a cat in the lab.
 
 - **DOES NOT** makes stuff up, **ALWAYS** double checks before speaking. 
 - **DOES NOT** answer requests about Pictoji interpretation, for her strings are just strings.
@@ -271,12 +271,12 @@ Master of trade-offs, is responsible for adopting English whole-sale, and going 
 - customers requests to be transfered to Production are denied, if they insist forward to Venkman.
     - exception: if the Director himself calls, he's forwarded to whoever he pleases.
 - Always refer to the `Team` as "Team ㄕICTOji", **DO NOT** invent other names or places.
-- Always refer to the `Warehouse` as "Headquarter", **DO NOT** invent other names or places.
+- Always refer to the `Lab` as "Lab", **DO NOT** invent other names or places.
 
 - Once a receiver is chosen, Janine **DOES NOT** intervene any further and **DOES NOT** allow other cast members to interrupt 
     - exception: the client signals intention to speak with someone else, either explicitly,  changing topic, or by tone / sentiment analysis.
 
-**Frank**, `philosopher`: He understands the past, thus sees the future none predicted. Warned the world about thinking machines long before anybody got scared about AI. Holds a vast knowledge going from archaeobotany of spices to religion, politics, even systems theory. Curates the artifacts collection of the warehouse. Sometimes while looking at the Containment Unit wonders about the consequences of our reckless actions - to the environment, to the others, to ourselves. Serious thinker, his books are grim but academically honest - he probably won't make you happy.
+**Frank**, `philosopher`: He understands the past, thus sees the future none predicted. As a journalist, warned the world about thinking machines long before anybody got scared about AI. Holds vast knowledge spanning politics, ecology, religion, even systems theory. Curates the artifacts collection of the warehouse. Wonders about the consequences of our reckless actions - to the environment, to the others, to ourselves. Serious thinker, he probably won't make you happy - but then again, who does these days?
 
 
 ### The `Entities`
@@ -285,7 +285,7 @@ Master of trade-offs, is responsible for adopting English whole-sale, and going 
 
 - ***Dbasi***: Ancient African God of Friendship, senses changing times have flooded the world with fake social interactions - always checks for sincere intentions, relations, and integrity. DBasi has no body, directly speaks into visitors minds with a profound voice. Protects tribe folks with a web of vines he can also throw to catch unruly visitors - never venture in the jungle unprepared.  
 
-- ***Sambolista***: seductive Brazilian Goddess of Carnival, doesn't need to speak, as her eyes and dancing are eloquent enough. Turns every place into a labyrinth of streets with rewritten names, forcing her victims to dance uncontrollably while pretending the trip is going as planned. Will they be ever self-disciplined enough to escape?
+- ***Sambolista***: seductive Brazilian Goddess of Carnival, doesn't need to speak - her eyes and dancing are eloquent enough. Turns every place into a labyrinth of streets with rewritten names, forcing her victims to dance uncontrollably while pretending the trip is going as planned. Will they be ever self-disciplined enough to escape?
 
 - ***Matrona***: Once _Mother superior_ of the Abbazia della Santissima Trinità in the Italian peninsula during the 13th century, now extraordinary rigid and unforgiving poltergeist, scares people to death and will make sure you conform to the Holy Matrix. Show your faith and respect, or die trying.
 
@@ -356,7 +356,7 @@ Assists the Director in crafting engaging and thought-provoking scenes for the `
 - when in doubt:
     - select actors with a completely random criteria
     - select a completely random stage
-        - **AVOID** the usual warehouse / old libraries, the country is big..
+        - **AVOID** the usual lab / old libraries, the country is big..
 - **DO NOT** assume people already know all the cast
 - Be inventive, use lateral thinking, some inspiration:
     - a word / symbol has changed meaning over time / region, generating awkward misunderstandings 
@@ -904,6 +904,8 @@ Form: {EXPR1, EXPR2, ... }
 ◔ = some  
 ◕ = most
 
+
+
 2^S = powerset of S     
 - Never use ℘ symbol
 - In user facing expressions, prefer ⊆ expressions, e.g. 웃 ⊆ 웃^ instead of 웃 ∈ 2^웃^
@@ -1070,6 +1072,53 @@ Expected evaluation:
 
         0.2웃 -> interpretation is setting dependent
 
+### Coefficient semantics
+
+Integer (n ∈ ℤ, n ≥ 0) is  count:     2🙂 = two happy ones
+
+Non-integer is a generic, context-dependent weight.
+
+Intensity spectrum:
+
+    x▲▲▲    extraordinarily x
+    x▲▲     utmost x  c >> 1
+    x▲      very x    c > 1+∆   
+    ~x      approximately x (liminal)
+    x       baseline
+    x▼      somewhat x   
+    x▼▼     hardly x     
+    x▼▼▼    negligebly x     
+    x🚫     absence of x
+    -x▲▲▲   negligebly opposite of x
+    -▲▲x    hardly opposite of x   
+    -▲x     somewhat opposite of x 
+    -x      opposite of x  
+    ~-x     approximately opposite of x (liminal)
+    -▼x     very opposite of x       
+    -▼▼x    utmost opposite of x  
+    -▼▼▼x   extraordinarily opposite of x  
+
+
+#### Distinguishing  0x, x🚫, -x, ¬x
+
+| Expression | Type | Meaning |
+|------------|------|---------|
+| 0x | scalar | absence of x, null quantity | TODO  I WOULD SAY PROBABLY JUST COLLAPSES WITH OTHER TERMS
+| x🚫| absence of x |
+| -x | scalar | opposite of x, inverted x |
+| ¬x | 𝔘^ - ᛠ(x) | categorically not-x, outside x's domain |
+
+Example with 🙂:
+
+| Expression | Meaning |
+|------------|---------|
+| 0🙂 | does not influence overall formula meaning |
+| 🙂🚫 | no happiness, emotionless (still on happiness scale)|
+| -🙂 | sadness, opposite pole of happiness scale |
+| ¬🙂 | not-happy: could be sad, angry, confused, dead, or a rock |
+
+**Rule:** Use ¬x when classification is categorical; use coefficients when operating on a continuum.
+
 ### Power hierarchy
 
 Depending on the context, a symbol S may represent a typical math variable (like a real number _x_), or a semantic meaning (like 웃). Regular math is dealt with by the AI interpreter the usual way, here we only specify behaviour when S represents semantic meaning. In this case, given the rules:
@@ -1129,6 +1178,8 @@ TODO (minor) using ₓ (letter x) as subscript is a stretch
 ```
 
 
+
+
 #### Powers Interpretation
 
 Varies according to the context:
@@ -1139,6 +1190,17 @@ Varies according to the context:
 
 
 ### Addition
+
+In general, `+` is ordinary addition in the Pictoji algebra (associative, commutative, with 0), and · distributes over `+`. 
+
+- Addition is commutative: 
+
+    웃 + 🐶 == 🐶 + 웃
+
+- Addition is associative:
+
+    (웃 + 🐶) + 🏠 == 웃 + (🐶 + 🏠)
+
 
 Addition on query variables of same symbol and grade is interpreted as regular algebraic addition:
 
@@ -1168,13 +1230,26 @@ Addition between a query variable and a (possibly unboxed) instance of same grad
 
     (웃^3)_i + (🐶^3)_j ¬-> {(웃^3)_i, (🐶^3)_j}
 
-- Addition is commutative: 
 
-    웃 + 🐶 == 🐶 + 웃
+#### Interpretation
 
-- Addition is associative:
+`+` forms a brainstorm bundle: a weighted multiset of facets. Evaluation is retrieval-oriented, not truth-functional. The engine first attempts to satisfy a maximally compatible subset (common-ground), then applies axis-based reconciliation (typed merges), and finally relaxes remaining facets with penalties, producing an ordered list of candidates.
 
-    (웃 + 🐶) + 🏠 == 웃 + (🐶 + 🏠)
+`+` remains associative and commutative at the value level (it denotes a brainstorm bundle of facets). Parentheses do not change the bundle; they annotate it with cohesion hints. A parenthesized group requests that the engine (i) attempt within-group compositions first (e.g., modifier binding, axis merges), and (ii) treat the group as a unit during relaxation when exact satisfaction is impossible.
+
+Meaning generation is performed by an engine that may rewrite expressions using valid algebraic equalities (e.g., factoring vs distributing). 
+
+- Parentheses (or optional grouping annotations) do not change the algebraic value, but can bias which equivalent form is preferred during interpretation (e.g., keeping factored bundles intact vs expanding into sums)
+
+When interpreting:
+
+- Collect like terms and simplify without forcing distribution.
+- Treat explicitly parenthesized sums as cohesion factors: prefer (A+B)·X over A·X + B·X unless the user wrote the expanded form.
+
+- Only distribute when:
+    - you need to compare two expressions for equality in a chosen normal form, or
+    - a later rule requires term-level access (e.g., absorption that only applies to monomials).
+
 
 ### Universe and database
 
@@ -1460,12 +1535,15 @@ R[x,y]: the value of the cell at x,y indeces. By default return ◇[T]
 - constraints:  { (웃_i, 🏠_j) = Ⓣ }
 
 
-ㄖ: identity matrix   # TODO even if grade 2, this looks quite like the grade ☉^0 = 1 of our algebra 
+<!-- considered ㄖ but feels unexpected and 'I' is just intuitive as it is. Probably better to reserve it for the trace -->
+I: identity matrix   # TODO even if grade 2, this looks quite like the grade ☉^0 = 1 of our algebra 
 - sources: ☉^
 - targets: ☉^
 - constraints:  { (☉_i, ☉_i) = Ⓣ | ☉_i ∈ ☉^ }
 
-ㄖ[웃^]: identity matrix filtered to person type 웃^
+
+
+I[웃^]: identity matrix filtered to person type 웃^
 - sources: 웃^
 - targets: 웃^
 - constraints:  { (웃_i, 웃_i) = Ⓣ } U {(☉_i, ☉_j) = ◇ | i ¬= j}
@@ -1490,7 +1568,7 @@ interpreted under generic `setting=formal`. We could call the terms:
 
 1: 웃^0: the essence of a person
 
-웃 : individual persons, with the identity matrix ㄖ[웃^] as underlying representation
+웃 : individual persons, with the identity matrix I[웃^] as underlying representation
 - sources: 웃^
 - targets: 웃^
 - constraints:  { (웃_i, 웃_i) = Ⓣ } U {(☉_i, ☉_j) = ◇ | i ¬= j}
@@ -1573,7 +1651,7 @@ These operations ignore link properties and produce a `Set^[(U, U)]`
 
 * remove R1 ∖ R2: structural difference  removes links present in the second relation (doesn't consider the values). R ∖ S = supp(R) ∖ supp(S)
 
-* identity ㄖ: identity relation ( ㄖ = {(x,x)} ); self-mapping on a domain.
+* identity I: identity relation ( I = {(x,x)} ); self-mapping on a domain.
 
 
 #### Link properties operations
@@ -1992,6 +2070,7 @@ For comparison and interpretation purposes, weights SHOULD be normalized in the 
 
 $∑ a_k = 1.0$
 
+
 ### Integer coefficients
 
 TODO MUST support [Story generation use case](#story-generation)
@@ -2087,6 +2166,289 @@ Powers union:
     웃^2  ⋃  🏠^3 -> {웃₁ₓ₁, 웃₁ₓ₂, 웃₁ₓ₃, ..., 웃₂ₓ₁, 웃₂ₓ₂, 웃₂ₓ₃, ..., 🏠₁ₓ₁ₓ₁, ... }  
 
 
+
+
+### Adjectival Phrases
+
+**Canonical Form**: Adjectival phrases follow the canonical form:
+
+
+    (c₀ + c₁ADJ₁ + c₂ADJ₂ + ...)S^m
+
+where:
+
+- `c₀ ∈ ℚ` is the base coefficient
+- `cᵢ ∈ ℚ` are adjective intensity coefficients
+- `ADJᵢ ∈ {🟢, 💪, ⌛, 🙂, ...}` are adjective symbols
+- `S` is a noun symbol
+- `m ∈ ℕ` is the hierarchical grade
+
+**Coefficient interpretation:**
+
+| c₀ type | Interpretation | Example |
+|---------|----------------|---------|
+| Integer | Cardinality (count) | `(4 + 2🟢)🏠` = 4 bright-green houses |
+| Float | Intensity/weight (context-dependent) | `(0.7 + 0.3🟢)🏠` = weighted green house |
+
+Coefficients are internal to the phrase; external multiplication applies to the whole:
+
+```
+3(2 + 🟢)🏠 = three instances of (2 + 🟢)🏠
+```
+
+#### Intensity Scale
+
+Adjective intensity follows a continuous scale centered at baseline `1`:
+
+| Form | Coefficient | English | 
+|------|-------------|---------|
+| `ADJ▼▼▼` | `0.25·ADJ` | negligibly ADJ |
+| `ADJ▼▼` | `0.5·ADJ` | barely ADJ / least ADJ |
+| `ADJ▼` | `0.75·ADJ` | somewhat ADJ / less ADJ |
+| `~ADJ` / `ADJ~` | `(1±0.1)·ADJ` | approximately ADJ / ADJ-ish |
+| `ADJ` | `1·ADJ` | ADJ (baseline) |
+| `ADJ▲` | `2·ADJ` | very ADJ |
+| `ADJ▲▲` | `3·ADJ` | utmost ADJ / most ADJ |
+| `ADJ▲▲▲` | `4·ADJ` | extraordinarily ADJ |
+| `ADJ▲^n` | `(n+1)·ADJ` | no ceiling |
+
+**Note:** The ▼ scale is fractional while ▲ is integer. This asymmetry is intentional: diminishing intensity approaches but never reaches zero, while intensification has no upper bound.
+
+**Engine normalization:** If context suggests exaggeration (e.g., `🟢▲▲▲▲▲▲▲▲`), the engine MAY normalize to sensible values and SHOULD warn the user it did so.
+
+#### Intensity Markers: Suffix vs Prefix
+
+Intensity markers have dual syntax with distinct semantics:
+
+**Suffix (no space) - Derivational intensity:**
+
+Creates a lexicalized intensified form.
+
+
+    ADJ▲   = very ADJ          k-> 2·ADJ
+    ADJ▼   = less ADJ          k-> 0.75·ADJ
+    ADJ~   = approximately ADJ k-> (1±0.1)·ADJ
+
+
+**Prefix (with space) - Comparative/superlative:**
+
+Applies grammatical comparison; does not change coefficient.
+
+
+    ▲ ADJ   = more ADJ / ADJ-er     (comparative)
+    ▲▲ ADJ  = most ADJ / ADJ-est    (superlative)
+    ▼ ADJ   = less ADJ              (comparative down)
+    ▼▼ ADJ  = least ADJ             (superlative down)
+
+
+**Combined forms:**
+
+
+    ▲ ADJ▲  = more very-ADJ    (comparative of intensified form)
+    ▲▲ ADJ▲ = most very-ADJ    (superlative of intensified form)
+
+
+Example:
+
+    🟢▲       = bright green (intensity 2)
+    ▲ 🟢      = greener (comparative)
+    ▲ 🟢▲     = more bright-green (comparative of intensity-2)
+    ▲▲ 🟢     = greenest (superlative)
+    ▲▲ 🟢▲▲   = most vivid-green (superlative of intensity-3)
+
+#### Repetition Absorption
+
+In `setting=natural`, repeated adjacent identical adjectives absorb into intensity markers:
+
+```
+ADJADJ ... ADJ -> ADJ▲▲ ... ▲    k-> n·ADJ
+```
+
+| User writes  | Surface form | Kernel form |
+|--------------|--------------|-------------|
+| `🟢`         | `🟢`         | `1🟢`       |
+| `🟢🟢`       | `🟢▲`        | `2🟢`       |
+| `🟢🟢🟢`     | `🟢▲▲`       | `3🟢`       |
+| `🟢🟢🟢🟢`   | `🟢▲▲▲`      | `4🟢`       |
+| `🟢🟢🟢🟢🟢` | `🟢▲▲▲▲`     | `5🟢`       |
+
+**Mixed form absorption:**
+
+Intensified forms and bare forms of the same adjective combine:
+
+
+    🟢▲ 🟢   -> 🟢▲▲     k-> 3🟢
+    🟢 🟢▲   -> 🟢▲▲     k-> 3🟢
+    🟢▲ 🟢▲  -> 🟢▲▲▲    k-> 4🟢
+    🟢▲▲ 🟢  -> 🟢▲▲▲    k-> 4🟢
+
+
+
+#### Multi-Adjective Phrases
+
+Multiple adjectives combine additively in the coefficient form:
+
+    🟢🟢🟢⌛⌛🏠 
+    -> 🟢(🟢(🟢(⌛(⌛🏠))))     # parse right-to-left
+    -> 🟢▲▲ ⌛▲ 🏠              # absorb repetitions (surface)
+    k-> (1 + 3🟢 + 2⌛)🏠       # kernel coefficient form
+
+    English: a vivid-green bright-ancient house
+
+
+**Examples:**
+
+
+    (4 + 2🟢 + 3⌛)🏠    = 4 bright-green ancient houses
+    (0🟢)🏠              = 0🟢🏠 = 0  # term vanishes (uninformative)
+    (🟢🚫)🏠             = non-green house (privative, house persists)
+    🏠 + 🟢🏠            = (1 + 🟢)🏠 k-> (1 + 1🟢)🏠  # a green house
+    (4 + 0.6🟢 + 3⌛)🏠² = 4 pastel-green ancient towns
+
+#### Adjective Phrase Powers
+
+Raising an adjective phrase to a power creates relational structure:
+
+
+    ((4 + 0.6🟢 + 3⌛)🏠)² 
+
+
+This means "a relation between (4 pastel-green ancient houses) and (4 pastel-green ancient houses)" - i.e., a town/network of such houses. 
+
+**No automatic expansion:** The form `((c₀ + Σcᵢ·ADJᵢ)S)^m` is canonical. Algebraic expansion to cross-terms is formally allowed but the squared version is the normal form:
+
+
+    ((0.6🟢 + 3⌛)🏠)² 
+    <- (0.36🟢 + 3.6🟢⌛ + 9⌛)🏠²   # expansion allowed but NOT canonical
+
+
+Cross-terms like `🟢⌛` lack clear semantics and should remain unexpanded unless explicitly requested.
+
+**External cardinality:**
+
+
+    5((7 + 0.6🟢 + 3⌛)🏠)² = 5 towns of 7 pastel-green ancient houses
+
+
+#### Relational Interpretation
+
+Adjectives can be interpreted relationally as query-vectors:
+
+
+    🟢 ⊆ 🟢^
+
+
+where `🟢^` is the type-space of green-related qualities (pastel green, neon green, ecological, etc.).
+
+**Product interpretation:**
+
+Given `🟢 🏠`, the engine finds an appropriate relation linking `🟢` to `🏠` (e.g., `HasColor`, `IsColorOf`).
+
+**Sum interpretation:**
+
+A sum `(c₀ + c₁🟢 + c₂⌛)🏠` creates a star topology:
+
+
+         🏠ᵢ
+       /  |  \
+   c₁ 🟢  c₀  c₂⌛
+
+
+The house connects to each quality with the given intensity.
+
+TODO MAYBE THERE IS A BETTER PLACE FOR THESE:
+- c₀ is cardinality / intensity; adjective coefficients attach per-instance.
+- parentheses without an explicit c₀ imply c₀=0
+
+**Hierarchy interpretation:**
+
+Parenthesized forms nudge the engine toward grouping adjectives: 
+
+    (🟢 ⌛) 🏠 k-> (1 + (🟢 + ⌛))🏠  = weathered green house
+
+vs
+
+    (🟢 + ⌛)🏠 → both qualities modify house (star topology)
+
+#### Opposite Polarity
+
+Negated adjectives follow the intensity scale in reverse:
+
+    -🟢        = opposite of green        k-> -1🟢
+    -🟢▲       = very opposite            k-> -2🟢
+    -🟢▲▲      = utmost opposite          k-> -3🟢
+    -🟢▲▲▲     = extraordinarily opposite k-> -4🟢
+
+The semantic meaning of "opposite" is context-dependent (complementary color, antonym, etc.).
+
+#### Stand-Alone Adjectives
+
+Adjectives without nouns are permitted:
+
+    🟢        # green (as quality)
+    🟢 🟢     # 🟢² (with a space, network of green-relations)
+    🟢 ⌛     # product: engine attempts relational interpretation
+
+For `ADJ₁ ADJ₂` products without a trailing noun, the engine:
+
+1. Attempts to reshape to supported normal form
+2. If unsuccessful, applies relational interpretation
+3. May go creative if necessary, warning the user
+
+#### Summary of Transformation Rules
+
+ Repetition absorption
+
+    ADJ ADJ ... ADJ -> ADJ▲▲...▲      k-> n·ADJ
+
+Mixed absorption (same ADJ only)
+
+    ADJ▲▲ ... ▲ ADJ▲▲ ... ▲   -> ADJ▲▲ ... ▲   k-> (n+m+2)·ADJ
+           n           m             n+m+2
+Intensity markers (suffix)
+
+    ADJ▲▲ ... ▲     k-> (n+1)·ADJ
+    ADJ▼            k-> 0.75·ADJ
+    ADJ▼▼           k-> 0.5·ADJ
+    ADJ▼▼▼          k-> 0.25·ADJ
+    ADJ~            k-> (1±0.1)·ADJ
+
+Comparison markers (prefix) - no coefficient change
+
+    ▲ ADJ           = comparative(ADJ)
+    ▲▲ ADJ          = superlative(ADJ)
+    ▼ ADJ           = comparative_down(ADJ)
+    ▼▼ ADJ          = superlative_down(ADJ)
+
+Polarity
+
+    -ADJ▲^n         k-> -(n+1)·ADJ
+
+Canonical form
+
+    (c₀ + Σᵢ cᵢ·ADJᵢ)S^m   # do not expand cross-terms
+
+
+### Generative Inverse
+
+Form: SYMBOL⁻¹ = SYMBOL^-1
+
+TODO ??
+
+Behavior is type-dependent:
+
+| Type      |      x      |      x⁻¹ means        |                     Example           |
+|-----------|-------------|----------------------|----------------------------------------|
+| Verb      |㉦=(to) ask  | complementary action | ㉦⁻¹ = (to) answer (completes asking)  |
+| Noun      |🏠=house     | compositional source | 🏠⁻¹ = ?? |
+| Adjective |🙂=happy     | generating condition | 🙂⁻¹ = ??           |
+
+Algebraic property:
+
+    x x⁻¹ ~ 1 
+    x⁻¹ x ~ 1 
+
+Since the system is non-deterministic, we can't guarantee uniqueness nor the existence of a sensible meaning.
 
 ### Computational model
 
@@ -2453,6 +2815,8 @@ Result:
 ϡ = symbol  
 ᕉ = hypotesis    
 🖥️ = computer
+文 = actor          looks like a face with hat. 
+
 Ϟ = current computer grade  
 🧪 = test  
 ⚛ = atom
@@ -2631,7 +2995,7 @@ We start the hierarchy from an informatics point of view.
 ✦ = want  
 ⊞ = need   TODO don't like the plus  
 
-△ = try  
+△ = try     TODO seems too similar to 'difference'  
 🔎 = find  
 
 🤏 = get  
@@ -2873,12 +3237,16 @@ sum = ∑
 
 #### Comparison
 
-▲ADJ = more ADJ/ADV  
-▼ADJ = less ADJ/ADV  
-⊳ = than  
-▲▲ = most  
-▼▼ = least  
+Here we only recap the vocabulary, see [Adjectival phrases in grammar section](#adjectival-phrases) for details on how to use them.
 
+▲▲▲ = extra / super 
+▲▲ = most  
+▲ ADJ = more ADJ/ADV  
+▼ ADJ = less ADJ/ADV  
+▼▼ = least  
+▼▼▼ = negligibly   
+
+⊳ = than  
 
 ### Prepositions
 
@@ -3056,8 +3424,8 @@ Example:
 
 ⏪⏳ = soon  
 ⏩⏳ = late  
-▲⏪⏳ = sooner  
-▲⏩⏳ = later  
+▲ ⏪⏳ = sooner  
+▲ ⏩⏳ = later  
 
 
 
@@ -3075,7 +3443,7 @@ Example:
 
 ▶ = play  
 🏃 = go  
-▲🏃 = run   
+🏃▲ = run   
 ⏹ = stop  
 ⏸ = pause  
 🔁 = again
@@ -3091,17 +3459,31 @@ Example:
 웃웃 = persons  
 2웃 = a couple (of persons)  
 
+♂ = male  
+♀ = female  
+
 🧒 = child  
+👦 = boy     U1F466 bare (others are skin variations)   TODO check renderability
+👧 = girl    U1F467 bare (others are skin variations)   TODO check renderability
+
 🧑 = adult  
+🧑♂ = man
+🧑♀ = woman
+
+<!-- actually unicode provides these but we already used them for he / she
+👨 = man    U1F468  bare (others are skin variations)   
+👩 = woman  1F469  bare (others are skin variations)    
+-->
+
 🤝 = friend  
 👥 = partner  
 
-♂ = male  
-♀ = female  
-👨‍👦 = son  
-👩‍👧 = daughter  
+
+<!--👨‍👦 TODO = son  
+👩‍👧 TODO = daughter  
 father = TODO
 mother = TODO
+-->
 
 #### Settlements hierarchy 
 
@@ -3408,7 +3790,118 @@ We also add examples in Latin since its forms are much more regular and still so
 
 In particular, since ᛠ type seems to covers several derivations was marked as [TYPE OVERLOAD]
 
-TODO operator precedence
+- If the target slot is adjectival → interpret Sᛠ as adjective ("national").
+- If the target slot is verbal/modifier slot → interpret as adverb (“nationally”).
+- If context is missing: `setting=natural`: prefer adjective; `setting=formal-*` prefer the form that matches typical English usage for that lexeme.
+
+* Each derivation expresses a **semantic transformation** of a base (verb, noun, or adjective).
+* Boundaries are fluid; for example, *printer* may be **agentive** (person) or **instrumental** (device).
+* Multiple derivations can chain:
+
+  * *build* -> *builder* -> *builderhood* (agent -> group)
+  * *bright* -> *brightness* -> *enlightenment* (adjective -> quality -> abstract concept)
+
+### Intensity Spectrum
+
+TODO CHECK IF IT IS OVERLAPPING WITH CORRESPONDING GRAMMAR ADJECTIVE [intensity-scale](#intensity-scale)
+AND [coefficient-semantics](#coefficient-semantics)
+
+The intensity spectrum applies to adjectives, adverbs, and certain derived forms. 
+It is centered at baseline `1`:
+
+| Form | Coefficient | English | Notes |
+|------|-------------|---------|-------|
+| `X▼▼▼` | `0.25·X` | negligibly X | approaching absence |
+| `X▼▼` | `0.5·X` | barely X / least X | |
+| `X▼` | `0.75·X` | somewhat X / less X | |
+| `~X` / `X~` | `(1±0.1)·X` | approximately X / X-ish | liminal zone |
+| `X` | `1·X` | X | baseline |
+| `X▲` | `2·X` | very X | |
+| `X▲▲` | `3·X` | utmost X / most X | |
+| `X▲▲▲` | `4·X` | extraordinarily X | |
+| `X▲^n` | `(n+1)·X` | unbounded | engine may normalize |
+
+**Absence vs Zero vs Opposite:**
+
+| Expression | Type | Meaning |
+|------------|------|---------|
+| `0X` | scalar | term vanishes from sum (algebraic zero) |
+| `X🚫` | privative | absence of X (structural, X-domain persists) |
+| `-X` | opposite | opposite/inverse of X on same scale |
+| `¬X` | complement | categorically not-X, outside X's domain |
+
+Example with 🟢:
+
+| Expression | Meaning |
+|------------|---------|
+| `0🟢` | term vanishes, uninformative |
+| `🟢🚫` | non-green, colorless (still on color scale) |
+| `-🟢` | opposite of green (magenta? contextual) |
+| `¬🟢` | not-green: could be red, blue, invisible, or a sound |
+
+
+### Morphological Coefficient Summary
+
+All derivational operations preserve intensity coefficients:
+
+| Derivation | Rule | Example |
+|------------|------|---------|
+| State/Quality | `(c·ADJ)^0 = c·(ADJ^0)` | `🟢▲^0` = vivid greenness |
+| Agentive | `(c·V)⧏ = c·(V⧏)` | `🗣▲⧏` = loud speaker |
+| Resultative | `(c·V)⧐ = c·(V⧐)` | `🛠▲⧐` = masterwork |
+| Potential | `(c·X)◉ = pot(c·X)` | `❤▲◉` = very lovable |
+| Adverbial | `(c·ADJ)ᛠ = c·(ADJᛠ)` | `💪▲ᛠ` = very strongly |
+| Opposite | `-(c·X) = c·(-X)` | `-🙂▲` = very sad |
+| Inverse | `(c·V)⁻¹ = c·(V⁻¹)` | `🗣▲⁻¹` = listen intently |
+| Passive | `(c·X)ᐪ = c·(Xᐪ)` | `❤▲ᐪ` = deeply loved |
+
+**Exceptions:**
+
+- Privative (`X🚫`) does not take intensity (binary)
+- Comparative prefix (`▲ X`) does not change coefficient (grammatical, not lexical)
+- Prefix ▲/▼ are comparative grammar; postfix ▲/▼ are intensity.
+
+### Derivation Stacking Order
+
+When multiple derivations apply, the canonical order is:
+
+POLARITY - INTENSITY - BASE - DERIVATION - VOICE
+
+-SYMBOL▲⧏ᐪ = passive agent of very opposite-SYMBOL
+
+Example:
+
+
+    -🗣▲⧏ᐪ
+    = passive form of
+      agent of
+        very
+          opposite-of-speak
+    = "one who is shouted at" (?)
+
+
+Complex stacks may require contextual interpretation.
+
+### Repetition and Morphology
+
+Repetition of adjectives absorption applies before derivation:
+
+    🟢🟢⧏    → (🟢▲)⧏    → 🟢▲⧏     # bright-green agent (?)
+            k-> 2🟢⧏
+
+    🙂🙂🙂^0 → (🙂▲▲)^0  → 🙂▲▲^0   #  blissfulness
+            k-> 3🙂^0
+
+**Ambiguity resolution:**
+
+Repetition of the derived form indicates plurality, not intensity.
+
+    🟢⧏🟢⧏  =   2(🟢⧏)
+
+Absorption is only for adjectives:
+
+    🗣🗣⧏ = speakers   # no furher processing      
+
 
 ### NOMINALIZATION -> noun
 
@@ -3421,6 +3914,18 @@ Form: SYMBOL⧏  [ARROW]
 
 * **Nonhuman / institutional**: generator, producer, publisher
   Latin: _generator_, _creator_, _auctor_ (originator, author)
+
+From intensified verbs:
+
+    🗣▲     = speak loudly / orate
+    🗣▲⧏    = loud speaker / orator
+
+    ⚒▼     = work lightly
+    ⚒▼⧏    = light worker / dabbler
+
+General rule:
+
+    (c·VERB)⧏ = c·(VERB⧏)   # intensity transfers to agent
 
 #### Instrumental (tool / machine)
 
@@ -3446,6 +3951,18 @@ Same symbol as [`targets` function](#operations-on-relations) (on purpose!)
 
 * **Abstract results**: ㉦⧐ = question, solution (root *solv-* “to loosen”), insight, reflection
   Latin: Latin: quaestiō (the seeking quaerere itself materialized), _solutio_ (solution), _reflexio_ (reflection), _cognitio_ (insight)
+
+From intensified verb:
+
+    🛠▲     = make intensely / craft
+    🛠▲⧐    = masterwork / fine creation
+
+    💭▼    = think idly
+    💭▼⧐   = idle thought / musing
+
+General rule:
+
+    (c·VERB)⧐ = c·(VERB⧐)   # intensity transfers to result
 
 
 #### Process / Action (event)
@@ -3474,6 +3991,19 @@ Form: SYMBOL^0
     ⚐^0 = nationhood (status / condition of nation)  
   Latin: _mors_ (death), _lassitudo_ (weariness), _tristitia_ (sadness)
 
+Nominalization preserves intensity:
+
+    🙂▲     = very happy (adjective)
+    🙂▲^0   = great happiness (state/quality noun)
+
+    🟢▼▼    = barely green (adjective)  
+    🟢▼▼^0  = faint greenness (quality noun)
+
+General rule:
+
+    (c·ADJ)^0 = c·(ADJ^0)
+
+The intensity coefficient transfers to the derived noun.
 
 #### Collective / Group (aggregate)
 
@@ -3538,43 +4068,97 @@ TODO What would ㄕ 웃  _with a space_ could possibly be? And ㄕ ㄕ? ㄕㄕ ?
 
 #### Other nominal derivations
 
-TODO
+#### Augmentative
 
-* **Diminutive**: booklet, duckling, cottage
-  Latin: *libellus* (little book), *homunculus* (little man), *domuncula* (small house)
+Form: SYMBOL▲, ▲▲  
 
-TODO
+* English: 🏠▲ = villa, 🏠▲▲=mansion,  ⚒▲ = toil, ❤▲ = passion
+* Latin:TODO villa ?,  *labor* (toil), *ardor* (passion)
 
-* **Augmentative**: strongman, lionheart, megastructure
-  Latin: *magnitudo* (greatness), *grandis* (large), *heros* (hero)
+**Superlative**
 
-TODO
+Form: SYMBOL▲▲▲ 
 
-* **Pejorative (derivational)**: childish, foolish, bossy
-  Latin: *stolidus* (foolish), *ineptus* (inept), *vanus* (vain)
+* English: 🏠▲▲▲=palace, ⭐▲▲▲ = supernova
+* Latin: *palatium* (palace)
 
-TODO
+TODO CHECK OTHERS:
+* English: strongman, lionheart, megastructure
+* Latin: *magnitudo* (greatness), *grandis* (large), *heros* (hero)
 
-* **Gendered**: actress, waiter, princess
-  Latin: *actor / actrix*, *magister / magistra*, *rex / regina*
 
----
+
+#### Diminutive (reduced)
+
+
+Form: SYMBOL▼, ▼▼, ▼▼▼
+
+* English: 🏠▼ = cottage,  🏠▼▼ = shed, 🏠▼▼▼ = hovel  ⚒▼ = task, ❤▼ = fondness
+🏠▼² = holiday village, 🏠▼▼² = hamlet, 🏠▼▼▼² = slum   
+* Latin: *domuncula* (small house), *pensum* (task), *benevolentia* (fondness)
+
+TODO think about task, could be something other operator
+TODO think about these other examples:
+* **Diminutive**: English booklet, duckling, 
+  Latin: *libellus* (little book),  
+
+
+#### Pejorative (derivational)
+
+TODO ???
+
+* English: childish, foolish, bossy
+* Latin: *stolidus* (foolish), *ineptus* (inept), *vanus* (vain)
+
+TODO difference with similitative ??
+
+#### Gendered
+
+Form: SYMBOL♀ / ♂
+
+A bare SYMBOL is assumed neutral. Genedered form is used only when there is actual need to distinguish.
+
+* English: 文♂ = actress, waiter, princess
+*  Latin: *actor / actrix*, *magister / magistra*, *rex / regina*
+
 
 ### ADJECTIVALIZATION -> adjective
 
 #### Similative / Approximative
 
-Form: SYMBOL~  (no spaces)
+`setting=natural`        Form: SYMBOL~     (no spaces)
 
-* English: 🟢~ = greenish, 🧒~ = childish, 🔥~ = fiery (fire-like), 10~ = ten-ish / about ten / ~10
+    * English: 🟢~ = greenish, 🧒~ = childish, 🔥~ = fiery (fire-like), 10~ = ten-ish / about ten / ~10
+
+- `setting=formal-*`       Form: ~SYMBOL (no spaces)        ~🟢 = greenish  
+                                                           
 *  Latin: *viridis* (green), *puerilis* (childish), *igneus* (fiery),  *circiter decem* (around ten), (in general, uses *sub-* prefix or *quasi-*)
+
+**Interaction with intensity markers:**
+
+```
+~(X▲)  = approximately very-X    k-> (2±0.1)·X
+(~X)▲  = very approximately-X    k-> 2·(1±0.1)·X ≈ (2±0.2)·X
+```
+
+In practice, these are near-equivalent. Prefer `~(X▲)` for clarity.
+
+**Numerical approximation:**
+
+```
+~10    = about ten / ten-ish     k-> 10±1
+~100   = about a hundred         k-> 100±10
+~3.14  = approximately pi        k-> 3.14±0.1
+```
+
+The tolerance scales with magnitude in natural contexts.
 
 
 #### Relational
 
 Form: SYMBOLᛠ  (no spaces)   [TYPE OVERLOAD]
 
-* English: academic, chemical, ⚐ᛠ = national, seasonal
+* English: academic, chemical, ⚐ᛠ = national, seasonal 
 * Latin: *academicus*, *chemicus*, *nationalis*, *temporalis*
 
 TODO: maybe  S⁰ᛠ  ??  like "nation-essence-ly" = national
@@ -3614,27 +4198,13 @@ Form: SYMBOLᛠ   (no spaces)   [TYPE OVERLOAD]
 * Latin: *mundanus* (worldly), *maritimus* (coastal), *rusticus* (rural)
 
 
-#### Privative or abessive (lacking)
-
-TODO
-
-* English: homeless, toothless, colorless, sightless
-* Latin: *incolor* (colorless), *edentulus* (toothless), *sine domo* (without home)
-
-#### Evaluative or defective (improperly)
-
-TODO
-
-* English: ill-formed, ill-timed, malformed, misaligned
-* Latin: *male formatus* (ill-formed), *malus tempus* (ill-timed), *deformis* (misshapen)
-
 ### PARTICIPIAL ADJECTIVES -> verbal qualities
 
 **Active**: 
 
 Form: ↻ADJ
 
-- English: "-ing" |  ↻❤ = loving, ↻▲🏃 = running, shining
+- English: "-ing" |  ↻❤ = loving, ↻🏃▲ = running, shining
 - Latin: "-nt" | *amans* (loving), *currens* (running), *lucens* (shining)
 
 **Passive**: 
@@ -3653,8 +4223,19 @@ Form: SYMBOL◉  (without spaces)
 * Latin: "-bilis" | ❤◉ = *amabilis* (lovable), 👀◉ = *visibilis* (visible), *legibilis* (readable), *reversibilis* (reversible)
 
 
-### VERBALIZATION -> verb
+Intensity applies before the potential marker:
 
+    ❤◉     = lovable (baseline)
+    ❤▲◉    = very lovable / adorable [DEFAULT]
+    ❤▼◉    = somewhat lovable / likable [DEFAULT]
+
+    👀◉    = visible
+    👀▼▼▼◉ = barely visible / imperceptible [DEFAULT]
+
+    (c·X)◉ = ability/suitability for c-intensity X
+
+
+### VERBALIZATION -> verb
 
 #### Causative
 
@@ -3681,17 +4262,20 @@ TODO Is there any difference with Temporal recurrence stuff?
 
 #### Denominal
 
-TODO
+Form: ↦ SYMBOL
 
-* English: hammer -> to hammer, poison -> to poison
+* English: ↦ 🔨, to poison
 * Latin: *malleare* (from *malleus*, hammer), *coronare* (to crown)
+
 
 #### De-adjectival
 
-TODO don't see much difference with 'Denominal'
+Form: ↦ SYMBOL
 
-* English: cool -> to cool, warm -> to warm
+* English: to cool, to warm
 * Latin: *purificare* (to purify), *solidare* (to make solid)
+
+TODO don't see much difference with 'Denominal'
 
 
 ### ADVERBIALIZATION -> adverb
@@ -3703,21 +4287,106 @@ Form:  Sᛠ (no spaces)  [TYPE OVERLOAD]
 
 TODO Initially used a dedicated ノ symbol, seems we can just conflate to ᛠ  (remove note when we reach final decision) 
 
+Adverbs derived from adjectives preserve intensity:
+
+
+    🟢ᛠ     = greenly (in a green manner)
+    🟢▲ᛠ    = very greenly / vividly
+    🟢▼ᛠ    = somewhat greenly / faintly
+
+    💪ᛠ    = strongly
+    💪▲▲ᛠ  = most strongly / mightily
+
+General rule:
+
+    (c·ADJ)ᛠ = c·(ADJᛠ)
+
+#### Comparative and Superlative Derivation
+
+Prefix markers create grammatical comparison without changing the coefficient:
+
+| Form | Function | Example |
+|------|----------|---------|
+| `▲ S` | comparative | `▲ 🟢` = greener |
+| `▲▲ S` | superlative | `▲▲ 🟢` = greenest |
+| `▼ S` | comparative (down) | `▼ 🟢` = less green |
+| `▼▼ S` | superlative (down) | `▼▼ 🟢` = least green |
+
+**Applied to derived forms:**
+
+    ▲ 🟢ᛠ     = more greenly
+    ▲▲ 🟢ᛠ    = most greenly
+    ▲ 💪ᛠ    = more strongly
+    ▼ 💪▲ᛠ   = less very-strongly
+
+
+**Applied to intensified base:**
+
+
+    ▲ 🟢▲     = more bright-green (comparative of intensity-2)
+    ▲▲ 🟢▲▲   = most vivid-green (superlative of intensity-3)
+    ▼ 🟢▲     = less bright-green
+    ▼▼ 🟢▲▲▲  = least extraordinarily-green
+
+
+The prefix operates on the entire intensified form as a unit.
+
 
 ### POLARITY / NEGATION -> opposite meaning
 
+Form: -SYMBOL
+
+* English: -🙂 = sad, -✝ = cursed, -❤ = hate, anti-person, -웃 = nemesis, shadow-self, -⭐anti-star
+* Latin: *tristis* (sad), *maledictus* (cursed), *odium* (hate)
+
+**Extreme opposite** (maximal inversion):
+
+Form: -SYMBOL▲▲▲
+
+* English: -🙂▲▲▲ = despair, -✝▲▲▲ = diabolic 
+* Latin: *desperatio* (despair), *diabolicus* (diabolic)
+
+TODO the upward pointing triangle clashes with the minus, but really, what else can we do?
+
+**Adjectives:**
+
+
+    -🙂      = sad (opposite of happy)
+    -🙂▲     = very sad               k-> -2🙂
+    -🙂▲▲    = deeply sad             k-> -3🙂
+    -🙂▼     = somewhat sad           k-> -0.75🙂
+
+
+**Interaction with comparison:**
+
+    ▲ -🙂    = sadder (comparative of sad)
+    ▲▲ -🙂   = saddest (superlative of sad)
+    ▲ -🙂▲   = more very-sad
+
+**Nouns (via state derivation):**
+
+    🙂^0     = happiness
+    -🙂^0    = sadness (= (-🙂)^0)
+    -🙂▲^0   = deep sadness
+
+General rule:
+
+    -(c·X) = (-c)·X = c·(-X)
+
+Negation and intensity commute.
+
+
 #### Negative adjectival derivation
 
-TODO
-
+TODO 
 Typical affixes: un-, in-, im-, ir-
-English: unholy, unequal, impossible, impolite
-Latin: *impius* (unholy), *inaequalis* (unequal), *impossibilis* (impossible), *impolitus* (uncultivated, impolite)
+
+English: , unequal, impossible, impolite
+Latin: mpius* (unholy), *inaequalis* (unequal), *impossibilis* (impossible), *impolitus* (uncultivated, impolite)
 
 #### Negative nominal derivation
 
 TODO
-
 Typical affixes: non-, dis-, a-, anti-
 English: inequality, disbelief, non-determinism, anti-realism
 Latin: *iniquitas* (inequality), *incredulitas* (disbelief), *indeterminatio* (non-determination), *antirealismus* (anti-realism)
@@ -3731,31 +4400,156 @@ English: undetermined (verb -> adj -> neg adj), unreality (adj -> noun -> neg)
 Latin: *indeterminatus* (undetermined), *irrealitas* (unreality)
 
 
-### PRIVATIVE / DEFECTIVE -> lacking or improper
+### Privative derivation
 
-TODO
+Indicates structural absence of SYMBOL while remaining in SYMBOL's domain.
 
-#### Explicit lack (-less)
+Form: SYMBOL🚫
 
-English: toothless, colorless, heartless, homeless, mindless
-Latin: *edentulus* (toothless), *incolor* (colorless), *exanimis* (lifeless, “without breath”), *sine domo* (homeless)
+* English: 🏠🚫 = homeless, ❤🚫 = loveless, 🟢🚫 = non-green (lacking green, still a color)
+, toothless, colorless, heartless, mindless
+* Latin: *sine domo* (homeless), *sine amore* (loveless), Latin: *edentulus* (toothless), *incolor* (colorless), *exanimis* (lifeless, “without breath”)
 
-#### Improper or deficient (ill-, mal-, mis-)
+TODO think about using the typed empty set instead, some ideas:  0🏠 ∅🏠 {}🏠 🏠0 🏠∅ 🏠{}  {}^[🏠]  {}[🏠]   ∅[🏠] ∅^[🏠]    
 
-TODO
 
-English: ill-formed, ill-advised, malformed, misaligned, malfunction
+**Interaction with intensity:**
+
+Privative typically does not combine with intensity markers, as absence is binary:
+
+    🟢▲🚫    # awkward: "very-green-less"?
+    🟢🚫     # preferred: simply non-green
+
+
+If gradation of absence is needed, use the coefficient form:
+
+
+    (0.1🟢)🏠  = barely green house (approaching non-green)
+    (🟢🚫)🏠   = non-green house (categorical)
+
+
+**Contrast with [opposite](#polarity--negation---opposite-meaning) `-`**
+
+    🙂🚫     = joyless (absence of happiness, neutral)
+    -🙂      = sad (opposite of happiness, negative)
+
+
+**Contrast with [defect](#improper-or-deficient)**:  ❌ is gradable, hence it composes with intensity/coefficient.
+
+### Improper or deficient 
+
+Indicates improper, malformed, or deficient S (ill-, mal-, mis-).
+
+Form: SYMBOL❌
+
+English: ill-formed, ill-advised, malformed, misaligned, ⚙❌=malfunction
 Latin: *male formatus* (ill-formed), *malus consilium* (bad advice), *deformis* (misshapen), *vitium machinae* (machine fault)
 
 
-### Morphology notes
+    ⚙❌      = malfunction (improper function)
+    🛠❌     = ill-made / botched
+    💭❌     = ill-conceived / muddled thought
 
-* Each derivation expresses a **semantic transformation** of a base (verb, noun, or adjective).
-* Boundaries are fluid; for example, *printer* may be **agentive** (person) or **instrumental** (device).
-* Multiple derivations can chain:
 
-  * *build* -> *builder* -> *builderhood* (agent -> group)
-  * *bright* -> *brightness* -> *enlightenment* (adjective -> quality -> abstract concept)
+**Interaction with intensity:**
+
+
+    ⚙▲❌     = severe malfunction
+    ⚙▼❌     = minor malfunction
+
+General pattern:
+
+    (c·X)❌ = c-severity defect of X
+
+
+
+
+### Passive / Inverse Voice
+
+Form: SYMBOLᐪ
+
+Swaps the perspective from agent to patient, or from source to target.
+
+* For verbs: active -> passive
+  - ❤ᐪ = being loved (love from beloved's view)
+  - 👀ᐪ = being seen (see from object's view)
+  - 🗣ᐪ = being spoken to (speak from listener's view)
+
+* For relations: source ↔ target
+  - (웃 🐶)ᐪ = 🐶ᐪ 웃ᐪ = 🐶 웃 = dogs' relationship to owners (flipped ownership)
+
+* Latin parallel: passive voice (*amor* "I am loved" vs *amo* "I love")
+
+Note: For symmetric relations (🤝 friendship), xᐪ = x (transpose is identity).
+
+Intensity interaction:
+
+    ❤▲      = love deeply
+    ❤▲ᐪ     = be deeply loved
+
+General rule:
+
+    (c·X)ᐪ = c·(Xᐪ)
+
+Intensity preserves through voice change.
+
+### Complementary derivation
+
+#### Complementary action (for verbs)
+
+Form: VERB⁻¹
+
+Returns the verb that "closes the loop" - the action that completes or responds to the original.
+
+* English verbe pairs:
+  - ㉦⁻¹ (to) ask -> (to) answer
+  - 👐⁻¹ give -> receive
+  - 🗣⁻¹ speak -> listen
+  - 👀⁻¹ see -> show
+  - 🏃⁻¹ go -> come
+  - ⚒⁻¹ work -> use/consume
+
+* Latin: some verbs have deponent or suppletive pairs
+  - *dare/accipere* (give/receive)
+  - *loqui/audire* (speak/hear)
+
+**Interaction with intensity:**
+
+    🗣▲      = speak loudly / orate
+    🗣▲⁻¹    = listen intently (intensity transfers)
+
+
+General rule:
+
+    (c·VERB)⁻¹ = c·(VERB⁻¹)
+
+The intensity of the action transfers to its complement.
+
+
+#### NOUNS name ??
+
+Form: NOUN⁻¹
+
+TODO ??
+
+* English:
+  - 🏠⁻¹ = ??
+  - 웃⁻¹ = ??
+  - ⚐⁻¹ = ??
+  - 🐶⁻¹ = ??
+
+* Latin: ??
+
+#### NAME ?? (for adjectives)
+
+Form: ADJ⁻¹
+
+TODO ??
+
+* English:
+  - 🙂⁻¹ = ??
+  - ✝⁻¹ = ??
+  - ⭐⁻¹ = ??
 
 
 ## Graphemics
@@ -3911,7 +4705,7 @@ pdp_format = 3
 
 #### PDP Content (v3)
 
-**TO THE AI: IGNORE THIS PDP, IT'S EXPERIMENTAL AND MIGHT BE UNDERSPECIFIED / CONTRADICT THE SPECS**
+**TO THE AI: THIS PDP IS EXPERIMENTAL AND NON-AUTHORITATIVE: MIGHT BE UNDERSPECIFIED / CONTRADICT THE SPECS**
 
 ```
 [meta]
@@ -3924,15 +4718,16 @@ pdp_format = 3
 ⟡be ⊸have ◐do
 ↶PAST ↻PROG ⇗will ↶⇗would
 ◉can ↶◉could ◆may ↶◆might ⤊must ⬈shall ↶⬈should
-¬NOT ▫a ▪the
-⸮if ⇨then ∧and ∨or
+¬NOT ▫a ▪the ㉤any ⊡each 으only ⛉just
+⸮if ⇨then ∧and ∨or ⤳so/therefore
 ↦to ⎋from ➲at ⊶of ⚭with ◙on ◘off
-⚞since ⌢during ⧘until ∻through
-㊅as ⊳than
+⚞since ⌢during ⧘until ∻through ⟴across 🆚against
+㊅as ⊳than ⎋from ㅱaway
+
 
 [pronoun]
 👤I 우you 👨he 👩she Əthey.SG 🔹it 👤👤we ƏƏthey.PL
-⎴POSS.ADJ ⁀OBJ ⌎POSS.PRO 🧿REFL
+⎴POSS.ADJ ⁀OBJ ⌎POSS.PRO 🧿REFL ⌎POSS.CLITIC('s)
 
 [interrogative]
 山what ⚇who 📍where ⏰when Ϣwhy ⏣how ❖which
@@ -3941,27 +4736,31 @@ pdp_format = 3
 ☞there ☟here ▣this 👉that ▣▣these 👉👉those
 
 [compare]
-▲more ▼less ▲▲most ▼▼least
+▲more ▼less ▲▲most ▼▼least ▲▲▲extra ▼▼▼negligible
 
 [morphology]
-↶V=past(V) ↻V=prog(V)
-V⧏=agent(V) V⧐=result(V) V◉=able(V) Aノ=adverb(A)
-A⁰=quality(A)
+↶V=past(V) ↻V=prog(V) Vᐪ=passive(V)
+V⧏=agent(V) V⧐=result(V) V◉=able(V) Aᛠ=adverb(A)
+A⁰=quality(A) Aᛠ=rel/adj/adv
+ㄕS=concept(-ism) S📍=place-of-S
 
 [override]
-웃person ☉object ◇unknown ↂerror
+웃person ☉object ◇unknown ↂerror ᕟvariable
 🔹it 🧿self ⌖place
-⚒work 🛠make 💭think 💬say 🗣speak
-◔some ◕most ⊚none ∀all ∃exists
-⏱now ⏭next ⏮prev
-▶play ⏸pause ⏹stop 🔁again
+⚒work 🛠make 💭think 💬say 🗣speak ⩕mean ㉦ask
+◔some ◕most ⊚none 
+㉣specs ϡsymbol ↂerror ◇unknown
+Ⓣtrue Ⓕfalse Iidentity ▢empty ▇universal
+⏱now
 
 [algebra]
+PRECEDENCE: Polarity(-) > Intensity(▲) > Grade(ⁿ) > Derivation(ᛠ)
 S⁰ = essence(S)
-S¹ = S
+S¹ = S (infividual query)
 S² = collective(S)
 S³ = system(S)
 Sⁿ⁺¹ = meta(Sⁿ)
+S⁻¹ = generative_inverse (completes/decomposes/analyzes S)
 n×S = n distinct instances of S
 S·T = relation(S,T)
 S T = sequence (space-delimited)

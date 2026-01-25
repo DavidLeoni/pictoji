@@ -1,4 +1,4 @@
-﻿# ㄕ🗿 PICTOJI DEV  0.6.21
+﻿# ㄕ🗿 PICTOJI DEV  [PICTOJI.VERSION]
 
 > _Ray_: What if we're wrong?  
 > _Egon_: About?  
@@ -425,6 +425,34 @@ R𝀆 TODO CHECK COMPAT
 
 arrows:   ⤊ ⤋   ⮉❗❗ 🠉❗❗ ⟱❗  ⟰❗ 
 
+Attempt at 'intensity': 
+- 🏠⇡ 🏠↑ 🏠🡑 🏠⇑ 🏠⤊ 🏠⟰   FAILED! Visually hard to distinguish
+- 🏠🔼 🏠⏫  🏠⏫🔼  🏠⏫⏫  FAILED! can emoji-render, distracting
+- 🏠ㅆ 🏠ㅆㅆ 
+
+
+🔼  U1F53C fully-qualified    TODO CHECK   can emoji-render
+⏫  U23EB  fully-qualified    TODO CHECK   can emoji-render
+🔽  1F53D  fully-qualified    TODO CHECK   can emoji-render
+⏬  23EC   fully-qualified    TODO CHECK   can emoji-render
+
+⇡TODO CHECK 
+⇣TODO CHECK
+↑ already used for 'up' TODO CHECK
+↓ already used for 'down' TODO CHECK
+↕
+🡑 sans serif TODO CHECK
+🡓 sans serif TODO CHECK
+⇑TODO CHECK
+⇓ TODO CHECK
+⤊ TODO CHECK
+⤋ TODO CHECK
+⟰❗
+⟱❗
+
+ᨑ Buginese 'ra': TODO CHECK
+
+
 으 므 브 프  오 모 우 무 부 푸 묘 요 뵤 유 뮤 뷰  Ⳬ:Coptic
 
 Ⰺ  Ⰲ:Glagolitic Ⱋ Ⰹ Ⰾ 
@@ -496,7 +524,7 @@ arrows: ↦ ↣ ➳ ➾ ⇺ ⇻ ⇥ ➠  ➲ ⮊❗❗     ↠ ⯮❗❗    ⬈ 
 쁘 뽀 Ⱖ 뿌 뮷 쏭 쑹 쑴 쑵 숌 슝 송 숭  Faces
 
 후 호 흐 文  chests
-
+= 
 웃 웃 흥 훗 흣 횻 효  people
 
 뭉 뭇 믖  robots?

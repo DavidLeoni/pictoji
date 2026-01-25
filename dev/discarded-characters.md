@@ -82,6 +82,10 @@ Too similar to ▇ : universal relation  U+2587 UPPER SEVEN EIGHTHS BLOCK
 ꖴ:Vai: too similar to ☉
 Ꙫ:CyrillicExtB: too similar to ⚇
 
+## Xxxs
+
+✗: TODO
+✘: TODO
 
 ⨉: N-ARY TIMES OPERATOR, U+2A09
 ×: multiplication sign, Latin-1 Supplement U+00D7

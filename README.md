@@ -7,9 +7,9 @@
 
 **PICTOJI features**:
 
-- semi-formal: adops math for generic concepts, English for grammar and idioms,  sometimes even Latin to clarify irregularities
+- semi-formal: adopts math for generic concepts, English for grammar and idioms,  sometimes even Latin to clarify irregularities
+- translation: non-deterministic, context dependent and AI assisted
 - character set: chosen from a variety of languages, with unicode symbols modern devices can show
-- Translation: non-deterministic, context dependent and AI assisted
 - cast: an engaging roster of actors to entertain you
 
 **Usage**:
