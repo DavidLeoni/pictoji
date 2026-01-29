@@ -7,13 +7,15 @@ Python tools for Pictoji project management
 
 NOTE: Python tools are only needed for Pictoji development, if you instead just want to use Pictoji simply copy-paste [pictoji.md](../pictoji.md) in your favorite AI chatbot.
 
-
 Dev features:
 
 Currently not much:
 
 - unicode chars statistics
 - token counts
+
+Continuous integration reports:  https://DavidLeoni.github.io/pictoji/ci/
+
 
 ## Installation
 
