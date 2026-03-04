@@ -1,4 +1,4 @@
-﻿<h1 align="center"> ㄕICTO<i>ji</i> <br><i>SPECS VERSION 0.6.25.DEV+p</i>
+﻿<h1 align="center"> ㄕICTO<i>ji</i> <br><i>SPECS VERSION 0.6.25+c6545e2</i>
  <br><br> 🗿 ⨝ 웃²  </h1> <h2 align="center"> A Relatable Algebra <br>for the  People </h2> 
 <br>
 <p align="center">
@@ -4898,7 +4898,7 @@ SUPPORTED_AIS = ["ChatGPT 5.*", "ChatGPT 5.* Thinking",  "Gemini 3 Pro Preview",
 
 CURRENT_AI = [PUT AI NAME]  
 PICTOJI_HEADER = [PUT PICTOJI SPECS HEADER]   
-PICTOJI_VERSION = 0.6.25.DEV+p  
+PICTOJI_VERSION = 0.6.25+c6545e2  
 
 
 - **Authority and versioning.**: This lexicon is authoritative over Unicode names and prior Pictoji releases. Any change to mappings requires a version bump and a changelog entry.

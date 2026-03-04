@@ -1,4 +1,4 @@
-﻿# ㄕ🗿 PICTOJI DEV  0.6.25.DEV+p
+﻿# ㄕ🗿 PICTOJI DEV  0.6.25+c6545e2
 
 > _Ray_: What if we're wrong?  
 > _Egon_: About?  

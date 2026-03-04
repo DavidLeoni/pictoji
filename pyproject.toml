@@ -1,4 +1,4 @@
-# Pictoji - A Relatable Algebra for the People
+﻿# Pictoji - A Relatable Algebra for the People
 # Single package with multiple optional submodules
 
 [build-system]
@@ -7,7 +7,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "pictoji"
-version = "0.6.25.DEV+p"
+version = "0.6.25"
 description = "A Relatable Algebra for the People - A new old language for AI-assisted mathemojics of meaning"
 readme = "README.md"
 requires-python = ">=3.8"
