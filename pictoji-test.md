@@ -374,6 +374,11 @@ Put them here as given the specs they MUST be redundant
 
 👤 💭, ⤳ 👤 ⟡. == I think, therefore I am.
 
+Natural language: literal difference matters (i.e. no / not):
+
+    山^ ↶⟡, ⇗ ⟡. 山^ ⟡, ⇗ ⟡ 🚫 ⧁. == What was, will be. What is, will be no more. 
+    -- Vigo the Carpathian
+
 
 👤^ ⊸^ ▫ 😴💭^ == I Have a Dream        # the original, note unnecessary extra-caret emphasis on 👤^ 
 👤 ⊸ ▫ 😴💭 == I have a dream 
@@ -447,5 +452,14 @@ JFK:㉦^ ¬ 山 우⎴ 🏠⁶ ◉ ◐ ㊐ 우 - ㉦ 山 우 ◉ ◐ ㊐ 우⎴ 
 
 🟠⧏ = ?
 
+
+## Pictoji in pictoji
+
+The ultimate test (aspirational!!!)
+
+∀ AI_i, AI_j ∈ SUPPORTED_AIS:
+    emojis = encode(pictoji_specs_english | AI_i)
+    deng = decode(emojis | AI_j)
+    ∆𐒄(pictoji_specs_english, deng) ≤? ε(setting=formal)
 
 DO NOT OUTPUT ANYTHING
