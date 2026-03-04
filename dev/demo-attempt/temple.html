@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Temple of 웃 — ㄕICTOji</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=Fira+Code:wght@400;500&display=swap');
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --gold: #c9a84c;
+    --gold-dim: #8a7340;
+    --ink: #2a2118;
+    --ink-light: #5a4d3a;
+    --parchment: #fffcf5;
+    --parchment-mid: #f5eedd;
+    --parchment-deep: #ebe0c8;
+  }
+
+  body {
+    min-height: 100vh;
+    background: linear-gradient(170deg, var(--parchment) 0%, var(--parchment-mid) 40%, var(--parchment-deep) 100%);
+    font-family: 'EB Garamond', 'Georgia', serif;
+    color: var(--ink);
+    overflow-x: hidden;
+  }
+
+  /* --- Floating Glyphs --- */
+  .glyph-field { position: fixed; inset: 0; pointer-events: none; z-index: 0; overflow: hidden; }
+  .glyph {
+    position: absolute;
+    color: var(--gold);
+    font-family: serif;
+    animation: floatGlyph var(--dur) ease-in-out var(--delay) infinite;
+  }
+  @keyframes floatGlyph {
+    0%, 100% { transform: translateY(0) rotate(0deg); }
+    33% { transform: translateY(-15px) rotate(3deg); }
+    66% { transform: translateY(8px) rotate(-2deg); }
+  }
+
+  /* --- Layout --- */
+  .temple { position: relative; z-index: 1; max-width: 600px; margin: 0 auto; padding: 20px 20px 60px; }
+
+  /* --- Header --- */
+  .header { text-align: center; margin-bottom: 32px; padding-top: 24px; }
+  .header-above {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 11px; letter-spacing: 6px; color: var(--gold-dim);
+    text-transform: uppercase; margin-bottom: 8px;
+    animation: titleReveal 1.2s ease both;
+  }
+  .header-symbol {
+    font-size: 56px; line-height: 1; margin-bottom: 8px;
+    display: inline-block; border-radius: 50%; padding: 8px;
+    animation: pulseGlow 4s ease-in-out infinite;
+  }
+  .header-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 28px; font-weight: 300; letter-spacing: 3px;
+    animation: titleReveal 1.2s ease 0.2s both;
+  }
+  .header-sub {
+    font-size: 15px; color: var(--gold-dim); margin-top: 8px;
+    font-style: italic; animation: subtitleReveal 1s ease 0.6s both;
+  }
+  @keyframes titleReveal { from { opacity:0; letter-spacing:12px } to { opacity:1; letter-spacing:6px } }
+  @keyframes subtitleReveal { from { opacity:0; transform:translateY(10px) } to { opacity:1; transform:translateY(0) } }
+  @keyframes pulseGlow {
+    0%,100% { box-shadow: 0 0 0 0 rgba(201,168,76,0) }
+    50% { box-shadow: 0 0 20px 4px rgba(201,168,76,.15) }
+  }
+
+  .divider {
+    height: 1px; margin: 0 40px 28px;
+    background: linear-gradient(90deg, transparent, rgba(201,168,76,.4), transparent);
+  }
+
+  /* --- Tabs --- */
+  .tabs { display: flex; justify-content: center; gap: 4px; margin-bottom: 28px; }
+  .tab-btn {
+    font-family: 'Cormorant Garamond', serif; font-size: 14px; letter-spacing: 1px;
+    padding: 8px 24px; border: none; border-bottom: 2px solid transparent;
+    background: transparent; color: var(--gold-dim); cursor: pointer; transition: all .3s;
+  }
+  .tab-btn[aria-selected="true"] {
+    border-bottom-color: var(--gold-dim); color: var(--ink); font-weight: 600;
+  }
+
+  /* --- Emoji Picker --- */
+  .picker { display: flex; justify-content: center; gap: 6px; margin-bottom: 28px; flex-wrap: wrap; }
+  .pick-btn {
+    width: 52px; height: 52px; border-radius: 12px;
+    border: 1.5px solid rgba(201,168,76,.2);
+    background: rgba(255,252,245,.6); cursor: pointer;
+    font-size: 22px; display: flex; flex-direction: column;
+    align-items: center; justify-content: center; gap: 0;
+    transition: all .2s; backdrop-filter: blur(8px);
+  }
+  .pick-btn[aria-selected="true"] {
+    border: 2px solid var(--gold-dim);
+    background: rgba(201,168,76,.1);
+    box-shadow: 0 2px 12px rgba(201,168,76,.15);
+  }
+  .pick-btn .pick-label {
+    font-size: 8px; color: var(--gold-dim);
+    font-family: 'Cormorant Garamond', serif; letter-spacing: .5px;
+  }
+
+  /* --- Active Symbol --- */
+  .active-symbol { text-align: center; margin-bottom: 20px; }
+  .active-symbol .above {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 13px; color: var(--gold-dim); letter-spacing: 2px;
+  }
+  .active-symbol .big { font-size: 32px; margin: 4px 0; }
+  .active-symbol .below { font-size: 14px; color: var(--ink-light); font-style: italic; }
+
+  /* --- Hierarchy Levels --- */
+  .hierarchy { display: flex; flex-direction: column-reverse; align-items: center; gap: 0; }
+  .level {
+    padding: 14px 20px; margin: 4px 0; width: 100%; max-width: 420;
+    border-radius: 8px; backdrop-filter: blur(8px);
+    opacity: 0; transform: translateY(20px) scale(.9);
+    transition: all .5s cubic-bezier(.23,1,.32,1);
+  }
+  .level.visible { opacity: 1; transform: translateY(0) scale(1); }
+  .level--genesis {
+    background: linear-gradient(135deg, rgba(120,80,40,.15), rgba(80,50,20,.08));
+    border: 1px solid rgba(120,80,40,.2);
+  }
+  .level--essence {
+    background: linear-gradient(135deg, rgba(201,168,76,.12), rgba(201,168,76,.04));
+    border: 1px solid rgba(201,168,76,.25);
+  }
+  .level--normal {
+    background: rgba(255,252,245,.5);
+    border: 1px solid rgba(201,168,76,.1);
+  }
+  .level-head { display: flex; align-items: baseline; gap: 10px; margin-bottom: 4px; }
+  .level-power {
+    font-family: 'Cormorant Garamond', serif; font-size: 13px;
+    color: var(--gold-dim); letter-spacing: 1px; min-width: 36px;
+  }
+  .level-power sup { font-size: 10px; }
+  .level-name {
+    font-family: 'Cormorant Garamond', serif; font-size: 18px;
+    font-weight: 600; color: var(--ink); letter-spacing: .5px;
+  }
+  .level-desc {
+    margin: 0; font-size: 14px; line-height: 1.55; color: var(--ink-light);
+  }
+  .level--genesis .level-desc { font-style: italic; }
+
+  /* --- Inscription --- */
+  .inscription {
+    text-align: center; margin-top: 32px; padding: 16px 20px;
+    border-top: 1px solid rgba(201,168,76,.15);
+  }
+  .inscription p {
+    font-size: 13px; color: var(--gold-dim); font-style: italic; line-height: 1.6;
+  }
+  .inscription .sub { font-size: 11px; letter-spacing: 1px; }
+
+  /* --- Forge --- */
+  .forge {
+    background: linear-gradient(180deg, rgba(255,252,245,.7), rgba(245,238,220,.5));
+    border: 1px solid rgba(201,168,76,.2); border-radius: 12px;
+    padding: 28px 24px; max-width: 520px; margin: 0 auto; backdrop-filter: blur(12px);
+  }
+  .forge-title {
+    font-family: 'Cormorant Garamond', serif; font-size: 20px; font-weight: 600;
+    color: var(--ink); text-align: center; letter-spacing: 1px; margin-bottom: 4px;
+  }
+  .forge-sub {
+    font-size: 14px; color: var(--gold-dim); text-align: center; margin-bottom: 20px;
+  }
+  .forge-formula {
+    font-family: 'Fira Code', monospace; font-size: 15px; color: var(--ink);
+    text-align: center; padding: 12px 16px; background: rgba(201,168,76,.07);
+    border-radius: 8px; margin-bottom: 20px; letter-spacing: .5px;
+  }
+  .bars { display: flex; justify-content: center; gap: 24px; margin-bottom: 20px; }
+  .bar-col { display: flex; flex-direction: column; align-items: center; gap: 8px; }
+  .bar-track { display: flex; flex-direction: column-reverse; align-items: center; height: 140px; justify-content: flex-start; }
+  .bar-fill {
+    width: 48px; border-radius: 4px 4px 0 0; position: relative;
+    transition: height .4s cubic-bezier(.23,1,.32,1);
+  }
+  .bar-val {
+    position: absolute; top: -22px; left: 50%; transform: translateX(-50%);
+    font-size: 12px; font-family: monospace; font-weight: 700; white-space: nowrap;
+  }
+  .bar-col input[type="range"] {
+    -webkit-appearance: none; width: 48px; height: 3px;
+    background: rgba(201,168,76,.3); border-radius: 2px; outline: none;
+  }
+  .bar-col input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none; width: 14px; height: 14px; border-radius: 50%;
+    background: var(--gold-dim); cursor: pointer;
+    border: 2px solid var(--parchment); box-shadow: 0 1px 4px rgba(0,0,0,.15);
+  }
+  .bar-sym { font-size: 16px; }
+  .bar-label {
+    font-size: 11px; color: var(--gold-dim);
+    font-family: 'Cormorant Garamond', serif; letter-spacing: .5px;
+  }
+  .presets { display: flex; gap: 8px; justify-content: center; flex-wrap: wrap; margin-bottom: 16px; }
+  .preset-btn {
+    font-family: 'Cormorant Garamond', serif; font-size: 13px;
+    padding: 5px 14px; border: 1px solid rgba(201,168,76,.3);
+    border-radius: 20px; background: transparent; color: var(--ink);
+    cursor: pointer; letter-spacing: .5px; transition: all .2s;
+  }
+  .preset-btn[aria-selected="true"] {
+    border: 1.5px solid var(--gold-dim);
+    background: rgba(201,168,76,.12);
+  }
+  .forge-reading {
+    font-size: 15px; line-height: 1.6; color: var(--ink-light);
+    text-align: center; font-style: italic; min-height: 44px;
+  }
+
+  /* --- Footer --- */
+  .footer {
+    text-align: center; margin-top: 40px; opacity: .5;
+    font-family: 'Cormorant Garamond', serif; font-size: 11px;
+    color: var(--gold-dim); letter-spacing: 3px;
+  }
+</style>
+</head>
+<body>
+
+<div id="app"></div>
+
+<script>
+// ============================================================
+//  DATA  (pure, immutable)
+// ============================================================
+
+const GLYPHS = "𓂀𓃭𓅃𓆣𓇋𓈖𓉐𓊝𓋴𓌙𓍯𓎡𓏏".split("");
+const POWERS = ["-1","0","1","2","3","4"];
+
+const EMOJI_DATA = Object.freeze({
+  "웃": { label:"Person", levels: {
+    "-1":{ name:"Genesis",      desc:"What generates a person? Need, desire, the meeting of two paths." },
+    "0": { name:"Personhood",   desc:"The quality of being a person. Identity, consciousness, dignity." },
+    "1": { name:"Individual",   desc:"A single person. You. Me. The irreducible unit of meaning." },
+    "2": { name:"People",       desc:"The collective. Community, tribe, the space between individuals." },
+    "3": { name:"Society",      desc:"The system. Institutions, laws, the architecture of coexistence." },
+    "4": { name:"Civilization", desc:"The meta-system. Culture across time, the long arc of human becoming." },
+  }},
+  "🏠": { label:"House", levels: {
+    "-1":{ name:"Genesis",      desc:"What generates a house? The decision to stop wandering. Shelter as choice." },
+    "0": { name:"Domesticity",  desc:"The quality of home. Warmth, belonging, the walls we build inside." },
+    "1": { name:"A House",      desc:"One dwelling. Four walls and a door. The basic unit of shelter." },
+    "2": { name:"Neighborhood", desc:"Houses in relation. Streets, fences, the geography of proximity." },
+    "3": { name:"Urban System", desc:"City planning, housing policy, the politics of where we live." },
+    "4": { name:"Habitat",      desc:"Civilization's relationship to dwelling. Nomadism to megacity." },
+  }},
+  "🌳": { label:"Tree", levels: {
+    "-1":{ name:"Genesis",      desc:"What generates a tree? A seed, patience, and the blind faith of soil." },
+    "0": { name:"Arborescence", desc:"The quality of tree-ness. Branching, rootedness, vertical patience." },
+    "1": { name:"A Tree",       desc:"One organism. Bark, leaves, rings counting silent years." },
+    "2": { name:"Forest",       desc:"Trees in communion. Canopy, mycorrhiza, the wood wide web." },
+    "3": { name:"Ecosystem",    desc:"The living system. Climate, carbon, the lungs of a planet." },
+    "4": { name:"Biosphere",    desc:"Life's total architecture. The thin green film that makes Earth, Earth." },
+  }},
+  "📖": { label:"Book", levels: {
+    "-1":{ name:"Genesis",    desc:"What generates a book? An idea that refused to stay unwritten." },
+    "0": { name:"Knowledge",  desc:"The quality of the written. Preserved thought, frozen speech." },
+    "1": { name:"A Book",     desc:"One volume. Pages bound, a world compressed into portable form." },
+    "2": { name:"Library",    desc:"Books in conversation. Shelves as civilization's memory palace." },
+    "3": { name:"Literature", desc:"The system of texts. Canon, tradition, the ongoing argument of culture." },
+    "4": { name:"Noosphere",  desc:"The total sphere of human thought. Every word ever committed to form." },
+  }},
+  "⭐": { label:"Star", levels: {
+    "-1":{ name:"Genesis",       desc:"What generates a star? Gravity's patience with hydrogen. Collapse as creation." },
+    "0": { name:"Stardom",       desc:"The quality of radiance. Brilliance, aspiration, the light that draws eyes." },
+    "1": { name:"A Star",        desc:"One burning point. Fusion sustained across billions of years." },
+    "2": { name:"Constellation", desc:"Stars in pattern. Meaning projected onto the random by the hopeful." },
+    "3": { name:"Galaxy",        desc:"The system of stars. Spiral arms, dark matter scaffolding, cosmic architecture." },
+    "4": { name:"Cosmos",        desc:"Everything that is. The universe regarding itself through equations and awe." },
+  }},
+  "❤": { label:"Love", levels: {
+    "-1":{ name:"Genesis",           desc:"What generates love? Vulnerability. The risk of needing another." },
+    "0": { name:"Lovingness",        desc:"The capacity to love. Tenderness as a state of being." },
+    "1": { name:"A Love",            desc:"One bond. Two people choosing each other against entropy." },
+    "2": { name:"Community of Care", desc:"Love in plural. Friendship, kinship, the networks that hold us." },
+    "3": { name:"Compassion System", desc:"Institutional care. Healthcare, charity, mercy codified into structure." },
+    "4": { name:"Agape",             desc:"Universal love. The improbable bet that strangers deserve kindness." },
+  }},
+  "⚒": { label:"Work", levels: {
+    "-1":{ name:"Genesis",  desc:"What generates work? Necessity, ambition, or the restless need to make." },
+    "0": { name:"Labor",    desc:"The condition of working. Effort as identity, craft as devotion." },
+    "1": { name:"A Task",   desc:"One act of making. Hands on material, mind on purpose." },
+    "2": { name:"Workshop", desc:"Workers together. Division of labor, shared purpose, the guild." },
+    "3": { name:"Economy",  desc:"The system of work. Markets, wages, the machinery of exchange." },
+    "4": { name:"Techne",   desc:"Civilization's relationship to making. From flint-knapping to AI." },
+  }},
+});
+
+const PRESETS = Object.freeze({
+  "Individualism":    { w1:.7, w2:.2, w3:.1 },
+  "Socialism":        { w1:.1, w2:.5, w3:.4 },
+  "Anarchism":        { w1:.9, w2:.1, w3:.0 },
+  "Totalitarianism":  { w1:.0, w2:.1, w3:.9 },
+});
+
+const SLIDER_META = Object.freeze([
+  { key:"w1", symbol:"웃¹", label:"Individual", color:"#c9a84c" },
+  { key:"w2", symbol:"웃²", label:"Collective", color:"#8a7340" },
+  { key:"w3", symbol:"웃³", label:"System",     color:"#5a4d3a" },
+]);
+
+
+// ============================================================
+//  MODEL  (immutable state + pure updater)
+// ============================================================
+
+const initModel = () => Object.freeze({
+  emoji: "웃",
+  tab: "hierarchy",
+  revealed: -1,
+  weights: { w1:.33, w2:.34, w3:.33 },
+  preset: null,
+});
+
+// Pure: old state → message → new state
+const update = (model, msg) => {
+  switch (msg.type) {
+    case "SELECT_EMOJI":
+      return { ...model, emoji: msg.emoji, revealed: -1 };
+    case "REVEAL_NEXT":
+      return { ...model, revealed: model.revealed + 1 };
+    case "SET_TAB":
+      return { ...model, tab: msg.tab };
+    case "SET_WEIGHT": {
+      const raw = { ...model.weights, [msg.key]: msg.value };
+      const sum = raw.w1 + raw.w2 + raw.w3;
+      if (sum <= 0) return model;
+      const norm = k => Math.round((raw[k] / sum) * 100) / 100;
+      const w1 = norm("w1"), w2 = norm("w2");
+      return { ...model, weights: { w1, w2, w3: Math.round((1 - w1 - w2) * 100) / 100 }, preset: null };
+    }
+    case "APPLY_PRESET":
+      return { ...model, weights: { ...PRESETS[msg.name] }, preset: msg.name };
+    default:
+      return model;
+  }
+};
+
+
+// ============================================================
+//  VIEW  (pure functions: state → HTML strings)
+// ============================================================
+
+const h = (tag, attrs, ...children) => {
+  const a = Object.entries(attrs || {})
+    .map(([k,v]) => k === "style" && typeof v === "object"
+      ? `style="${Object.entries(v).map(([p,val]) => `${p.replace(/[A-Z]/g,m=>`-${m.toLowerCase()}`)}:${val}`).join(";")}"` 
+      : `${k}="${v}"`)
+    .join(" ");
+  return `<${tag}${a ? " " + a : ""}>${children.join("")}</${tag}>`;
+};
+
+const viewGlyphs = () =>
+  h("div", { class: "glyph-field" },
+    ...Array.from({ length: 30 }, (_, i) => {
+      const g = GLYPHS[i % GLYPHS.length];
+      const dur = 30 + Math.random() * 40;
+      const delay = Math.random() * -30;
+      return h("span", {
+        class: "glyph",
+        style: {
+          left: `${Math.random()*100}%`,
+          top: `${Math.random()*100}%`,
+          fontSize: `${12 + Math.random()*18}px`,
+          opacity: 0.03 + Math.random() * 0.06,
+          "--dur": `${dur}s`,
+          "--delay": `${delay}s`,
+        }
+      }, g);
+    })
+  );
+
+const viewHeader = () =>
+  h("header", { class: "header" },
+    h("div", { class: "header-above" }, "Temple of"),
+    h("div", { class: "header-symbol" }, "웃"),
+    h("h1", { class: "header-title" }, "ㄕICTO<em>ji</em>"),
+    h("p", { class: "header-sub" }, "Where meaning has structure, and you can see it"),
+  );
+
+const viewTabs = (model) =>
+  h("div", { class: "tabs" },
+    ...["hierarchy", "forge"].map(id =>
+      h("button", {
+        class: "tab-btn",
+        "aria-selected": model.tab === id,
+        "data-action": "tab",
+        "data-tab": id,
+      }, id === "hierarchy" ? "Power Hierarchy" : "Polynomial Forge")
+    )
+  );
+
+const viewPicker = (model) =>
+  h("div", { class: "picker" },
+    ...Object.entries(EMOJI_DATA).map(([emoji, data]) =>
+      h("button", {
+        class: "pick-btn",
+        "aria-selected": model.emoji === emoji,
+        "data-action": "pick",
+        "data-emoji": emoji,
+      },
+        h("span", null, emoji),
+        h("span", { class: "pick-label" }, data.label),
+      )
+    )
+  );
+
+const viewActiveSymbol = (model) => {
+  const data = EMOJI_DATA[model.emoji];
+  return h("div", { class: "active-symbol" },
+    h("span", { class: "above" }, "ASCENDING THE POWERS OF"),
+    h("div", { class: "big" }, model.emoji),
+    h("span", { class: "below" }, data.label),
+  );
+};
+
+const levelClass = (power) =>
+  power === "-1" ? "level level--genesis"
+  : power === "0" ? "level level--essence"
+  : "level level--normal";
+
+const viewHierarchy = (model) => {
+  const data = EMOJI_DATA[model.emoji];
+  return h("div", { class: "hierarchy" },
+    ...POWERS.map((power, idx) => {
+      const lev = data.levels[power];
+      const vis = idx <= model.revealed ? " visible" : "";
+      return h("div", { class: levelClass(power) + vis },
+        h("div", { class: "level-head" },
+          h("span", { class: "level-power" }, `${model.emoji}<sup>${power}</sup>`),
+          h("span", { class: "level-name" }, lev.name),
+        ),
+        h("p", { class: "level-desc" }, lev.desc),
+      );
+    })
+  );
+};
+
+const viewInscription = (model) => {
+  const e = model.emoji;
+  return h("div", { class: "inscription" },
+    h("p", null,
+      `${e}⁻¹ → ${e}⁰ → ${e}¹ → ${e}² → ${e}³ → ${e}⁴<br>`,
+      h("span", { class: "sub" }, "genesis → essence → individual → collective → system → civilization"),
+    )
+  );
+};
+
+const describePhilosophy = ({ w1, w2, w3 }) => {
+  if (w1 >= .6) return "Radical individualism — the person above all else. Liberty as the highest value.";
+  if (w3 >= .6) return "Strong systemic control — the structure governs. Order as the highest value.";
+  if (w2 >= .5) return "Communitarian emphasis — the group as primary. Solidarity as the highest value.";
+  if (w1 >= .4 && w2 >= .3) return "Liberal democracy — individual rights within community bonds.";
+  if (w2 >= .3 && w3 >= .3) return "Social democracy — collective welfare anchored in institutional structure.";
+  if (Math.abs(w1-w2) < .1 && Math.abs(w2-w3) < .1) return "Balanced triarchy — equal weight to person, people, and system. A rare equilibrium.";
+  return "A hybrid philosophy — weighting individual, collective, and systemic forces in tension.";
+};
+
+const viewForge = (model) => {
+  const { weights, preset } = model;
+  return h("div", { class: "forge" },
+    h("h3", { class: "forge-title" }, "The Polynomial Forge"),
+    h("p", { class: "forge-sub" }, "Tune the weights. Shape a worldview."),
+    h("div", { class: "forge-formula" },
+      `ㄕ(웃) = ${weights.w1}웃 + ${weights.w2}웃² + ${weights.w3}웃³`
+    ),
+    h("div", { class: "bars" },
+      ...SLIDER_META.map(({ key, symbol, label, color }) =>
+        h("div", { class: "bar-col" },
+          h("div", { class: "bar-track" },
+            h("div", { class: "bar-fill", style: {
+              height: `${140 * weights[key]}px`,
+              minHeight: "2px",
+              background: color,
+            }},
+              h("span", { class: "bar-val", style: { color } }, String(weights[key])),
+            ),
+          ),
+          h("input", {
+            type: "range", min: "0", max: "100",
+            value: String(Math.round(weights[key] * 100)),
+            "data-action": "weight",
+            "data-key": key,
+            style: { accentColor: color },
+          }),
+          h("div", { style: { textAlign: "center" } },
+            h("div", { class: "bar-sym" }, symbol),
+            h("div", { class: "bar-label" }, label),
+          ),
+        )
+      )
+    ),
+    h("div", { class: "presets" },
+      ...Object.keys(PRESETS).map(name =>
+        h("button", {
+          class: "preset-btn",
+          "aria-selected": preset === name,
+          "data-action": "preset",
+          "data-name": name,
+        }, name)
+      )
+    ),
+    h("p", { class: "forge-reading" }, describePhilosophy(weights)),
+  );
+};
+
+const view = (model) =>
+  viewGlyphs() +
+  h("div", { class: "temple" },
+    viewHeader(),
+    h("div", { class: "divider" }),
+    viewTabs(model),
+    model.tab === "hierarchy"
+      ? viewPicker(model) + viewActiveSymbol(model) + viewHierarchy(model) + viewInscription(model)
+      : viewForge(model),
+    h("div", { class: "footer" }, "🗿 ⨝ 웃²"),
+  );
+
+
+// ============================================================
+//  RUNTIME  (the one impure shell)
+// ============================================================
+
+const app = document.getElementById("app");
+let model = initModel();
+let revealTimer = null;
+
+const dispatch = (msg) => {
+  model = Object.freeze(update(model, msg));
+  render();
+
+  if (msg.type === "SELECT_EMOJI" || (msg.type === "SET_TAB" && msg.tab === "hierarchy")) {
+    startReveal();
+  }
+};
+
+const startReveal = () => {
+  clearInterval(revealTimer);
+  let i = 0;
+  revealTimer = setInterval(() => {
+    dispatch({ type: "REVEAL_NEXT" });
+    i++;
+    if (i >= POWERS.length) clearInterval(revealTimer);
+  }, 180);
+};
+
+const render = () => {
+  app.innerHTML = view(model);
+  bindEvents();
+};
+
+const bindEvents = () => {
+  app.querySelectorAll("[data-action='tab']").forEach(el =>
+    el.addEventListener("click", () => dispatch({ type: "SET_TAB", tab: el.dataset.tab }))
+  );
+  app.querySelectorAll("[data-action='pick']").forEach(el =>
+    el.addEventListener("click", () => dispatch({ type: "SELECT_EMOJI", emoji: el.dataset.emoji }))
+  );
+  app.querySelectorAll("[data-action='weight']").forEach(el =>
+    el.addEventListener("input", () => dispatch({ type: "SET_WEIGHT", key: el.dataset.key, value: parseInt(el.value) / 100 }))
+  );
+  app.querySelectorAll("[data-action='preset']").forEach(el =>
+    el.addEventListener("click", () => dispatch({ type: "APPLY_PRESET", name: el.dataset.name }))
+  );
+};
+
+// Boot
+render();
+startReveal();
+</script>
+</body>
+</html>

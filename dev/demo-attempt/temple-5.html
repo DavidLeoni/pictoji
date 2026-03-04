@@ -1,0 +1,782 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Temple of 웃 — ㄕictoji</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Fira+Code:wght@400;500&display=swap');
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --gold: #c9a84c;
+    --gold-dim: #8a7340;
+    --ink: #2a2118;
+    --ink-light: #5a4d3a;
+    --parchment: #f5eedd;
+    --parchment-light: #fffcf5;
+    --parchment-deep: #ebe0c8;
+  }
+
+  body {
+    min-height: 100vh;
+    font-family: 'EB Garamond', 'Georgia', serif;
+    color: var(--ink);
+    overflow-x: hidden;
+    background: linear-gradient(170deg, var(--parchment-light) 0%, var(--parchment) 40%, var(--parchment-deep) 100%);
+  }
+
+  .temple { position: relative; max-width: 620px; margin: 0 auto; padding: 20px 20px 40px; }
+
+  /* === HEADER === */
+  .header { text-align: center; margin-bottom: 32px; padding-top: 28px; }
+  .header-above {
+    font-size: 11px; letter-spacing: 6px; color: var(--gold-dim);
+    text-transform: uppercase; margin-bottom: 8px;
+    opacity: 0; animation: fadeUp .8s ease .3s forwards;
+  }
+  .header-symbol {
+    font-size: 56px; line-height: 1; margin-bottom: 8px;
+    display: inline-block; border-radius: 50%; padding: 8px;
+    opacity: 0; animation: fadeUp .8s ease .5s forwards;
+    transition: transform .3s;
+  }
+  .header-symbol:hover { transform: scale(1.15) rotate(5deg); cursor: default; }
+  .header-title {
+    font-size: 26px; font-weight: 400; letter-spacing: 1px;
+    opacity: 0; animation: fadeUp .8s ease .7s forwards;
+  }
+  .header-title em { font-style: italic; }
+  .header-sub {
+    font-size: 15px; color: var(--gold-dim); margin-top: 8px;
+    font-style: italic;
+    opacity: 0; animation: fadeUp .8s ease .9s forwards;
+  }
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(12px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  .divider {
+    height: 1px; margin: 0 40px 28px;
+    background: linear-gradient(90deg, transparent, rgba(201,168,76,.4), transparent);
+  }
+
+  /* === TABS === */
+  .tabs { display: flex; justify-content: center; gap: 4px; margin-bottom: 28px; }
+  .tab-btn {
+    font-family: 'EB Garamond', serif; font-size: 15px; letter-spacing: 1px;
+    padding: 8px 24px; border: none; border-bottom: 2px solid transparent;
+    background: transparent; color: var(--gold-dim); cursor: pointer; transition: all .3s;
+  }
+  .tab-btn[aria-selected="true"] {
+    border-bottom-color: var(--gold-dim); color: var(--ink); font-weight: 600;
+  }
+
+  /* === PICKER === */
+  .picker { display: flex; justify-content: center; gap: 6px; margin-bottom: 28px; flex-wrap: wrap; }
+  .pick-btn {
+    width: 52px; height: 52px; border-radius: 12px;
+    border: 1.5px solid rgba(201,168,76,.2);
+    background: rgba(255,252,245,.6); cursor: pointer;
+    font-size: 22px; display: flex; flex-direction: column;
+    align-items: center; justify-content: center; gap: 0;
+    transition: all .2s;
+  }
+  .pick-btn[aria-selected="true"] {
+    border: 2px solid var(--gold-dim);
+    background: rgba(201,168,76,.1);
+    box-shadow: 0 2px 12px rgba(201,168,76,.15);
+  }
+  .pick-btn:hover { transform: translateY(-2px); }
+  .pick-btn .pick-label {
+    font-size: 8px; color: var(--gold-dim);
+    font-family: 'EB Garamond', serif; letter-spacing: .5px;
+  }
+
+  /* === ACTIVE SYMBOL === */
+  .active-symbol { text-align: center; margin-bottom: 24px; }
+  .active-symbol .above {
+    font-size: 12px; color: var(--gold-dim); letter-spacing: 2px;
+  }
+  .active-symbol .big { font-size: 36px; margin: 4px 0; }
+  .active-symbol .below { font-size: 14px; color: var(--ink-light); font-style: italic; }
+
+  /* === HIERARCHY === */
+  .hierarchy { display: flex; flex-direction: column; align-items: center; gap: 0; }
+  .level {
+    padding: 16px 20px; margin: 5px 0; width: 100%; max-width: 500px;
+    border-radius: 10px;
+    opacity: 0; transform: translateY(16px);
+    transition: opacity .5s ease, transform .5s ease;
+  }
+  .level.visible { opacity: 1; transform: translateY(0); }
+  .level--normal {
+    background: rgba(255,252,245,.5);
+    border: 1px solid rgba(201,168,76,.12);
+  }
+  .level-head { display: flex; align-items: baseline; gap: 10px; margin-bottom: 6px; }
+  .level-power {
+    font-size: 14px; color: var(--gold-dim); letter-spacing: 1px; min-width: 40px;
+  }
+  .level-name {
+    font-size: 19px; font-weight: 600; color: var(--ink); letter-spacing: .5px;
+  }
+  .level-desc {
+    margin: 0; font-size: 14px; line-height: 1.55; color: var(--ink-light);
+  }
+
+  /* Split layout for levels with big diagrams */
+  .level-body { display: block; }
+  .level-body--split {
+    display: flex; gap: 16px; align-items: flex-start;
+  }
+  .level-body--split .level-text { flex: 1; min-width: 0; }
+  .level-body--split .level-diagram { flex: 0 0 auto; }
+
+  .level-diagram { display: flex; justify-content: center; padding: 8px 0 2px; }
+  .level-diagram svg { display: block; }
+
+  /* === SPECIAL LEVELS === */
+  .special-toggle { text-align: center; margin: 24px 0 8px; }
+  .special-btn {
+    font-family: 'EB Garamond', serif; font-size: 14px;
+    padding: 8px 20px; border: 1px dashed rgba(201,168,76,.35);
+    border-radius: 24px; background: transparent; color: var(--gold-dim);
+    cursor: pointer; letter-spacing: .5px; transition: all .3s;
+  }
+  .special-btn:hover {
+    border-color: var(--gold); color: var(--ink); background: rgba(201,168,76,.06);
+  }
+  .special-levels {
+    max-height: 0; overflow: hidden; transition: max-height .6s ease, opacity .4s ease;
+    opacity: 0;
+  }
+  .special-levels.open { max-height: 500px; opacity: 1; }
+  .level--essence {
+    background: linear-gradient(135deg, rgba(201,168,76,.10), rgba(201,168,76,.03));
+    border: 1px solid rgba(201,168,76,.2);
+  }
+  .level--genesis {
+    background: linear-gradient(135deg, rgba(120,80,40,.12), rgba(80,50,20,.05));
+    border: 1px solid rgba(120,80,40,.15);
+  }
+  .level--genesis .level-desc { font-style: italic; }
+
+  /* === INSCRIPTION === */
+  .inscription {
+    text-align: center; margin-top: 28px; padding: 14px 20px;
+    border-top: 1px solid rgba(201,168,76,.12);
+  }
+  .inscription p {
+    font-size: 13px; color: var(--gold-dim); font-style: italic; line-height: 1.6;
+  }
+  .inscription .sub { font-size: 11px; letter-spacing: 1px; }
+
+  /* === FORGE === */
+  .forge {
+    background: linear-gradient(180deg, rgba(255,252,245,.7), rgba(245,238,220,.5));
+    border: 1px solid rgba(201,168,76,.2); border-radius: 12px;
+    padding: 28px 24px; max-width: 520px; margin: 0 auto;
+  }
+  .forge-title {
+    font-size: 20px; font-weight: 600;
+    color: var(--ink); text-align: center; letter-spacing: 1px; margin-bottom: 4px;
+  }
+  .forge-sub {
+    font-size: 14px; color: var(--gold-dim); text-align: center; margin-bottom: 20px;
+  }
+  .forge-formula {
+    font-family: 'Fira Code', monospace; font-size: 15px; color: var(--ink);
+    text-align: center; padding: 12px 16px; background: rgba(201,168,76,.07);
+    border-radius: 8px; margin-bottom: 20px; letter-spacing: .5px;
+  }
+  .bars { display: flex; justify-content: center; gap: 24px; margin-bottom: 20px; }
+  .bar-col { display: flex; flex-direction: column; align-items: center; gap: 8px; }
+  .bar-track {
+    display: flex; flex-direction: column-reverse; align-items: center;
+    height: 140px; justify-content: flex-start;
+  }
+  .bar-fill {
+    width: 48px; border-radius: 4px 4px 0 0; position: relative;
+    transition: height .12s ease-out; min-height: 2px;
+  }
+  .bar-val {
+    position: absolute; top: -22px; left: 50%; transform: translateX(-50%);
+    font-size: 12px; font-family: 'Fira Code', monospace; font-weight: 700;
+    white-space: nowrap;
+  }
+  .bar-col input[type="range"] {
+    -webkit-appearance: none; width: 48px; height: 3px;
+    background: rgba(201,168,76,.3); border-radius: 2px; outline: none;
+  }
+  .bar-col input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none; width: 16px; height: 16px; border-radius: 50%;
+    background: var(--gold-dim); cursor: pointer;
+    border: 2px solid var(--parchment-light); box-shadow: 0 1px 4px rgba(0,0,0,.15);
+  }
+  .bar-sym { font-size: 16px; }
+  .bar-label {
+    font-size: 11px; color: var(--gold-dim);
+    font-family: 'EB Garamond', serif; letter-spacing: .5px;
+  }
+  .presets { display: flex; gap: 8px; justify-content: center; flex-wrap: wrap; margin-bottom: 16px; }
+  .preset-btn {
+    font-family: 'EB Garamond', serif; font-size: 13px;
+    padding: 5px 14px; border: 1px solid rgba(201,168,76,.3);
+    border-radius: 20px; background: transparent; color: var(--ink);
+    cursor: pointer; letter-spacing: .5px; transition: all .2s;
+  }
+  .preset-btn[aria-selected="true"] {
+    border: 1.5px solid var(--gold-dim); background: rgba(201,168,76,.12);
+  }
+  .preset-btn:hover { background: rgba(201,168,76,.06); }
+  .forge-reading {
+    font-size: 15px; line-height: 1.6; color: var(--ink-light);
+    text-align: center; font-style: italic; min-height: 44px;
+  }
+
+  /* === FOOTER === */
+  .footer { text-align: center; margin-top: 48px; padding-bottom: 20px; }
+  .footer-sigil {
+    font-size: 13px; color: var(--gold-dim); opacity: .5; letter-spacing: 3px;
+    margin-top: 16px;
+  }
+  .believe-link {
+    display: inline-block;
+    font-family: 'EB Garamond', serif; font-size: 15px;
+    color: var(--gold-dim); text-decoration: none; letter-spacing: 1.5px;
+    font-style: italic; transition: all .4s;
+    border-bottom: 1px solid rgba(201,168,76,.4);
+    padding-bottom: 2px;
+    cursor: pointer;
+  }
+  .believe-link:hover {
+    color: var(--ink); border-bottom-color: var(--gold);
+    letter-spacing: 2.5px;
+  }
+
+  /* Easter egg */
+  .header-symbol.egg { animation: eggSpin .6s ease; }
+  @keyframes eggSpin {
+    0%   { transform: scale(1) rotate(0); }
+    25%  { transform: scale(1.2) rotate(-10deg); }
+    50%  { transform: scale(1.3) rotate(10deg); }
+    75%  { transform: scale(1.2) rotate(-5deg); }
+    100% { transform: scale(1) rotate(0); }
+  }
+</style>
+</head>
+<body>
+
+<div class="temple" id="app"></div>
+
+<script>
+// ============================================================
+//  DATA
+// ============================================================
+
+const EMOJI_DATA = {
+  "\uc6c3": { label:"Person", levels: {
+    "-1":{ name:"Genesis",      desc:"What generates a person? Need, desire, the meeting of two paths." },
+    "0": { name:"Personhood",   desc:"The quality of being a person. Identity, consciousness, dignity." },
+    "1": { name:"Individual",   desc:"A single person. You. Me. The irreducible unit of meaning." },
+    "2": { name:"People",       desc:"The collective. Community, tribe, the space between individuals." },
+    "3": { name:"Society",      desc:"The system. Institutions, laws, the architecture of coexistence." },
+    "4": { name:"Civilization", desc:"The meta-system. Culture across time, the long arc of human becoming." },
+  }},
+  "\ud83c\udfe0": { label:"House", levels: {
+    "-1":{ name:"Genesis",      desc:"What generates a house? The decision to stop wandering. Shelter as choice." },
+    "0": { name:"Domesticity",  desc:"The quality of home. Warmth, belonging, the walls we build inside." },
+    "1": { name:"A House",      desc:"One dwelling. Four walls and a door. The basic unit of shelter." },
+    "2": { name:"Neighborhood", desc:"Houses in relation. Streets, fences, the geography of proximity." },
+    "3": { name:"Urban System", desc:"City planning, housing policy, the politics of where we live." },
+    "4": { name:"Habitat",      desc:"Civilization\u2019s relationship to dwelling. Nomadism to megacity." },
+  }},
+  "\ud83c\udf33": { label:"Tree", levels: {
+    "-1":{ name:"Genesis",      desc:"What generates a tree? A seed, patience, and the blind faith of soil." },
+    "0": { name:"Arborescence", desc:"The quality of tree-ness. Branching, rootedness, vertical patience." },
+    "1": { name:"A Tree",       desc:"One organism. Bark, leaves, rings counting silent years." },
+    "2": { name:"Forest",       desc:"Trees in communion. Canopy, mycorrhiza, the wood wide web." },
+    "3": { name:"Ecosystem",    desc:"The living system. Climate, carbon, the lungs of a planet." },
+    "4": { name:"Biosphere",    desc:"Life\u2019s total architecture. The thin green film that makes Earth, Earth." },
+  }},
+  "\ud83d\udcd6": { label:"Book", levels: {
+    "-1":{ name:"Genesis",    desc:"What generates a book? An idea that refused to stay unwritten." },
+    "0": { name:"Knowledge",  desc:"The quality of the written. Preserved thought, frozen speech." },
+    "1": { name:"A Book",     desc:"One volume. Pages bound, a world compressed into portable form." },
+    "2": { name:"Library",    desc:"Books in conversation. Shelves as civilization\u2019s memory palace." },
+    "3": { name:"Literature", desc:"The system of texts. Canon, tradition, the ongoing argument of culture." },
+    "4": { name:"Noosphere",  desc:"The total sphere of human thought. Every word ever committed to form." },
+  }},
+  "\u2b50": { label:"Star", levels: {
+    "-1":{ name:"Genesis",       desc:"What generates a star? Gravity\u2019s patience with hydrogen. Collapse as creation." },
+    "0": { name:"Stardom",       desc:"The quality of radiance. Brilliance, aspiration, the light that draws eyes." },
+    "1": { name:"A Star",        desc:"One burning point. Fusion sustained across billions of years." },
+    "2": { name:"Constellation", desc:"Stars in pattern. Meaning projected onto the random by the hopeful." },
+    "3": { name:"Galaxy",        desc:"The system of stars. Spiral arms, dark matter scaffolding, cosmic architecture." },
+    "4": { name:"Cosmos",        desc:"Everything that is. The universe regarding itself through equations and awe." },
+  }},
+  "\u2764": { label:"Love", levels: {
+    "-1":{ name:"Genesis",           desc:"What generates love? Vulnerability. The risk of needing another." },
+    "0": { name:"Lovingness",        desc:"The capacity to love. Tenderness as a state of being." },
+    "1": { name:"A Love",            desc:"One bond. Two people choosing each other against entropy." },
+    "2": { name:"Community of Care", desc:"Love in plural. Friendship, kinship, the networks that hold us." },
+    "3": { name:"Compassion System", desc:"Institutional care. Healthcare, charity, mercy codified into structure." },
+    "4": { name:"Agape",             desc:"Universal love. The improbable bet that strangers deserve kindness." },
+  }},
+  "\u2692": { label:"Work", levels: {
+    "-1":{ name:"Genesis",  desc:"What generates work? Necessity, ambition, or the restless need to make." },
+    "0": { name:"Labor",    desc:"The condition of working. Effort as identity, craft as devotion." },
+    "1": { name:"A Task",   desc:"One act of making. Hands on material, mind on purpose." },
+    "2": { name:"Workshop", desc:"Workers together. Division of labor, shared purpose, the guild." },
+    "3": { name:"Economy",  desc:"The system of work. Markets, wages, the machinery of exchange." },
+    "4": { name:"Techne",   desc:"Civilization\u2019s relationship to making. From flint-knapping to AI." },
+  }},
+};
+
+const PRESETS = {
+  "Individualism":   { w1:.7, w2:.2, w3:.1 },
+  "Socialism":       { w1:.1, w2:.5, w3:.4 },
+  "Anarchism":       { w1:.9, w2:.1, w3:.0 },
+  "Totalitarianism": { w1:.0, w2:.1, w3:.9 },
+};
+
+const SLIDER_META = [
+  { key:"w1", symbol:"\uc6c3\u00b9", label:"Individual", color:"#c9a84c" },
+  { key:"w2", symbol:"\uc6c3\u00b2", label:"Collective", color:"#8a7340" },
+  { key:"w3", symbol:"\uc6c3\u00b3", label:"System",     color:"#5a4d3a" },
+];
+
+
+// ============================================================
+//  SVG DIAGRAM GENERATORS
+// ============================================================
+
+const GOLD = "#c9a84c", GOLD_DIM = "#8a7340", INK_LT = "#5a4d3a";
+
+// Cluster palette — each cluster gets a slightly different hue
+const CLUSTER_COLORS = ["#c9a84c","#b8883a","#a07830","#d4b860","#c09848","#8a7340"];
+
+const jitter = (base, range) => base + (Math.random()-.5)*range;
+
+const svgDot = (cx,cy,r=4,fill=GOLD) =>
+  `<circle cx="${cx}" cy="${cy}" r="${r}" fill="${fill}" opacity=".75"/>`;
+
+const svgLine = (x1,y1,x2,y2,stroke=GOLD_DIM,op=".3") =>
+  `<line x1="${x1}" y1="${y1}" x2="${x2}" y2="${y2}" stroke="${stroke}" stroke-width="1.2" opacity="${op}"/>`;
+
+const svgFace = (cx,cy,size=12,fill=GOLD) =>
+  `<text x="${cx}" y="${cy}" text-anchor="middle" dominant-baseline="central" font-size="${size}" fill="${fill}">\uc6c3</text>`;
+
+// Generate a random cluster of n nodes around center (cx,cy)
+function makeCluster(cx, cy, n, spread, colorIdx) {
+  const col = CLUSTER_COLORS[colorIdx % CLUSTER_COLORS.length];
+  const pts = [];
+  for (let i = 0; i < n; i++) {
+    const angle = (Math.PI*2*i/n) + (Math.random()-.5)*.6;
+    const r = spread * (.5 + Math.random()*.5);
+    pts.push([cx + Math.cos(angle)*r, cy + Math.sin(angle)*r]);
+  }
+  return { pts, color: col };
+}
+
+function diagramForPower(power, emoji) {
+  const isUt = (emoji === "\uc6c3");
+  const node = isUt
+    ? (cx,cy,s,fill) => svgFace(cx,cy,s||12,fill||GOLD)
+    : (cx,cy,s,fill) => svgDot(cx,cy,(s||12)/3.2,fill||GOLD);
+
+  // Use a seeded-ish approach per emoji so diagrams stay stable per render
+  // but differ between emoji picks
+  const seed = emoji.codePointAt(0);
+  const R = (i) => {
+    const x = Math.sin(seed * 9.1 + i * 7.3) * 10000;
+    return x - Math.floor(x);
+  };
+
+  switch (power) {
+    case "1": {
+      // Isolated individuals — scattered, no connections
+      const w=200, h=50;
+      let s = `<svg width="${w}" height="${h}" viewBox="0 0 ${w} ${h}">`;
+      const count = 5; //+ Math.floor(R(0)*2); // 5-7
+      for (let i = 0; i < count; i++) {
+        const x = 15 + (i/(count-1)) * (w-30);// + (R(i+10)-.5)*14;
+        const y = h/2; // + (R(i+20)-.5)*14;
+        s += node(x, y, 13, CLUSTER_COLORS[i % CLUSTER_COLORS.length]);
+      }
+      return s + `</svg>`;
+    }
+
+    case "2": {
+      // Small groups with internal links — varied sizes and colors
+      const w=240, h=65;
+      let s = `<svg width="${w}" height="${h}" viewBox="0 0 ${w} ${h}">`;
+      const centers = [[45,32],[120,32],[195,32]];
+      const sizes = [2+Math.floor(R(1)*2), 3, 2+Math.floor(R(2)*2)]; // 2-3 each
+      centers.forEach(([cx,cy], gi) => {
+        const cl = makeCluster(cx + (R(gi+5)-.5)*10, cy + (R(gi+8)-.5)*8, sizes[gi], 16+(R(gi)*6), gi);
+        // Draw links within cluster
+        for (let i=0;i<cl.pts.length;i++) for (let j=i+1;j<cl.pts.length;j++)
+          s += svgLine(cl.pts[i][0],cl.pts[i][1],cl.pts[j][0],cl.pts[j][1],cl.color,".3");
+        for (const p of cl.pts) s += node(p[0],p[1],11,cl.color);
+      });
+      return s + `</svg>`;
+    }
+
+    case "3": {
+      // Society: 3 clusters in a TRIANGLE (all linked to each other)
+      const w=180, h=160;
+      let s = `<svg width="${w}" height="${h}" viewBox="0 0 ${w} ${h}">`;
+      // Triangle arrangement
+      const clCenters = [[90,28],[35,120],[145,120]];
+      const clSizes = [3+Math.floor(R(3)), 4, 3+Math.floor(R(4))];
+      const clusters = clCenters.map((c,i) =>
+        makeCluster(c[0]+(R(i+20)-.5)*8, c[1]+(R(i+25)-.5)*6, clSizes[i], 18+(R(i+30)*5), i)
+      );
+      // Inter-cluster bridges: every cluster linked to every other
+      for (let a=0;a<clusters.length;a++) for (let b=a+1;b<clusters.length;b++) {
+        // Pick closest pair of nodes between clusters
+        let minD=Infinity, best=[0,0];
+        for (let i=0;i<clusters[a].pts.length;i++) for (let j=0;j<clusters[b].pts.length;j++) {
+          const dx=clusters[a].pts[i][0]-clusters[b].pts[j][0];
+          const dy=clusters[a].pts[i][1]-clusters[b].pts[j][1];
+          const d=dx*dx+dy*dy;
+          if (d<minD) { minD=d; best=[i,j]; }
+        }
+        const pa=clusters[a].pts[best[0]], pb=clusters[b].pts[best[1]];
+        s += `<line x1="${pa[0]}" y1="${pa[1]}" x2="${pb[0]}" y2="${pb[1]}" stroke="#b8993f" stroke-width="1.5" opacity=".25" stroke-dasharray="3,2"/>`;
+      }
+      // Institutional ring
+      //s += `<ellipse cx="90" cy="82" rx="78" ry="58" fill="none" stroke="${INK_LT}" stroke-width="1" opacity=".15" stroke-dasharray="4,3"/>`;
+      // Draw clusters
+      for (const cl of clusters) {
+        for (let i=0;i<cl.pts.length;i++) for (let j=i+1;j<cl.pts.length;j++)
+          s += svgLine(cl.pts[i][0],cl.pts[i][1],cl.pts[j][0],cl.pts[j][1],cl.color,".3");
+        for (const p of cl.pts) s += node(p[0],p[1],10,cl.color);
+      }
+      return s + `</svg>`;
+    }
+
+    case "4": {
+      // Civilization: HIERARCHICAL tree — top node → mid tier → leaf clusters
+      const w=260, h=130;
+      let s = `<svg width="${w}" height="${h}" viewBox="0 0 ${w} ${h}">`;
+      // Top: single apex
+      const apex = [130, 14];
+      // Mid tier: 3 nodes
+      const mid = [[50,50],[130,50],[210,50]];
+      // Bottom tier: 5 leaf groups
+      const leaves = [[20,95],[65,100],[115,98],[165,100],[220,95]];
+      // Apex → mid
+      for (const m of mid) s += svgLine(apex[0],apex[1],m[0],m[1],"#b8993f",".25");
+      // Mid → leaves
+      s += svgLine(mid[0][0],mid[0][1],leaves[0][0],leaves[0][1],GOLD_DIM,".2");
+      s += svgLine(mid[0][0],mid[0][1],leaves[1][0],leaves[1][1],GOLD_DIM,".2");
+      s += svgLine(mid[1][0],mid[1][1],leaves[1][0],leaves[1][1],GOLD_DIM,".2");
+      s += svgLine(mid[1][0],mid[1][1],leaves[2][0],leaves[2][1],GOLD_DIM,".2");
+      s += svgLine(mid[1][0],mid[1][1],leaves[3][0],leaves[3][1],GOLD_DIM,".2");
+      s += svgLine(mid[2][0],mid[2][1],leaves[3][0],leaves[3][1],GOLD_DIM,".2");
+      s += svgLine(mid[2][0],mid[2][1],leaves[4][0],leaves[4][1],GOLD_DIM,".2");
+      // Leaf clusters: small group around each leaf center
+      for (let li=0;li<leaves.length;li++) {
+        const [lx,ly] = leaves[li];
+        const n = 2 + Math.floor(R(li+40)*2);
+        const col = CLUSTER_COLORS[li % CLUSTER_COLORS.length];
+        const pts = [];
+        for (let i=0;i<n;i++) {
+          const a = (Math.PI*2*i/n)+(R(li*10+i)-.5)*.5;
+          const r = 8+R(li*10+i+5)*5;
+          pts.push([lx+Math.cos(a)*r, ly+Math.sin(a)*r]);
+        }
+        // Link leaf nodes
+        for (let i=0;i<pts.length;i++) for (let j=i+1;j<pts.length;j++)
+          s += svgLine(pts[i][0],pts[i][1],pts[j][0],pts[j][1],col,".2");
+        for (const p of pts) s += node(p[0],p[1],7,col);
+      }
+      // Time arrow at bottom
+      s += `<line x1="15" y1="122" x2="245" y2="122" stroke="${INK_LT}" stroke-width="1" opacity=".2"/>`;
+      s += `<polygon points="245,119 253,122 245,125" fill="${INK_LT}" opacity=".2"/>`;
+      s += `<text x="130" y="130" text-anchor="middle" font-size="8" fill="${INK_LT}" opacity=".4" font-family="EB Garamond,serif" font-style="italic">across time</text>`;
+      // Draw mid + apex nodes on top
+      for (const m of mid) s += node(m[0],m[1],11,GOLD_DIM);
+      s += node(apex[0],apex[1],14,GOLD);
+      return s + `</svg>`;
+    }
+    default: return "";
+  }
+}
+
+
+// ============================================================
+//  MODEL
+// ============================================================
+
+let model = {
+  emoji: "\uc6c3",
+  tab: "hierarchy",
+  weights: { w1:.33, w2:.34, w3:.33 },
+  preset: null,
+  specialOpen: false,
+};
+
+
+// ============================================================
+//  PURE HELPERS
+// ============================================================
+
+const normalize = (raw) => {
+  const s = raw.w1 + raw.w2 + raw.w3;
+  if (s <= 0) return raw;
+  const w1 = Math.round((raw.w1/s)*100)/100;
+  const w2 = Math.round((raw.w2/s)*100)/100;
+  return { w1, w2, w3: Math.round((1-w1-w2)*100)/100 };
+};
+
+const describePhilosophy = ({ w1, w2, w3 }) => {
+  if (w1 >= .6) return "Radical individualism \u2014 the person above all else. Liberty as the highest value.";
+  if (w3 >= .6) return "Strong systemic control \u2014 the structure governs. Order as the highest value.";
+  if (w2 >= .5) return "Communitarian emphasis \u2014 the group as primary. Solidarity as the highest value.";
+  if (w1 >= .4 && w2 >= .3) return "Liberal democracy \u2014 individual rights within community bonds.";
+  if (w2 >= .3 && w3 >= .3) return "Social democracy \u2014 collective welfare anchored in institutional structure.";
+  if (Math.abs(w1-w2)<.1 && Math.abs(w2-w3)<.1) return "Balanced triarchy \u2014 equal weight to person, people, and system. A rare equilibrium.";
+  return "A hybrid philosophy \u2014 weighting individual, collective, and systemic forces in tension.";
+};
+
+const SUP = {"-1":"\u207b\u00b9","0":"\u2070","1":"\u00b9","2":"\u00b2","3":"\u00b3","4":"\u2074"};
+
+
+// ============================================================
+//  RENDER
+// ============================================================
+
+const renderHeader = () => `
+  <header class="header">
+    <div class="header-above">Temple of</div>
+    <div class="header-symbol" id="header-egg">\uc6c3</div>
+    <h1 class="header-title">\u3115icto<em>ji</em></h1>
+    <p class="header-sub">You already know what it means</p>
+  </header>
+  <div class="divider"></div>`;
+
+const renderTabs = () => `
+  <div class="tabs">
+    <button class="tab-btn" aria-selected="${model.tab==="hierarchy"}" data-tab="hierarchy">Power Hierarchy</button>
+    <button class="tab-btn" aria-selected="${model.tab==="forge"}" data-tab="forge">Polynomial Forge</button>
+  </div>`;
+
+const renderPicker = () => `
+  <div class="picker">
+    ${Object.entries(EMOJI_DATA).map(([e,d]) => `
+      <button class="pick-btn" aria-selected="${model.emoji===e}" data-emoji="${e}">
+        <span>${e}</span><span class="pick-label">${d.label}</span>
+      </button>`).join("")}
+  </div>`;
+
+const renderActiveSymbol = () => {
+  const d = EMOJI_DATA[model.emoji];
+  return `<div class="active-symbol">
+    <span class="above">THE ASCENDING POWERS OF</span>
+    <div class="big">${model.emoji}</div>
+    <span class="below">${d.label}</span>
+  </div>`;
+};
+
+const renderHierarchy = () => {
+  const d = EMOJI_DATA[model.emoji];
+  const e = model.emoji;
+
+  const levels = ["1","2","3","4"].map((p, i) => {
+    const lev = d.levels[p];
+    const diagram = diagramForPower(p, e);
+    // ^3 and ^4 use split layout (text left, diagram right)
+    const useSplit = (p === "3" || p === "4");
+    if (useSplit) {
+      return `<div class="level level--normal" data-reveal="${i}">
+        <div class="level-head">
+          <span class="level-power">${e}${SUP[p]}</span>
+          <span class="level-name">${lev.name}</span>
+        </div>
+        <div class="level-body--split">
+          <p class="level-desc level-text">${lev.desc}</p>
+          <div class="level-diagram">${diagram}</div>
+        </div>
+      </div>`;
+    }
+    return `<div class="level level--normal" data-reveal="${i}">
+      <div class="level-head">
+        <span class="level-power">${e}${SUP[p]}</span>
+        <span class="level-name">${lev.name}</span>
+      </div>
+      <p class="level-desc">${lev.desc}</p>
+      <div class="level-diagram">${diagram}</div>
+    </div>`;
+  }).join("");
+
+  const special = `
+    <div class="special-toggle">
+      <button class="special-btn" id="special-toggle-btn">
+        What about ${e}${SUP["0"]} and ${e}${SUP["-1"]} ?
+      </button>
+    </div>
+    <div class="special-levels${model.specialOpen?" open":""}" id="special-panel">
+      <div class="level level--essence visible" style="margin-top:12px;max-width:500px">
+        <div class="level-head">
+          <span class="level-power">${e}${SUP["0"]}</span>
+          <span class="level-name">${d.levels["0"].name}</span>
+        </div>
+        <p class="level-desc">${d.levels["0"].desc}</p>
+      </div>
+      <div class="level level--genesis visible" style="margin-top:8px;max-width:500px">
+        <div class="level-head">
+          <span class="level-power">${e}${SUP["-1"]}</span>
+          <span class="level-name">${d.levels["-1"].name}</span>
+        </div>
+        <p class="level-desc">${d.levels["-1"].desc}</p>
+      </div>
+    </div>`;
+
+  const inscription = `<div class="inscription">
+    <p>${e}${SUP["1"]} \u2192 ${e}${SUP["2"]} \u2192 ${e}${SUP["3"]} \u2192 ${e}${SUP["4"]}<br>
+    <span class="sub">individual \u2192 collective \u2192 system \u2192 civilization</span></p>
+  </div>`;
+
+  return renderPicker() + renderActiveSymbol() +
+    `<div class="hierarchy">${levels}</div>` + special + inscription;
+};
+
+const renderForge = () => {
+  const { weights: w, preset } = model;
+  return `<div class="forge">
+    <h3 class="forge-title">The Polynomial Forge</h3>
+    <p class="forge-sub">Tune the weights. Shape a worldview.</p>
+    <div class="forge-formula" id="forge-formula">\u3115(\uc6c3) = ${w.w1}\uc6c3 + ${w.w2}\uc6c3\u00b2 + ${w.w3}\uc6c3\u00b3</div>
+    <div class="bars">
+      ${SLIDER_META.map(({key,symbol,label,color}) => `
+        <div class="bar-col">
+          <div class="bar-track">
+            <div class="bar-fill" id="bar-${key}" style="height:${140*w[key]}px;background:${color}">
+              <span class="bar-val" id="val-${key}" style="color:${color}">${w[key]}</span>
+            </div>
+          </div>
+          <input type="range" min="0" max="100" value="${Math.round(w[key]*100)}"
+                 data-key="${key}" style="accent-color:${color}">
+          <div style="text-align:center">
+            <div class="bar-sym">${symbol}</div>
+            <div class="bar-label">${label}</div>
+          </div>
+        </div>`).join("")}
+    </div>
+    <div class="presets">
+      ${Object.keys(PRESETS).map(name => `
+        <button class="preset-btn" aria-selected="${preset===name}" data-preset="${name}">${name}</button>`).join("")}
+    </div>
+    <p class="forge-reading" id="forge-reading">${describePhilosophy(w)}</p>
+  </div>`;
+};
+
+const renderFooter = () => `
+  <div class="footer">
+    <a href="#believe" class="believe-link" id="believe-link">I want to believe..</a>
+    <div class="footer-sigil">\ud83d\uddff \u2a1d \uc6c3\u00b2</div>
+
+  </div>`;
+
+
+// ============================================================
+//  MOUNT + BIND
+// ============================================================
+
+const app = document.getElementById("app");
+
+const render = () => {
+  const content = model.tab === "hierarchy" ? renderHierarchy() : renderForge();
+  app.innerHTML = renderHeader() + renderTabs() + content + renderFooter();
+  bind();
+  if (model.tab === "hierarchy") startReveal();
+};
+
+const bind = () => {
+  app.querySelectorAll(".tab-btn").forEach(el =>
+    el.addEventListener("click", () => { model.tab = el.dataset.tab; render(); })
+  );
+
+  app.querySelectorAll(".pick-btn").forEach(el =>
+    el.addEventListener("click", () => { model.emoji = el.dataset.emoji; model.specialOpen = false; render(); })
+  );
+
+  const togBtn = document.getElementById("special-toggle-btn");
+  if (togBtn) togBtn.addEventListener("click", () => {
+    model.specialOpen = !model.specialOpen;
+    const panel = document.getElementById("special-panel");
+    if (panel) panel.classList.toggle("open", model.specialOpen);
+  });
+
+  // Forge: targeted patching
+  app.querySelectorAll('input[type="range"]').forEach(el => {
+    el.addEventListener("input", () => {
+      model.weights[el.dataset.key] = parseInt(el.value) / 100;
+      model.weights = normalize(model.weights);
+      model.preset = null;
+      patchForge();
+    });
+  });
+
+  app.querySelectorAll(".preset-btn").forEach(el => {
+    el.addEventListener("click", () => {
+      model.weights = { ...PRESETS[el.dataset.preset] };
+      model.preset = el.dataset.preset;
+      patchForge();
+      app.querySelectorAll(".preset-btn").forEach(b =>
+        b.setAttribute("aria-selected", b.dataset.preset === model.preset)
+      );
+      SLIDER_META.forEach(({key}) => {
+        const s = app.querySelector(`input[data-key="${key}"]`);
+        if (s) s.value = Math.round(model.weights[key] * 100);
+      });
+    });
+  });
+
+
+};
+
+const patchForge = () => {
+  const w = model.weights;
+  SLIDER_META.forEach(({key}) => {
+    const bar = document.getElementById(`bar-${key}`);
+    const val = document.getElementById(`val-${key}`);
+    if (bar) bar.style.height = `${140 * w[key]}px`;
+    if (val) val.textContent = String(w[key]);
+  });
+  const f = document.getElementById("forge-formula");
+  if (f) f.textContent = `\u3115(\uc6c3) = ${w.w1}\uc6c3 + ${w.w2}\uc6c3\u00b2 + ${w.w3}\uc6c3\u00b3`;
+  const r = document.getElementById("forge-reading");
+  if (r) r.textContent = describePhilosophy(w);
+};
+
+
+// ============================================================
+//  REVEAL — finite, self-clearing
+// ============================================================
+
+let revealTimer = null;
+const startReveal = () => {
+  clearInterval(revealTimer);
+  const levels = app.querySelectorAll(".level[data-reveal]");
+  let i = 0;
+  revealTimer = setInterval(() => {
+    if (i < levels.length) { levels[i].classList.add("visible"); i++; }
+    else { clearInterval(revealTimer); revealTimer = null; }
+  }, 200);
+};
+
+
+// ============================================================
+//  BOOT
+// ============================================================
+render();
+</script>
+</body>
+</html>

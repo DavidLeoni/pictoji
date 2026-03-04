@@ -7,7 +7,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "pictoji"
-version = "[PICTOJI.VERSION]"
+version = "0.6.25.DEV+p"
 description = "A Relatable Algebra for the People - A new old language for AI-assisted mathemojics of meaning"
 readme = "README.md"
 requires-python = ">=3.8"

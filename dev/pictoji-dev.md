@@ -1,4 +1,4 @@
-﻿# ㄕ🗿 PICTOJI DEV  [PICTOJI.VERSION]
+﻿# ㄕ🗿 PICTOJI DEV  0.6.25.DEV+p
 
 > _Ray_: What if we're wrong?  
 > _Egon_: About?  

@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Temple of 웃 — ㄕICTOji</title>
+<link rel="stylesheet" href="https://pyscript.net/releases/2024.9.2/core.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/pyscript/ltk@main/ltk/ltk.css">
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script type="module" src="https://pyscript.net/releases/2024.9.2/core.js"></script>
+
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=Fira+Code:wght@400;500&display=swap');
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --gold: #c9a84c;
+    --gold-dim: #8a7340;
+    --ink: #2a2118;
+    --ink-light: #5a4d3a;
+    --parchment: #fffcf5;
+    --parchment-mid: #f5eedd;
+    --parchment-deep: #ebe0c8;
+  }
+
+  body {
+    min-height: 100vh;
+    background: linear-gradient(170deg, var(--parchment) 0%, var(--parchment-mid) 40%, var(--parchment-deep) 100%);
+    font-family: 'EB Garamond', 'Georgia', serif;
+    color: var(--ink);
+    overflow-x: hidden;
+  }
+
+  /* --- Floating Glyphs --- */
+  .glyph-field { position: fixed; inset: 0; pointer-events: none; z-index: 0; overflow: hidden; }
+  .glyph {
+    position: absolute; color: var(--gold); font-family: serif;
+    animation: floatGlyph var(--dur) ease-in-out var(--delay) infinite;
+  }
+  @keyframes floatGlyph {
+    0%, 100% { transform: translateY(0) rotate(0deg); }
+    33% { transform: translateY(-15px) rotate(3deg); }
+    66% { transform: translateY(8px) rotate(-2deg); }
+  }
+  @keyframes pulseGlow {
+    0%,100% { box-shadow: 0 0 0 0 rgba(201,168,76,0) }
+    50% { box-shadow: 0 0 20px 4px rgba(201,168,76,.15) }
+  }
+  @keyframes titleReveal { from { opacity:0; letter-spacing:12px } to { opacity:1; letter-spacing:6px } }
+  @keyframes subtitleReveal { from { opacity:0; transform:translateY(10px) } to { opacity:1; transform:translateY(0) } }
+
+  /* --- Layout --- */
+  .temple { position: relative; z-index: 1; max-width: 600px; margin: 0 auto; padding: 20px 20px 60px; }
+
+  .header { text-align: center; margin-bottom: 32px; padding-top: 24px; }
+  .header-above {
+    font-family: 'Cormorant Garamond', serif; font-size: 11px; letter-spacing: 6px;
+    color: var(--gold-dim); text-transform: uppercase; margin-bottom: 8px;
+    animation: titleReveal 1.2s ease both;
+  }
+  .header-symbol { font-size: 56px; line-height: 1; margin-bottom: 8px; display: inline-block; border-radius: 50%; padding: 8px; animation: pulseGlow 4s ease-in-out infinite; }
+  .header-title { font-family: 'Cormorant Garamond', serif; font-size: 28px; font-weight: 300; letter-spacing: 3px; animation: titleReveal 1.2s ease 0.2s both; }
+  .header-sub { font-size: 15px; color: var(--gold-dim); margin-top: 8px; font-style: italic; animation: subtitleReveal 1s ease 0.6s both; }
+
+  .divider { height: 1px; margin: 0 40px 28px; background: linear-gradient(90deg, transparent, rgba(201,168,76,.4), transparent); }
+
+  /* Tabs */
+  .tabs { display: flex; justify-content: center; gap: 4px; margin-bottom: 28px; }
+  .tab-btn {
+    font-family: 'Cormorant Garamond', serif; font-size: 14px; letter-spacing: 1px;
+    padding: 8px 24px; border: none; border-bottom: 2px solid transparent;
+    background: transparent; color: var(--gold-dim); cursor: pointer; transition: all .3s;
+    user-select: none;
+  }
+  .tab-btn.active { border-bottom-color: var(--gold-dim); color: var(--ink); font-weight: 600; }
+
+  /* Picker */
+  .picker { display: flex; justify-content: center; gap: 6px; margin-bottom: 28px; flex-wrap: wrap; }
+  .pick-btn {
+    width: 52px; height: 52px; border-radius: 12px; border: 1.5px solid rgba(201,168,76,.2);
+    background: rgba(255,252,245,.6); cursor: pointer; font-size: 22px;
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    transition: all .2s; backdrop-filter: blur(8px);
+  }
+  .pick-btn.active { border: 2px solid var(--gold-dim); background: rgba(201,168,76,.1); box-shadow: 0 2px 12px rgba(201,168,76,.15); }
+  .pick-label { font-size: 8px; color: var(--gold-dim); font-family: 'Cormorant Garamond', serif; letter-spacing: .5px; }
+
+  .active-symbol { text-align: center; margin-bottom: 20px; }
+  .active-symbol .above { font-family: 'Cormorant Garamond', serif; font-size: 13px; color: var(--gold-dim); letter-spacing: 2px; }
+  .active-symbol .big { font-size: 32px; margin: 4px 0; }
+  .active-symbol .below { font-size: 14px; color: var(--ink-light); font-style: italic; }
+
+  /* Levels */
+  .hierarchy { display: flex; flex-direction: column-reverse; align-items: center; gap: 0; }
+  .level {
+    padding: 14px 20px; margin: 4px 0; width: 100%; max-width: 420px;
+    border-radius: 8px; backdrop-filter: blur(8px);
+    opacity: 0; transform: translateY(20px) scale(.9);
+    transition: all .5s cubic-bezier(.23,1,.32,1);
+  }
+  .level.visible { opacity: 1; transform: translateY(0) scale(1); }
+  .level-genesis { background: linear-gradient(135deg, rgba(120,80,40,.15), rgba(80,50,20,.08)); border: 1px solid rgba(120,80,40,.2); }
+  .level-essence { background: linear-gradient(135deg, rgba(201,168,76,.12), rgba(201,168,76,.04)); border: 1px solid rgba(201,168,76,.25); }
+  .level-normal { background: rgba(255,252,245,.5); border: 1px solid rgba(201,168,76,.1); }
+  .level-head { display: flex; align-items: baseline; gap: 10px; margin-bottom: 4px; }
+  .level-power { font-family: 'Cormorant Garamond', serif; font-size: 13px; color: var(--gold-dim); letter-spacing: 1px; min-width: 36px; }
+  .level-power sup { font-size: 10px; }
+  .level-name { font-family: 'Cormorant Garamond', serif; font-size: 18px; font-weight: 600; color: var(--ink); letter-spacing: .5px; }
+  .level-desc { margin: 0; font-size: 14px; line-height: 1.55; color: var(--ink-light); }
+  .level-genesis .level-desc { font-style: italic; }
+
+  .inscription { text-align: center; margin-top: 32px; padding: 16px 20px; border-top: 1px solid rgba(201,168,76,.15); }
+  .inscription p { font-size: 13px; color: var(--gold-dim); font-style: italic; line-height: 1.6; }
+  .inscription .sub { font-size: 11px; letter-spacing: 1px; }
+
+  /* Forge */
+  .forge {
+    background: linear-gradient(180deg, rgba(255,252,245,.7), rgba(245,238,220,.5));
+    border: 1px solid rgba(201,168,76,.2); border-radius: 12px;
+    padding: 28px 24px; max-width: 520px; margin: 0 auto; backdrop-filter: blur(12px);
+  }
+  .forge-title { font-family: 'Cormorant Garamond', serif; font-size: 20px; font-weight: 600; color: var(--ink); text-align: center; letter-spacing: 1px; margin-bottom: 4px; }
+  .forge-sub { font-size: 14px; color: var(--gold-dim); text-align: center; margin-bottom: 20px; }
+  .forge-formula {
+    font-family: 'Fira Code', monospace; font-size: 15px; color: var(--ink);
+    text-align: center; padding: 12px 16px; background: rgba(201,168,76,.07);
+    border-radius: 8px; margin-bottom: 20px; letter-spacing: .5px;
+  }
+  .bars { display: flex; justify-content: center; gap: 24px; margin-bottom: 20px; }
+  .bar-col { display: flex; flex-direction: column; align-items: center; gap: 8px; }
+  .bar-track { display: flex; flex-direction: column-reverse; align-items: center; height: 140px; justify-content: flex-start; }
+  .bar-fill { width: 48px; border-radius: 4px 4px 0 0; position: relative; transition: height .4s cubic-bezier(.23,1,.32,1); min-height: 2px; }
+  .bar-val { position: absolute; top: -22px; left: 50%; transform: translateX(-50%); font-size: 12px; font-family: monospace; font-weight: 700; white-space: nowrap; }
+  .bar-col input[type="range"] { -webkit-appearance: none; width: 48px; height: 3px; background: rgba(201,168,76,.3); border-radius: 2px; outline: none; }
+  .bar-col input[type="range"]::-webkit-slider-thumb { -webkit-appearance: none; width: 14px; height: 14px; border-radius: 50%; background: var(--gold-dim); cursor: pointer; border: 2px solid var(--parchment); box-shadow: 0 1px 4px rgba(0,0,0,.15); }
+  .bar-sym { font-size: 16px; }
+  .bar-label { font-size: 11px; color: var(--gold-dim); font-family: 'Cormorant Garamond', serif; letter-spacing: .5px; }
+
+  .presets { display: flex; gap: 8px; justify-content: center; flex-wrap: wrap; margin-bottom: 16px; }
+  .preset-btn {
+    font-family: 'Cormorant Garamond', serif; font-size: 13px; padding: 5px 14px;
+    border: 1px solid rgba(201,168,76,.3); border-radius: 20px; background: transparent;
+    color: var(--ink); cursor: pointer; letter-spacing: .5px; transition: all .2s;
+  }
+  .preset-btn.active { border: 1.5px solid var(--gold-dim); background: rgba(201,168,76,.12); }
+
+  .forge-reading { font-size: 15px; line-height: 1.6; color: var(--ink-light); text-align: center; font-style: italic; min-height: 44px; }
+
+  .footer { text-align: center; margin-top: 40px; opacity: .5; font-family: 'Cormorant Garamond', serif; font-size: 11px; color: var(--gold-dim); letter-spacing: 3px; }
+
+  /* Hide pyscript loading */
+  [type="py"]::before { display: none !important; }
+</style>
+</head>
+<body>
+
+<!-- Glyph field rendered by CSS only, no Python needed -->
+<div class="glyph-field" id="glyphs"></div>
+
+<!-- Static HTML shell renders instantly, Python hydrates interactivity -->
+<div class="temple" id="temple">
+  <header class="header">
+    <div class="header-above">Temple of</div>
+    <div class="header-symbol">웃</div>
+    <h1 class="header-title">ㄕICTO<em>ji</em></h1>
+    <p class="header-sub">Where meaning has structure, and you can see it</p>
+  </header>
+  <div class="divider"></div>
+  <div id="tabs-container"></div>
+  <div id="content"></div>
+  <div class="footer">🗿 ⨝ 웃²</div>
+</div>
+
+<script>
+// Pre-render floating glyphs in JS immediately (no Python dependency)
+(function() {
+  const G = "𓂀𓃭𓅃𓆣𓇋𓈖𓉐𓊝𓋴𓌙𓍯𓎡𓏏".split("");
+  const f = document.getElementById("glyphs");
+  for (let i = 0; i < 30; i++) {
+    const s = document.createElement("span");
+    s.className = "glyph";
+    s.textContent = G[i % G.length];
+    s.style.cssText = `left:${Math.random()*100}%;top:${Math.random()*100}%;font-size:${12+Math.random()*18}px;opacity:${.03+Math.random()*.06};--dur:${30+Math.random()*40}s;--delay:${Math.random()*-30}s`;
+    f.appendChild(s);
+  }
+})();
+</script>
+
+<!--
+  RUNTIME CHOICE:
+  Option A (below): Pyodide — works immediately, ~3-5s boot, full PyPI access
+  Option B: MicroPython — <100ms boot, but requires self-hosting ltk files
+           because micropython.org/pi blocks CORS. To use:
+           1. Download ltk/ folder from https://github.com/pyscript/ltk/tree/main/ltk
+           2. Place in your static server under ./ltk/
+           3. Replace this config block with:
+              <mpy-config>
+              [files]
+              "./ltk/__init__.py" = "./ltk/__init__.py"
+              "./ltk/jquery.py"   = "./ltk/jquery.py"
+              "./ltk/widgets.py"  = "./ltk/widgets.py"
+              "./ltk/pubsub.py"   = "./ltk/pubsub.py"
+              "./ltk/logger.py"   = "./ltk/logger.py"
+              </mpy-config>
+           4. Change <script type="py"> to <script type="mpy">
+-->
+<py-config>
+packages = ["pyscript-ltk"]
+</py-config>
+
+<script type="py">
+import ltk
+
+# ============================================================
+#  DATA (pure, immutable dicts)
+# ============================================================
+
+POWERS = ["-1", "0", "1", "2", "3", "4"]
+
+EMOJI_DATA = {
+    "웃": {"label": "Person", "levels": {
+        "-1": ("Genesis", "What generates a person? Need, desire, the meeting of two paths."),
+        "0":  ("Personhood", "The quality of being a person. Identity, consciousness, dignity."),
+        "1":  ("Individual", "A single person. You. Me. The irreducible unit of meaning."),
+        "2":  ("People", "The collective. Community, tribe, the space between individuals."),
+        "3":  ("Society", "The system. Institutions, laws, the architecture of coexistence."),
+        "4":  ("Civilization", "The meta-system. Culture across time, the long arc of human becoming."),
+    }},
+    "🏠": {"label": "House", "levels": {
+        "-1": ("Genesis", "What generates a house? The decision to stop wandering. Shelter as choice."),
+        "0":  ("Domesticity", "The quality of home. Warmth, belonging, the walls we build inside."),
+        "1":  ("A House", "One dwelling. Four walls and a door. The basic unit of shelter."),
+        "2":  ("Neighborhood", "Houses in relation. Streets, fences, the geography of proximity."),
+        "3":  ("Urban System", "City planning, housing policy, the politics of where we live."),
+        "4":  ("Habitat", "Civilization's relationship to dwelling. Nomadism to megacity."),
+    }},
+    "🌳": {"label": "Tree", "levels": {
+        "-1": ("Genesis", "What generates a tree? A seed, patience, and the blind faith of soil."),
+        "0":  ("Arborescence", "The quality of tree-ness. Branching, rootedness, vertical patience."),
+        "1":  ("A Tree", "One organism. Bark, leaves, rings counting silent years."),
+        "2":  ("Forest", "Trees in communion. Canopy, mycorrhiza, the wood wide web."),
+        "3":  ("Ecosystem", "The living system. Climate, carbon, the lungs of a planet."),
+        "4":  ("Biosphere", "Life's total architecture. The thin green film that makes Earth, Earth."),
+    }},
+    "📖": {"label": "Book", "levels": {
+        "-1": ("Genesis", "What generates a book? An idea that refused to stay unwritten."),
+        "0":  ("Knowledge", "The quality of the written. Preserved thought, frozen speech."),
+        "1":  ("A Book", "One volume. Pages bound, a world compressed into portable form."),
+        "2":  ("Library", "Books in conversation. Shelves as civilization's memory palace."),
+        "3":  ("Literature", "The system of texts. Canon, tradition, the ongoing argument of culture."),
+        "4":  ("Noosphere", "The total sphere of human thought. Every word ever committed to form."),
+    }},
+    "⭐": {"label": "Star", "levels": {
+        "-1": ("Genesis", "What generates a star? Gravity's patience with hydrogen. Collapse as creation."),
+        "0":  ("Stardom", "The quality of radiance. Brilliance, aspiration, the light that draws eyes."),
+        "1":  ("A Star", "One burning point. Fusion sustained across billions of years."),
+        "2":  ("Constellation", "Stars in pattern. Meaning projected onto the random by the hopeful."),
+        "3":  ("Galaxy", "The system of stars. Spiral arms, dark matter scaffolding, cosmic architecture."),
+        "4":  ("Cosmos", "Everything that is. The universe regarding itself through equations and awe."),
+    }},
+    "❤": {"label": "Love", "levels": {
+        "-1": ("Genesis", "What generates love? Vulnerability. The risk of needing another."),
+        "0":  ("Lovingness", "The capacity to love. Tenderness as a state of being."),
+        "1":  ("A Love", "One bond. Two people choosing each other against entropy."),
+        "2":  ("Community of Care", "Love in plural. Friendship, kinship, the networks that hold us."),
+        "3":  ("Compassion System", "Institutional care. Healthcare, charity, mercy codified into structure."),
+        "4":  ("Agape", "Universal love. The improbable bet that strangers deserve kindness."),
+    }},
+    "⚒": {"label": "Work", "levels": {
+        "-1": ("Genesis", "What generates work? Necessity, ambition, or the restless need to make."),
+        "0":  ("Labor", "The condition of working. Effort as identity, craft as devotion."),
+        "1":  ("A Task", "One act of making. Hands on material, mind on purpose."),
+        "2":  ("Workshop", "Workers together. Division of labor, shared purpose, the guild."),
+        "3":  ("Economy", "The system of work. Markets, wages, the machinery of exchange."),
+        "4":  ("Techne", "Civilization's relationship to making. From flint-knapping to AI."),
+    }},
+}
+
+PRESETS = {
+    "Individualism":   (0.7, 0.2, 0.1),
+    "Socialism":       (0.1, 0.5, 0.4),
+    "Anarchism":       (0.9, 0.1, 0.0),
+    "Totalitarianism": (0.0, 0.1, 0.9),
+}
+
+
+# ============================================================
+#  MODEL (mutable state — the one impure reference)
+# ============================================================
+
+state = {
+    "emoji": "웃",
+    "tab": "hierarchy",
+    "weights": [0.33, 0.34, 0.33],
+    "preset": None,
+    "revealed": -1,
+    "timer": None,
+}
+
+
+# ============================================================
+#  PURE LOGIC
+# ============================================================
+
+def normalize_weights(w):
+    s = sum(w)
+    if s <= 0:
+        return w
+    normed = [round(x / s * 100) / 100 for x in w]
+    normed[2] = round((1.0 - normed[0] - normed[1]) * 100) / 100
+    return normed
+
+def describe_philosophy(w):
+    w1, w2, w3 = w
+    if w1 >= 0.6: return "Radical individualism — the person above all else. Liberty as the highest value."
+    if w3 >= 0.6: return "Strong systemic control — the structure governs. Order as the highest value."
+    if w2 >= 0.5: return "Communitarian emphasis — the group as primary. Solidarity as the highest value."
+    if w1 >= 0.4 and w2 >= 0.3: return "Liberal democracy — individual rights within community bonds."
+    if w2 >= 0.3 and w3 >= 0.3: return "Social democracy — collective welfare anchored in institutional structure."
+    if abs(w1 - w2) < 0.1 and abs(w2 - w3) < 0.1: return "Balanced triarchy — equal weight to person, people, and system. A rare equilibrium."
+    return "A hybrid philosophy — weighting individual, collective, and systemic forces in tension."
+
+def level_class(power):
+    if power == "-1": return "level level-genesis"
+    if power == "0": return "level level-essence"
+    return "level level-normal"
+
+
+# ============================================================
+#  RENDER FUNCTIONS (rebuild DOM via LTK)
+# ============================================================
+
+def render_tabs():
+    tabs_el = ltk.find("#tabs-container")
+    tabs_el.empty()
+
+    def make_tab_handler(tab_name):
+        def handler(event):
+            state["tab"] = tab_name
+            render_tabs()
+            render_content()
+            if tab_name == "hierarchy":
+                start_reveal()
+        return handler
+
+    tabs = ltk.HBox(
+        ltk.Text("Power Hierarchy")
+            .addClass("tab-btn" + (" active" if state["tab"] == "hierarchy" else ""))
+            .on("click", ltk.proxy(make_tab_handler("hierarchy"))),
+        ltk.Text("Polynomial Forge")
+            .addClass("tab-btn" + (" active" if state["tab"] == "forge" else ""))
+            .on("click", ltk.proxy(make_tab_handler("forge"))),
+    ).addClass("tabs")
+    tabs.appendTo(tabs_el)
+
+
+def render_hierarchy():
+    emoji = state["emoji"]
+    data = EMOJI_DATA[emoji]
+
+    # Picker
+    picker = ltk.Div().addClass("picker")
+    for em, info in EMOJI_DATA.items():
+        def make_pick_handler(e):
+            def handler(event):
+                state["emoji"] = e
+                state["revealed"] = -1
+                render_content()
+                start_reveal()
+            return handler
+        btn = ltk.Div(
+            ltk.Span(em),
+            ltk.Span(info["label"]).addClass("pick-label"),
+        ).addClass("pick-btn" + (" active" if em == emoji else "")).on("click", ltk.proxy(make_pick_handler(em)))
+        btn.appendTo(picker)
+
+    # Active symbol
+    active = ltk.Div(
+        ltk.Div("ASCENDING THE POWERS OF").addClass("above"),
+        ltk.Div(emoji).addClass("big"),
+        ltk.Div(data["label"]).addClass("below"),
+    ).addClass("active-symbol")
+
+    # Hierarchy
+    hierarchy = ltk.Div().addClass("hierarchy")
+    for idx, power in enumerate(POWERS):
+        name, desc = data["levels"][power]
+        vis = " visible" if idx <= state["revealed"] else ""
+        lev = ltk.Div(
+            ltk.Div(
+                ltk.Span(f"{emoji}").append(ltk.create(f"<sup>{power}</sup>")).addClass("level-power"),
+                ltk.Span(name).addClass("level-name"),
+            ).addClass("level-head"),
+            ltk.Paragraph(desc).addClass("level-desc"),
+        ).addClass(level_class(power) + vis)
+        lev.appendTo(hierarchy)
+
+    # Inscription
+    e = emoji
+    inscription = ltk.Div(
+        ltk.Paragraph(
+            f"{e}\u207B\u00B9 \u2192 {e}\u2070 \u2192 {e}\u00B9 \u2192 {e}\u00B2 \u2192 {e}\u00B3 \u2192 {e}\u2074"
+        ).append(ltk.create('<br>')).append(
+            ltk.Span("genesis \u2192 essence \u2192 individual \u2192 collective \u2192 system \u2192 civilization").addClass("sub")
+        ),
+    ).addClass("inscription")
+
+    return ltk.Div(picker, active, hierarchy, inscription)
+
+
+def render_forge():
+    w = state["weights"]
+
+    formula = ltk.Div(
+        f"\u0234(웃) = {w[0]}웃 + {w[1]}웃\u00B2 + {w[2]}웃\u00B3"
+    ).addClass("forge-formula")
+
+    colors = ["#c9a84c", "#8a7340", "#5a4d3a"]
+    symbols = ["웃\u00B9", "웃\u00B2", "웃\u00B3"]
+    labels = ["Individual", "Collective", "System"]
+
+    bars = ltk.Div().addClass("bars")
+    for i in range(3):
+        def make_slider_handler(idx):
+            def handler(event):
+                val = int(ltk.find(f"#slider-{idx}").val()) / 100
+                state["weights"][idx] = val
+                state["weights"] = normalize_weights(state["weights"])
+                state["preset"] = None
+                render_content()
+            return handler
+
+        col = ltk.Div(
+            ltk.Div(
+                ltk.Div(
+                    ltk.Span(str(w[i])).addClass("bar-val").css("color", colors[i]),
+                ).addClass("bar-fill").css("height", f"{140 * w[i]}px").css("background", colors[i]),
+            ).addClass("bar-track"),
+            ltk.create(f'<input type="range" id="slider-{i}" min="0" max="100" value="{int(w[i]*100)}" style="accent-color:{colors[i]}">'),
+            ltk.Div(
+                ltk.Div(symbols[i]).addClass("bar-sym"),
+                ltk.Div(labels[i]).addClass("bar-label"),
+            ),
+        ).addClass("bar-col")
+        col.appendTo(bars)
+
+    # Bind slider events after building
+    for i in range(3):
+        def make_handler(idx):
+            def handler(event):
+                val = int(ltk.find(f"#slider-{idx}").val()) / 100
+                state["weights"][idx] = val
+                state["weights"] = normalize_weights(state["weights"])
+                state["preset"] = None
+                render_content()
+            return handler
+        ltk.find(f"#slider-{i}").on("input", ltk.proxy(make_handler(i)))
+
+    presets = ltk.Div().addClass("presets")
+    for name, vals in PRESETS.items():
+        def make_preset_handler(n, v):
+            def handler(event):
+                state["weights"] = list(v)
+                state["preset"] = n
+                render_content()
+            return handler
+        btn = ltk.Text(name).addClass(
+            "preset-btn" + (" active" if state["preset"] == name else "")
+        ).on("click", ltk.proxy(make_preset_handler(name, vals)))
+        btn.appendTo(presets)
+
+    reading = ltk.Paragraph(describe_philosophy(w)).addClass("forge-reading")
+
+    forge = ltk.Div(
+        ltk.Div("The Polynomial Forge").addClass("forge-title"),
+        ltk.Paragraph("Tune the weights. Shape a worldview.").addClass("forge-sub"),
+        formula,
+        bars,
+        presets,
+        reading,
+    ).addClass("forge")
+
+    return forge
+
+
+def render_content():
+    content = ltk.find("#content")
+    content.empty()
+
+    if state["tab"] == "hierarchy":
+        render_hierarchy().appendTo(content)
+    else:
+        render_forge().appendTo(content)
+
+
+# ============================================================
+#  REVEAL ANIMATION
+# ============================================================
+
+def start_reveal():
+    from pyscript import window
+    if state["timer"]:
+        window.clearInterval(state["timer"])
+
+    state["revealed"] = -1
+
+    def tick():
+        state["revealed"] += 1
+        # Update visibility classes in place
+        levels = ltk.find(".level")
+        for idx in range(len(POWERS)):
+            el = levels.eq(idx)
+            if idx <= state["revealed"]:
+                el.addClass("visible")
+        if state["revealed"] >= len(POWERS) - 1:
+            window.clearInterval(state["timer"])
+            state["timer"] = None
+
+    state["timer"] = window.setInterval(ltk.proxy(tick), 180)
+
+
+# ============================================================
+#  BOOT
+# ============================================================
+
+render_tabs()
+render_content()
+start_reveal()
+</script>
+</body>
+</html>
