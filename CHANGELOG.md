@@ -1,16 +1,23 @@
 ﻿# Pictoji Changelog
 
 ## [Unreleased]
-    ### Added
-    - ???
+### Added
+- ???
 
-    ### Changed
-    - ???
+### Changed
+- ???
 
-    ### Fixed
-    - ???
+### Fixed
+- ???
+
+
+## [0.6.52] - 2026-03-05
+
+
+### Fixed
+- versioning and stamping again
     
-    ## [0.6.51] - 2026-03-05
+## [0.6.51] - 2026-03-05
 
 
 ### Fixed
