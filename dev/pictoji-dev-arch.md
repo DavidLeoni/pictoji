@@ -1,4 +1,4 @@
-﻿# ㄕ🗿 PICTOJI DEV ARCHITECTURE 0.6.48+a626f89
+﻿# ㄕ🗿 PICTOJI DEV ARCHITECTURE v0.6.49+5db6234
 
 If we wanted to go operational, we realistically could:
 
