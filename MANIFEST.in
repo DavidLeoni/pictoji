@@ -1,2 +1,2 @@
-﻿include pictoji.md pictoji-test.md pictoji-introspection-aitest.md README.md LICENSE.txt
+﻿include pictoji.md pictoji-test.md pictoji-introspection-aitest.md README.md LICENSE.txt CHANGELOG.md
 include dev/pictoji-dev.md dev/pictoji-dev-arch.md dev/README.md 

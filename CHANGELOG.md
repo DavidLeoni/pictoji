@@ -13,7 +13,6 @@
 
 ## [0.6.52] - 2026-03-05
 
-
 ### Fixed
 - versioning and stamping again
     
