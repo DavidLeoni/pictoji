@@ -12,3 +12,4 @@ Build reports organized by version.
 - [0.6.25](0.6.25/report.txt)
 - [0.6.25](0.6.25/report.txt)
 - [0.6.25](0.6.25/report.txt)
+- [0.6.25](0.6.25/report.txt)
