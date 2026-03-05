@@ -1,4 +1,4 @@
-﻿<h1 align="center"> ㄕICTO<i>ji</i> <br><i>SPECS VERSION 0.6.47+c71812c</i>
+﻿<h1 align="center"> ㄕICTO<i>ji</i> <br><i>SPECS VERSION 0.6.48+a626f89</i>
  <br><br> 🗿 ⨝ 웃²  </h1> <h2 align="center"> A Relatable Algebra <br>for the  People </h2> 
 <br>
 <p align="center">
