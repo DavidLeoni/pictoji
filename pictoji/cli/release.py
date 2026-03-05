@@ -459,7 +459,7 @@ def main() -> None:
     PYPROJECT = ORIG_PYPROJECT
 
     run(f"git fetch origin {GIT_TAG}")
-    run(f"git fetch origin triage")
+    run(f"git fetch origin triage:triage")
 
     console.rule("[bold]Bump to next dev version")
     dev_version = f"{NEXT_BASE}.DEV+p"

@@ -1,22 +1,10 @@
 ﻿# Pictoji Changelog
 
-## [0.6.53] - 2026-03-05
+## [0.6.54] - 2026-03-05
 
 
 ### Fixed
-- missing changelog in triage
-
-
-## [0.6.52] - 2026-03-05
-
-### Fixed
-- versioning and stamping again
-
-
-## [0.6.51] - 2026-03-05
-
-### Fixed
-- versioning and stamping
+- versioning and stamping yet again
 
 
 ## [0.5.0] - 2025-10-15
