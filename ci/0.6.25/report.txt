@@ -7,7 +7,7 @@ Couldn't load from proper package, trying relative path dev-time hack...
 UNICODE BLOCK ANALYSIS
 ======================================================================
 
-Basic Latin=93, occ=132,286 : ! " # $ % & ' ( ) * + , - . / 0 1 2 3 4 5 6 7 8 9 : ; < = > ? A B C D E F G H I J K L M N O P Q R S T U V W X Y Z [ \ ] ^ _ ` a b c d e f g h i j k l m n o p q r s t u v w x y z { | } ~
+Basic Latin=93, occ=132,294 : ! " # $ % & ' ( ) * + , - . / 0 1 2 3 4 5 6 7 8 9 : ; < = > ? A B C D E F G H I J K L M N O P Q R S T U V W X Y Z [ \ ] ^ _ ` a b c d e f g h i j k l m n o p q r s t u v w x y z { | } ~
 
 Miscellaneous Symbols and Pictographs=72, occ=628 : 🌃 🌅 🌆 🌐 🌓 🌙 🌱 🌳 🌴 🌾 🌿 🍎 🍴 🍷 🏁 🏃 🏘 🏙 🏛 🏠 🏢 🏳 🏷 🐕 🐣 🐧 🐩 🐶 👀 👄 👈 👉 👌 👐 👤 👥 👦 👧 👨 👩 👻 💓 💧 💪 💬 💭 💻 📄 📅 📍 📖 📚 📡 📢 📨 📱 🔁 🔎 🔗 🔠 🔤 🔥 🔨 🔴 🔹 🕒 🖥 🗓 🗣 🗺 🗾 🗿
 
@@ -67,7 +67,7 @@ Vai=3, occ=9 : ꔅ ꔆ ꕷ
 
 CJK Symbols and Punctuation=3, occ=5 : 〘 〙 〽
 
-Whitespace=2, occ=33,196 :    
+Whitespace=2, occ=33,197 :    
 
 Runic=2, occ=68 : ᛠ ᛤ
 
@@ -136,9 +136,9 @@ Unicode supported version: 13 (308 blocks)
 
 📄 File: pictoji.md
 ----------------------------------------------------------------------
-Characters:        174,816
-Claude 4.5:        52,514 tokens (tiktoken estimate)
-GPT-4/GPT-4o:      52,514 tokens
-GPT-5:             50,986 tokens
-Gemini 2.0 Pro:    43,704 tokens (estimate)
+Characters:        174,825
+Claude 4.5:        52,517 tokens (tiktoken estimate)
+GPT-4/GPT-4o:      52,517 tokens
+GPT-5:             50,989 tokens
+Gemini 2.0 Pro:    43,706 tokens (estimate)
 
