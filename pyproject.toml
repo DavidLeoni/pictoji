@@ -1,5 +1,6 @@
-﻿# Pictoji - A Relatable Algebra for the People
+# Pictoji - A Relatable Algebra for the People
 # Single package with multiple optional submodules
+# NOTE: UTF8 BOM is *NOT* allowed by toml specs!
 
 [build-system]
 requires = ["setuptools>=61.0", "wheel"]
@@ -7,7 +8,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "pictoji"
-version = "0.6.25"
+version = "0.6.26.DEV+p"
 description = "A Relatable Algebra for the People - A new old language for AI-assisted mathemojics of meaning"
 readme = "README.md"
 requires-python = ">=3.8"
