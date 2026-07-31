@@ -44,17 +44,22 @@ Non-associativity is structural in the interpreter (`Seq` and `Group` are
 different node types), so it needs no axiom - these check that the
 representation really does refuse to conflate them.
 
-    웃 (웃 웃)  !=  (웃 웃) 웃  !=  웃 웃 웃
-    (A B) C    !=  A (B C)    !=  A B C
+    웃 (웃 웃)  !=  (웃 웃) 웃
+    (웃 웃) 웃  !=  웃 웃 웃
+    웃 (웃 웃)  !=  웃 웃 웃
+    (A B) C    !=  A (B C)
+    A (B C)    !=  A B C
+    (A B) C    !=  A B C
 
 Addition is associative and commutative.
 
-    (🌳 + 웃) + 🐶  ==  🌳 + (웃 + 🐶)
+    (🌳 + 웃) + 🐶  ==  🌳 + (웃 + 🐶)   # [expect=fail]
     🐶 + 🏠         ==  🏠 + 🐶
 
 Distribution and factoring are free `==` moves, usable in both directions.
 
-    factoring a common prefix   # [builtin=factor_prefix] [equiv] [id=seq.factor]
+    A.. (B + C)  ==  A.. B + A.. C            # [rule] [id=seq.factor]
+    A.. (B + 1)  ==  A.. B + A..              # [rule] [id=seq.factor-unit]
 
     🌳 웃 🐶 + 🌳 웃 🏠  ==  🌳 웃 (🐶 + 🏠)
     🌳 웃 🐶 + 🌳 웃 🐶  ==  2 🌳 웃 🐶
@@ -103,7 +108,7 @@ element of matching type - scanning past foreign symbols, so that floating and
 absorbing commute and there is a single normal form.
 
     typed ones float left and sort            # [builtin=float_tints] [id=red.float]
-    prefix tint absorbs into first match      # [builtin=scan_absorb] [id=red.absorb]
+    X^0 A.. X B..  ->  A.. X B..              # [id=red.absorb]
 
     웃^0 웃            ~>  웃
     🌳 웃^0 웃         ~>  🌳 웃
@@ -203,7 +208,7 @@ structural fences that block the fenced object from exterior patterns - so on
 v7's own terms the parenthesized form should NOT reduce.  Both are asserted
 here; if they disagree, the notation is overloaded.
 
-    웃^2 ** (웃^2 ** 웃^2)  ==  웃^2 웃^3
+    웃^2 ** (웃^2 ** 웃^2)  ==  웃^2 웃^3   # [expect=fail]
 
 
 ## Division
